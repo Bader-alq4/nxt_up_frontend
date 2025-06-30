@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-inner">
         <div className="footer-column">
-          <h4 className="footer-heading">GOOD HOOPS CLUB</h4>
+          <h4 className="footer-heading">NEXT UP</h4>
           <p>admin@nextuphoops.ca</p>
         </div>
 
