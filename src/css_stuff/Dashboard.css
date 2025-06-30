@@ -1,0 +1,146 @@
+.dashboard-container {
+  min-height: calc(100vh - 60px); /* Adjust for the global navbar */
+  background-color: #f5f7fa;
+  padding-top: 2rem;
+}
+
+.dashboard-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 2rem;
+}
+
+.dashboard-header {
+  margin-bottom: 2rem;
+}
+
+.welcome-text {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.error-message {
+  background-color: #fff5f5;
+  border: 1px solid #feb2b2;
+  color: #c53030;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+
+.registration-card, .info-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.registration-card h2, .info-card h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.registration-card p {
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+}
+
+.register-button {
+  display: inline-block;
+  background-color: #3182ce;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.info-item label {
+  font-size: 0.875rem;
+  color: #718096;
+  font-weight: 500;
+}
+
+.info-item span {
+  font-size: 1rem;
+  color: #2d3748;
+  font-weight: 500;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.status-badge.selected {
+  background-color: #c6f6d5;
+  color: #22543d;
+}
+
+.status-badge.not_selected {
+  background-color: #fed7d7;
+  color: #822727;
+}
+
+.status-badge.pending {
+  background-color: #fefcbf;
+  color: #744210;
+}
+
+.team-access {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.team-access h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.teamsnap-button {
+  display: inline-block;
+  background-color: #3182ce;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+
+.loading-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f7fa;
+}
+
+.loading-spinner {
+  color: #3182ce;
+  font-size: 1.125rem;
+  font-weight: 500;
+} 

@@ -1,0 +1,90 @@
+.nav-bar {
+  /* background: black; */
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0; /* remove global padding from the bar itself */
+  overflow-x: hidden; /* <- key line */
+  max-width: 100%;
+  overflow: visible;         /* ✅ allow dropdowns to overflow */
+  box-sizing: border-box;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1rem;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow: visible;         
+    box-sizing: border-box;
+  }
+      
+  @media (max-width: 768px) {
+    .nav-links a, .nav-links button {
+      font-size: 0.65rem;
+    }
+  }
+
+
+/* --- Dropdown Styles for About Menu --- */
+
+.nav-item.dropdown {
+  position: relative;
+}
+
+.nav-item.dropdown .nav-link {
+  cursor: pointer;
+}
+
+/* Dropdown menu hidden by default */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 0.5rem 0;
+  min-width: 160px;
+  list-style: none;
+}
+
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  list-style: none;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f9fafb;
+}
+
+/* Show on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 1rem; /* Optional spacing between items */
+}
+
+/* Make dropdown links black */
+.dropdown-menu li a {
+  color: #000;
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+}

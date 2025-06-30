@@ -1,0 +1,41 @@
+.highlights-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+  
+  .highlights-heading {
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 4rem;
+    margin-top: 0;
+  }
+  
+  .highlights-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9rem;
+    justify-content: center;
+  }
+  
+  .highlight-item {
+    flex: 1 1 300px;
+    max-width: 300px;
+  }
+  
+  .highlight-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .highlight-caption {
+    margin-top: 3rem;
+    font-size: 1rem;
+    color: white; /* Tailwind gray-900 */
+  }
+  
