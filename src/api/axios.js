@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: `${import.meta.env.VITE_API_URL}/api`,
+  baseURL: `${import.meta.env.VITE_API_URL}`,
   withCredentials: true,
 });
 
@@ -24,7 +24,7 @@ api.interceptors.response.use(
       originalRequest._retry = true;
 
       try {
-        const res = await api.get('/auth/refresh-token');
+        const res = await api.post('/auth/refresh-token');
         const newToken = res.data.token;
 
         sessionStorage.setItem('token', newToken);

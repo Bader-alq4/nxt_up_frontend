@@ -125,9 +125,21 @@ function TryoutRegister() {
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <p className="text-sm text-gray-700 text-center">
-            Welcome, {user.first_name}! Registering for{' '}
-            <strong>{activeSeason.name}</strong>.
+            Welcome, {user.first_name}! You are registering for the {' '}
+            <strong>{activeSeason.name}</strong> season.
           </p>
+
+          <div className="text-sm text-gray-600 mt-4 space-y-1">
+            <p className="font-semibold text-gray-800">Age Group Clarification:</p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>13U – Born in 2012 or later</li>
+              <li>15U – Born in 2010 or later</li>
+              <li>16U – Born in 2009 or later</li>
+              <li>17U – Born in 2008 or later</li>
+              <li>18U – Born in 2007 or later</li>
+            </ul>
+          </div>
+
 
           {/* Inner container is now a DIV, not a FORM */}
           <div className="space-y-8">
