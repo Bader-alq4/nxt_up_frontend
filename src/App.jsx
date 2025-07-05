@@ -28,7 +28,7 @@ import EmailVerificationSuccess from './pages/EmailVerificationSuccess';
 import PaymentSuccess from './pages/PaymentSuccess';
 import PaymentCancelled from './pages/PaymentCancelled';
 
-// Legal
+// Legal stuff
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 
