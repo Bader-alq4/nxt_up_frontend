@@ -16,7 +16,7 @@ Sentry.init({
   environment: import.meta.env.MODE,
 });
 
-// // ✅ Optional: Confirm Sentry initialized
+// // ✅ Optionall: Confirm Sentry initialized
 // console.log("Sentry DSN:", import.meta.env.VITE_SENTRY_DSN);
 
 // // ✅ OPTIONAL: Trigger test error (REMOVE after testing)
