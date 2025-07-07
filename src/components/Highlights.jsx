@@ -1,30 +1,35 @@
 import React from 'react';
 import '../css_stuff/Highlights.css';
 
-export default function Highlights() {
-  // Replace these with your actual image paths and captions
-  const highlights = [
-    {
-      image: '/board.jpg',
-      caption: 'Strategizing for success — every play begins with purpose.',
-    },
-    {
-      image: '/team.jpg',
-      caption: 'One falls, all rise. That’s what being a team means.',
-    },
-    {
-      image: '/madih.jpg',
-      caption: 'The standard is set — we don’t play to participate, we play to win.',
-    },
-  ];
+const highlights = [
+  {
+    src: '/board.jpg',
+    caption: 'Strategizing for success — every play begins with purpose.'
+  },
+  {
+    src: '/team.jpg',
+    caption: 'One falls, all rise. That’s what being a team means.'
+  },
+  {
+    src: '/madih.jpg',
+    caption: 'The standard is set — we don’t play to participate, we play to win.'
+  }
+];
 
+export default function Highlights() {
   return (
     <section className="highlights-section">
-      {/* <h2 className="highlights-heading">Club Highlights</h2> */}
-      <div className="highlights-grid">
-        {highlights.map((item, index) => (
-          <div className="highlight-item" key={index}>
-            <img src={item.image} alt={`Highlight ${index + 1}`} className="highlight-image" />
+      <div className="highlights-header">
+        <h2>Highlights from the Grind</h2>
+        <p>Moments that define our standard — leadership, teamwork, and grit.</p>
+      </div>
+
+      <div className="highlight-grid">
+        {highlights.map((item, idx) => (
+          <div key={idx} className="highlight-card">
+            <div className="highlight-image-wrapper">
+              <img src={item.src} alt={`Highlight ${idx + 1}`} />
+            </div>
             <p className="highlight-caption">{item.caption}</p>
           </div>
         ))}

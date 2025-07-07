@@ -1,11 +1,18 @@
-function SixteenFallBoys() {
+import { motion } from 'framer-motion';
+
+function SixteenBoysFall() {
     return (
-      <div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -20 }}
+        transition={{ duration: 0.4 }}
+      >
         <h1>info 16</h1>
         <p>16 boys.</p>
-      </div>
+      </motion.div>
     );
   }
   
-  export default SixteenFallBoys;
+  export default SixteenBoysFall;
   

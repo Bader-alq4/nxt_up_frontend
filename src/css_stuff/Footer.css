@@ -1,51 +1,65 @@
 .footer {
-    background-color: #dde8eb;
-    color: #000;
-    padding: 6rem 4rem;
-    font-family: sans-serif;
-  }
-  
+  background-color: #dde8eb;
+  padding: 6rem 4rem;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.footer-heading {
+  font-size: 0.9rem;
+  font-weight: 950;               /* lighter weight */
+  text-transform: uppercase;
+  letter-spacing: 0.1em;          /* spaced‐out letters */
+  color: #000;                    /* black text */
+  margin-bottom: 1rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-link {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 450;
+  color: #000;                    /* black text */
+  text-decoration: none;          /* no underline ever */
+  letter-spacing: 0.05em;         /* slight spacing */
+  transition: opacity 0.3s ease;
+}
+
+.footer-link:hover {
+  opacity: 0.6;                   
+  text-decoration: none;          
+}
+
+.footer-column a[href^="mailto"] {
+  font-style: normal;             /* same styling for the email link */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .footer-inner {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .footer-column {
-    flex: 1 1 200px;
-    min-width: 200px;
-  }
-  
-  .footer-heading {
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-  }
-  
-  .footer-column ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .footer-column li {
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
-  }
-  
-  .footer-column p {
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-  }
-  
-  @media (max-width: 768px) {
-    .footer-inner {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
-  
+}

@@ -9,7 +9,7 @@ export default function NavBar() {
   const navLinks = [
     { label: 'About', to: '/about' },
     { label: 'Fall Season', to: '/FallTeams' },
-    { label: 'Spring/Summer Season', to: '/SpringTeams' },
+    { label: 'Spring Season', to: '/SpringTeams' },
     { label: 'Winter Programming', to: '/WinterProgramming' },
     { label: 'Training/Camps', to: '/Training' },
     { label: 'Tournaments', to: '/Tournaments' },
@@ -25,13 +25,13 @@ export default function NavBar() {
 
   const aboutSubmenu = [
     { label: 'Our Mission', to: '/about#mission' },
-    { label: 'Latest News', to: '/about#latest_news' },
-    { label: 'Our Vision', to: '/about#history' },
-    { label: 'Contact Us', to: '/about#team' },
+    { label: 'Latest News', to: '/#upcoming-events' },
+    { label: 'Why Choose Us', to: '/about#why-choose-us' },
+    { label: 'Contact', to: '/contact' },
   ];
 
   const fallSubmenu = [
-    { label: 'Tryout Registration Info', to: '/tryouts-info/fall' },
+    { label: 'Tryouts Information', to: '/FallTeams' },
     { label: '13U Boys', to: '/FallTeams/13u-boys' },
     { label: '15U Boys', to: '/FallTeams/15u-boys' },
     { label: '16U Boys', to: '/FallTeams/16u-boys' },
@@ -42,7 +42,7 @@ export default function NavBar() {
   ];
 
   const springSubmenu = [
-    { label: 'Tryout Registration Info', to: '/tryouts-info/spring' },
+    { label: 'Tryouts Information', to: '/SpringTeams' },
     { label: '13U Boys', to: '/SpringTeams/13u-boys' },
     { label: '15U Boys', to: '/SpringTeams/15u-boys' },
     { label: '16U Boys', to: '/SpringTeams/16u-boys' },
@@ -50,18 +50,6 @@ export default function NavBar() {
     { label: '18U Boys', to: '/SpringTeams/18u-boys' },
     { label: '15U Girls', to: '/SpringTeams/15u-girls' },
     { label: '16U Girls', to: '/SpringTeams/16u-girls' },
-  ];
-
-  const winterSubmenu = [
-    { label: 'Winter Information', to: '/WinterProgramming' },
-  ];
-
-  const trainingSubmenu = [
-    { label: 'Training & Camps Information', to: '/Training' },
-  ];
-
-  const tournamentsSubmenu = [
-    { label: 'Tournaments Information', to: '/Tournaments' },
   ];
 
   return (
@@ -107,7 +95,7 @@ export default function NavBar() {
               );
             }
 
-            if (link.label === 'Spring/Summer Season') {
+            if (link.label === 'Spring Season') {
               return (
                 <li key={idx} className="nav-item dropdown">
                   <Link className="nav-link" to={link.to}>
@@ -124,59 +112,9 @@ export default function NavBar() {
               );
             }
 
-            if (link.label === 'Winter Programming') {
-              return (
-                <li key={idx} className="nav-item dropdown">
-                  <Link className="nav-link" to={link.to}>
-                    {link.label}
-                  </Link>
-                  <ul className="dropdown-menu">
-                    {winterSubmenu.map((item, i) => (
-                      <li key={i}>
-                        <Link to={item.to}>{item.label}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              );
-            }
-
-            if (link.label === 'Training/Camps') {
-              return (
-                <li key={idx} className="nav-item dropdown">
-                  <Link className="nav-link" to={link.to}>
-                    {link.label}
-                  </Link>
-                  <ul className="dropdown-menu">
-                    {trainingSubmenu.map((item, i) => (
-                      <li key={i}>
-                        <Link to={item.to}>{item.label}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              );
-            }
-
-            if (link.label === 'Tournaments') {
-              return (
-                <li key={idx} className="nav-item dropdown">
-                  <Link className="nav-link" to={link.to}>
-                    {link.label}
-                  </Link>
-                  <ul className="dropdown-menu">
-                    {tournamentsSubmenu.map((item, i) => (
-                      <li key={i}>
-                        <Link to={item.to}>{item.label}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              );
-            }
-
+            // Winter Programming, Training/Camps, Tournaments, Login/Dashboard/Admin, etc.
             return (
-              <li key={idx}>
+              <li key={idx} className="nav-item">
                 <Link className="nav-link" to={link.to}>
                   {link.label}
                 </Link>
@@ -185,8 +123,10 @@ export default function NavBar() {
           })}
 
           {user && (
-            <li>
-              <button onClick={logout}>Logout</button>
+            <li className="nav-item">
+              <button onClick={logout} className="nav-link button-link">
+                Logout
+              </button>
             </li>
           )}
         </ul>

@@ -5,15 +5,15 @@ import '../css_stuff/GeneralInfo.css';
 const infoItems = [
   {
     image: '/fall.jpg',
-    title: '2024 Fall Programs',
-    description: 'Our 2024 Fall Programs focus on skill development, competition, and fun for all age groups.',
-    link: '/tryouts-info/fall',
+    title: '2025 Fall Programs',
+    description: 'Our 2025 Fall Programs focus on skill development, competition, and fun for all age groups.',
+    link: 'FallTeams',
   },
   {
     image: '/spring.jpg',
-    title: '2024 Spring Programs',
+    title: '2026 Spring Programs',
     description: 'Spring training prepares athletes for the next level with elite instruction and regional showcases.',
-    link: '/tryouts-info/spring',
+    link: '/SpringTeams',
   },
   {
     image: '/tournaments.jpg',
@@ -33,16 +33,31 @@ export default function GeneralInfo() {
   return (
     <section className="general-info-section">
       <div className="next-up-banner">
-        <h2>Next Up. Elite Bound.</h2>
+        <h2>
+          Next Up. <span>Elite Bound.</span>
+        </h2>
+        {/* Link now includes the hash to scroll to the mission section */}
+        <Link to="/about#mission" className="vision-button">
+          Our Mission →
+        </Link>
+        <a href="#upcoming-events" className="see-events-button">
+          See Upcoming Events →
+        </a>
       </div>
 
       <div className="general-info-grid">
         {infoItems.map((item, index) => (
           <div className="general-info-item" key={index}>
-            <img src={item.image} alt={item.title} className="general-info-image" />
+            <img
+              src={item.image}
+              alt={item.title}
+              className="general-info-image"
+            />
             <h3 className="general-info-title">{item.title}</h3>
             <p className="general-info-text">{item.description}</p>
-            <Link to={item.link} className="learn-more-link">Learn More</Link>
+            <Link to={item.link} className="learn-more-link">
+              Learn More
+            </Link>
           </div>
         ))}
       </div>

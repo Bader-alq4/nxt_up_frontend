@@ -1,0 +1,94 @@
+/* src/css_stuff/WinterProgramming.css */
+.winter-page {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 6rem 1rem 7rem 1rem;
+  }
+  
+  .winter-container {
+    max-width: 950px;
+    width: 100%;
+    background: #111;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    padding: 4rem 3rem 4rem 3rem;
+    text-align: left;
+  }
+  
+  .winter-heading {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #36a4d6;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+  }
+  
+  .winter-intro {
+    font-size: 1.35rem;
+    color: #ccc;
+    margin-bottom: 2.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .winter-description {
+    font-size: 1.15rem;
+    color: #ddd;
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+  }
+  
+  .winter-list {
+    list-style: none;
+    padding-left: 1.5rem;
+    margin-bottom: 2.5rem;
+    background: #181b1f;
+    border-radius: 8px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(54,164,214,0.07);
+  }
+  
+  .winter-list li {
+    position: relative;
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+    color: #ccc;
+    font-size: 1.08rem;
+  }
+  
+  .winter-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #36a4d6;
+    font-size: 1.3rem;
+  }
+  
+  .winter-hr {
+    border: none;
+    border-top: 2px solid #36a4d6;
+    margin: 2.5rem 0 2.5rem 0;
+    opacity: 0.25;
+  }
+  
+  .winter-note {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+  }
+  
+  @media (max-width: 640px) {
+    .winter-container {
+      padding: 2rem 1rem;
+      max-width: 100%;
+    }
+  
+    .winter-heading {
+      font-size: 2rem;
+    }
+  }
+  

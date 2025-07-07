@@ -1,0 +1,96 @@
+.sponsorship-page {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1rem;
+  }
+  
+  .sponsorship-container {
+    max-width: 800px;
+    width: 100%;
+    background: #111;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    padding: 3rem 2rem;
+    text-align: left;
+  }
+  
+  .sponsorship-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #36a4d6;
+  }
+  
+  .sponsorship-intro {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #ddd;
+  }
+  
+  .sponsorship-subheading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .sponsorship-list {
+    margin: 0;
+    padding-left: 1.25rem;
+    list-style: none;
+  }
+  
+  .sponsorship-list-item {
+    position: relative;
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    font-size: 1.0625rem;
+    color: #ccc;
+    line-height: 1.5;
+  }
+  
+  .sponsorship-list-item::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: #36a4d6;
+  }
+  
+  .sponsorship-contact {
+    margin-top: 2.5rem;
+    font-size: 1.0625rem;
+    text-align: center;
+  }
+  
+  .sponsorship-link {
+    color: #36a4d6;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .sponsorship-link:hover {
+    text-decoration: none;
+  }
+  
+  @media (max-width: 640px) {
+    .sponsorship-container {
+      padding: 2rem 1rem;
+    }
+  
+    .sponsorship-heading {
+      font-size: 2rem;
+    }
+  
+    .sponsorship-subheading {
+      font-size: 1.25rem;
+    }
+  }
+  

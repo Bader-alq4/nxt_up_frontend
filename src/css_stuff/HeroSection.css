@@ -1,73 +1,102 @@
-.hero-image {
-    width: 100%;
-    max-width: 600px;   /* Increase to make it wider */
-    aspect-ratio: 3 / 1; /* Force horizontal shape */
-    border-radius: 0;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    object-fit: cover;
-    height: 400px;
-    display: block;
-    margin: 0 auto;
+.hero-fullscreen {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+@media (min-width: 768px) {
+  .hero-fullscreen {
+    flex-direction: row;
   }
-  
-  
-  /* Section wrapper */
-  .hero-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4rem 1rem;
+}
+
+.hero-image-side {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* center image horizontally */
+  align-items: center;
+  padding: 2rem; /* space around image */
+  box-sizing: border-box;
+  background-color: #000; /* keep background black */
+}
+
+
+@media (min-width: 768px) {
+  .hero-image-side {
+    height: 100%;
   }
-  
-  /* Layout: Image + Text */
-  .hero-row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-  }
-  
-  @media (min-width: 768px) {
-    .hero-row {
-      flex-direction: row;
-      align-items: center; /* or use 'center' for vertical middle */
-    }
-  }
-  
-  
-  /* Text block styles */
-  .text-block-hero-section {
-    flex: 1;
-    margin-left: 0;
-    padding-left: 2rem; /* or 0 */
-    font-size: 1.5rem;
-    color: white;
-    line-height: 1.6;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 500px; /* control size */
+  height: auto;
+  border-radius: px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+
+.hero-text-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero-text-side {
     text-align: left;
+    padding: 4rem;
   }
-  
-  /* Button styles */
-  .button-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6rem;
-    justify-content: center;
-    margin-top: 3rem;
-  } 
-  
-  .hero-button {
-    background-color: #1f1f1f;
-    color: white;
-    padding: 1rem 2rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 0.875rem;
-    letter-spacing: 0.05em;
-    border-radius: 0;
-    transition: background-color 0.2s ease;
+}
+
+.hero-text-side h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.hero-text-side p {
+  font-size: 1.25rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.8rem;
+  justify-content: center;
+  margin-top: 4rem; /* <-- Adds spacing above buttons */
+}
+
+@media (min-width: 768px) {
+  .hero-buttons {
+    justify-content: flex-start;
   }
-  
-  .hero-button:hover {
-    background-color: #1f1f1f;
-  }
-  
+}
+
+
+.hero-buttons button {
+  background-color: white;
+  color: black;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 590;
+  border-radius: 0px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.hero-buttons button:hover {
+  background-color: #c62828;
+  transform: scale(1.05);
+}

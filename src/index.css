@@ -940,3 +940,7 @@ input:checked + .toggle-slider:before {
   outline: none;
   box-shadow: none;
 }
+
+html {
+  scroll-behavior: smooth;
+}

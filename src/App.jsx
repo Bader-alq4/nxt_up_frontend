@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 
 // Core Layout
 import NavBar from './components/NavBar';
@@ -13,6 +14,9 @@ import SpringTeams from './pages/SpringTeams';
 import WinterProgramming from './pages/WinterProgramming';
 import Tournaments from './pages/Tournaments';
 import TryoutsClosed from './pages/TryoutsClosed';
+import Sponsorship from './pages/Sponsorship';
+import Testimonials from './pages/Testimonials';
+import Contact from './pages/Contact';
 
 // Auth Pages
 import Login from './pages/Login';
@@ -31,15 +35,6 @@ import PaymentCancelled from './pages/PaymentCancelled';
 // Legal stuff
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
-
-// Tryout Info Pages
-import FallTryoutsInfo from './pages/tryouts-info/FallTryoutsInfo';
-import SpringTryoutsInfo from './pages/tryouts-info/SpringTryoutsInfo';
-
-// Dropdown Pages (Use FallTeams and SpringTeams for now)
-import WinterInfo from './pages/WinterProgramming';
-import TrainingInfo from './pages/Training';
-import TournamentsInfo from './pages/Tournaments';
 
 // Protected Route Wrapper
 import ProtectedRoute from './components/ProtectedRoute';
@@ -84,93 +79,91 @@ function AppWrapper() {
     path.startsWith('/WinterProgramming') ||
     path.startsWith('/Training') ||
     path.startsWith('/Tournaments') ||
-    path.startsWith('/tryouts-info');
+    path.startsWith('/sponsorship') ||
+    path.startsWith('/testimonials') ||
+    path.startsWith('/contact');
 
   return (
     <>
       <NavBar />
 
-      <Routes>
-        {/* Public Routes */}
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/Training" element={<Training />} />
-        <Route path="/FallTeams" element={<FallTeams />} />
-        <Route path="/SpringTeams" element={<SpringTeams />} />
-        <Route path="/WinterProgramming" element={<WinterProgramming />} />
-        <Route path="/Tournaments" element={<Tournaments />} />
-        <Route path="/TryoutsClosed" element={<TryoutsClosed />} />
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          {/* Public Routes */}
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/sponsorship" element={<Sponsorship />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/Training" element={<Training />} />
+          <Route path="/FallTeams" element={<FallTeams />} />
+          <Route path="/SpringTeams" element={<SpringTeams />} />
+          <Route path="/WinterProgramming" element={<WinterProgramming />} />
+          <Route path="/Tournaments" element={<Tournaments />} />
+          <Route path="/TryoutsClosed" element={<TryoutsClosed />} />
 
-        {/* Dropdown & Button Routes (no path/filename changes) */}
-        <Route path="/tryouts-info/fall" element={<FallTryoutsInfo />} />
-        <Route path="/tryouts-info/spring" element={<SpringTryoutsInfo />} />
-        <Route path="/tryouts-info/FallTryoutsInfo" element={<FallTryoutsInfo />} />
-        <Route path="/tryouts-info/SpringTryoutsInfo" element={<SpringTryoutsInfo />} />
-        <Route path="/WinterProgramming/info" element={<WinterInfo />} />
-        <Route path="/Training/info" element={<TrainingInfo />} />
-        <Route path="/Tournaments/info" element={<TournamentsInfo />} />
+          {/* Fall Team Subpages */}
+          <Route path="/FallTeams/13u-boys" element={<Fall13UBoys />} />
+          <Route path="/FallTeams/15u-boys" element={<Fall15UBoys />} />
+          <Route path="/FallTeams/16u-boys" element={<Fall16UBoys />} />
+          <Route path="/FallTeams/17u-boys" element={<Fall17UBoys />} />
+          <Route path="/FallTeams/18u-boys" element={<Fall18UBoys />} />
+          <Route path="/FallTeams/15u-girls" element={<Fall15UGirls />} />
+          <Route path="/FallTeams/16u-girls" element={<Fall16UGirls />} />
 
-        {/* Fall Team Subpages */}
-        <Route path="/FallTeams/13u-boys" element={<Fall13UBoys />} />
-        <Route path="/FallTeams/15u-boys" element={<Fall15UBoys />} />
-        <Route path="/FallTeams/16u-boys" element={<Fall16UBoys />} />
-        <Route path="/FallTeams/17u-boys" element={<Fall17UBoys />} />
-        <Route path="/FallTeams/18u-boys" element={<Fall18UBoys />} />
-        <Route path="/FallTeams/15u-girls" element={<Fall15UGirls />} />
-        <Route path="/FallTeams/16u-girls" element={<Fall16UGirls />} />
+          {/* Spring Team Subpages */}
+          <Route path="/SpringTeams/13u-boys" element={<Spring13UBoys />} />
+          <Route path="/SpringTeams/15u-boys" element={<Spring15UBoys />} />
+          <Route path="/SpringTeams/16u-boys" element={<Spring16UBoys />} />
+          <Route path="/SpringTeams/17u-boys" element={<Spring17UBoys />} />
+          <Route path="/SpringTeams/18u-boys" element={<Spring18UBoys />} />
+          <Route path="/SpringTeams/15u-girls" element={<Spring15UGirls />} />
+          <Route path="/SpringTeams/16u-girls" element={<Spring16UGirls />} />
 
-        {/* Spring Team Subpages */}
-        <Route path="/SpringTeams/13u-boys" element={<Spring13UBoys />} />
-        <Route path="/SpringTeams/15u-boys" element={<Spring15UBoys />} />
-        <Route path="/SpringTeams/16u-boys" element={<Spring16UBoys />} />
-        <Route path="/SpringTeams/17u-boys" element={<Spring17UBoys />} />
-        <Route path="/SpringTeams/18u-boys" element={<Spring18UBoys />} />
-        <Route path="/SpringTeams/15u-girls" element={<Spring15UGirls />} />
-        <Route path="/SpringTeams/16u-girls" element={<Spring16UGirls />} />
+          {/* Auth */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password/:token" element={<ResetPassword />} />
+          <Route path="/check-email" element={<CheckEmail />} />
+          <Route path="/verify-notice" element={<EmailVerificationNoticeWrapper />} />
+          <Route path="/email-confirmed" element={<EmailVerificationSuccess />} />
 
-        {/* Auth */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/reset-password/:token" element={<ResetPassword />} />
-        <Route path="/check-email" element={<CheckEmail />} />
-        <Route path="/verify-notice" element={<EmailVerificationNoticeWrapper />} />
-        <Route path="/email-confirmed" element={<EmailVerificationSuccess />} />
+          {/* Legal */}
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
 
-        {/* Legal */}
-        <Route path="/privacy" element={<Privacy />} />
-        <Route path="/terms" element={<Terms />} />
+          {/* Payment */}
+          <Route path="/payment/success" element={<PaymentSuccess />} />
+          <Route path="/payment/cancelled" element={<PaymentCancelled />} />
 
-        {/* Payment */}
-        <Route path="/payment/success" element={<PaymentSuccess />} />
-        <Route path="/payment/cancelled" element={<PaymentCancelled />} />
-
-        {/* Protected Routes */}
-        <Route
-          path="/dashboard"
-          element={
-            <ProtectedRoute>
-              <Dashboard />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/tryout"
-          element={
-            <ProtectedRoute>
-              <TryoutRegister />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/admin"
-          element={
-            <ProtectedRoute requiredRole="admin">
-              <AdminDashboard />
-            </ProtectedRoute>
-          }
-        />
-      </Routes>
+          {/* Protected Routes */}
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/tryout"
+            element={
+              <ProtectedRoute>
+                <TryoutRegister />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin"
+            element={
+              <ProtectedRoute requiredRole="admin">
+                <AdminDashboard />
+              </ProtectedRoute>
+            }
+          />
+        </Routes>
+      </AnimatePresence>
 
       {shouldShowFooter && <Footer />}
     </>
@@ -184,4 +177,3 @@ export default function App() {
     </Router>
   );
 }
-// minor trigger
