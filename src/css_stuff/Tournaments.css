@@ -60,6 +60,10 @@
     font-size: 1.08rem;
   }
   
+  .tournaments-list li:last-child {
+    margin-bottom: 0;
+  }
+  
   .tournaments-list li::before {
     content: '•';
     position: absolute;

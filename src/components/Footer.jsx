@@ -26,7 +26,7 @@ export default function Footer() {
             </li>
             <li>
               <Link to="/#upcoming-events" className="footer-link">
-                Latest News
+                Events
               </Link>
             </li>
             <li>

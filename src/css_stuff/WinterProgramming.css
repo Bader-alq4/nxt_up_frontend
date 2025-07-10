@@ -58,6 +58,10 @@
     font-size: 1.08rem;
   }
   
+  .winter-list li:last-child {
+    margin-bottom: 0;
+  }
+  
   .winter-list li::before {
     content: '•';
     position: absolute;

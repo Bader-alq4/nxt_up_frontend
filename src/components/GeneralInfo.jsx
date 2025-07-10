@@ -19,13 +19,13 @@ const infoItems = [
     image: '/tournaments.jpg',
     title: 'Tournaments',
     description: 'We participate in high-level tournaments to give players real-game exposure and experience.',
-    link: '/Tournaments/info',
+    link: '/Tournaments',
   },
   {
     image: '/camps.jpg',
     title: 'Camps/Programming',
     description: 'Our seasonal camps blend competitive training with community-building and development.',
-    link: '/Training/info',
+    link: '/Training',
   },
 ];
 

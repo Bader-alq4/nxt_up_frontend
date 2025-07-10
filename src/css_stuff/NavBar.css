@@ -1,90 +1,241 @@
+/* src/css_stuff/NavBar.css */
+
+/* Base navbar */
 .nav-bar {
-  /* background: black; */
+  background: #000;
   border-bottom: 1px solid #e5e7eb;
-  padding: 0; /* remove global padding from the bar itself */
-  overflow-x: hidden; /* <- key line */
-  max-width: 100%;
-  overflow: visible;         /* ✅ allow dropdowns to overflow */
-  box-sizing: border-box;
-  }
-  
-  .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 1rem 1rem;
-    min-width: 0;
-    max-width: 100%;
-    overflow-x: hidden;
-    overflow: visible;         
-    box-sizing: border-box;
-  }
-      
-  @media (max-width: 768px) {
-    .nav-links a, .nav-links button {
-      font-size: 0.65rem;
-    }
-  }
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
 
+/* Desktop nav-links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.nav-links li {
+  margin-left: 1rem;
+}
+.nav-link {
+  text-decoration: none;
+  color: #fff !important;
+}
+.nav-link:hover,
+.nav-link:focus {
+  background: none;
+  color: #fff;
+  outline: none;
+}
 
-/* --- Dropdown Styles for About Menu --- */
-
+/* Dropdown menus */
 .nav-item.dropdown {
   position: relative;
 }
-
-.nav-item.dropdown .nav-link {
-  cursor: pointer;
-}
-
-/* Dropdown menu hidden by default */
 .dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background: white;
+  background: #000;
   border: 1px solid #e5e7eb;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   padding: 0.5rem 0;
-  min-width: 160px;
   list-style: none;
+  margin: 0;
 }
-
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
 .dropdown-menu li {
   padding: 0.5rem 1rem;
   white-space: nowrap;
   list-style: none;
 }
-
-.dropdown-menu li:hover {
-  background-color: #f9fafb;
+.dropdown-menu li:hover,
+.dropdown-menu li:focus {
+  background: none;
+}
+.dropdown-menu li a,
+.dropdown-link {
+  color: #fff !important;
+  text-decoration: none;
+}
+.dropdown-menu li a:hover,
+.dropdown-menu li a:focus {
+  background: none;
+  color: #fff;
+  outline: none;
 }
 
-/* Show on hover */
-.nav-item.dropdown:hover .dropdown-menu {
+/* Hamburger button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px,5px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px,-5px);
+}
+.hamburger:hover,
+.hamburger:focus,
+.hamburger:active {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  filter: none !important;
+}
+
+/* Responsive: ≤768px */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none !important;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .nav-links.open {
+    display: flex !important;
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    flex-direction: column;
+    background: #000;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 80vw;
+    max-width: 340px;
+    padding: 2.5rem 1.5rem 2rem;
+    z-index: 1002;
+    overflow-y: auto;           /* allow scrolling */
+    height: 100vh;              /* fill viewport */
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav-links.open li {
+    margin: 0;
+  }
+  .nav-links.open li + li {
+    border-top: 1px solid #e5e7eb;
+  }
+  .nav-link,
+  .button-link {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    display: block;
+    color: #fff !important;
+  }
+  .nav-link:hover,
+  .button-link:hover {
+    background: none;
+    color: #fff;
+  }
+}
+
+/* Mobile sidebar overlay */
+.mobile-sidebar-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 1001;
+}
+
+/* Mobile sidebar itself */
+.mobile-sidebar {
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  width: 80vw;
+  max-width: 340px;
+  background: #111;
+  z-index: 1002;
+  box-shadow: 2px 0 16px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 1.5rem 2rem;
+  transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+  transform: translateX(0);
+  overflow-y: auto;             /* make options scrollable */
+  height: 100vh;                /* ensure full-height container */
+  -webkit-overflow-scrolling: touch;
+}
+
+.mobile-nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-nav-links .nav-link {
+  display: block;
+  padding: 1.1rem 0;
+  font-size: 1.25rem;
+  color: #fff;
+  background: none;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+}
+.mobile-nav-links .nav-link:hover {
+  color: #36a4d6;
+}
+
+.mobile-dropdown > .nav-link {
+  cursor: pointer;
+}
+.mobile-dropdown .dropdown-menu {
+  display: block;
+  position: static;
+  background: none;
+  box-shadow: none;
+  border: none;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.mobile-dropdown .dropdown-menu li a {
+  color: #36a4d6;
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
   display: block;
 }
-
-.nav-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
+.mobile-dropdown .dropdown-menu li a:hover {
+  color: #fff;
+  background: #222;
 }
 
-.nav-links li {
-  margin-left: 1rem; /* Optional spacing between items */
+@media (min-width: 901px) {
+  .mobile-sidebar,
+  .mobile-sidebar-overlay {
+    display: none !important;
+  }
 }
 
-/* Make dropdown links black */
-.dropdown-menu li a {
-  color: #000;
-  text-decoration: none;
-  list-style: none;
-  margin: 0;
-  padding: 0.5rem 0;
+body.no-scroll {
+  overflow: hidden !important;
+  position: fixed;
+  width: 100vw;
 }

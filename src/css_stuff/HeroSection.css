@@ -100,3 +100,28 @@
   background-color: #c62828;
   transform: scale(1.05);
 }
+
+@media (max-width: 767px) {
+  .hero-fullscreen {
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 2rem;
+  }
+  .hero-image-side {
+    padding: 1rem;
+  }
+  .hero-img {
+    max-width: 300px;
+    margin-bottom: 1.5rem;
+  }
+  .hero-text-side h1 {
+    font-size: 1.5rem;
+  }
+  .hero-text-side p {
+    font-size: 1rem;
+  }
+  .hero-buttons {
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+}

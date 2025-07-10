@@ -1,10 +1,23 @@
-import React, { useContext } from 'react';
+// src/components/NavBar.jsx
+import React, { useContext, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AuthContext from '../context/AuthContext';
 import '../css_stuff/NavBar.css';
 
 export default function NavBar() {
   const { user, logout } = useContext(AuthContext);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+    return () => {
+      document.body.classList.remove('no-scroll');
+    };
+  }, [mobileMenuOpen]);
 
   const navLinks = [
     { label: 'About', to: '/about' },
@@ -13,6 +26,7 @@ export default function NavBar() {
     { label: 'Winter Programming', to: '/WinterProgramming' },
     { label: 'Training/Camps', to: '/Training' },
     { label: 'Tournaments', to: '/Tournaments' },
+    { label: 'Contact', to: '/contact' },
   ];
 
   if (!user) {
@@ -25,7 +39,7 @@ export default function NavBar() {
 
   const aboutSubmenu = [
     { label: 'Our Mission', to: '/about#mission' },
-    { label: 'Latest News', to: '/#upcoming-events' },
+    { label: 'Events', to: '/#upcoming-events' },
     { label: 'Why Choose Us', to: '/about#why-choose-us' },
     { label: 'Contact', to: '/contact' },
   ];
@@ -52,6 +66,70 @@ export default function NavBar() {
     { label: '16U Girls', to: '/SpringTeams/16u-girls' },
   ];
 
+  // Helper to render nav links (for both desktop and mobile)
+  const renderLinks = (isMobile = false) => (
+    <>
+      {navLinks.map((link, idx) => {
+        if (link.label === 'About') {
+          return (
+            <li key={idx} className={`nav-item dropdown${isMobile ? ' mobile-dropdown' : ''}`}>
+              <Link to={link.to} className="nav-link" onClick={() => setMobileMenuOpen(false)}>{link.label}</Link>
+              <ul className="dropdown-menu">
+                {aboutSubmenu.map((item, i) => (
+                  <li key={i}>
+                    <Link to={item.to} onClick={() => setMobileMenuOpen(false)}>{item.label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          );
+        }
+        if (link.label === 'Fall Season') {
+          return (
+            <li key={idx} className={`nav-item dropdown${isMobile ? ' mobile-dropdown' : ''}`}>
+              <Link to={link.to} className="nav-link" onClick={() => setMobileMenuOpen(false)}>{link.label}</Link>
+              <ul className="dropdown-menu">
+                {fallSubmenu.map((item, i) => (
+                  <li key={i}>
+                    <Link to={item.to} onClick={() => setMobileMenuOpen(false)}>{item.label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          );
+        }
+        if (link.label === 'Spring Season') {
+          return (
+            <li key={idx} className={`nav-item dropdown${isMobile ? ' mobile-dropdown' : ''}`}>
+              <Link to={link.to} className="nav-link" onClick={() => setMobileMenuOpen(false)}>{link.label}</Link>
+              <ul className="dropdown-menu">
+                {springSubmenu.map((item, i) => (
+                  <li key={i}>
+                    <Link to={item.to} onClick={() => setMobileMenuOpen(false)}>{item.label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          );
+        }
+        return (
+          <li key={idx} className="nav-item">
+            <Link className="nav-link" to={link.to} onClick={() => setMobileMenuOpen(false)}>
+              {link.label}
+            </Link>
+          </li>
+        );
+      })}
+      {user && (
+        <li className="nav-item">
+          <button onClick={() => { logout(); setMobileMenuOpen(false); }} className="nav-link button-link">
+            Logout
+          </button>
+        </li>
+      )}
+    </>
+  );
+
   return (
     <nav className="nav-bar">
       <div className="nav-container">
@@ -59,77 +137,35 @@ export default function NavBar() {
           <Link to="/"><img src="/final_logo.jpg" alt="Logo" /></Link>
         </div>
 
+        {/* Desktop Nav Links */}
         <ul className="nav-links">
-          {navLinks.map((link, idx) => {
-            if (link.label === 'About') {
-              return (
-                <li key={idx} className="nav-item dropdown">
-                  <Link className="nav-link" to={link.to}>
-                    {link.label}
-                  </Link>
-                  <ul className="dropdown-menu">
-                    {aboutSubmenu.map((item, i) => (
-                      <li key={i}>
-                        <Link to={item.to}>{item.label}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              );
-            }
-
-            if (link.label === 'Fall Season') {
-              return (
-                <li key={idx} className="nav-item dropdown">
-                  <Link className="nav-link" to={link.to}>
-                    {link.label}
-                  </Link>
-                  <ul className="dropdown-menu">
-                    {fallSubmenu.map((item, i) => (
-                      <li key={i}>
-                        <Link to={item.to}>{item.label}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              );
-            }
-
-            if (link.label === 'Spring Season') {
-              return (
-                <li key={idx} className="nav-item dropdown">
-                  <Link className="nav-link" to={link.to}>
-                    {link.label}
-                  </Link>
-                  <ul className="dropdown-menu">
-                    {springSubmenu.map((item, i) => (
-                      <li key={i}>
-                        <Link to={item.to}>{item.label}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              );
-            }
-
-            // Winter Programming, Training/Camps, Tournaments, Login/Dashboard/Admin, etc.
-            return (
-              <li key={idx} className="nav-item">
-                <Link className="nav-link" to={link.to}>
-                  {link.label}
-                </Link>
-              </li>
-            );
-          })}
-
-          {user && (
-            <li className="nav-item">
-              <button onClick={logout} className="nav-link button-link">
-                Logout
-              </button>
-            </li>
-          )}
+          {renderLinks(false)}
         </ul>
+
+        {/* Hamburger Icon for Mobile */}
+        <button
+          className="hamburger"
+          aria-label="Open menu"
+          onClick={() => setMobileMenuOpen((open) => !open)}
+        >
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="7" width="32" height="3" rx="1.5" fill="#36a4d6" />
+            <rect y="15" width="32" height="3" rx="1.5" fill="#36a4d6" />
+            <rect y="23" width="32" height="3" rx="1.5" fill="#36a4d6" />
+          </svg>
+        </button>
+
+        {/* Mobile Sidebar Menu */}
+        {mobileMenuOpen && (
+          <>
+            <div className="mobile-sidebar-overlay" onClick={() => setMobileMenuOpen(false)} />
+            <div className="mobile-sidebar">
+              <ul className="mobile-nav-links">
+                {renderLinks(true)}
+              </ul>
+            </div>
+          </>
+        )}
       </div>
     </nav>
   );

@@ -30,7 +30,7 @@ const dummyNews = [
 export default function NewsSection() {
   return (
     <section className="mb-8">
-      <SectionHeader icon={<Newspaper className="h-6 w-6 text-blue-600" />} title="Latest News" />
+      <SectionHeader icon={<Newspaper className="h-6 w-6 text-blue-600" />} title="Events" />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
         {dummyNews.map((item) => (
           <NewsCard key={item.id} {...item} />
