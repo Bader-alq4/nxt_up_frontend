@@ -26,7 +26,6 @@ export default function NavBar() {
     { label: 'Winter Programming', to: '/WinterProgramming' },
     { label: 'Training/Camps', to: '/Training' },
     { label: 'Tournaments', to: '/Tournaments' },
-    { label: 'Contact', to: '/contact' },
   ];
 
   if (!user) {
