@@ -40,13 +40,13 @@ import Terms from './pages/Terms';
 import ProtectedRoute from './components/ProtectedRoute';
 
 // Fall Team Subpages
-import Fall13UBoys from './pages/FallTeams/13u-boys';
-import Fall15UBoys from './pages/FallTeams/15u-boys';
-import Fall16UBoys from './pages/FallTeams/16u-boys';
-import Fall17UBoys from './pages/FallTeams/17u-boys';
-import Fall18UBoys from './pages/FallTeams/18u-boys';
-import Fall15UGirls from './pages/FallTeams/15u-girls';
-import Fall16UGirls from './pages/FallTeams/17u-girls';
+// import Fall13UBoys from './pages/FallTeams/13u-boys';
+// import Fall15UBoys from './pages/FallTeams/15u-boys';
+// import Fall16UBoys from './pages/FallTeams/16u-boys';
+// import Fall17UBoys from './pages/FallTeams/17u-boys';
+// import Fall18UBoys from './pages/FallTeams/18u-boys';
+// import Fall15UGirls from './pages/FallTeams/15u-girls';
+// import Fall16UGirls from './pages/FallTeams/17u-girls';
 
 // Spring Team Subpages
 import Spring13UBoys from './pages/SpringTeams/13u-boys';
@@ -103,13 +103,13 @@ function AppWrapper() {
           <Route path="/TryoutsClosed" element={<TryoutsClosed />} />
 
           {/* Fall Team Subpages */}
-          <Route path="/FallTeams/13u-boys" element={<Fall13UBoys />} />
+          {/* <Route path="/FallTeams/13u-boys" element={<Fall13UBoys />} />
           <Route path="/FallTeams/15u-boys" element={<Fall15UBoys />} />
           <Route path="/FallTeams/16u-boys" element={<Fall16UBoys />} />
           <Route path="/FallTeams/17u-boys" element={<Fall17UBoys />} />
           <Route path="/FallTeams/18u-boys" element={<Fall18UBoys />} />
           <Route path="/FallTeams/15u-girls" element={<Fall15UGirls />} />
-          <Route path="/FallTeams/16u-girls" element={<Fall16UGirls />} />
+          <Route path="/FallTeams/16u-girls" element={<Fall16UGirls />} /> */}
 
           {/* Spring Team Subpages */}
           <Route path="/SpringTeams/13u-boys" element={<Spring13UBoys />} />

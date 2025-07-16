@@ -43,16 +43,16 @@ export default function NavBar() {
     { label: 'Contact', to: '/contact' },
   ];
 
-  const fallSubmenu = [
-    { label: 'Tryouts Information', to: '/FallTeams' },
-    { label: '13U Boys', to: '/FallTeams/13u-boys' },
-    { label: '15U Boys', to: '/FallTeams/15u-boys' },
-    { label: '16U Boys', to: '/FallTeams/16u-boys' },
-    { label: '17U Boys', to: '/FallTeams/17u-boys' },
-    { label: '18U Boys', to: '/FallTeams/18u-boys' },
-    { label: '15U Girls', to: '/FallTeams/15u-girls' },
-    { label: '16U Girls', to: '/FallTeams/16u-girls' },
-  ];
+  // const fallSubmenu = [
+  //   { label: 'Tryouts Information', to: '/FallTeams' },
+  //   { label: '13U Boys', to: '/FallTeams/13u-boys' },
+  //   { label: '15U Boys', to: '/FallTeams/15u-boys' },
+  //   { label: '16U Boys', to: '/FallTeams/16u-boys' },
+  //   { label: '17U Boys', to: '/FallTeams/17u-boys' },
+  //   { label: '18U Boys', to: '/FallTeams/18u-boys' },
+  //   { label: '15U Girls', to: '/FallTeams/15u-girls' },
+  //   { label: '16U Girls', to: '/FallTeams/16u-girls' },
+  // ];
 
   const springSubmenu = [
     { label: 'Tryouts Information', to: '/SpringTeams' },
@@ -87,13 +87,13 @@ export default function NavBar() {
           return (
             <li key={idx} className={`nav-item dropdown${isMobile ? ' mobile-dropdown' : ''}`}>
               <Link to={link.to} className="nav-link" onClick={() => setMobileMenuOpen(false)}>{link.label}</Link>
-              <ul className="dropdown-menu">
+              {/* <ul className="dropdown-menu">
                 {fallSubmenu.map((item, i) => (
                   <li key={i}>
                     <Link to={item.to} onClick={() => setMobileMenuOpen(false)}>{item.label}</Link>
                   </li>
                 ))}
-              </ul>
+              </ul> */}
             </li>
           );
         }
