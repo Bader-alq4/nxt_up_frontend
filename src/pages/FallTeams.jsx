@@ -1,5 +1,5 @@
-// src/pages/FallTeams.jsx
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import '../css_stuff/FallTeams.css';
 
@@ -10,76 +10,69 @@ export default function FallTeams() {
 
   return (
     <motion.div
-      className="fall-teams-page"
+      className="fall-page"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.4 }}
     >
-      <div className="fall-teams-container">
-        {/* Main Season Intro */}
-        <h1 className="fall-teams-heading">NEXT UP Elite Fall 2025 Season</h1>
-        <p className="fall-teams-age-range">
-          Our Fall club programming runs through September and October 2025, giving athletes a chance to train and compete at a high level before the school season begins.
-        </p>
+      <div className="fall-container">
+        {/* Intro Section */}
+        <section className="fall-section fall-intro-section">
+          <div className="fall-intro-text">
+            <h1 className="fall-title">Fall Club Basketball</h1>
+            <p className="fall-paragraph">
+            Our Next Up Elite Teams are designed to give athletes access to high-level coaching, structured growth, and elite competition. Every season is thoughtfully designed to provide athletes with the tools, reps, and exposure they need to reach the next level no matter where they start.
 
-        {/* Teams Offered */}
-        <h2 className="fall-teams-subheading">Teams Offered</h2>
-        <ul className="fall-teams-list">
-          <li>Boys: 15U, 16U, 17U</li>
-          <li>Girls: Two teams (ages 15–17)</li>
-        </ul>
+            </p>
+          </div>
+        </section>
 
-        {/* Tournament Schedule */}
-        <h2 className="fall-teams-subheading">Boys Tournament Schedule</h2>
-        <ul className="fall-teams-list">
-          <li>Edge International Invitational – Calgary, AB (End of September 2025, Dates TBD)</li>
-          <li>Good Hoops Fall Classic – Edmonton, AB (October 2025, Dates TBD)</li>
-          <li>Each tournament includes 3–5 games.</li>
-        </ul>
+        {/* Girls Teams Section */}
+        <section className="fall-section fall-girls-section">
+          <div className="fall-section-image">
+            <img src="/team.jpg" alt="Girls Basketball Team" />
+          </div>
+          <div className="fall-section-text">
+            <h2 className="fall-section-title">Girls Teams</h2>
+            <p className="fall-paragraph">
+              Our girls teams focus on skill development, leadership, and building a supportive team environment. We offer competitive opportunities for various age groups, led by experienced coaches passionate about empowering young athletes.
+            </p>
+            <ul className="fall-section-list">
+              <li>Age groups: 15U, 17U</li>
+              <li>2 practices per week</li>
+              <li>2 tournaments: one local, one out-of-town</li>
+              <li>Team gear and uniforms included</li>
+              <li>Emphasis on personal growth and teamwork</li>
+            </ul>
+            <Link to="/FallTeams/Girls">
+              <button className="fall-section-btn">Explore Girls Teams</button>
+            </Link>
+          </div>
+        </section>
 
-        {/* What’s Included */}
-        <h2 className="fall-teams-subheading">What’s Included (All Teams)</h2>
-        <ul className="fall-teams-list">
-          <li>Tournament or exhibition play depending on team</li>
-          <li>2 practices/training sessions per week (Details TBD)</li>
-          <li>Exhibition games</li>
-          <li>Team gear package</li>
-          <li>Hotel accommodations included for Calgary tournament</li>
-          <li>Hotel block available for parents/guardians</li>
-          <li>Transportation to/from Calgary and between hotel and games is the athlete’s responsibility</li>
-        </ul>
-
-        {/* Separator */}
-        <hr className="fall-teams-hr" />
-
-        {/* Tryouts and Cost */}
-        <p className="fall-teams-tryouts"><strong>Tryouts:</strong> Early August</p>
-        <p className="fall-teams-note">
-          Details and registration links released prior to season start.
-        </p>
-
-        {/* Additional Season Details */}
-        <hr className="fall-teams-hr" />
-        <p className="fall-teams-tryouts"><strong>Cost:</strong> $950 per athlete</p>
-        <p className="fall-teams-note">
-          Full payment is due August 18, 2025. Payment must be made in full unless you’ve contacted us in advance. Missed payment without notice will result in removal from the team without warning.
-        </p>
-
-        {/* Registration & Questions */}
-        <hr className="fall-teams-hr" />
-        <h2 className="fall-teams-subheading">Registration</h2>
-        <p className="fall-teams-note">
-          Athletes who make a team will receive a TeamSnap registration link after evaluations.
-        </p>
-
-        <h2 className="fall-teams-subheading">Questions?</h2>
-        <p className="fall-teams-note">
-          We work to remove financial barriers so all athletes can compete. Email us at{' '}
-          <a href="mailto:admin@nextuphoops.ca" className="fall-link">
-            admin@nextuphoops.ca
-          </a> with any questions.
-        </p>
+        {/* Boys Teams Section */}
+        <section className="fall-section fall-boys-section">
+          <div className="fall-section-text">
+            <h2 className="fall-section-title">Boys Teams</h2>
+            <p className="fall-paragraph">
+              Our boys teams are designed for athletes who want to compete, improve, and grow as leaders on and off the court. We provide a challenging and positive environment for all skill levels.
+            </p>
+            <ul className="fall-section-list">
+              <li>Age groups:15U, 16U, 17U, 18U</li>
+              <li>2 practices per week</li>
+              <li>2 tournaments: one local, one out-of-town</li>
+              <li>Team gear and uniforms included</li>
+              <li>Focus on skill, strategy, and sportsmanship</li>
+            </ul>
+            <Link to="/FallTeams/Boys">
+              <button className="fall-section-btn">Explore Boys Teams</button>
+            </Link>
+          </div>
+          <div className="fall-section-image">
+            <img src="/group.jpg" alt="Boys Basketball Team" />
+          </div>
+        </section>
       </div>
     </motion.div>
   );

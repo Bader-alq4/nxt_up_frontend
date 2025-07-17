@@ -53,6 +53,10 @@ export default function NavBar() {
   //   { label: '15U Girls', to: '/FallTeams/15u-girls' },
   //   { label: '16U Girls', to: '/FallTeams/16u-girls' },
   // ];
+  const fallSubmenu = [
+    { label: "Girls Teams", to: "/FallTeams/Girls" },
+    { label: "Boys Teams", to: "/FallTeams/Boys" },
+  ];
 
   const springSubmenu = [
     { label: 'Tryouts Information', to: '/SpringTeams' },
@@ -87,13 +91,13 @@ export default function NavBar() {
           return (
             <li key={idx} className={`nav-item dropdown${isMobile ? ' mobile-dropdown' : ''}`}>
               <Link to={link.to} className="nav-link" onClick={() => setMobileMenuOpen(false)}>{link.label}</Link>
-              {/* <ul className="dropdown-menu">
+              <ul className="dropdown-menu">
                 {fallSubmenu.map((item, i) => (
                   <li key={i}>
                     <Link to={item.to} onClick={() => setMobileMenuOpen(false)}>{item.label}</Link>
                   </li>
                 ))}
-              </ul> */}
+              </ul>
             </li>
           );
         }

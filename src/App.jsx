@@ -31,6 +31,7 @@ import EmailVerificationNotice from './pages/EmailVerificationNotice';
 import EmailVerificationSuccess from './pages/EmailVerificationSuccess';
 import PaymentSuccess from './pages/PaymentSuccess';
 import PaymentCancelled from './pages/PaymentCancelled';
+import TryoutInformation from './pages/TryoutInformation';
 
 // Legal stuff
 import Privacy from './pages/Privacy';
@@ -40,6 +41,8 @@ import Terms from './pages/Terms';
 import ProtectedRoute from './components/ProtectedRoute';
 
 // Fall Team Subpages
+import FallTeamsGirls from './pages/FallTeams/Girls';
+import FallTeamsBoys from './pages/FallTeams/Boys';
 // import Fall13UBoys from './pages/FallTeams/13u-boys';
 // import Fall15UBoys from './pages/FallTeams/15u-boys';
 // import Fall16UBoys from './pages/FallTeams/16u-boys';
@@ -101,6 +104,8 @@ function AppWrapper() {
           <Route path="/WinterProgramming" element={<WinterProgramming />} />
           <Route path="/Tournaments" element={<Tournaments />} />
           <Route path="/TryoutsClosed" element={<TryoutsClosed />} />
+          <Route path="/FallTeams/Girls" element={<FallTeamsGirls />} />
+          <Route path="/FallTeams/Boys" element={<FallTeamsBoys />} />
 
           {/* Fall Team Subpages */}
           {/* <Route path="/FallTeams/13u-boys" element={<Fall13UBoys />} />
@@ -153,6 +158,10 @@ function AppWrapper() {
                 <TryoutRegister />
               </ProtectedRoute>
             }
+          />
+          <Route
+            path="/tryout-information"
+            element={<TryoutInformation />}
           />
           <Route
             path="/admin"
