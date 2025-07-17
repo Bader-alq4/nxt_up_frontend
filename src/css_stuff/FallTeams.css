@@ -1,3 +1,5 @@
+/* Listing / Overview (“Fall Teams” page) */
+
 .fall-page {
   background: #000;
   color: #fff;
@@ -54,7 +56,7 @@
   width: 80%;
   max-width: 400px;
   height: auto;
-  border-radius: 0px;
+  border-radius: 0;
   box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
   margin: 0 auto;
   display: block;
@@ -94,7 +96,6 @@
   background: #36a4d6;
   color: #fff;
   border: none;
-  border-radius: 0;
   padding: 0.8rem 1.8rem;
   font-size: 1rem;
   font-weight: 300;
@@ -106,72 +107,37 @@
   transform: translateY(-2px) scale(1.04);
 }
 
-.fall-teams-detail {
-  background: #181b1f;
-  border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(54,164,214,0.10);
-  padding: 3.5rem 2.5rem 2.5rem 2.5rem;
-  max-width: 600px;
-  margin: 4rem auto 3rem auto;
-  color: #fff;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+/* Responsive tweaks for listing page */
+@media (max-width: 900px) {
+  .fall-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  .fall-section-image,
+  .fall-section-text {
+    width: 100%;
+    min-width: unset;
+  }
+  .fall-section-image img {
+    width: 100%;
+    max-width: 350px;
+  }
 }
-.fall-teams-detail-title {
-  color: #36a4d6;
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  letter-spacing: 0.01em;
+
+@media (max-width: 600px) {
+  .fall-page {
+    padding: 2rem 0.5rem;
+  }
+  .fall-title {
+    font-size: 1.5rem;
+  }
+  .fall-section-title {
+    font-size: 1.2rem;
+  }
 }
-.fall-teams-detail-desc {
-  color: #ccc;
-  font-size: 1.18rem;
-  margin-bottom: 2rem;
-  line-height: 1.7;
-}
-.fall-teams-detail-list {
-  margin-bottom: 2.5rem;
-  padding-left: 1.5rem;
-  list-style: none;
-  width: 100%;
-}
-.fall-teams-detail-list li {
-  color: #b3e0ff;
-  font-size: 1.13rem;
-  margin-bottom: 1.1rem;
-  font-weight: 500;
-  position: relative;
-  padding-left: 1.5rem;
-}
-.fall-teams-detail-list li::before {
-  content: '•';
-  position: absolute;
-  left: 0;
-  color: #36a4d6;
-  font-size: 1.2em;
-}
-.fall-teams-detail-btn {
-  background: #36a4d6;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 1rem 2.2rem;
-  font-size: 1.15rem;
-  font-weight: 700;
-  cursor: pointer;
-  box-shadow: 0 2px 12px rgba(54,164,214,0.10);
-  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-  margin-top: 0.5rem;
-  align-self: flex-start;
-}
-.fall-teams-detail-btn:hover {
-  background: #2580a7;
-  transform: translateY(-2px) scale(1.04);
-  box-shadow: 0 6px 24px rgba(54,164,214,0.18);
-}
+
+/* Detail Page Styles for Fall Teams (Boys & Girls) */
 
 .fall-detail-page {
   background: #000;
@@ -204,7 +170,7 @@
 
 .fall-detail-title {
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 500;
   color: #000;
   margin-bottom: 1.5rem;
   line-height: 1.2;
@@ -215,13 +181,6 @@
   color: #333;
   margin-bottom: 1rem;
   line-height: 1.5;
-}
-
-.fall-detail-desc {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 2rem;
-  line-height: 1.6;
 }
 
 .fall-detail-section {
@@ -235,13 +194,15 @@
   margin-bottom: 0.5rem;
 }
 
+/* Paragraphs inside sections */
 .fall-detail-section p {
   font-size: 1rem;
-  color: #333;
+  color: #000;
   margin-bottom: 0.5rem;
   line-height: 1.5;
 }
 
+/* “What’s Included” lists */
 .fall-detail-list {
   list-style: none;
   padding-left: 0;
@@ -265,6 +226,7 @@
   font-weight: bold;
 }
 
+/* Buttons */
 .fall-detail-btn {
   background: #36a4d6;
   color: #fff;
@@ -278,7 +240,7 @@
   margin-top: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 .fall-detail-btn:hover {
@@ -286,6 +248,29 @@
   transform: translateY(-2px);
 }
 
+.fall-detail-register-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  padding: 1rem 2.2rem;
+  font-size: 1rem;
+  font-weight: 300;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  margin-top: 1em;
+  width: 50%;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.fall-detail-register-btn:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+/* Image column */
 .fall-detail-image {
   flex: 1;
   background: #f5f5f5;
@@ -302,97 +287,33 @@
   display: block;
 }
 
-.fall-detail-register-btn {
-  background: black;
-  color: #fff;
-  border: none;
-  border-radius: 0;
-  padding: 1rem 2.2rem;
-  font-size: 1rem;
-  font-weight: 300;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
-  margin-top:1em;
-  width: 50%;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-}
-
-.fall-detail-register-btn:hover {
-  background: #333;
-  transform: translateY(-2px);
-}
-
+/* Responsive tweaks */
 @media (max-width: 900px) {
-  .fall-section {
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
-  }
-  .fall-section-image,
-  .fall-section-text {
-    width: 100%;
-    min-width: unset;
-  }
-  .fall-section-image img {
-    width: 100%;
-    max-width: 350px;
-  }
   .fall-detail-content {
     flex-direction: column;
   }
-  
   .fall-detail-text {
     padding: 2rem 1.5rem;
   }
-  
   .fall-detail-image {
     min-height: 300px;
   }
-  
   .fall-detail-title {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 600px) {
-  .fall-page {
-    padding: 2rem 0.5rem;
-  }
-  .fall-title {
-    font-size: 1.5rem;
-  }
-  .fall-section-title {
-    font-size: 1.2rem;
-  }
   .fall-detail-page {
     padding: 2rem 0.5rem;
   }
-  
   .fall-detail-text {
     padding: 1.5rem 1rem;
   }
-  
   .fall-detail-title {
     font-size: 1.5rem;
   }
-  
   .fall-detail-heading {
     font-size: 1.1rem;
-  }
-}
-@media (max-width: 700px) {
-  .fall-teams-detail {
-    padding: 2rem 1rem;
-    max-width: 98vw;
-  }
-  .fall-teams-detail-title {
-    font-size: 1.3rem;
-  }
-  .fall-teams-detail-btn {
-    width: 100%;
-    text-align: center;
-    align-self: stretch;
   }
 }

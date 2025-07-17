@@ -20,10 +20,6 @@ export default function FallTeamsBoys() {
         <div className="fall-detail-content">
           <div className="fall-detail-text">
             <h1 className="fall-detail-title">Fall Boys Teams</h1>
-            <p className="fall-detail-desc">
-              Our Fall Boys Teams program offers high-level training, quality tournaments, and a positive environment for athletes looking to develop their skills and compete at a higher level.
-            </p>
-            
             <div className="fall-detail-section">
               <h3 className="fall-detail-heading">Eligibility</h3>
               <p>Age groups: 15U, 16U, 17U, 18U</p>
