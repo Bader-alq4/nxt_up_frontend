@@ -4,27 +4,34 @@ import '../css_stuff/Events.css';
 const events = [
   {
     id: 1,
-    title: '18U Boys Tryouts',
-    datetime: 'November 5, 2025 • 10:00 AM – 12:00 PM',
-    location: 'Main Gym',
+    title: '15U/16U Boys Tryouts',
+    datetimes: [
+      'August 9, 2025 • 1:00 PM – 2:30 PM @ Saville, Court 3',
+      'August 16, 2025 • 1:00 PM – 2:30 PM @ Location TBD'
+    ],
   },
   {
     id: 2,
-    title: '15U Girls Skills Clinic',
-    datetime: 'November 12, 2025 • 2:00 PM – 4:00 PM',
-    location: 'East Court',
+    title: '17/18U Boys Tryouts',
+    datetimes: [
+      'August 9, 2025 • 2:30 PM – 4:00 PM @ Saville, Court 3', 
+      'August 16, 2025 • 2:30 PM – 4:00 PM @ Location TBD'
+    ],
   },
   {
     id: 3,
-    title: 'All-Star Showcase Game',
-    datetime: 'December 3, 2025 • 6:00 PM',
-    location: 'City Arena',
+    title: '15U/17U Girls Open Gym',
+    datetimes: [
+      'August 5, 2025 • 7:00 PM – 9:00 PM @ Central Lions Rec Centre'
+    ],
   },
   {
     id: 4,
-    title: 'Other Stuff potentially',
-    datetime: 'December 9, 2023 • 3:00 PM',
-    location: 'City Arena',
+    title: '15U/17U Girls Tryouts',
+    datetimes: [
+      'August 13, 2025 • 4:00 PM – 6:00 PM @ Commonwealth Rec Centre', 
+      'August 19, 2025 • 6:00 PM – 8:00 PM @ Central Lions Rec Centre'
+    ],
   },
 ];
 
@@ -38,7 +45,11 @@ export default function EventCardSection() {
           {events.map((event) => (
             <div className="event-card" key={event.id}>
               <h4 className="event-title">{event.title}</h4>
-              <p className="event-datetime">{event.datetime}</p>
+
+              {event.datetimes?.map((time, index) => (
+                <p className="event-datetime" key={index}>{time}</p>
+              ))}
+
               <p className="event-location">{event.location}</p>
             </div>
           ))}

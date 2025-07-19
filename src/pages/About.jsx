@@ -55,7 +55,7 @@ export default function About() {
         {/* Section 2 */}
         <section className="about-nextup-section" id="mission">
           <div className="about-nextup-image">
-            <img src="/group.jpg" alt="Team huddle" />
+            <img src="/team.jpg" alt="Team huddle" />
           </div>
           <div className="about-nextup-text">
             <h2 className="about-nextup-subtitle">Our Mission & Values</h2>

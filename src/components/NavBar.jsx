@@ -66,7 +66,7 @@ export default function NavBar() {
     { label: '17U Boys', to: '/SpringTeams/17u-boys' },
     { label: '18U Boys', to: '/SpringTeams/18u-boys' },
     { label: '15U Girls', to: '/SpringTeams/15u-girls' },
-    { label: '16U Girls', to: '/SpringTeams/16u-girls' },
+    { label: '17U Girls', to: '/SpringTeams/17u-girls' },
   ];
 
   // Helper to render nav links (for both desktop and mobile)

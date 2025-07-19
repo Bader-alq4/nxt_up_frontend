@@ -49,7 +49,7 @@ import FallTeamsBoys from './pages/FallTeams/Boys';
 // import Fall17UBoys from './pages/FallTeams/17u-boys';
 // import Fall18UBoys from './pages/FallTeams/18u-boys';
 // import Fall15UGirls from './pages/FallTeams/15u-girls';
-// import Fall16UGirls from './pages/FallTeams/17u-girls';
+// import Fall17UGirls from './pages/FallTeams/17u-girls';
 
 // Spring Team Subpages
 import Spring13UBoys from './pages/SpringTeams/13u-boys';
@@ -58,7 +58,7 @@ import Spring16UBoys from './pages/SpringTeams/16u-boys';
 import Spring17UBoys from './pages/SpringTeams/17u-boys';
 import Spring18UBoys from './pages/SpringTeams/18u-boys';
 import Spring15UGirls from './pages/SpringTeams/15u-girls';
-import Spring16UGirls from './pages/SpringTeams/17u-girls';
+import Spring17UGirls from './pages/SpringTeams/17u-girls';
 
 function EmailVerificationNoticeWrapper() {
   const location = useLocation();
@@ -123,7 +123,7 @@ function AppWrapper() {
           <Route path="/SpringTeams/17u-boys" element={<Spring17UBoys />} />
           <Route path="/SpringTeams/18u-boys" element={<Spring18UBoys />} />
           <Route path="/SpringTeams/15u-girls" element={<Spring15UGirls />} />
-          <Route path="/SpringTeams/16u-girls" element={<Spring16UGirls />} />
+          <Route path="/SpringTeams/17u-girls" element={<Spring17UGirls />} />
 
           {/* Auth */}
           <Route path="/login" element={<Login />} />

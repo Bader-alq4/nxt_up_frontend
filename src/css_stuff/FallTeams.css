@@ -22,6 +22,45 @@
   flex-wrap: wrap;
 }
 
+.fall-girls-section .fall-section-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
+.fall-girls-section .fall-section-image img {
+  width: 100%;
+  max-width: 700px;
+  height: 400px; /* Increased vertical size */
+  object-fit: cover; /* Keeps image visually balanced */
+  border-radius: 0px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.fall-section-boys-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  min-height: 350px;       /* Increase vertical size */
+  background: #000;        /* Optional: match background */
+}
+
+.fall-section-boys-image img {
+  height: 100%;            /* Stretch vertically */
+  width: auto;             /* Maintain aspect ratio */
+  max-height: 350px;       /* Limit extreme vertical size */
+  object-fit: cover;       /* Crop to fill */
+  display: block;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+}
+
+
+
 .fall-intro-section {
   justify-content: center;
   margin-bottom: 4rem;
@@ -35,7 +74,7 @@
 
 .fall-title {
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 200;
   margin-bottom: 1.2rem;
 }
 
@@ -95,6 +134,7 @@
 .fall-section-btn {
   background: #36a4d6;
   color: #fff;
+  border-radius: 0px;
   border: none;
   padding: 0.8rem 1.8rem;
   font-size: 1rem;
@@ -169,8 +209,8 @@
 }
 
 .fall-detail-title {
-  font-size: 2.5rem;
-  font-weight: 500;
+  font-size: 3rem;
+  font-weight: 200;
   color: #000;
   margin-bottom: 1.5rem;
   line-height: 1.2;
@@ -273,7 +313,7 @@
 /* Image column */
 .fall-detail-image {
   flex: 1;
-  background: #f5f5f5;
+  background: white;
   display: flex;
   align-items: center;
   justify-content: center;

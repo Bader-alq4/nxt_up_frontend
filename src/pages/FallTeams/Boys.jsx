@@ -45,10 +45,8 @@ export default function FallTeamsBoys() {
             <div className="fall-detail-section">
               <h3 className="fall-detail-heading">What's Included</h3>
               <ul className="fall-detail-list">
-              <li>All tournament and league fees</li>
                 <li>Exhibition games against elite clubs and prep schools.</li>
                 <li>Full uniform and training gear package</li>
-                <li>Team culture and leadership sessions</li>
                 <li>Hotel accommodations included for Calgary tournament</li>
                 <li>Media coverage and in-season highlights</li>
                 <li>Parent/guradian hotel blocks provided for out-of-town events</li>
@@ -72,7 +70,7 @@ export default function FallTeamsBoys() {
           </div>
           
           <div className="fall-detail-image">
-            <img src="/group.jpg" alt="Boys Basketball Team" />
+            <img src="/fall_boys_detail.jpg" alt="Boys Basketball Team" />
           </div>
         </div>
       </div>

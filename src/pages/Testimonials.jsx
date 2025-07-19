@@ -7,6 +7,7 @@ export default function Testimonials() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <motion.div
       className="testimonials-page"
@@ -21,7 +22,7 @@ export default function Testimonials() {
           We're collecting feedback from our athletes, families, and community members who've experienced the Next Up difference.
         </p>
 
-        <div className="testimonials-list">
+        {/* <div className="testimonials-list">
           <div className="testimonial-card">
             <p className="testimonial-text">"Next Up Hoops gave my son the confidence and skills to excel both on and off the court. The coaches truly care!"</p>
             <div className="testimonial-author">— Parent</div>
@@ -36,10 +37,13 @@ export default function Testimonials() {
             <p className="testimonial-text">"Proud to support a club that puts community and character first. Highly recommended for sponsors!"</p>
             <div className="testimonial-author">— Sponsor</div>
           </div>
-        </div>
+        </div> */}
 
         <div className="testimonials-footer">Testimonial section coming soon.</div>
       </div>
+
+      {/* Extra space to make the page feel longer */}
+      <div className="testimonials-spacer"></div>
     </motion.div>
   );
 }

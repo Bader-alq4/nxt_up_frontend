@@ -31,7 +31,7 @@ export default function FallTeams() {
         {/* Girls Teams Section */}
         <section className="fall-section fall-girls-section">
           <div className="fall-section-image">
-            <img src="/team.jpg" alt="Girls Basketball Team" />
+            <img src="/fall_teams_girls.jpg" alt="Girls Basketball Team" />
           </div>
           <div className="fall-section-text">
             <h2 className="fall-section-title">Girls Teams</h2>
@@ -41,7 +41,7 @@ export default function FallTeams() {
             <ul className="fall-section-list">
               <li>Age groups: 15U, 17U</li>
               <li>2 practices per week</li>
-              <li>2 tournaments: one local, one out-of-town</li>
+              <li>2 tournaments</li>
               <li>Team gear and uniforms included</li>
               <li>Emphasis on personal growth and teamwork</li>
             </ul>
@@ -59,9 +59,9 @@ export default function FallTeams() {
               Our boys teams are designed for athletes who want to compete, improve, and grow as leaders on and off the court. We provide a challenging and positive environment for all skill levels.
             </p>
             <ul className="fall-section-list">
-              <li>Age groups:15U, 16U, 17U, 18U</li>
+              <li>Age groups: 15U, 16U, 17U, 18U</li>
               <li>2 practices per week</li>
-              <li>2 tournaments: one local, one out-of-town</li>
+              <li>2 tournaments</li>
               <li>Team gear and uniforms included</li>
               <li>Focus on skill, strategy, and sportsmanship</li>
             </ul>
@@ -69,8 +69,8 @@ export default function FallTeams() {
               <button className="fall-section-btn">Explore Boys Teams</button>
             </Link>
           </div>
-          <div className="fall-section-image">
-            <img src="/group.jpg" alt="Boys Basketball Team" />
+          <div className="fall-section-boys-image">
+            <img src="/fall_teams_boys.jpg" alt="Boys Basketball Team" />
           </div>
         </section>
       </div>

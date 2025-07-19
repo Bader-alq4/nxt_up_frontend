@@ -1,18 +1,26 @@
 import { motion } from 'framer-motion';
+import '../../css_stuff/SpringTeams.css'; // Path assumes this is inside SpringTeams folder
 
 function SixteenBoysSpring() {
-    return (
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -20 }}
-        transition={{ duration: 0.4 }}
-      >
-        <h1>info 16</h1>
-        <p>16 boys.</p>
-      </motion.div>
-    );
-  }
-  
-  export default SixteenBoysSpring;
-  
+  return (
+    <motion.div
+      className="spring-teams-page"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.4 }}
+    >
+      <div className="spring-teams-container">
+        <h1 className="spring-teams-heading">
+          16U Spring Boys Team <span className="spring-teams-age-range">(Coming Soon)</span>
+        </h1>
+        <p className="spring-teams-subheading">Team information is currently being finalized.</p>
+        <p className="spring-teams-description">
+          We’re putting the finishing touches on coaching staff, tournaments, and tryout times. Please check back soon!
+        </p>
+      </div>
+    </motion.div>
+  );
+}
+
+export default SixteenBoysSpring;
