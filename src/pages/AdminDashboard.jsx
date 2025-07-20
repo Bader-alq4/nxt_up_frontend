@@ -12,6 +12,9 @@ function AdminDashboard() {
   const [filterGroup, setFilterGroup] = useState('All');
   const [filterResult, setFilterResult] = useState('All');
   const [selectedPlayer, setSelectedPlayer] = useState(null);
+  const [newSeasonName, setNewSeasonName] = useState('');
+  const [isCreatingSeason, setIsCreatingSeason] = useState(false);
+
 
   useEffect(() => {
     const fetchSeasons = async () => {
@@ -126,6 +129,27 @@ function AdminDashboard() {
     setActiveTab('players');
   };
 
+  const handleCreateSeason = async () => {
+      if (!newSeasonName.trim()) {
+        showNotification('error', 'Please enter a season name.');
+        return;
+      }
+      setIsCreatingSeason(true);
+      try {
+        const res = await api.post('/admin/seasons', { name: newSeasonName });
+        // insert at the front, select it
+        setSeasons(prev => [res.data, ...prev]);
+        setSelectedSeason(res.data.id);
+        showNotification('success', `Season "${res.data.name}" created and activated.`);
+        setNewSeasonName('');
+      } catch (err) {
+        showNotification('error', 'Failed to create season', err.response?.data);
+      } finally {
+        setIsCreatingSeason(false);
+      }
+    };
+    
+
   return (
     <div className="admin-dashboard">
       <div className="admin-header">
@@ -177,19 +201,39 @@ function AdminDashboard() {
         </div>
       )}
 
-      {activeTab === 'tryouts' && (
-        <div className="tryouts-section">
-          <div className="controls-section">
-            <div className="season-selector">
-              <label htmlFor="season-select">Season:</label>
+{activeTab === 'tryouts' && (
+  <div className="tryouts-section">
+    <div className="controls-section">
+
+      {/* ── Create New Season Form ── */}
+      <div className="create-season-form" style={{ marginBottom: 16 }}>
+        <input
+          type="text"
+          placeholder="New season name (e.g. Winter 2026)"
+          value={newSeasonName}
+          onChange={e => setNewSeasonName(e.target.value)}
+          disabled={isCreatingSeason}
+          style={{ marginRight: 8 }}
+        />
+        <button
+          onClick={handleCreateSeason}
+          disabled={isCreatingSeason}
+        >
+          {isCreatingSeason ? 'Creating…' : 'Create Season'}
+        </button>
+      </div>
+
+      {/* ── Existing Season Selector ── */}
+      <div className="season-selector">
+        <label htmlFor="season-select">Season:</label>
         <select
           id="season-select"
           value={selectedSeason}
-          onChange={(e) => setSelectedSeason(e.target.value)}
+          onChange={e => setSelectedSeason(e.target.value)}
         >
-                <option value="">Select Season</option>
-          {seasons.map((s) => (
-                  <option key={s.id} value={s.id}>{s.name}</option>
+          <option value="">Select Season</option>
+          {seasons.map(s => (
+            <option key={s.id} value={s.id}>{s.name}</option>
           ))}
         </select>
       </div>
