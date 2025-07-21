@@ -19,18 +19,18 @@ import Testimonials from './pages/Testimonials';
 import Contact from './pages/Contact';
 
 // Auth Pages
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Dashboard from './pages/Dashboard';
-import TryoutRegister from './pages/TryoutRegister';
-import AdminDashboard from './pages/AdminDashboard';
-import ForgotPassword from './pages/ForgotPassword';
-import ResetPassword from './pages/ResetPassword';
-import CheckEmail from './pages/CheckEmail';
-import EmailVerificationNotice from './pages/EmailVerificationNotice';
-import EmailVerificationSuccess from './pages/EmailVerificationSuccess';
-import PaymentSuccess from './pages/PaymentSuccess';
-import PaymentCancelled from './pages/PaymentCancelled';
+// import Login from './pages/Login';
+// import Register from './pages/Register';
+// import Dashboard from './pages/Dashboard';
+// import TryoutRegister from './pages/TryoutRegister';
+// import AdminDashboard from './pages/AdminDashboard';
+// import ForgotPassword from './pages/ForgotPassword';
+// import ResetPassword from './pages/ResetPassword';
+// import CheckEmail from './pages/CheckEmail';
+// import EmailVerificationNotice from './pages/EmailVerificationNotice';
+// import EmailVerificationSuccess from './pages/EmailVerificationSuccess';
+// import PaymentSuccess from './pages/PaymentSuccess';
+// import PaymentCancelled from './pages/PaymentCancelled';
 import TryoutInformation from './pages/TryoutInformation';
 
 // Legal stuff
@@ -126,51 +126,51 @@ function AppWrapper() {
           <Route path="/SpringTeams/17u-girls" element={<Spring17UGirls />} />
 
           {/* Auth */}
-          <Route path="/login" element={<Login />} />
+          {/* <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/reset-password/:token" element={<ResetPassword />} />
           <Route path="/check-email" element={<CheckEmail />} />
           <Route path="/verify-notice" element={<EmailVerificationNoticeWrapper />} />
-          <Route path="/email-confirmed" element={<EmailVerificationSuccess />} />
+          <Route path="/email-confirmed" element={<EmailVerificationSuccess />} /> */}
 
           {/* Legal */}
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
 
           {/* Payment */}
-          <Route path="/payment/success" element={<PaymentSuccess />} />
-          <Route path="/payment/cancelled" element={<PaymentCancelled />} />
+          {/* <Route path="/payment/success" element={<PaymentSuccess />} />
+          <Route path="/payment/cancelled" element={<PaymentCancelled />} /> */}
 
           {/* Protected Routes */}
-          <Route
+          {/* <Route
             path="/dashboard"
             element={
               <ProtectedRoute>
                 <Dashboard />
               </ProtectedRoute>
             }
-          />
-          <Route
+          /> */}
+          {/* <Route
             path="/tryout"
             element={
               <ProtectedRoute>
                 <TryoutRegister />
               </ProtectedRoute>
             }
-          />
+          /> */}
           <Route
             path="/tryout-information"
             element={<TryoutInformation />}
           />
-          <Route
+          {/* <Route
             path="/admin"
             element={
               <ProtectedRoute requiredRole="admin">
                 <AdminDashboard />
               </ProtectedRoute>
             }
-          />
+          /> */}
         </Routes>
       </AnimatePresence>
 

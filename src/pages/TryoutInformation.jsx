@@ -32,20 +32,20 @@ export default function TryoutInformation() {
 
             <h4 className="tryout-info-date-subheading">Boys 15U/16U</h4>
             <ul className="tryout-info-list">
-              <li>Saturday, August 2nd, 2025 – 1:00PM to 2:30PM @ Saville, Court 1</li>
-              <li>Saturday, August 9th, 2025 – 1:00PM to 2:30PM @ Saville, Court 1</li>
+              <li>Saturday, August 9th, 2025 – 1:00PM to 2:30PM @ Saville, Court 3</li>
+              <li>Saturday, August 16th, 2025 – 1:00PM to 2:30PM @ Location TBD</li>
             </ul>
 
             <h4 className="tryout-info-date-subheading">Boys 17U/18U</h4>
             <ul className="tryout-info-list">
-              <li>Saturday, August 2nd, 2025 – 2:30PM to 4:00PM @ Saville, Court 3</li>
               <li>Saturday, August 9th, 2025 – 2:30PM to 4:00PM @ Saville, Court 3</li>
+              <li>Saturday, August 16th, 2025 – 2:30PM to 4:00PM @ Location TBD</li>
             </ul>
 
             <h4 className="tryout-info-date-subheading">Girls 15U/17U</h4>
             <ul className="tryout-info-list">
             <li>Wednesday, August 13th, 2025 – 4:00PM to 6:00PM @ Commonwealth Rec Centre</li>
-              <li>Tuesday, August 19th, 2025 – 6:00PM to 8:00PM @ Central Lions Rec Centre</li>
+            <li>***Tuesday, August 19th, 2025 – 6:00PM to 8:00PM @ Central Lions Rec Centre (If necessary)</li>
             </ul>
           </div>
 
@@ -73,17 +73,17 @@ export default function TryoutInformation() {
           <div className="tryout-info-section">
             <h3 className="tryout-section-heading">Age Group Clarification</h3>
             <ul className="tryout-info-list">
-              <li>13 – Born in 2012</li>
-              <li>15 – Born in 2010</li>
-              <li>16 – Born in 2009</li>
-              <li>17 – Born in 2008</li>
-              <li>18 – Born in 2007</li>
+              <li>13U – Born in 2012</li>
+              <li>15U – Born in 2010</li>
+              <li>16U – Born in 2009</li>
+              <li>17U – Born in 2008</li>
+              <li>18U – Born in 2007</li>
             </ul>
           </div>
 
           {/* Registration Button */}
           <div className="tryout-info-section">
-            <Link to="/register">
+            <Link to="https://registration.teamsnap.com/form/32154">
               <button className="tryout-info-register-btn">Register for Tryouts</button>
             </Link>
           </div>

@@ -30,16 +30,13 @@ export default function Contact() {
             <strong>Instagram:</strong> <a href="https://instagram.com/nextupelite" target="_blank" rel="noopener noreferrer" className="sponsorship-link">@nextuphoops</a>
           </div>
           <div style={{marginBottom: '1.5rem'}}>
-            <strong>Facebook:</strong> <a href="https://www.facebook.com/nextupelite" target="_blank" rel="noopener noreferrer" className="sponsorship-link">https://www.facebook.com/nextupelite</a>
+            <strong>Facebook:</strong> <a href="https://www.facebook.com/share/1AJEZHD6Ju/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="sponsorship-link">https://www.facebook.com/nextuphoops</a>
           </div>
           <div style={{marginBottom: '1.5rem'}}>
-            <strong>TikTok:</strong> <a href="https://www.tiktok.com/@nextupelite" target="_blank" rel="noopener noreferrer" className="sponsorship-link">https://www.tiktok.com/@nextupelite</a>
+            <strong>TikTok:</strong> <a href="https://www.tiktok.com/@nextupcanada" target="_blank" rel="noopener noreferrer" className="sponsorship-link">https://www.tiktok.com/@nextupcanada</a>
           </div>
           <div style={{marginBottom: '1.5rem'}}>
-            <strong>YouTube:</strong> <a href="https://www.youtube.com/@nextupelite" target="_blank" rel="noopener noreferrer" className="sponsorship-link">https://www.youtube.com/@nextupelite</a>
-          </div>
-          <div style={{marginBottom: '1.5rem'}}>
-            <strong>Linktree:</strong> <a href="https://linktr.ee/nextupelite" target="_blank" rel="noopener noreferrer" className="sponsorship-link">https://linktr.ee/nextupelite</a>
+            <strong>Linktree:</strong> <a href="https://linktr.ee/nextuphoops?fbclid=PAZXh0bgNhZW0CMTEAAafgeH4wG0BENyhGNJ8DVd7gzG3PMZ2LuMn3y3vgYJiUy5Sz0xWIqw3PuEYJvw_aem_kOvaqRM0alKoirU0Pq5vjA" target="_blank" rel="noopener noreferrer" className="sponsorship-link">https://linktr.ee/nextupelite</a>
           </div>
           <div style={{marginBottom: '1.5rem'}}>
             <strong>Location:</strong> Edmonton, Alberta

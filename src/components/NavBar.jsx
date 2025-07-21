@@ -28,13 +28,13 @@ export default function NavBar() {
     { label: 'Tournaments', to: '/Tournaments' },
   ];
 
-  if (!user) {
-    navLinks.push({ label: 'Login', to: '/login' });
-  } else if (!user.is_admin) {
-    navLinks.push({ label: 'Dashboard', to: '/dashboard' });
-  } else {
-    navLinks.push({ label: 'Admin', to: '/admin' });
-  }
+  // if (!user) {
+  //   navLinks.push({ label: 'Login', to: '/login' });
+  // } else if (!user.is_admin) {
+  //   navLinks.push({ label: 'Dashboard', to: '/dashboard' });
+  // } else {
+  //   navLinks.push({ label: 'Admin', to: '/admin' });
+  // }
 
   const aboutSubmenu = [
     { label: 'Our Mission', to: '/about#mission' },
