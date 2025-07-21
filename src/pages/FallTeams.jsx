@@ -50,9 +50,9 @@ export default function FallTeams() {
           </div>
         </section>
 
-        {/* Boys Teams Section - REORDERED */}
-        <section className="fall-section-image">
-          <div className="fall-section-boys-image">
+        {/* Boys Teams Section — copied structure from Girls Section */}
+        <section className="fall-section fall-boys-section">
+          <div className="fall-section-image">
             <img src="/fall_teams_boys.jpg" alt="Boys Basketball Team" />
           </div>
           <div className="fall-section-text">
@@ -72,6 +72,7 @@ export default function FallTeams() {
             </Link>
           </div>
         </section>
+
       </div>
     </motion.div>
   );
