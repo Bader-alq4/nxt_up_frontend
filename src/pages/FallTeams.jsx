@@ -22,8 +22,7 @@ export default function FallTeams() {
           <div className="fall-intro-text">
             <h1 className="fall-title">Fall Club Basketball</h1>
             <p className="fall-paragraph">
-            Our Next Up Elite Teams are designed to give athletes access to high-level coaching, structured growth, and elite competition. Every season is thoughtfully designed to provide athletes with the tools, reps, and exposure they need to reach the next level no matter where they start.
-
+              Our Next Up Elite Teams are designed to give athletes access to high-level coaching, structured growth, and elite competition. Every season is thoughtfully designed to provide athletes with the tools, reps, and exposure they need to reach the next level no matter where they start.
             </p>
           </div>
         </section>
@@ -51,8 +50,11 @@ export default function FallTeams() {
           </div>
         </section>
 
-        {/* Boys Teams Section */}
-        <section className="fall-section fall-boys-section">
+        {/* Boys Teams Section - REORDERED */}
+        <section className="fall-section-image">
+          <div className="fall-section-boys-image">
+            <img src="/fall_teams_boys.jpg" alt="Boys Basketball Team" />
+          </div>
           <div className="fall-section-text">
             <h2 className="fall-section-title">Boys Teams</h2>
             <p className="fall-paragraph">
@@ -68,9 +70,6 @@ export default function FallTeams() {
             <Link to="/FallTeams/Boys">
               <button className="fall-section-btn">Explore Boys Teams</button>
             </Link>
-          </div>
-          <div className="fall-section-boys-image">
-            <img src="/fall_teams_boys.jpg" alt="Boys Basketball Team" />
           </div>
         </section>
       </div>
