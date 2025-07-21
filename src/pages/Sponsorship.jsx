@@ -43,7 +43,7 @@ export default function Sponsorship() {
         </ul>
 
         <p className="sponsorship-contact">
-          To become a sponsor or partner, contact us at{' '}
+          To become a sponsor, contact us at{' '}
           <a href="mailto:yassir@nextup.ca" className="sponsorship-link">
             yassir@nextup.ca
           </a>.
