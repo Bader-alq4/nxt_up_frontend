@@ -87,10 +87,16 @@
     cursor: pointer;
     transition: background 0.2s, transform 0.2s;
     margin-top: 4em;
-    width: 50%;
+    width: 100%;               /* ✅ FULL WIDTH */
+    max-width: 300px;          /* ✅ Optional limit */
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    display: block;            /* ✅ Ensures margin works */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
+  
   
   .tryout-info-register-btn:hover {
     background: #333;
