@@ -5,19 +5,6 @@ import '../css_stuff/Sponsorship.css';
 export default function Sponsorship() {
   useEffect(() => {
     window.scrollTo(0, 0);
-
-    // Email obfuscation logic
-    const user = 'yassir';
-    const domain = 'nextup.ca';
-    const email = `${user}@${domain}`;
-    const emailLink = document.createElement('a');
-    emailLink.href = `mailto:${email}`;
-    emailLink.textContent = email;
-
-    const container = document.getElementById('email-link');
-    if (container && container.childNodes.length === 0) {
-      container.appendChild(emailLink);
-    }
   }, []);
 
   return (
@@ -55,8 +42,11 @@ export default function Sponsorship() {
           <li className="sponsorship-list-item">Measurable community impact through athlete stories and stats</li>
         </ul>
 
-        <p className="contact-section">
-          To become a partner, contact us at <span id="email-link"></span>.
+        <p className="sponsorship-contact">
+          To become a sponsor or partner, contact us at{' '}
+          <a href="mailto:yassir@nextup.ca" className="sponsorship-link">
+            yassir@nextup.ca
+          </a>.
         </p>
       </div>
     </motion.div>
