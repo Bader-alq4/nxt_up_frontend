@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import '../css_stuff/Sponsorship.css'; // You’ll need to update the class names here too
+import '../css_stuff/Sponsorship.css'; 
 
 export default function SupportPartners() {
   useEffect(() => {
