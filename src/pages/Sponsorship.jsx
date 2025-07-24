@@ -1,50 +1,46 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import '../css_stuff/Sponsorship.css';
+import '../css_stuff/Sponsorship.css'; // You’ll need to update the class names here too
 
-export default function Sponsorship() {
+export default function SupportPartners() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <motion.div
-      className="sponsorship-page"
+      className="partner-page"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.4 }}
     >
-      <div className="sponsorship-container">
-        <h1 className="sponsorship-heading">SPONSORSHIP OPPORTUNITIES</h1>
-        <p className="sponsorship-intro">
-          We are actively looking for impact-focused sponsors and partners to help us grow the next generation of leaders and athletes.
+      <div className="partner-container">
+        <h1 className="partner-heading">PARTNER WITH NEXT UP</h1>
+        <p className="partner-intro">
+          We’re looking for mission-driven sponsors to help us empower the next generation of leaders and athletes.
         </p>
 
-        <h2 className="sponsorship-subheading">
-          At Next Up Hoops, your sponsorship directly supports:
-        </h2>
-        <ul className="sponsorship-list">
-          <li className="sponsorship-list-item">Subsidized club fees for families in need</li>
-          <li className="sponsorship-list-item">Tournament entry fees and travel costs</li>
-          <li className="sponsorship-list-item">Training equipment, gear, uniforms, and shoes</li>
-          <li className="sponsorship-list-item">Expansion into underserved schools and communities</li>
-          <li className="sponsorship-list-item">Player development programs, mentorship, and outreach</li>
+        <h2 className="partner-subheading">Your support directly contributes to:</h2>
+        <ul className="partner-list">
+          <li className="partner-list-item">Lowered program costs for families in need</li>
+          <li className="partner-list-item">Travel and tournament entry support</li>
+          <li className="partner-list-item">Training equipment, gear, uniforms, and shoes</li>
+          <li className="partner-list-item">Access for underserved schools and communities</li>
+          <li className="partner-list-item">Mentorship and long-term player development</li>
         </ul>
 
-        <h2 className="sponsorship-subheading">
-          What sponsors receive:
-        </h2>
-        <ul className="sponsorship-list">
-          <li className="sponsorship-list-item">High-visibility branding on team gear, social media, and tournaments</li>
-          <li className="sponsorship-list-item">Recognition on our website, at events, and through media content</li>
-          <li className="sponsorship-list-item">Custom packages tailored to align with your brand’s mission</li>
-          <li className="sponsorship-list-item">Measurable community impact through athlete stories and stats</li>
+        <h2 className="partner-subheading">In return, you’ll receive:</h2>
+        <ul className="partner-list">
+          <li className="partner-list-item">Brand presence on team gear, social channels, and events</li>
+          <li className="partner-list-item">Visibility on our site and within community media</li>
+          <li className="partner-list-item">Tailored packages that reflect your mission</li>
+          <li className="partner-list-item">Impact metrics and real success stories</li>
         </ul>
 
-        <p className="sponsorship-contact">
-          To become a sponsor, contact us at{' '}
-          <a href="mailto:yassir@nextup.ca" className="sponsorship-link">
+        <p className="partner-contact">
+          Want to join us? Reach out at{' '}
+          <a href="mailto:yassir@nextup.ca" className="partner-link">
             yassir@nextup.ca
           </a>.
         </p>
