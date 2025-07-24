@@ -18,7 +18,7 @@ export default function SupportPartners() {
       <div className="partner-container">
         <h1 className="partner-heading">PARTNER WITH NEXT UP</h1>
         <p className="partner-intro">
-          We’re looking for mission-driven sponsors to help us empower the next generation of leaders and athletes.
+          We’re looking for mission-driven partners to help us empower the next generation of leaders and athletes.
         </p>
 
         <h2 className="partner-subheading">Your support directly contributes to:</h2>
