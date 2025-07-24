@@ -10,19 +10,6 @@
       ]
     }
   ],
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.nextuphoops.ca"
-        }
-      ],
-      "destination": "https://nextuphoops.ca/:path*",
-      "permanent": true
-    }
-  ],
   "rewrites": [
     {
       "source": "/(.*)",
