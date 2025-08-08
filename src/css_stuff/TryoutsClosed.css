@@ -1,0 +1,39 @@
+.tryouts-closed-container {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .tryouts-closed-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+  
+  .tryouts-closed-message {
+    font-size: 1.125rem;
+    color: #555555;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 600px) {
+    .tryouts-closed-container {
+      margin: 60px 1rem;
+      padding: 1.5rem;
+    }
+  
+    .tryouts-closed-title {
+      font-size: 1.5rem;
+    }
+  
+    .tryouts-closed-message {
+      font-size: 1rem;
+    }
+  }
+  
