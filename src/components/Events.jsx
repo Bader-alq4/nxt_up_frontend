@@ -7,7 +7,7 @@ const events = [
     title: '15U/16U Boys Tryouts',
     datetimes: [
       'August 9, 2025 • 1:00 PM – 2:30 PM @ Saville, Court 3',
-      'August 16, 2025 • 1:00 PM – 2:30 PM @ Location TBD'
+      'August 16, 2025 • 1:00 PM – 2:30 PM @ Raise Athletics, Court 1'
     ],
   },
   {
@@ -15,7 +15,7 @@ const events = [
     title: '17/18U Boys Tryouts',
     datetimes: [
       'August 9, 2025 • 2:30 PM – 4:00 PM @ Saville, Court 3', 
-      'August 16, 2025 • 2:30 PM – 4:00 PM @ Location TBD'
+      'August 16, 2025 • 2:30 PM – 4:00 PM @ Raise Athletics, Court 1'
     ],
   },
   {

@@ -33,13 +33,13 @@ export default function TryoutInformation() {
             <h4 className="tryout-info-date-subheading">Boys 15U/16U</h4>
             <ul className="tryout-info-list">
               <li>Saturday, August 9th, 2025 – 1:00PM to 2:30PM @ Saville, Court 3</li>
-              <li>Saturday, August 16th, 2025 – 1:00PM to 2:30PM @ Location TBD</li>
+              <li>Saturday, August 16th, 2025 – 1:00PM to 2:30PM @ Raise Athletics, Court 1</li>
             </ul>
 
             <h4 className="tryout-info-date-subheading">Boys 17U/18U</h4>
             <ul className="tryout-info-list">
               <li>Saturday, August 9th, 2025 – 2:30PM to 4:00PM @ Saville, Court 3</li>
-              <li>Saturday, August 16th, 2025 – 2:30PM to 4:00PM @ Location TBD</li>
+              <li>Saturday, August 16th, 2025 – 2:30PM to 4:00PM @ Raise Athletics, Court 1</li>
             </ul>
 
             <h4 className="tryout-info-date-subheading">Girls 15U/17U</h4>
