@@ -56,7 +56,7 @@ function Dashboard() {
           <div className="registration-card">
             <h2>Ready to Join?</h2>
             <p>Register for tryouts to get started!</p>
-            <Link to="/tryouts" className="register-button"> {/* change Link to to '/tryout when tryouts are open and to TryoutsClosed' when tryouts are closed */}
+            <Link to="/tryout" className="register-button"> {/* change Link to to '/tryout when tryouts are open and to TryoutsClosed' when tryouts are closed */}
               Register for Tryouts
             </Link>
           </div>
