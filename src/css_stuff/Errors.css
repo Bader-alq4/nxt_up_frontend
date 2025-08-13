@@ -1,0 +1,64 @@
+/* errors.css — focused, accessible error styling */
+
+.input {
+    width: 100%;
+    border: 1px solid #d1d5db;        /* neutral gray */
+    border-radius: 6px;
+    padding: 8px 10px;
+    outline: none;
+    transition: border-color 120ms, box-shadow 120ms;
+    background: #fff;
+  }
+  
+  .input:focus {
+    border-color: #2563eb;            /* blue focus */
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+  }
+  
+  .input--error {
+    border-color: #dc2626 !important; /* red-600 */
+    box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.15);
+  }
+  
+  .error-text {
+    color: #dc2626;                   /* red-600 */
+    font-size: 0.875rem;              /* 14px */
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+  
+  .error-summary {
+    border: 1px solid #fecaca;        /* red-200 */
+    background: #fef2f2;              /* red-50 */
+    color: #991b1b;                    /* red-800 */
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin-top: 8px;
+  }
+  
+  .password-wrapper {
+    position: relative;
+  }
+  
+  .password-eye-btn {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 4px;
+    line-height: 0;
+  }
+  
+  .consent-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .consent-checkbox input[type="checkbox"] {
+    margin-top: 3px;
+  }
+  

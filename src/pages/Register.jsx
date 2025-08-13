@@ -4,6 +4,7 @@ import { Eye, EyeOff } from 'lucide-react';
 import api from '../api/axios';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PageTransition from '../components/PageTransition';
+import '../css_stuff/errors.css';
 
 function Register() {
   const navigate = useNavigate();
@@ -65,7 +66,7 @@ function Register() {
       case 'password': {
         if (!value) return 'Password is required.';
         const msgs = [];
-        if (value.length < 12) msgs.push('at least 12 characters');
+        if (value.length < 8) msgs.push('at least 8 characters');
         if (!/[A-Z]/.test(value))   msgs.push('an uppercase letter');
         if (!/[a-z]/.test(value))   msgs.push('a lowercase letter');
         if (!/\d/.test(value))      msgs.push('a number');
@@ -101,6 +102,9 @@ function Register() {
     }
   };
 
+  /* small helper: should we show the error for this field? */
+  const showErr = (name) => !!(touched[name] && errors[name]);
+
   /* ──────────────────── HANDLERS ────────────────────────── */
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -122,8 +126,7 @@ function Register() {
   const validateForm = () => {
     const newErr = {};
     Object.keys(form).forEach((key) => {
-      // skip parent_consent here; check it below
-      if (key === 'parent_consent') return;
+      if (key === 'parent_consent') return; // checked separately
       const err = validateField(key, form[key]);
       if (err) newErr[key] = err;
     });
@@ -136,18 +139,26 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formErr = validateForm();
+
     if (Object.keys(formErr).length) {
       setErrors(formErr);
       const allTouched = {};
       Object.keys(form).forEach(k => { allTouched[k] = true; });
       setTouched(allTouched);
-    
-      // Show general error below the Create Account button
+
       setFormSummaryError('Please correct the highlighted fields above.');
+
+      // Scroll to first errored field
+      const firstKey = Object.keys(formErr)[0];
+      const el = document.querySelector(`[name="${firstKey}"]`);
+      if (el && typeof el.scrollIntoView === 'function') {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        el.focus({ preventScroll: true });
+      }
       return;
     }
+
     setFormSummaryError('');
-    
 
     setIsSubmitting(true);
     try {
@@ -162,6 +173,7 @@ function Register() {
 
   return (
     <PageTransition>
+      {/* You can keep your layout/utility classes for structure/spacing */}
       <form onSubmit={handleSubmit} className="max-w-md mx-auto p-6 bg-white rounded-lg shadow space-y-4">
         <h2 className="text-2xl font-semibold text-gray-800 text-center">Create Your Account</h2>
 
@@ -175,10 +187,12 @@ function Register() {
               onChange={handleChange}
               onBlur={handleBlur}
               disabled={isSubmitting}
-              className="w-full border p-2 rounded"
+              aria-invalid={showErr('first_name') ? 'true' : 'false'}
+              aria-describedby={showErr('first_name') ? 'first_name-error' : undefined}
+              className={`input ${showErr('first_name') ? 'input--error' : ''}`}
             />
-            {touched.first_name && errors.first_name && (
-              <p className="text-red-600 text-sm">{errors.first_name}</p>
+            {showErr('first_name') && (
+              <p id="first_name-error" role="alert" className="error-text">{errors.first_name}</p>
             )}
           </div>
           <div>
@@ -189,10 +203,12 @@ function Register() {
               onChange={handleChange}
               onBlur={handleBlur}
               disabled={isSubmitting}
-              className="w-full border p-2 rounded"
+              aria-invalid={showErr('last_name') ? 'true' : 'false'}
+              aria-describedby={showErr('last_name') ? 'last_name-error' : undefined}
+              className={`input ${showErr('last_name') ? 'input--error' : ''}`}
             />
-            {touched.last_name && errors.last_name && (
-              <p className="text-red-600 text-sm">{errors.last_name}</p>
+            {showErr('last_name') && (
+              <p id="last_name-error" role="alert" className="error-text">{errors.last_name}</p>
             )}
           </div>
         </div>
@@ -207,26 +223,29 @@ function Register() {
             onChange={handleChange}
             onBlur={handleBlur}
             disabled={isSubmitting}
-            className="w-full border p-2 rounded"
+            aria-invalid={showErr('email') ? 'true' : 'false'}
+            aria-describedby={showErr('email') ? 'email-error' : undefined}
+            className={`input ${showErr('email') ? 'input--error' : ''}`}
           />
-          {touched.email && errors.email && (
-            <p className="text-red-600 text-sm">{errors.email}</p>
+          {showErr('email') && (
+            <p id="email-error" role="alert" className="error-text">{errors.email}</p>
           )}
         </div>
 
         {/* Password with toggle */}
-        <div className="relative">
+        <div className="password-wrapper">
           <input
             name="password"
             type={showPassword ? 'text' : 'password'}
             placeholder="Create a Password"
             value={form.password}
             onChange={handleChange}
-            onBlur={handleBlur}               // ← this line
+            onBlur={handleBlur}
             disabled={isSubmitting}
-            className="w-full border p-2 rounded pr-12"
+            aria-invalid={showErr('password') ? 'true' : 'false'}
+            aria-describedby={showErr('password') ? 'password-error' : undefined}
+            className={`input ${showErr('password') ? 'input--error' : ''}`}
           />
-
           <button
             type="button"
             onClick={() => setShowPassword(!showPassword)}
@@ -236,7 +255,12 @@ function Register() {
           >
             {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
           </button>
-          {errors.password && <p className="text-red-600 text-sm mt-1">{errors.password}</p>}
+
+          {showErr('password') && (
+            <p id="password-error" role="alert" className="error-text">
+              {errors.password}
+            </p>
+          )}
         </div>
 
         {/* Date of Birth */}
@@ -249,10 +273,12 @@ function Register() {
             onChange={handleChange}
             onBlur={handleBlur}
             disabled={isSubmitting}
-            className="w-full border p-2 rounded"
+            aria-invalid={showErr('date_of_birth') ? 'true' : 'false'}
+            aria-describedby={showErr('date_of_birth') ? 'date_of_birth-error' : undefined}
+            className={`input ${showErr('date_of_birth') ? 'input--error' : ''}`}
           />
-          {touched.date_of_birth && errors.date_of_birth && (
-            <p className="text-red-600 text-sm">{errors.date_of_birth}</p>
+          {showErr('date_of_birth') && (
+            <p id="date_of_birth-error" role="alert" className="error-text">{errors.date_of_birth}</p>
           )}
         </div>
 
@@ -265,10 +291,12 @@ function Register() {
             onChange={handleChange}
             onBlur={handleBlur}
             disabled={isSubmitting}
-            className="w-full border p-2 rounded"
+            aria-invalid={showErr('phone_number') ? 'true' : 'false'}
+            aria-describedby={showErr('phone_number') ? 'phone_number-error' : undefined}
+            className={`input ${showErr('phone_number') ? 'input--error' : ''}`}
           />
-          {touched.phone_number && errors.phone_number && (
-            <p className="text-red-600 text-sm">{errors.phone_number}</p>
+          {showErr('phone_number') && (
+            <p id="phone_number-error" role="alert" className="error-text">{errors.phone_number}</p>
           )}
         </div>
 
@@ -283,10 +311,12 @@ function Register() {
             onChange={handleChange}
             onBlur={handleBlur}
             disabled={isSubmitting}
-            className="w-full border p-2 rounded"
+            aria-invalid={showErr('emergency_contact_name') ? 'true' : 'false'}
+            aria-describedby={showErr('emergency_contact_name') ? 'emergency_contact_name-error' : undefined}
+            className={`input ${showErr('emergency_contact_name') ? 'input--error' : ''}`}
           />
-          {touched.emergency_contact_name && errors.emergency_contact_name && (
-            <p className="text-red-600 text-sm">{errors.emergency_contact_name}</p>
+          {showErr('emergency_contact_name') && (
+            <p id="emergency_contact_name-error" role="alert" className="error-text">{errors.emergency_contact_name}</p>
           )}
         </div>
 
@@ -299,10 +329,12 @@ function Register() {
             onChange={handleChange}
             onBlur={handleBlur}
             disabled={isSubmitting}
-            className="w-full border p-2 rounded"
+            aria-invalid={showErr('emergency_contact_phone') ? 'true' : 'false'}
+            aria-describedby={showErr('emergency_contact_phone') ? 'emergency_contact_phone-error' : undefined}
+            className={`input ${showErr('emergency_contact_phone') ? 'input--error' : ''}`}
           />
-          {touched.emergency_contact_phone && errors.emergency_contact_phone && (
-            <p className="text-red-600 text-sm">{errors.emergency_contact_phone}</p>
+          {showErr('emergency_contact_phone') && (
+            <p id="emergency_contact_phone-error" role="alert" className="error-text">{errors.emergency_contact_phone}</p>
           )}
         </div>
 
@@ -316,11 +348,13 @@ function Register() {
             onChange={handleChange}
             onBlur={handleBlur}
             disabled={isSubmitting}
-            className="w-full border p-2 rounded"
+            aria-invalid={showErr('emergency_contact_email') ? 'true' : 'false'}
+            aria-describedby={showErr('emergency_contact_email') ? 'emergency_contact_email-error' : undefined}
+            className={`input ${showErr('emergency_contact_email') ? 'input--error' : ''}`}
             required
           />
-          {touched.emergency_contact_email && errors.emergency_contact_email && (
-            <p className="text-red-600 text-sm">{errors.emergency_contact_email}</p>
+          {showErr('emergency_contact_email') && (
+            <p id="emergency_contact_email-error" role="alert" className="error-text">{errors.emergency_contact_email}</p>
           )}
         </div>
 
@@ -332,7 +366,9 @@ function Register() {
             onChange={handleChange}
             onBlur={handleBlur}
             disabled={isSubmitting}
-            className="w-full border p-2 rounded bg-white"
+            aria-invalid={showErr('emergency_contact_relationship') ? 'true' : 'false'}
+            aria-describedby={showErr('emergency_contact_relationship') ? 'emergency_contact_relationship-error' : undefined}
+            className={`input ${showErr('emergency_contact_relationship') ? 'input--error' : ''}`}
           >
             <option value="">Relationship</option>
             <option value="parent">Parent</option>
@@ -340,8 +376,8 @@ function Register() {
             <option value="other_family">Family Member</option>
             <option value="other">Other</option>
           </select>
-          {touched.emergency_contact_relationship && errors.emergency_contact_relationship && (
-            <p className="text-red-600 text-sm">{errors.emergency_contact_relationship}</p>
+          {showErr('emergency_contact_relationship') && (
+            <p id="emergency_contact_relationship-error" role="alert" className="error-text">{errors.emergency_contact_relationship}</p>
           )}
         </div>
 
@@ -356,6 +392,8 @@ function Register() {
               onChange={handleChange}
               required
               disabled={isSubmitting}
+              aria-invalid={showErr('parent_consent') ? 'true' : 'false'}
+              aria-describedby={showErr('parent_consent') ? 'parent_consent-error' : undefined}
             />
             <label htmlFor="parent_consent">
               I confirm that I am a parent/legal guardian and I give consent for this registration
@@ -363,15 +401,15 @@ function Register() {
           </div>
         )}
         {touched.parent_consent && errors.parent_consent && (
-          <p className="text-red-600 text-sm">{errors.parent_consent}</p>
+          <p id="parent_consent-error" role="alert" className="error-text">{errors.parent_consent}</p>
         )}
 
         {/* Form-level error */}
         {errors.form && (
-          <p className="text-red-600 text-center">{errors.form}</p>
+          <div role="alert" className="error-summary">{errors.form}</div>
         )}
 
-        {/* Privacy policy */}
+        {/* Privacy policy (you can keep Tailwind for layout/typography if you want) */}
         <p className="text-xs text-gray-500">
           By creating an account, you agree to our{' '}
           <Link to="/privacy" className="underline">Privacy Policy</Link> and{' '}
@@ -395,7 +433,7 @@ function Register() {
         </button>
 
         {formSummaryError && (
-          <p className="text-red-600 text-sm text-center mt-2">{formSummaryError}</p>
+          <div role="alert" className="error-summary">{formSummaryError}</div>
         )}
 
         <p className="text-sm text-center">

@@ -5,16 +5,22 @@ import AuthContext from '../context/AuthContext';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PageTransition from '../components/PageTransition';
 import { Eye, EyeOff } from 'lucide-react';
+import '../css_stuff/errors.css'; // ← use the shared CSS
 
 function Login() {
   const { login } = useContext(AuthContext);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+
+  // page-level banners
   const [error, setError] = useState('');
   const [resendSuccess, setResendSuccess] = useState('');
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [resendStatus, setResendStatus] = useState(''); // '', 'resending', 'sent', 'error'
+
+  // rate limit countdown for resend
   const [secondsLeft, setSecondsLeft] = useState(() => {
     const timestamp = localStorage.getItem('login_verification_last_sent');
     if (timestamp) {
@@ -23,6 +29,7 @@ function Login() {
     }
     return 0;
   });
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -71,6 +78,7 @@ function Login() {
 
   return (
     <PageTransition>
+      {/* Keeping Tailwind for layout/spacing/background only */}
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-50 to-gray-100 px-4 sm:px-6 lg:px-8">
         <div className="max-w-sm w-full bg-white rounded-xl p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -80,28 +88,30 @@ function Login() {
             </div>
 
             <div className="space-y-4">
-      <input
-        type="email"
+              <input
+                type="email"
                 name="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-            disabled={isSubmitting}
-                className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-150 ease-in-out text-gray-900 text-sm placeholder-gray-400"
-      />
+                placeholder="Email"
+                className="input"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                disabled={isSubmitting}
+                aria-label="Email"
+              />
 
-              <div className="relative">
-      <input
+              <div className="password-wrapper">
+                <input
                   type={showPassword ? 'text' : 'password'}
                   name="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        required
-            disabled={isSubmitting}
-                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-150 ease-in-out text-gray-900 text-sm placeholder-gray-400 pr-12"
-          />
+                  placeholder="Password"
+                  className="input"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                  disabled={isSubmitting}
+                  aria-label="Password"
+                />
                 <button
                   type="button"
                   onClick={() => setShowPassword((v) => !v)}
@@ -112,16 +122,17 @@ function Login() {
                   {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
                 </button>
               </div>
-        </div>
+            </div>
 
+            {/* Error banner */}
             {error && (
-              <div className="text-sm text-red-600 bg-red-50 px-4 py-3 rounded-lg">
+              <div role="alert" className="error-summary">
                 {error}
-                {error.includes('verify your email') && (
+                {error.toLowerCase().includes('verify your email') && (
                   <div className="mt-2">
-                  <button
-                    type="button"
-                    onClick={handleResendVerification}
+                    <button
+                      type="button"
+                      onClick={handleResendVerification}
                       className="ml-1 text-blue-600 hover:text-blue-700 font-medium flex items-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed border border-blue-200 rounded px-2 py-1"
                       disabled={resendStatus === 'resending' || secondsLeft > 0}
                     >
@@ -135,14 +146,14 @@ function Login() {
                       ) : (
                         'Resend verification email'
                       )}
-                  </button>
+                    </button>
                     {resendStatus === 'sent' && (
-                      <p className="success-notification text-xs mt-1">
+                      <p className="success-text">
                         Verification email has been sent successfully.
                       </p>
                     )}
                     {resendStatus === 'error' && (
-                      <p className="error-notification text-xs mt-1">
+                      <p className="error-notification">
                         Failed to resend verification email.
                       </p>
                     )}
@@ -151,8 +162,9 @@ function Login() {
               </div>
             )}
 
+            {/* Success banner */}
             {resendSuccess && (
-              <div className="text-sm text-green-600 bg-green-50 px-4 py-3 rounded-lg">
+              <div role="alert" className="success-summary">
                 {resendSuccess}
               </div>
             )}
@@ -165,15 +177,15 @@ function Login() {
                   ? 'bg-blue-400 cursor-not-allowed' 
                   : 'bg-blue-600 hover:bg-blue-700 active:bg-blue-800'}`}
             >
-          {isSubmitting ? (
+              {isSubmitting ? (
                 <>
-              <LoadingSpinner size="small" light={true} />
-              <span className="ml-2">Signing in...</span>
+                  <LoadingSpinner size="small" light={true} />
+                  <span className="ml-2">Signing in...</span>
                 </>
-          ) : (
-            'Sign In'
-          )}
-      </button>
+              ) : (
+                'Sign In'
+              )}
+            </button>
 
             <div className="space-y-4 text-center text-sm">
               <Link 
@@ -183,16 +195,16 @@ function Login() {
                 Forgot your password?
               </Link>
               <div className="text-gray-600">
-                Don't have an account?{' '}
+                Don&apos;t have an account?{' '}
                 <Link 
                   to="/register" 
                   className="text-blue-600 hover:text-blue-700 font-medium transition-colors duration-150"
                 >
                   Sign up
                 </Link>
-          </div>
-      </div>
-    </form>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </PageTransition>
