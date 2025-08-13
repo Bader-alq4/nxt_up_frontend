@@ -5,7 +5,7 @@ import AuthContext from '../context/AuthContext';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PageTransition from '../components/PageTransition';
 import { Eye, EyeOff } from 'lucide-react';
-import '../css_stuff/errors.css';
+import '../css_stuff/Errors.css';
 
 function Login() {
   const { login } = useContext(AuthContext);

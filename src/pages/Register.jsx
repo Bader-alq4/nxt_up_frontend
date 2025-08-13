@@ -4,7 +4,7 @@ import { Eye, EyeOff } from 'lucide-react';
 import api from '../api/axios';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PageTransition from '../components/PageTransition';
-import '../css_stuff/errors.css';
+import '../css_stuff/Errors.css';
 
 function Register() {
   const navigate = useNavigate();
@@ -263,25 +263,30 @@ function Register() {
           )}
         </div>
 
-        {/* Date of Birth */}
-        <div>
-          <input
-            name="date_of_birth"
-            type="date"
-            placeholder="Date of Birth"
-            value={form.date_of_birth}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            disabled={isSubmitting}
-            aria-invalid={showErr('date_of_birth') ? 'true' : 'false'}
-            aria-describedby={showErr('date_of_birth') ? 'date_of_birth-error' : undefined}
-            className={`input ${showErr('date_of_birth') ? 'input--error' : ''}`}
-          />
-          {showErr('date_of_birth') && (
-            <p id="date_of_birth-error" role="alert" className="error-text">{errors.date_of_birth}</p>
-          )}
-        </div>
-
+      {/* Date of Birth */}
+      <div>
+        <label htmlFor="date_of_birth" className="block text-sm font-medium text-gray-700 mb-1">
+          Date of Birth
+        </label>
+        <input
+          id="date_of_birth"
+          name="date_of_birth"
+          type="date"
+          value={form.date_of_birth}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          disabled={isSubmitting}
+          aria-invalid={showErr('date_of_birth') ? 'true' : 'false'}
+          aria-describedby={showErr('date_of_birth') ? 'date_of_birth-error' : undefined}
+          className={`input ${showErr('date_of_birth') ? 'input--error' : ''}`}
+          max={new Date().toISOString().split('T')[0]} // prevent future dates
+        />
+        {showErr('date_of_birth') && (
+          <p id="date_of_birth-error" role="alert" className="error-text">
+            {errors.date_of_birth}
+          </p>
+        )}
+      </div>
         {/* Phone */}
         <div>
           <input
