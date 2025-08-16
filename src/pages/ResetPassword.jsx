@@ -25,7 +25,7 @@ function ResetPassword() {
 
   const validatePassword = (pwd) => {
     const requirements = {
-      minLength: pwd.length >= 8,
+      minLength: pwd.length >= 12,
       hasUpper: /[A-Z]/.test(pwd),
       hasLower: /[a-z]/.test(pwd),
       hasNumber: /\d/.test(pwd),
@@ -33,7 +33,7 @@ function ResetPassword() {
     };
 
     const messages = [];
-    if (!requirements.minLength) messages.push('be at least 8 characters long');
+    if (!requirements.minLength) messages.push('be at least 12 characters long');
     if (!requirements.hasUpper) messages.push('include an uppercase letter');
     if (!requirements.hasLower) messages.push('include a lowercase letter');
     if (!requirements.hasNumber) messages.push('include a number');

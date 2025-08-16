@@ -30,7 +30,7 @@ const events = [
     title: '15U/17U Girls Tryouts',
     datetimes: [
       'August 13, 2025 • 4:00 PM – 6:00 PM @ Commonwealth Rec Centre', 
-      '***August 19, 2025 • 6:00 PM – 8:00 PM @ Central Lions Rec Centre (If necessary)'
+      'August 19, 2025 • 6:00 PM – 8:00 PM @ Central Lions Rec Centre'
     ],
   },
 ];

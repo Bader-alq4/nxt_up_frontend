@@ -45,7 +45,7 @@ export default function TryoutInformation() {
             <h4 className="tryout-info-date-subheading">Girls 15U/17U</h4>
             <ul className="tryout-info-list">
             <li>Wednesday, August 13th, 2025 – 4:00PM to 6:00PM @ Commonwealth Rec Centre</li>
-            <li>***Tuesday, August 19th, 2025 – 6:00PM to 8:00PM @ Central Lions Rec Centre (If necessary)</li>
+            <li>Tuesday, August 19th, 2025 – 6:00PM to 8:00PM @ Central Lions Rec Centre</li>
             </ul>
           </div>
 

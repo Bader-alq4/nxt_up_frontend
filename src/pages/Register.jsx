@@ -66,7 +66,7 @@ function Register() {
       case 'password': {
         if (!value) return 'Password is required.';
         const msgs = [];
-        if (value.length < 8) msgs.push('at least 8 characters');
+        if (value.length < 12) msgs.push('at least 12 characters');
         if (!/[A-Z]/.test(value))   msgs.push('an uppercase letter');
         if (!/[a-z]/.test(value))   msgs.push('a lowercase letter');
         if (!/\d/.test(value))      msgs.push('a number');

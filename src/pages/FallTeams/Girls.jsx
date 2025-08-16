@@ -33,8 +33,8 @@ export default function FallTeamsGirls() {
 
             <div className="fall-detail-section">
               <h3 className="fall-detail-heading">Tournament Schedule</h3>
-              <p>Edge International Invitational – Calgary, AB (End of September 2025, Dates TBD)</p>
-              <p>Good Hoops Fall Classic – Edmonton, AB (October 2025, Dates TBD)</p> 
+              <p>Edge International Invitational – Calgary, AB (September 19 - 21)</p>
+              <p>Good Hoops Fall Classic – Edmonton, AB (October 17 - 19)</p> 
               <p>Each tournament includes 3–5 games</p>
             </div>
 
