@@ -83,7 +83,7 @@ export default function TryoutInformation() {
 
           {/* Registration Button */}
           <div className="tryout-info-section">
-            <Link to="https://registration.teamsnap.com/form/32154">
+            <Link to="/TryoutsClosed">
               <button className="tryout-info-register-btn">Register for Tryouts</button>
             </Link>
           </div>

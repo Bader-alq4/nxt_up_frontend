@@ -15,19 +15,11 @@ function TryoutsClosed() {
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.4 }}
     >
-      <h1 className="tryouts-closed-title">Tryouts Registration Coming Soon</h1>
+      <h1 className="tryouts-closed-title">Tryout Registrations Are Currently Closed</h1>
       <p className="tryouts-closed-message">
-        Online tryout registration through our website will be available soon.
-        For now, you can register by clicking the link below:
+        Registrations are closed right now, but they’ll be opening back up soon.
+        Please check back later for updates!
       </p>
-      <a
-        href="https://registration.teamsnap.com/form/32154"
-        className="tryouts-closed-link"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Register Here
-      </a>
     </motion.div>
   );
 }
