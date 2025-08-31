@@ -149,7 +149,7 @@ function TryoutRegister() {
               <div className="bg-gray-50 rounded-lg p-4 space-y-4">
                 <label className="grid grid-cols-[1fr_auto] items-center cursor-pointer">
                   <span className="text-sm font-medium text-gray-900">
-                    Pay with Cash
+                    <strong>Pay with Cash</strong>
                   </span>
                   <input
                     type="radio"
@@ -161,8 +161,8 @@ function TryoutRegister() {
                   />
                 </label>
                 <label className="grid grid-cols-[1fr_auto] items-center cursor-pointer">
-                  <span className="text-sm font-medium text-gray-900">
-                    Pay with Card (Stripe)
+                  <span className="text-sm font-medium text-gray-900 mb-2 block custom-spacing">
+                    <strong>Pay with Card (Stripe)</strong>
                   </span>
                   <input
                     type="radio"

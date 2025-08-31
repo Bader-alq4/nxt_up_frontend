@@ -23,7 +23,7 @@ function AdminDashboard() {
   useEffect(() => {
     const fetchSeasons = async () => {
       try {
-        const res = await api.get('/seasons/all');
+        const res = await api.get('/seasons/all'); // first thing that happens when an admin loads admin dashbaord
         if (res.data && res.data.length > 0) {
           setSeasons(res.data);
           setSelectedSeason(res.data[0].id);
