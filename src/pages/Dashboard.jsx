@@ -1,35 +1,67 @@
-import { useContext, useEffect, useState } from 'react';
-import api from '../api/axios'; //your centralized axios instance
+import { useContext, useEffect, useState, useCallback } from 'react';
+import api from '../api/axios';
 import AuthContext from '../context/AuthContext';
 import { Link } from 'react-router-dom';
 import '../css_stuff/Dashboard.css';
 
 function Dashboard() {
   const { user } = useContext(AuthContext);
+
   const [tryoutData, setTryoutData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [finalizing, setFinalizing] = useState(false); // NEW
   const [error, setError] = useState('');
 
+  const fetchTryoutData = useCallback(async () => {
+    // moved out so we can reuse
+    if (!user) {
+      setLoading(false);
+      return;
+    }
+
+    try {
+      const res = await api.get('/tryouts/my');
+      setTryoutData(res.data);
+    } catch (err) {
+      console.error(err);
+      setError('An error occurred while loading your tryout information.');
+    } finally {
+      setLoading(false);
+    }
+  }, [user]);
+
   useEffect(() => {
-    const fetchTryoutData = async () => {
-      if (!user) {
-        setLoading(false);
+    // 1) If this is a success redirect, confirm with the server immediately
+    const params = new URLSearchParams(window.location.search);
+    const sessionId = params.get('session_id');
+
+    const confirmAndRefresh = async () => {
+      if (!sessionId || !user) {
+        // no confirm needed; just load normally
+        await fetchTryoutData();
         return;
       }
 
       try {
-        const res = await api.get('/tryouts/my');
-        setTryoutData(res.data);
-      } catch (err) {
-        console.error(err);
-        setError('An error occurred while loading your tryout information.');
+        setFinalizing(true);
+        // hit your confirm endpoint (idempotent; safe if webhook already ran)
+        await api.get('/payments/confirm', { params: { session_id: sessionId } });
+      } catch (e) {
+        // optional: we don't block UX on this; webhook may still land
+        console.warn('confirmCheckout failed; will still refresh dashboard', e);
       } finally {
-        setLoading(false);
+        // 2) Always refresh actual state from API
+        await fetchTryoutData();
+
+        // 3) Clean the URL so refreshes don’t re-confirm
+        window.history.replaceState({}, '', '/dashboard');
+
+        setFinalizing(false);
       }
     };
 
-    fetchTryoutData();
-  }, [user]);
+    confirmAndRefresh();
+  }, [user, fetchTryoutData]);
 
   if (loading) {
     return (
@@ -44,20 +76,17 @@ function Dashboard() {
       <main className="dashboard-content">
         <header className="dashboard-header">
           <h1 className="welcome-text">Welcome, {user.first_name}!</h1>
+          {finalizing && <div className="info-banner">Finalizing your payment…</div>}
         </header>
 
-        {error && (
-          <div className="error-message">
-            {error}
-          </div>
-        )}
+        {error && <div className="error-message">{error}</div>}
 
         {tryoutData && !tryoutData.hasRegistered && (
           <div className="registration-card">
             <h2>Ready to Join?</h2>
             <p>Register for tryouts to get started!</p>
-            <Link to="/tryout" className="register-button"> {/* change Link to to '/tryout when tryouts are open and to TryoutsClosed' when tryouts are closed */}
-              Register for Tryouts 
+            <Link to="/TryoutsClosed" className="register-button">
+              Register for Tryouts
             </Link>
           </div>
         )}
