@@ -40,8 +40,8 @@ export default function SupportPartners() {
 
         <p className="partner-contact">
           Want to join us? Reach out at{' '}
-          <a href="mailto:yassir@nextup.ca" className="partner-link">
-            yassir@nextup.ca
+          <a href="mailto:yassir@nextuphoops.ca" className="partner-link">
+            yassir@nextuphoops.ca
           </a>.
         </p>
       </div>
