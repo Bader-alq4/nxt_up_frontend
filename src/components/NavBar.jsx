@@ -60,13 +60,14 @@ export default function NavBar() {
 
   const springSubmenu = [
     { label: 'Tryouts Information', to: '/SpringTeams' },
-    { label: '13U Boys', to: '/SpringTeams/13u-boys' },
-    { label: '15U Boys', to: '/SpringTeams/15u-boys' },
-    { label: '16U Boys', to: '/SpringTeams/16u-boys' },
-    { label: '17U Boys', to: '/SpringTeams/17u-boys' },
-    { label: '18U Boys', to: '/SpringTeams/18u-boys' },
-    { label: '15U Girls', to: '/SpringTeams/15u-girls' },
-    { label: '17U Girls', to: '/SpringTeams/17u-girls' },
+    { label: 'U13 Boys', to: '/SpringTeams/13u-boys' },
+    { label: 'U14 Boys', to: '/SpringTeams/14u-boys' },
+    { label: 'U15 Boys', to: '/SpringTeams/15u-boys' },
+    { label: 'U16 Boys', to: '/SpringTeams/16u-boys' },
+    { label: 'U17 Boys', to: '/SpringTeams/17u-boys' },
+    { label: 'U18 Boys', to: '/SpringTeams/18u-boys' },
+    { label: 'U15 Girls', to: '/SpringTeams/15u-girls' },
+    { label: 'U17 Girls', to: '/SpringTeams/17u-girls' },
   ];
 
   // Helper to render nav links (for both desktop and mobile)

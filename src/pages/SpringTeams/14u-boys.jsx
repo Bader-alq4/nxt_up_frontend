@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import '../../css_stuff/SpringTeams.css'; // Reuse spring styling
 
-function ThirteenBoysSpring() {
+function FourteenBoysSpring() { 
   return (
     <motion.div
       className="spring-teams-page"
@@ -12,7 +12,7 @@ function ThirteenBoysSpring() {
     >
       <div className="spring-teams-container">
         <h1 className="spring-teams-heading">
-          13U Spring Boys Team <span className="spring-teams-age-range">(Coming Soon)</span>
+          14U Spring Boys Team <span className="spring-teams-age-range">(Coming Soon)</span>
         </h1>
         <p className="spring-teams-subheading">Details are being finalized and will be posted here soon.</p>
         <p className="spring-teams-description">
@@ -23,4 +23,4 @@ function ThirteenBoysSpring() {
   );
 }
 
-export default ThirteenBoysSpring;
+export default FourteenBoysSpring;

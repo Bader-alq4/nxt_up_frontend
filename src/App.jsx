@@ -53,6 +53,7 @@ import FallTeamsBoys from './pages/FallTeams/Boys';
 
 // Spring Team Subpages
 import Spring13UBoys from './pages/SpringTeams/13u-boys';
+import Spring14UBoys from './pages/SpringTeams/14u-boys';
 import Spring15UBoys from './pages/SpringTeams/15u-boys';
 import Spring16UBoys from './pages/SpringTeams/16u-boys';
 import Spring17UBoys from './pages/SpringTeams/17u-boys';
@@ -118,6 +119,7 @@ function AppWrapper() {
 
           {/* Spring Team Subpages */}
           <Route path="/SpringTeams/13u-boys" element={<Spring13UBoys />} />
+          <Route path="/SpringTeams/14u-boys" element={<Spring14UBoys />} />
           <Route path="/SpringTeams/15u-boys" element={<Spring15UBoys />} />
           <Route path="/SpringTeams/16u-boys" element={<Spring16UBoys />} />
           <Route path="/SpringTeams/17u-boys" element={<Spring17UBoys />} />
