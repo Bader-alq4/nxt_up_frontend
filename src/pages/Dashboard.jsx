@@ -70,7 +70,7 @@ function Dashboard() {
       </div>
     );
   }
- 
+
   return (
     <div className="dashboard-container">
       <main className="dashboard-content">
@@ -81,11 +81,11 @@ function Dashboard() {
 
         {error && <div className="error-message">{error}</div>}
 
-        {tryoutData && !tryoutData.hasRegistered && ( 
+        {tryoutData && !tryoutData.hasRegistered && (
           <div className="registration-card">
             <h2>Ready to Join?</h2>
             <p>Register for tryouts to get started!</p>
-            <Link to="/tryout" className="register-button">
+            <Link to="/TryoutsClosed" className="register-button"> {/* when tryouts open, change to 'tryout'. When tryouts are closed, change to 'TryoutsClosed' */}
               Register for Tryouts
             </Link>
           </div>
