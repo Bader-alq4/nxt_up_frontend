@@ -185,7 +185,7 @@ function AdminDashboard() {
   return (
     <div className="admin-dashboard">
       <div className="admin-header">
-        <h1>Admin Dashboard</h1>
+        <h1 className="admin-title-text">Admin Dashboard</h1>
         <div className="tab-navigation">
           <button 
             className={`tab-button ${activeTab === 'tryouts' ? 'active' : ''}`}
