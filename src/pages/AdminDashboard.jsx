@@ -410,7 +410,7 @@ function AdminDashboard() {
                             className="action-button"
                             onClick={() => handleSendSingleEmail(t.id)}
                           >
-                            Resend Email
+                            Send Email
                           </button>
                         </td>
                       </tr>
