@@ -48,14 +48,14 @@ export default function About() {
             </p>
           </div>
           <div className="about-nextup-image">
-            <img src="/coach.jpg" alt="Coach mentoring athletes" />
+            <img src="https://res.cloudinary.com/dahquiy48/image/upload/v1767375628/coach_edoawv.jpg" alt="Coach mentoring athletes" />
           </div>
         </section>
 
         {/* Section 2 */}
         <section className="about-nextup-section" id="mission">
           <div className="about-nextup-image">
-            <img src="/team.jpg" alt="Team huddle" />
+            <img src="https://res.cloudinary.com/dahquiy48/image/upload/v1767375694/team_q5kqhc.jpg" alt="Team huddle" />
           </div>
           <div className="about-nextup-text">
             <h2 className="about-nextup-subtitle">Our Mission & Values</h2>

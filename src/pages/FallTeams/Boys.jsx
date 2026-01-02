@@ -70,7 +70,7 @@ export default function FallTeamsBoys() {
           </div>
           
           <div className="fall-detail-image">
-            <img src="/fall_boys_detail.jpg" alt="Boys Basketball Team" />
+            <img src="https://res.cloudinary.com/dahquiy48/image/upload/v1767375664/fall_boys_detail_fvfv81.jpg" alt="Boys Basketball Team" />
           </div>
         </div>
       </div>

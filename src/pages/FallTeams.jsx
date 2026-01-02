@@ -30,7 +30,7 @@ export default function FallTeams() {
         {/* Girls Teams Section */}
         <section className="fall-section fall-girls-section">
           <div className="fall-section-image">
-            <img src="/fall_teams_girls.jpg" alt="Girls Basketball Team" />
+            <img src="https://res.cloudinary.com/dahquiy48/image/upload/v1767375664/fall_teams_girls_meztlu.jpg" alt="Girls Basketball Team" />
           </div>
           <div className="fall-section-text">
             <h2 className="fall-section-title">Girls Teams</h2>
@@ -53,7 +53,7 @@ export default function FallTeams() {
         {/* Boys Teams Section — copied structure from Girls Section */}
         <section className="fall-section fall-boys-section">
           <div className="fall-section-image">
-            <img src="/fall_teams_boys.jpg" alt="Boys Basketball Team" />
+            <img src="https://res.cloudinary.com/dahquiy48/image/upload/v1767375664/fall_teams_boys_iqm6uj.jpg" alt="Boys Basketball Team" />
           </div>
           <div className="fall-section-text">
             <h2 className="fall-section-title">Boys Teams</h2>

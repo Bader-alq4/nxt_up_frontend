@@ -72,7 +72,7 @@ export default function FallTeamsGirls() {
           </div>
           
           <div className="fall-detail-image">
-            <img src="/camps.jpg" alt="Girls Basketball Team" />
+            <img src="https://res.cloudinary.com/dahquiy48/image/upload/v1767375627/camps_rgyuvf.jpg" alt="Girls Basketball Team" />
           </div>
         </div>
       </div>

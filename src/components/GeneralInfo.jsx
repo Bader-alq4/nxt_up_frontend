@@ -4,25 +4,25 @@ import '../css_stuff/GeneralInfo.css';
 
 const infoItems = [
   {
-    image: '/fall.jpg',
+    image: 'https://res.cloudinary.com/dahquiy48/image/upload/v1767375664/fall_qc9mux.jpg',
     title: '2025 Fall Programs',
     description: 'Our 2025 Fall Programs focus on skill development, competition, and fun for all age groups.',
     link: 'FallTeams',
   },
   {
-    image: '/spring.jpg',
+    image: 'https://res.cloudinary.com/dahquiy48/image/upload/v1767375694/spring_bkozur.jpg',
     title: '2026 Spring Programs',
     description: 'Spring training prepares athletes for the next level with elite instruction and regional showcases.',
     link: '/SpringTeams',
   },
   {
-    image: '/tournaments.jpg',
+    image: 'https://res.cloudinary.com/dahquiy48/image/upload/v1767375694/tournaments_zjucif.jpg',
     title: 'Tournaments',
     description: 'We participate in high-level tournaments to give players real-game exposure and experience.',
     link: '/Tournaments',
   },
   {
-    image: '/camps.jpg',
+    image: 'https://res.cloudinary.com/dahquiy48/image/upload/v1767375627/camps_rgyuvf.jpg',
     title: 'Camps/Programming',
     description: 'Our seasonal camps blend competitive training with community-building and development.',
     link: '/Training',
