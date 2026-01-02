@@ -6,10 +6,11 @@ export default function HeroSection() {
   return (
     <section className="hero-fullscreen">
       <div className="hero-image-side">
-      <img
-        src="https://res.cloudinary.com/dahquiy48/image/upload/w_500,q_auto,f_auto/group_f9jng3.jpg"
-        alt="Team group"
-      />
+        <img
+          src="https://res.cloudinary.com/dahquiy48/image/upload/w_500,q_auto,f_auto/group_f9jng3.jpg"
+          alt="Team group"
+          className="hero-img"
+        />
       </div>
 
       <div className="hero-text-side">

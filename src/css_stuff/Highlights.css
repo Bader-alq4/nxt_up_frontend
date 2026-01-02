@@ -67,20 +67,40 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .highlights-section {
+    padding: 3rem 1rem;
+  }
+  
+  .highlights-header {
+    margin-bottom: 2rem;
+  }
+  
   .highlights-header h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
   }
 
   .highlights-header p {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  .highlight-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
 
   .highlight-image-wrapper {
-    max-height: 400px;
+    height: 280px;
+    max-height: 280px;
   }
 
   .highlight-image-wrapper img {
-    max-height: 400px;
+    max-height: 280px;
+  }
+  
+  .highlight-card {
+    margin-bottom: 0;
   }
 }
 
