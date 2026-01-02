@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import { Navigate } from "react-router-dom";
 
 // Core Layout
 import NavBar from './components/NavBar';
@@ -128,7 +129,7 @@ function AppWrapper() {
           <Route path="/SpringTeams/17u-girls" element={<Spring17UGirls />} />
 
           {/* Auth */}
-          {/* <Route path="/login" element={<Login />} /> */}
+          <Route path="/login" element={<Navigate to="/" replace />} />
           <Route path="/register" element={<Register />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/reset-password/:token" element={<ResetPassword />} />
