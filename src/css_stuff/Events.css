@@ -11,6 +11,7 @@
 
 .events-heading {
   font-size: 2.5rem;
+  font-family: 'Atkinson Hyperlegible', 'Courier New', monospace;
   font-weight: 600;
   margin-bottom: 3rem;
   color: white;
@@ -56,6 +57,7 @@
 
 .event-title {
   font-size: 1.3rem;
+  font-family: 'Atkinson Hyperlegible', 'Courier New', monospace;
   font-weight: 600;
   color: #36a4d6;
   margin-bottom: 0.4rem;
@@ -103,6 +105,7 @@
   }
   
   .event-title {
+    font-family: 'Atkinson Hyperlegible', 'Courier New', monospace;
     font-size: 1.1rem;
     margin-bottom: 0.75rem;
     line-height: 1.3;

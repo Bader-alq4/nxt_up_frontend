@@ -15,17 +15,16 @@ const highlights = [
 export default function Highlights() {
   return (
     <section className="highlights-section">
-      <div className="highlights-header">
-        <h2>More than Basketball</h2>
-        <p>The hustle, the laughs, the highlights — all in the frame.</p>
-      </div>
-
-      <div className="highlight-grid">
+      <div className="highlight-scroll">
         {highlights.map((item, idx) => (
-          <div key={idx} className="highlight-card">
-            <div className="highlight-image-wrapper">
-              <img src={item.src} alt={`Highlight ${idx + 1}`} />
-            </div>
+          <div key={idx} className="highlight-item">
+            <img 
+              src={item.src} 
+              alt="" 
+              loading="lazy"
+              decoding="async"
+              fetchpriority={idx === 0 ? "high" : "low"}
+            />
           </div>
         ))}
       </div>

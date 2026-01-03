@@ -20,61 +20,40 @@ export default function NavBar() {
   }, [mobileMenuOpen]);
 
   const navLinks = [
-    { label: 'About', to: '/about' },
-    { label: 'Fall Season', to: '/FallTeams' },
-    { label: 'Spring Season', to: '/SpringTeams' },
-    { label: 'Winter Programming', to: '/WinterProgramming' },
-    { label: 'Training/Camps', to: '/Training' },
-    { label: 'Tournaments', to: '/Tournaments' },
+    { label: 'about', to: '/about' },
+    { label: 'fall', to: '/FallTeams' },
+    { label: 'spring', to: '/SpringTeams' },
+    { label: 'winter', to: '/WinterProgramming' },
+    { label: 'training', to: '/Training' },
+    { label: 'tournaments', to: '/Tournaments' },
   ];
-
-  // if (!user) {
-  //   navLinks.push({ label: 'Login', to: '/login' });
-  // } else if (!user.is_admin) {
-  //   navLinks.push({ label: 'Dashboard', to: '/dashboard' });
-  // } else {
-  //   navLinks.push({ label: 'Admin', to: '/admin' });
-  // }
 
   const aboutSubmenu = [
-    { label: 'Our Mission', to: '/about#mission' },
-    { label: 'Events', to: '/#upcoming-events' },
-    { label: 'Why Choose Us', to: '/about#why-choose-us' },
-    { label: 'Contact', to: '/contact' },
+    { label: 'mission', to: '/about#mission' },
+    { label: 'events', to: '/#upcoming-events' },
+    { label: 'contact', to: '/contact' },
   ];
 
-  // const fallSubmenu = [
-  //   { label: 'Tryouts Information', to: '/FallTeams' },
-  //   { label: '13U Boys', to: '/FallTeams/13u-boys' },
-  //   { label: '15U Boys', to: '/FallTeams/15u-boys' },
-  //   { label: '16U Boys', to: '/FallTeams/16u-boys' },
-  //   { label: '17U Boys', to: '/FallTeams/17u-boys' },
-  //   { label: '18U Boys', to: '/FallTeams/18u-boys' },
-  //   { label: '15U Girls', to: '/FallTeams/15u-girls' },
-  //   { label: '16U Girls', to: '/FallTeams/16u-girls' },
-  // ];
   const fallSubmenu = [
-    { label: "Girls Teams", to: "/FallTeams/Girls" },
-    { label: "Boys Teams", to: "/FallTeams/Boys" },
+    { label: "girls", to: "/FallTeams/Girls" },
+    { label: "boys", to: "/FallTeams/Boys" },
   ];
 
   const springSubmenu = [
-    { label: 'Tryouts Information', to: '/SpringTeams' },
-    { label: 'U13 Boys', to: '/SpringTeams/13u-boys' },
-    { label: 'U14 Boys', to: '/SpringTeams/14u-boys' },
-    { label: 'U15 Boys', to: '/SpringTeams/15u-boys' },
-    { label: 'U16 Boys', to: '/SpringTeams/16u-boys' },
-    { label: 'U17 Boys', to: '/SpringTeams/17u-boys' },
-    { label: 'U18 Boys', to: '/SpringTeams/18u-boys' },
-    { label: 'U15 Girls', to: '/SpringTeams/15u-girls' },
-    { label: 'U17 Girls', to: '/SpringTeams/17u-girls' },
+    { label: 'u13 boys', to: '/SpringTeams/13u-boys' },
+    { label: 'u14 boys', to: '/SpringTeams/14u-boys' },
+    { label: 'u15 boys', to: '/SpringTeams/15u-boys' },
+    { label: 'u16 boys', to: '/SpringTeams/16u-boys' },
+    { label: 'u17 boys', to: '/SpringTeams/17u-boys' },
+    { label: 'u18 boys', to: '/SpringTeams/18u-boys' },
+    { label: 'u15 girls', to: '/SpringTeams/15u-girls' },
+    { label: 'u17 girls', to: '/SpringTeams/17u-girls' },
   ];
 
-  // Helper to render nav links (for both desktop and mobile)
   const renderLinks = (isMobile = false) => (
     <>
       {navLinks.map((link, idx) => {
-        if (link.label === 'About') {
+        if (link.label === 'about') {
           return (
             <li key={idx} className={`nav-item dropdown${isMobile ? ' mobile-dropdown' : ''}`}>
               <Link to={link.to} className="nav-link" onClick={() => setMobileMenuOpen(false)}>{link.label}</Link>
@@ -88,7 +67,7 @@ export default function NavBar() {
             </li>
           );
         }
-        if (link.label === 'Fall Season') {
+        if (link.label === 'fall') {
           return (
             <li key={idx} className={`nav-item dropdown${isMobile ? ' mobile-dropdown' : ''}`}>
               <Link to={link.to} className="nav-link" onClick={() => setMobileMenuOpen(false)}>{link.label}</Link>
@@ -102,7 +81,7 @@ export default function NavBar() {
             </li>
           );
         }
-        if (link.label === 'Spring Season') {
+        if (link.label === 'spring') {
           return (
             <li key={idx} className={`nav-item dropdown${isMobile ? ' mobile-dropdown' : ''}`}>
               <Link to={link.to} className="nav-link" onClick={() => setMobileMenuOpen(false)}>{link.label}</Link>
@@ -127,7 +106,7 @@ export default function NavBar() {
       {user && (
         <li className="nav-item">
           <button onClick={() => { logout(); setMobileMenuOpen(false); }} className="nav-link button-link">
-            Logout
+            logout
           </button>
         </li>
       )}
@@ -141,25 +120,20 @@ export default function NavBar() {
           <Link to="/"><img src="/final_logo.jpg" alt="Logo" /></Link>
         </div>
 
-        {/* Desktop Nav Links */}
         <ul className="nav-links">
           {renderLinks(false)}
         </ul>
 
-        {/* Hamburger Icon for Mobile */}
         <button
           className="hamburger"
           aria-label="Open menu"
           onClick={() => setMobileMenuOpen((open) => !open)}
         >
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect y="7" width="32" height="3" rx="1.5" fill="#36a4d6" />
-            <rect y="15" width="32" height="3" rx="1.5" fill="#36a4d6" />
-            <rect y="23" width="32" height="3" rx="1.5" fill="#36a4d6" />
-          </svg>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
 
-        {/* Mobile Sidebar Menu */}
         {mobileMenuOpen && (
           <>
             <div className="mobile-sidebar-overlay" onClick={() => setMobileMenuOpen(false)} />

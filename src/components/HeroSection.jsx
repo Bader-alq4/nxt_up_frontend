@@ -4,30 +4,42 @@ import '../css_stuff/HeroSection.css';
 
 export default function HeroSection() {
   return (
-    <section className="hero-fullscreen">
-      <div className="hero-image-side">
+    <div className="hero-container">
+      <div className="hero-image-layer">
         <img
           src="https://res.cloudinary.com/dahquiy48/image/upload/w_500,q_auto,f_auto/group_f9jng3.jpg"
-          alt="Team group"
-          className="hero-img"
+          alt=""
+          loading="eager"
+          decoding="sync"
+          fetchpriority="high"
         />
       </div>
+      <div className="noise-overlay"></div>
+      <div className="vignette"></div>
 
-      <div className="hero-text-side">
-        <h1>Where the Work Speaks for Itself</h1>
-        <p>Building More Than Athletes. Creating Leaders for Life.</p>
-        <div className="hero-buttons">
-          <Link to="FallTeams">
-            <button className="hero-button">Fall Season</button>
+      <div className="hero-content">
+        <div className="top-marker">Edmonton</div>
+
+        <div className="center-lockup">
+          <h1 className="hero-title">still<br/>running.</h1>
+          <p className="hero-subtitle">Session active</p>
+        </div>
+
+        <div className="bottom-actions">
+          <Link to="/FallTeams" className="action-link">
+            <span>Fall</span>
+            <span className="action-arrow">→</span>
           </Link>
-          <Link to="SpringTeams">
-            <button className="hero-button">Spring Season</button>
+          <Link to="/SpringTeams" className="action-link">
+            <span>Spring</span>
+            <span className="action-arrow">→</span>
           </Link>
-          <Link to="/Training">
-            <button className="hero-button">Camps & Programming</button>
+          <Link to="/Training" className="action-link">
+            <span>Sessions</span>
+            <span className="action-arrow">→</span>
           </Link>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
