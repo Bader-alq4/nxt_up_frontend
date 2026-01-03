@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { AnimatePresence } from 'framer-motion';
 import { Navigate } from "react-router-dom";
 
+import NotFound from "./pages/NotFound";
+
 // Core Layout
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
@@ -174,6 +176,7 @@ function AppWrapper() {
               </ProtectedRoute>
             }
           />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>
 
