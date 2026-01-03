@@ -83,6 +83,7 @@ The NextUp Hoops platform enables:
   https://github.com/Bader-alq4/next-up-showcase  
 
 The backend repository demonstrates authentication, payments, admin tooling, and system architecture in detail.
+It is a **showcase repository for code showcase and review purposes only**
 
 ---
 
