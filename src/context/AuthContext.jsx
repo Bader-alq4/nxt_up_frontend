@@ -179,14 +179,14 @@ export const AuthProvider = ({ children }) => {
           const newToken = await refreshToken();
           if (newToken) {
             originalRequest.headers.Authorization = `Bearer ${newToken}`;
-            return api(originalRequest); // ✅ Use configured axios instance
+            return api(originalRequest);
           }
         }
         return Promise.reject(error);
       }
     );
 
-    return () => api.interceptors.response.eject(id); // ✅ Use `api`, not raw axios
+    return () => api.interceptors.response.eject(id);
   }, []);
 
   /* ──────────────────── PROVIDE CONTEXT ──────────────────── */
