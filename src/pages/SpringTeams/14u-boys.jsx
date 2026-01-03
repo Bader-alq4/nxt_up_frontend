@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import '../../css_stuff/SpringTeams.css'; // Reuse spring styling
+import '../../css_files/SpringTeams.css'; // Reuse spring styling
 
 function FourteenBoysSpring() { 
   return (

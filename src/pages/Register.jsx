@@ -4,7 +4,7 @@ import { Eye, EyeOff } from 'lucide-react';
 import api from '../api/axios';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PageTransition from '../components/PageTransition';
-import '../css_stuff/Errors.css';
+import '../css_files/Errors.css';
 
 function Register() {
   const navigate = useNavigate();

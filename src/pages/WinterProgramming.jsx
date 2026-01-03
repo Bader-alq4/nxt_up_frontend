@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import '../css_stuff/WinterProgramming.css';
+import '../css_files/WinterProgramming.css';
 
 export default function WinterProgramming() {
   useEffect(() => {

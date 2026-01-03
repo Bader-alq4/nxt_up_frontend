@@ -1,7 +1,7 @@
 // src/pages/Training.jsx
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import '../css_stuff/Training.css';
+import '../css_files/Training.css';
 
 export default function Training() {
   useEffect(() => {

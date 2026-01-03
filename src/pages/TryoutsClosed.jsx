@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
-import '../css_stuff/TryoutsClosed.css';
+import '../css_files/TryoutsClosed.css';
 
 function TryoutsClosed() {
   useEffect(() => {

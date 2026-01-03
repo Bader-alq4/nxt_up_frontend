@@ -1,6 +1,6 @@
-/* src/css_stuff/Training.css */
+/* src/css_files/Tournaments.css */
 
-.training-page {
+.tournaments-page {
   background-color: #000;
   color: #fff;
   display: flex;
@@ -11,17 +11,17 @@
   line-height: 1.6;
 }
 
-.training-container {
+.tournaments-container {
   max-width: 950px;
   width: 100%;
   background: #111;
   border-radius: 12px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
   padding: 4rem 2.5rem;
-  text-align: left; /* now left-aligned */
+  text-align: left;
 }
 
-.training-heading {
+.tournaments-heading {
   font-size: 2.5rem;
   font-weight: 200;
   color: #36a4d6;
@@ -29,7 +29,7 @@
   letter-spacing: 0.8px;
 }
 
-.training-subheading {
+.tournaments-subheading {
   font-size: 1.2rem;
   color: #bbb;
   margin-bottom: 2.2rem;
@@ -37,24 +37,24 @@
   font-weight: 300;
 }
 
-.training-note {
+.tournaments-note {
   font-size: 1rem;
   color: #aaa;
   font-weight: 300;
 }
 
 @media (max-width: 640px) {
-  .training-container {
+  .tournaments-container {
     padding: 2rem 1.2rem;
     max-width: 100%;
   }
 
-  .training-heading {
+  .tournaments-heading {
     font-size: 2rem;
   }
 
-  .training-subheading,
-  .training-note {
+  .tournaments-subheading,
+  .tournaments-note {
     font-size: 0.95rem;
   }
 }

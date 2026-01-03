@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import '../css_stuff/About.css';
+import '../css_files/About.css';
 
 export default function About() {
   const location = useLocation();
@@ -75,7 +75,7 @@ export default function About() {
         <div className="values-grid">
           <div className="value-item">
             <h3>Elite Coaching</h3>
-            <p>High-quality instruction from proven mentors who prioritize character development alongside basketball skills.</p>
+            <p>High-quality instruction from proven coaches who prioritize character development alongside basketball skills.</p>
           </div>
           <div className="value-item">
             <h3>Real Playing Time</h3>

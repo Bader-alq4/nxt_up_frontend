@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import '../../css_stuff/SpringTeams.css'; // Adjusted path for subfolder
+import '../../css_files/SpringTeams.css'; // Adjusted path for subfolder
 
 function FifteenGirlsSpring() {
   return (

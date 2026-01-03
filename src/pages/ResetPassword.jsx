@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import api from '../api/axios';
 import { Eye, EyeOff } from 'lucide-react';
 // Replace your old CSS import with the shared errors.css:
-import '../css_stuff/Errors.css';
+import '../css_files/Errors.css';
 
 function ResetPassword() {
   const { token } = useParams();

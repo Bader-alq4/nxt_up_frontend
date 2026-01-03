@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AuthContext from '../context/AuthContext';
-import '../css_stuff/EmailVerificationSuccess.css'; // Import the CSS file
+import '../css_files/EmailVerificationSuccess.css'; // Import the CSS file
 
 const EmailVerificationSuccess = () => {
   const navigate = useNavigate();

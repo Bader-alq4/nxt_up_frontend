@@ -2,7 +2,7 @@ import { useContext, useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import api from '../api/axios';
 import AuthContext from '../context/AuthContext';
-import '../css_stuff/ForgotPassword.css'; // this is just to use the css style from the forgot password button so that I dont have to create another css file for tryoutRegister 
+import '../css_files/ForgotPassword.css'; // this is just to use the css style from the forgot password button so that I dont have to create another css file for tryoutRegister 
 
 /**
  * Tryout Registration (final polished layout)

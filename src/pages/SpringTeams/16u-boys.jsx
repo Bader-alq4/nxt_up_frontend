@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import '../../css_stuff/SpringTeams.css'; // Path assumes this is inside SpringTeams folder
+import '../../css_files/SpringTeams.css'; // Path assumes this is inside SpringTeams folder
 
 function SixteenBoysSpring() {
   return (

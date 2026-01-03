@@ -1,7 +1,7 @@
 // src/pages/SpringTeams.jsx
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import '../css_stuff/SpringTeams.css';
+import '../css_files/SpringTeams.css';
 
 export default function SpringTeams() {
   useEffect(() => {

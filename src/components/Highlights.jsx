@@ -1,6 +1,6 @@
 // src/components/Highlights.jsx
 import React from 'react';
-import '../css_stuff/Highlights.css';
+import '../css_files/Highlights.css';
 
 const highlights = [
   { src: "https://res.cloudinary.com/dahquiy48/image/upload/w_600,q_auto,f_auto/board_blo3u0.jpg"},

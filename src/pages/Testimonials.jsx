@@ -1,7 +1,7 @@
 // src/components/Testimonials.jsx
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import '../css_stuff/Testimonials.css';
+import '../css_files/Testimonials.css';
 
 export default function Testimonials() {
   useEffect(() => {

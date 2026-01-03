@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import api from '../api/axios';
-import '../css_stuff/ForgotPassword.css';
+import '../css_files/ForgotPassword.css';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 function ForgotPassword() {

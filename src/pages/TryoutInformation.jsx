@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import '../css_stuff/TryoutInformation.css';
+import '../css_files/TryoutInformation.css';
 
 export default function TryoutInformation() {
   useEffect(() => {

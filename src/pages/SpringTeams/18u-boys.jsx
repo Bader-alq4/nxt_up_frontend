@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import '../../css_stuff/SpringTeams.css'; // Adjust path based on your file structure
+import '../../css_files/SpringTeams.css'; // Adjust path based on your file structure
 
 function EighteenBoysSpring() {
   return (

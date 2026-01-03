@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../css_stuff/GeneralInfo.css';
+import '../css_files/GeneralInfo.css';
 
 const infoItems = [
   {

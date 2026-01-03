@@ -1,7 +1,7 @@
 // src/pages/Tournaments.jsx
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import '../css_stuff/Tournaments.css';
+import '../css_files/Tournaments.css';
 
 export default function Tournaments() {
   useEffect(() => {

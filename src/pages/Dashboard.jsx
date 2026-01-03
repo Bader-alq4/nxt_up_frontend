@@ -2,7 +2,7 @@ import { useContext, useEffect, useState, useCallback } from 'react';
 import api from '../api/axios';
 import AuthContext from '../context/AuthContext';
 import { Link } from 'react-router-dom';
-import '../css_stuff/Dashboard.css';
+import '../css_files/Dashboard.css';
 
 function Dashboard() {
   const { user } = useContext(AuthContext);

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import '../css_stuff/Sponsorship.css'; // ✅ Reuse the same CSS as the Partner page
+import '../css_files/Sponsorship.css'; // ✅ Reuse the same CSS as the Partner page
 
 export default function Contact() {
   useEffect(() => {
