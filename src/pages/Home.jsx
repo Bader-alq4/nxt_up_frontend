@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 // import RegistrationCall from '../components/RegistrationCall'; // Uncomment when Registrations open
 import HeroSection from '../components/HeroSection';
 import Events from '../components/Events';
+import WhatWeOffer from '../components/WhatWeOffer';
 import Highlights from '../components/Highlights';
 import GeneralInfo from '../components/GeneralInfo';
 import Footer from '../components/Footer';
@@ -39,6 +40,7 @@ export default function Home() {
 
         <HeroSection />
         <Highlights />
+        <WhatWeOffer />
         <GeneralInfo />
         <Events />
         <Footer />

@@ -1,173 +1,148 @@
+/* ================= PAGE ================= */
 .tryout-info-page {
-    background: #000;
-    color: #fff;
-    padding: 4rem 2rem;
-    font-family: 'Helvetica Neue', sans-serif;
-    line-height: 1.7;
-    min-height: 100vh;
-  }
-  
-  .tryout-info-wrapper {
-    max-width: 800px;
-    margin: 4rem auto 3rem auto;
-    background: #000;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    padding: 3rem 2.5rem;
-  }
-  
-  .tryout-info-text {
-    padding: 3rem 2.5rem;
-  }
-  
-  .tryout-info-title {
-    color: #fff;
-    text-align: center;
-    margin-bottom: 6rem; /* increased from 2.5rem to add extra space below */
-    font-size: 2.8rem;
-    font-weight: 700;
-  }
-  
-  .tryout-info-desc {
-    color: #e0e0e0;
-    font-weight: 300;
-    font-size: 20px;
-    margin-bottom: 2rem;
-  }
-  
-  .tryout-info-date-heading {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #fff;
-    margin-bottom: 1rem;
-    text-align: left;
-  }
-  
-  .tryout-info-section {
-    margin-bottom: 2rem;
-  }
-  
-  .tryout-info-list {
-    list-style: none;
-    padding-left: 1.4rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .tryout-info-list li {
-    font-size: 1rem;
-    color: #ccc;
-    margin-bottom: 0.6rem;
-    font-weight: 300;
-    position: relative;
-    padding-left: 1rem;
-  }
-  
-  .tryout-info-list li::before {
-    content: '•';
-    color: #36a4d6;
-    position: absolute;
-    left: 0;
-  }
-  
-  .tryout-info-note {
-    font-size: 0.95rem;
-    color: #aaa;
-    margin-bottom: 0.5rem;
-    font-weight: 300;
-  }
-  
-  .tryout-info-register-btn {
-    background: white;
-    color: black;
-    border: none;
-    border-radius: 0;
-    padding: 1rem 2.2rem;
-    font-size: 1rem;
-    font-weight: 300;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.2s;
-    margin-top: 4em;
-    width: 100%;               /* ✅ FULL WIDTH */
-    max-width: 300px;          /* ✅ Optional limit */
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    display: block;            /* ✅ Ensures margin works */
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
-  
-  
-  .tryout-info-register-btn:hover {
-    background: #333;
-    transform: translateY(-2px);
-  }
-  
-  .tryout-info-btn {
-    background: #36a4d6;
-    color: #fff;
-    border: none;
-    border-radius: 0;
-    padding: 0.8rem 1.8rem;
-    font-size: 1rem;
-    font-weight: 300;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.2s;
-    margin-top: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  
-  .tryout-info-btn:hover {
-    background: #2580a7;
-    transform: translateY(-2px);
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .tryout-info-wrapper {
-      padding: 2rem 1rem;
-    }
-  
-    .tryout-info-title {
-      font-size: 1.8rem;
-      line-height: 1.3;
-    }
-  
-    .tryout-info-register-btn {
-      font-size: 1rem;
-      width: 100%;
-      max-width: 100%;
-      padding: 1rem;
-    }
-  
-    .tryout-info-date-heading {
-      font-size: 1.2rem;
-    }
-  
-    .tryout-info-list li,
-    .tryout-info-note,
-    .tryout-info-desc {
-      font-size: 0.95rem;
-    }
-  }
-  
+  padding: 4rem 2rem 6rem;
+  background: #050505;
+  color: #e5e7eb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
 
-  .tryout-info-note {
-    font-size: 0.95rem;
-    color: #aaa;
-    margin-top: 8rem; /* 👈 adds space above the note */
-    margin-bottom: 0.5rem;
-    font-weight: 300;
-  }
-  
+/* ================= HEADER ================= */
+.tryout-info-header {
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto 4rem;
+}
 
-  .tryout-section-heading {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: white;
-    margin-bottom: 1.5rem;
-    text-align: left;
-    margin-top: 9rem; /* 👈 Adds space above the heading */
+.tryout-info-header h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin-bottom: 2rem;
+  color: #f9fafb;
+}
+
+/* Intro text (THIS is where text size is controlled) */
+.tryout-intro-wide p {
+  max-width: 1000px;
+  margin: 0 auto 1.1rem;
+  font-size: 1.1rem;   /* ⬅️ change this to scale intro text */
+  font-weight: 100;     /* thin but supported by system fonts */
+  line-height: 1.85;
+  color: #9ca3af;
+}
+
+/* ================= COLUMNS ================= */
+.tryout-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.5rem;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* ================= INDIVIDUAL COLUMN ================= */
+.tryout-column {
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ================= PROGRAM BADGE (BUTTON) ================= */
+.program-badge {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  padding: 0.45rem 1rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  border-radius: 0; /* square */
+}
+
+.program-link {
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.program-link:hover {
+  background: rgba(56, 189, 248, 0.22);
+  border-color: rgba(56, 189, 248, 0.75);
+  color: #7dd3fc;
+}
+
+/* ================= HEADINGS ================= */
+.tryout-column h2 {
+  font-size: 1.95rem;
+  font-weight: 600;
+  margin-bottom: 1.4rem;
+  color: #f9fafb;
+}
+
+.tryout-column h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 1.75rem;
+  margin-bottom: 0.4rem;
+  color: #e5e7eb;
+}
+
+/* ================= DATE / LOCATION ================= */
+.location-date {
+  font-size: 0.95rem;
+  color: #9ca3af;
+  margin-bottom: 0.4rem;
+}
+
+/* ================= LISTS ================= */
+.tryout-column ul {
+  margin-left: 1.25rem;
+  margin-bottom: 1.2rem;
+}
+
+.tryout-column li {
+  font-size: 1rem;   /* ⬅️ main body size for tryout info */
+  color: #d1d5db;
+  margin-bottom: 0.35rem;
+}
+
+/* ================= FEES ================= */
+.tryout-fee {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #f9fafb;
+}
+
+/* ================= NOTES ================= */
+.important-note {
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+.muted-note {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #6b7280;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+  .tryout-columns {
+    grid-template-columns: 1fr;
+    gap: 3rem;
   }
-  
+
+  .tryout-info-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .tryout-intro-wide p {
+    font-size: 1.05rem;
+  }
+}

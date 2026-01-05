@@ -12,14 +12,18 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Training from './pages/Training';
-import FallTeams from './pages/FallTeams';
-import SpringTeams from './pages/SpringTeams';
 import WinterProgramming from './pages/WinterProgramming';
 import Tournaments from './pages/Tournaments';
 import TryoutsClosed from './pages/TryoutsClosed';
 import Sponsorship from './pages/Sponsorship';
 import Testimonials from './pages/Testimonials';
 import Contact from './pages/Contact';
+
+// Club Teams Pages
+import ClubTeams from './pages/ClubTeams/ClubTeams';
+import Spring2026Boys from './pages/ClubTeams/Spring-2026-Boys';
+import Spring2026Girls from './pages/ClubTeams/Spring-2026-Girls';
+import TryoutInformation from './pages/ClubTeams/TryoutInformation';
 
 // Auth Pages
 import Login from './pages/Login';
@@ -34,7 +38,6 @@ import EmailVerificationNotice from './pages/EmailVerificationNotice';
 import EmailVerificationSuccess from './pages/EmailVerificationSuccess';
 import PaymentSuccess from './pages/PaymentSuccess';
 import PaymentCancelled from './pages/PaymentCancelled';
-import TryoutInformation from './pages/TryoutInformation';
 
 // Legal stuff
 import Privacy from './pages/Privacy';
@@ -43,26 +46,7 @@ import Terms from './pages/Terms';
 // Protected Route Wrapper
 import ProtectedRoute from './components/ProtectedRoute';
 
-// Fall Team Subpages
-import FallTeamsGirls from './pages/FallTeams/Girls';
-import FallTeamsBoys from './pages/FallTeams/Boys';
-// import Fall13UBoys from './pages/FallTeams/13u-boys';
-// import Fall15UBoys from './pages/FallTeams/15u-boys';
-// import Fall16UBoys from './pages/FallTeams/16u-boys';
-// import Fall17UBoys from './pages/FallTeams/17u-boys';
-// import Fall18UBoys from './pages/FallTeams/18u-boys';
-// import Fall15UGirls from './pages/FallTeams/15u-girls';
-// import Fall17UGirls from './pages/FallTeams/17u-girls';
 
-// Spring Team Subpages
-import Spring13UBoys from './pages/SpringTeams/13u-boys';
-import Spring14UBoys from './pages/SpringTeams/14u-boys';
-import Spring15UBoys from './pages/SpringTeams/15u-boys';
-import Spring16UBoys from './pages/SpringTeams/16u-boys';
-import Spring17UBoys from './pages/SpringTeams/17u-boys';
-import Spring18UBoys from './pages/SpringTeams/18u-boys';
-import Spring15UGirls from './pages/SpringTeams/15u-girls';
-import Spring17UGirls from './pages/SpringTeams/17u-girls';
 
 function EmailVerificationNoticeWrapper() {
   const location = useLocation();
@@ -81,8 +65,7 @@ function AppWrapper() {
 
   const shouldShowFooter =
     path.startsWith('/about') ||
-    path.startsWith('/FallTeams') ||
-    path.startsWith('/SpringTeams') ||
+    path.startsWith('/ClubTeams') ||
     path.startsWith('/WinterProgramming') ||
     path.startsWith('/Training') ||
     path.startsWith('/Tournaments') ||
@@ -103,32 +86,14 @@ function AppWrapper() {
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/Training" element={<Training />} />
-          <Route path="/FallTeams" element={<FallTeams />} />
-          <Route path="/SpringTeams" element={<SpringTeams />} />
+          <Route path="/ClubTeams" element={<ClubTeams />} />
+          <Route path="/ClubTeams/Spring-2026-Boys" element={<Spring2026Boys />} />
+          <Route path="/ClubTeams/Spring-2026-Girls" element={<Spring2026Girls />} />
+          <Route path="/ClubTeams/Tryouts" element={<TryoutInformation />} />
           <Route path="/WinterProgramming" element={<WinterProgramming />} />
           <Route path="/Tournaments" element={<Tournaments />} />
           <Route path="/TryoutsClosed" element={<TryoutsClosed />} />
-          <Route path="/FallTeams/Girls" element={<FallTeamsGirls />} />
-          <Route path="/FallTeams/Boys" element={<FallTeamsBoys />} />
 
-          {/* Fall Team Subpages */}
-          {/* <Route path="/FallTeams/13u-boys" element={<Fall13UBoys />} />
-          <Route path="/FallTeams/15u-boys" element={<Fall15UBoys />} />
-          <Route path="/FallTeams/16u-boys" element={<Fall16UBoys />} />
-          <Route path="/FallTeams/17u-boys" element={<Fall17UBoys />} />
-          <Route path="/FallTeams/18u-boys" element={<Fall18UBoys />} />
-          <Route path="/FallTeams/15u-girls" element={<Fall15UGirls />} />
-          <Route path="/FallTeams/16u-girls" element={<Fall16UGirls />} /> */}
-
-          {/* Spring Team Subpages */}
-          <Route path="/SpringTeams/13u-boys" element={<Spring13UBoys />} />
-          <Route path="/SpringTeams/14u-boys" element={<Spring14UBoys />} />
-          <Route path="/SpringTeams/15u-boys" element={<Spring15UBoys />} />
-          <Route path="/SpringTeams/16u-boys" element={<Spring16UBoys />} />
-          <Route path="/SpringTeams/17u-boys" element={<Spring17UBoys />} />
-          <Route path="/SpringTeams/18u-boys" element={<Spring18UBoys />} />
-          <Route path="/SpringTeams/15u-girls" element={<Spring15UGirls />} />
-          <Route path="/SpringTeams/17u-girls" element={<Spring17UGirls />} />
 
           {/* Auth */}
           <Route path="/login" element={<Navigate to="/" replace />} />

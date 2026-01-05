@@ -1,0 +1,162 @@
+.what-we-offer {
+    padding: 8rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: #000;
+    position: relative;
+  }
+  
+  .offer-section-header {
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #1a1a1a;
+  }
+  
+  .offer-section-title {
+    font-family: 'Atkinson Hyperlegible', 'Courier New', monospace;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .offer-section-subtitle {
+    font-size: 0.9rem;
+    color: #808080;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+    margin: 0;
+  }
+  
+  .offer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1px;
+    background: #000;
+  }
+  
+  .offer-card {
+    padding: 3rem 2.5rem;
+    background: #000;
+    text-align: left;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .offer-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .offer-card:hover {
+    background: #0a0a0a;
+    transform: translateY(-2px);
+  }
+  
+  .offer-card:hover::before {
+    opacity: 1;
+  }
+  
+  .offer-card-number {
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #505050;
+    letter-spacing: 0.15em;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+  
+  .offer-card:hover .offer-card-number {
+    color: #808080;
+  }
+  
+  .offer-card-title {
+    font-family: 'Atkinson Hyperlegible', 'Courier New', monospace;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #fff;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    transition: color 0.3s ease;
+  }
+  
+  .offer-card:hover .offer-card-title {
+    color: #fff;
+  }
+  
+  .offer-card-subtitle {
+    font-size: 0.95rem;
+    color: #808080;
+    margin: 0;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+  }
+  
+  .offer-card:hover .offer-card-subtitle {
+    color: #cfcfcf;
+  }
+  
+  .offer-card-divider {
+    width: 0;
+    height: 1px;
+    background: #808080;
+    margin-top: 1.5rem;
+    transition: width 0.4s ease;
+  }
+  
+  .offer-card:hover .offer-card-divider {
+    width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .what-we-offer {
+      padding: 5rem 1.5rem;
+    }
+  
+    .offer-section-header {
+      margin-bottom: 3rem;
+      padding-bottom: 1.5rem;
+    }
+  
+    .offer-section-title {
+      font-size: 2rem;
+    }
+  
+    .offer-grid {
+      grid-template-columns: 1fr;
+      gap: 1px;
+    }
+  
+    .offer-card {
+      padding: 2.5rem 2rem;
+    }
+  
+    .offer-card-title {
+      font-size: 1.5rem;
+    }
+  
+    .offer-card-subtitle {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .offer-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }

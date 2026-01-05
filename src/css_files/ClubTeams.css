@@ -1,0 +1,146 @@
+/* PAGE */
+.club-teams-page {
+  background: #050505;
+  color: #e5e7eb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* HERO */
+.club-hero {
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background:
+    linear-gradient(180deg, rgba(5,5,5,0.85), rgba(5,5,5,1)),
+    url('/basketball-hero.jpg'); /* ⬅️ swap later */
+  background-size: cover;
+  background-position: center;
+}
+
+.club-hero-content {
+  max-width: 900px;
+  text-align: center;
+}
+
+.club-hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #f9fafb;
+}
+
+.club-hero-content p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #9ca3af;
+}
+
+/* SEASON */
+.club-season {
+  padding: 5rem 2rem 6rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.club-season-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.club-season-header h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.season-status {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #38bdf8;
+  border: 1px solid rgba(56,189,248,0.4);
+  padding: 0.4rem 0.75rem;
+}
+
+/* CARDS */
+.club-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.club-card {
+  position: relative;
+  height: 360px;
+  background-size: cover;
+  background-position: center;
+  text-decoration: none;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.club-card.boys {
+  background-image: url('/boys-team.jpg');
+}
+
+.club-card.girls {
+  background-image: url('/girls-team.jpg');
+}
+
+.club-card.tryouts {
+  background-image: url('/tryouts.jpg');
+}
+
+.club-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(5,5,5,0.35),
+    rgba(5,5,5,0.9)
+  );
+}
+
+.club-card-content {
+  position: absolute;
+  bottom: 0;
+  padding: 2rem;
+}
+
+.club-card-content h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+  color: #f9fafb;
+}
+
+.club-card-content p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #d1d5db;
+  margin-bottom: 1.25rem;
+}
+
+.club-card-content span {
+  font-size: 0.85rem;
+  color: #38bdf8;
+}
+
+/* HOVER */
+.club-card:hover {
+  transform: translateY(-4px);
+  transition: transform 0.25s ease;
+}
+
+/* MOBILE */
+@media (max-width: 1000px) {
+  .club-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .club-hero-content h1 {
+    font-size: 2.6rem;
+  }
+}

@@ -1,46 +1,38 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "../css_files/HeroSection.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../css_files/NotFound.css';
 
-export default function HeroSection() {
+export default function NotFound() {
   return (
-    <section className="hero-fullscreen portal">
-      {/* IMAGE */}
-      <div className="hero-image-side">
-        <img
-          src="https://res.cloudinary.com/dahquiy48/image/upload/w_500,q_auto,f_auto/group_f9jng3.jpg"
-          alt="Session live"
-          className="hero-img"
-        />
-      </div>
-
-      {/* INTERFACE */}
-      <div className="hero-text-side portal-ui">
-        <span className="portal-tag">SESSION ACTIVE</span>
-
-        <h1>Gym Access</h1>
-
-        <p>Authorized players only.</p>
-
-        <div className="hero-buttons portal-actions">
-          <Link to="/FallTeams">
-            <button>Fall</button>
-          </Link>
-
-          <Link to="/SpringTeams">
-            <button>Spring</button>
-          </Link>
-
-          <Link to="/Training">
-            <button>Training</button>
-          </Link>
+    <div className="not-found-page">
+      <div className="not-found-container">
+        {/* 404 + Ball */}
+        <div className="not-found-header">
+          <h1 className="not-found-number">404</h1>
+          
+          {/* Ball */}
+          <div className="not-found-ball-container">
+            <div className="not-found-ball">🏀</div>
+            <div className="not-found-shadow"></div>
+          </div>
         </div>
 
-        <div className="portal-meta">
-          <span>Status: Live</span>
-          <span>Location: Locked</span>
+        {/* Text */}
+        <div className="not-found-content">
+          <h2 className="not-found-title">You Missed the Shot</h2>
+          <p className="not-found-message">
+            The page you're looking for doesn't exist or was moved.
+            Even legends miss sometimes.
+          </p>
+        </div>
+
+        {/* Actions */}
+        <div className="not-found-actions">
+          <Link to="/" className="not-found-btn not-found-btn-primary">
+            Go Home
+          </Link>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
