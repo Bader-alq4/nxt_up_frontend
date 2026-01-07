@@ -4,33 +4,30 @@ import '../css_files/Events.css';
 const events = [
   {
     id: 1,
-    title: '15U/16U Boys Tryouts',
+    title: 'U13–U15 Boys Tryouts',
     datetimes: [
-      'August 9, 2025 • 1:00 PM – 2:30 PM @ Saville, Court 3',
-      'August 16, 2025 • 1:00 PM – 2:30 PM @ Raise Athletics, Court 1'
+      'February 21, 2026 • 7:30 PM – 9:00 PM @ Commonwealth Rec Centre, Court 1'
     ],
   },
   {
     id: 2,
-    title: '17/18U Boys Tryouts',
+    title: 'U16–U17 Boys Tryouts',
     datetimes: [
-      'August 9, 2025 • 2:30 PM – 4:00 PM @ Saville, Court 3', 
-      'August 16, 2025 • 2:30 PM – 4:00 PM @ Raise Athletics, Court 1'
+      'February 21, 2026 • 7:30 PM – 9:00 PM @ Commonwealth Rec Centre, Court 2'
     ],
   },
   {
     id: 3,
-    title: '15U/17U Girls Open Gym',
+    title: 'U15 Girls Tryouts',
     datetimes: [
-      'August 5, 2025 • 7:00 PM – 9:00 PM @ Central Lions Rec Centre'
+      'February 21, 2026 • 6:00 PM – 7:30 PM @ Commonwealth Rec Centre, Court 1'
     ],
   },
   {
     id: 4,
-    title: '15U/17U Girls Tryouts',
+    title: 'U17 Girls Tryouts',
     datetimes: [
-      'August 13, 2025 • 4:00 PM – 6:00 PM @ Commonwealth Rec Centre', 
-      'August 19, 2025 • 6:00 PM – 8:00 PM @ Central Lions Rec Centre'
+      'February 21, 2026 • 6:00 PM – 7:30 PM @ Commonwealth Rec Centre, Court 2'
     ],
   },
 ];

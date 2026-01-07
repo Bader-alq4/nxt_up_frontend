@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import '../../css_files/TryoutInformation.css';
 
 export default function TryoutInformation() {
@@ -15,117 +14,176 @@ export default function TryoutInformation() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.4 }}
     >
-      <div className="tryout-info-header">
-        <h1>Spring 2026 Club Tryouts</h1>
+      <div className="tryout-wrapper">
 
-        <div className="tryout-intro-wide">
-            <p>
-            We offer Club teams for girls and boys from 13U to 18U during the Spring and
-            Summer seasons. Teams are formed through tryouts and selective invitations,
-            depending on age group and roster needs.
+        {/* ================= HERO ================= */}
+        <header className="tryout-hero">
+          <div className="hero-content">
+            <span className="tryout-date">February 21, 2026</span>
+            <h1>Spring Club Tryouts</h1>
+            <p className="hero-subtitle">
+              Commonwealth Recreation Centre · Edmonton
             </p>
+          </div>
 
+          <div className="hero-images-layout">
+            <img
+              src="https://res.cloudinary.com/dahquiy48/image/upload/v1767375626/boys_group_highlight_dih4fc.jpg"
+              alt="Next Up Hoops game action"
+              className="hero-img-1"
+            />
+            <img
+              src="https://res.cloudinary.com/dahquiy48/image/upload/v1767639418/girls-bench_pdshhj.jpg"
+              alt="Next Up Hoops training session"
+              className="hero-img-2"
+            />
+          </div>
+        </header>
+
+        {/* ================= INTRO ================= */}
+        <section className="intro-section">
+          <div className="intro-content">
             <p>
-            Teams train on a regular schedule and compete in local and regional tournaments,
-            with some teams participating in out-of-province events based on age group and
-            competitive level. Tournament schedules and travel expectations vary by team.
+              Next Up Hoops will be holding Spring Season Club tryouts for boys and
+              girls teams. Athletes are evaluated by age group in structured sessions
+              focused on skill level, competitiveness, and overall fit within the program.
             </p>
-        </div>
-        </div>
+            <p>
+              Teams compete throughout the Spring season in league play and tournaments.
+              Final roster selections are made following the evaluation sessions.
+            </p>
+            <div className="fee-box">
+              <span className="fee-label">Tryout Fee</span>
+              <span className="fee-amount">$15</span>
+              <span className="fee-note">per player</span>
+            </div>
+          </div>
+        </section>
 
+        {/* ================= TRYOUT SCHEDULE ================= */}
+        <section className="schedule-section">
+          <h2>Tryout Schedule</h2>
 
-      <div className="tryout-columns">
-        {/* ================= GIRLS ================= */}
-        <div className="tryout-column">
-          <Link
-            to="/ClubTeams/Spring-2026-Girls"
-            className="program-badge program-link"
+          <div className="schedule-container">
+            <div className="schedule-group">
+              <div className="group-label">Boys</div>
+              <div className="schedule-items">
+                <div className="schedule-item">
+                  <div className="item-header">
+                    <span className="age-group">U13 – U15</span>
+                    <span className="court-info">Court 1</span>
+                  </div>
+                  <div className="item-time">7:30 PM</div>
+                  <div className="item-location">Commonwealth Rec Centre</div>
+                </div>
+
+                <div className="schedule-item">
+                  <div className="item-header">
+                    <span className="age-group">U16 – U17</span>
+                    <span className="court-info">Court 2</span>
+                  </div>
+                  <div className="item-time">7:30 PM</div>
+                  <div className="item-location">Commonwealth Rec Centre</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="schedule-group">
+              <div className="group-label">Girls</div>
+              <div className="schedule-items">
+                <div className="schedule-item">
+                  <div className="item-header">
+                    <span className="age-group">U15</span>
+                    <span className="court-info">Court 1</span>
+                  </div>
+                  <div className="item-time">6:00 PM</div>
+                  <div className="item-location">Commonwealth Rec Centre</div>
+                </div>
+
+                <div className="schedule-item">
+                  <div className="item-header">
+                    <span className="age-group">U17</span>
+                    <span className="court-info">Court 2</span>
+                  </div>
+                  <div className="item-time">6:00 PM</div>
+                  <div className="item-location">Commonwealth Rec Centre</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p className="arrival-reminder">
+            <strong>Arrive 15 minutes early</strong> for check-in and warmups
+          </p>
+        </section>
+
+        {/* ================= OPEN GYMS ================= */}
+        <section className="open-gym-section">
+          <h2>Open Gym Sessions</h2>
+          <p className="section-subtitle">No registration required</p>
+
+          <div className="open-gym-block">
+            <div className="gym-header">
+              <span className="gym-label">TBD</span>
+            </div>
+          </div>
+        </section>
+
+        {/* ================= AGE ELIGIBILITY ================= */}
+        <section className="eligibility-section">
+          <h2>Age Group Eligibility</h2>
+          
+          <div className="eligibility-list">
+            <div className="eligibility-row">
+              <span className="age">U13</span>
+              <span className="divider"></span>
+              <span className="birth">Born in 2013 or later</span>
+            </div>
+            <div className="eligibility-row">
+              <span className="age">U14</span>
+              <span className="divider"></span>
+              <span className="birth">Born in 2012 or later</span>
+            </div>
+
+            <div className="eligibility-row">
+              <span className="age">U15</span>
+              <span className="divider"></span>
+              <span className="birth">Born in 2011 or later</span>
+            </div>
+            <div className="eligibility-row">
+              <span className="age">U16</span>
+              <span className="divider"></span>
+              <span className="birth">Born in 2010 or later</span>
+            </div>
+            <div className="eligibility-row">
+              <span className="age">U17</span>
+              <span className="divider"></span>
+              <span className="birth">Born in 2009 or later</span>
+            </div>
+          </div>
+        </section>
+
+        {/* ================= ADDITIONAL INFO ================= */}
+        <section className="additional-info">
+          <p>
+            Additional tryout sessions may be scheduled only if warranted by competitive 
+            depth within an age group. All scheduling decisions are made at the discretion 
+            of the coaching staff and will be communicated through official club channels.
+          </p>
+        </section>
+
+        {/* ================= CTA ================= */}
+        <section className="cta-section">
+          <a
+            href="https://registration.teamsnap.com/form/48542"
+            className="register-button"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Girls Program Info
-          </Link>
+            Register for Tryouts
+          </a>
+        </section>
 
-          <h2>Girls Tryouts – Edmonton & Calgary</h2>
-
-          <h3>Edmonton – Club</h3>
-          <p className="location-date">
-            <strong>Saturday, January 10, 2026</strong> – Edmonton Sports Centre (9880 47 Ave)
-          </p>
-
-          <ul>
-            <li><strong>10:00 AM – 12:00 PM</strong> – 11U Girls (2015+)</li>
-            <li><strong>10:00 AM – 12:00 PM</strong> – 13U Girls (2013+)</li>
-            <li><strong>12:15 PM – 2:15 PM</strong> – 15U Girls (2011+)</li>
-            <li><strong>2:30 PM – 4:30 PM</strong> – 16U / 17U / 18U Girls (2007+)</li>
-          </ul>
-
-          <p className="location-date">
-            <strong>Sunday, January 11, 2026</strong> – Edmonton Sports Centre (9880 47 Ave)
-          </p>
-
-          <ul>
-            <li><strong>10:00 AM – 12:00 PM</strong> – 11U Girls</li>
-            <li><strong>10:00 AM – 12:00 PM</strong> – 13U Girls</li>
-            <li><strong>12:15 PM – 2:15 PM</strong> – 15U Girls</li>
-            <li><strong>2:30 PM – 4:30 PM</strong> – 16U / 17U / 18U Girls</li>
-          </ul>
-
-          <h3>Calgary – Club</h3>
-          <p className="location-date">
-            <strong>Saturday, January 17, 2026</strong> – RISE Sports Complex
-          </p>
-
-          <ul>
-            <li><strong>3:30 PM – 5:00 PM</strong> – 15U Girls</li>
-            <li><strong>5:00 PM – 6:30 PM</strong> – 16U / 17U / 18U Girls</li>
-          </ul>
-
-          <p className="tryout-fee">Tryout Fee: $25 + GST</p>
-        </div>
-
-        {/* ================= BOYS ================= */}
-        <div className="tryout-column">
-          <Link
-            to="/ClubTeams/Spring-2026-Boys"
-            className="program-badge program-link"
-          >
-            Boys Program Info
-          </Link>
-
-          <h2>Boys Tryouts</h2>
-
-          <h3>Edmonton – Club</h3>
-          <p className="location-date">
-            <strong>Saturday, January 17, 2026</strong> – Edmonton Sports Centre (9880 47 Ave)
-          </p>
-
-          <ul>
-            <li><strong>10:00 AM – 12:00 PM</strong> – 11U Boys (2015+)</li>
-            <li><strong>10:00 AM – 12:00 PM</strong> – 13U Boys (2013+)</li>
-            <li><strong>12:15 PM – 2:15 PM</strong> – 15U Boys (2011+)</li>
-            <li><strong>2:30 PM – 4:30 PM</strong> – 16U / 17U / 18U Boys (2007+)</li>
-          </ul>
-
-          <p className="location-date">
-            <strong>Sunday, January 18, 2026</strong> – Edmonton Sports Centre (9880 47 Ave)
-          </p>
-
-          <ul>
-            <li><strong>10:00 AM – 12:00 PM</strong> – 11U Boys</li>
-            <li><strong>10:00 AM – 12:00 PM</strong> – 13U Boys</li>
-            <li><strong>12:15 PM – 2:15 PM</strong> – 15U Boys</li>
-            <li><strong>2:30 PM – 4:30 PM</strong> – 16U / 17U / 18U Boys</li>
-          </ul>
-
-          <p className="tryout-fee">Tryout Fee: $25 + GST</p>
-
-          <p className="important-note">
-            <strong>Important:</strong> Arrive 30 minutes prior to your scheduled time.
-          </p>
-
-          <p className="muted-note">
-            Calgary Boys Tryouts – TBA
-          </p>
-        </div>
       </div>
     </motion.div>
   );

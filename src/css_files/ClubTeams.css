@@ -1,146 +1,391 @@
-/* PAGE */
-.club-teams-page {
-  background: #050505;
-  color: #e5e7eb;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+/* ===============================
+   GLOBAL PAGE
+================================ */
+.program-page {
+  background: #ffffff;
+  color: #111;
+  padding: 5rem 1.5rem 6rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
 }
 
-/* HERO */
-.club-hero {
-  min-height: 65vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4rem 2rem;
-  background:
-    linear-gradient(180deg, rgba(5,5,5,0.85), rgba(5,5,5,1)),
-    url('/basketball-hero.jpg'); /* ⬅️ swap later */
-  background-size: cover;
-  background-position: center;
-}
-
-.club-hero-content {
-  max-width: 900px;
-  text-align: center;
-}
-
-.club-hero-content h1 {
-  font-size: 3.5rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  color: #f9fafb;
-}
-
-.club-hero-content p {
-  font-size: 1.15rem;
-  line-height: 1.8;
-  color: #9ca3af;
-}
-
-/* SEASON */
-.club-season {
-  padding: 5rem 2rem 6rem;
-  max-width: 1300px;
+.program-container {
+  max-width: 980px;
   margin: 0 auto;
 }
 
-.club-season-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 3rem;
-}
-
-.club-season-header h2 {
-  font-size: 2.2rem;
-  font-weight: 600;
-}
-
-.season-status {
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #38bdf8;
-  border: 1px solid rgba(56,189,248,0.4);
-  padding: 0.4rem 0.75rem;
-}
-
-/* CARDS */
-.club-cards {
+/* ===============================
+   HERO
+================================ */
+.program-hero {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  margin-bottom: 5rem;
+  align-items: start;
+  padding-top: 1rem;
 }
 
-.club-card {
+.program-eyebrow {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 0.75rem;
+}
+
+.program-hero-text h1 {
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 1.5rem;
+}
+
+.program-hero-text h1 span {
+  font-weight: 400;
+}
+
+.program-lead {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #444;
+  max-width: 520px;
+}
+
+/* ===============================
+   HERO IMAGES - OVERLAPPING DESIGN
+================================ */
+.program-hero-images {
   position: relative;
-  height: 360px;
-  background-size: cover;
-  background-position: center;
-  text-decoration: none;
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.08);
+  height: 560px;
 }
 
-.club-card.boys {
-  background-image: url('/boys-team.jpg');
+.hero-image-primary {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  z-index: 1;
 }
 
-.club-card.girls {
-  background-image: url('/girls-team.jpg');
+.hero-image-primary img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.14);
 }
 
-.club-card.tryouts {
-  background-image: url('/tryouts.jpg');
-}
-
-.club-card-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(5,5,5,0.35),
-    rgba(5,5,5,0.9)
-  );
-}
-
-.club-card-content {
+.hero-image-secondary {
   position: absolute;
   bottom: 0;
-  padding: 2rem;
+  right: -30px;
+  width: 62%;
+  height: 260px;
+  z-index: 2;
 }
 
-.club-card-content h3 {
-  font-size: 1.6rem;
-  margin-bottom: 0.75rem;
-  color: #f9fafb;
+.hero-image-secondary img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.18);
 }
 
-.club-card-content p {
+/* ===============================
+   SECTIONS
+================================ */
+.program-section {
+  margin-bottom: 4.5rem;
+}
+
+.program-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.program-section h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.program-section p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #333;
+  max-width: 760px;
+  margin-bottom: 1.2rem;
+}
+
+/* ===============================
+   WHAT'S INCLUDED GRID
+================================ */
+.included-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.included-item {
+  background: #fafafa;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 1.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.included-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.included-item h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+  color: #111;
+}
+
+.included-item p {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #d1d5db;
-  margin-bottom: 1.25rem;
+  color: #555;
+  margin: 0;
+  max-width: 100%;
 }
 
-.club-card-content span {
-  font-size: 0.85rem;
-  color: #38bdf8;
+/* ===============================
+   LISTS
+================================ */
+.simple-list {
+  padding-left: 1.25rem;
+  max-width: 720px;
 }
 
-/* HOVER */
-.club-card:hover {
-  transform: translateY(-4px);
-  transition: transform 0.25s ease;
+.simple-list li {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 0.6rem;
+  color: #333;
 }
 
-/* MOBILE */
-@media (max-width: 1000px) {
-  .club-cards {
+/* ===============================
+   TOURNAMENT OPTIONS
+================================ */
+.tournament-option-block {
+  background: #f9f9f9;
+  border-left: 3px solid #111;
+  padding: 1.75rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+}
+
+.tournament-option-block h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.option-note {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.tournament-option-block .simple-list {
+  margin-bottom: 0;
+}
+
+/* ===============================
+   PRICING
+================================ */
+.pricing-intro {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #333;
+  max-width: 760px;
+  margin-bottom: 2.5rem;
+}
+
+.pricing-option-wrapper {
+  background: #fafafa;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.pricing-option-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #ddd;
+}
+
+.pricing-option-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.pricing-total {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #000;
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.pricing-table tr td {
+  padding: 0.8rem 0;
+  vertical-align: top;
+}
+
+.pricing-table tr td:first-child {
+  color: #333;
+}
+
+.pricing-table tr td:last-child {
+  text-align: right;
+  color: #000;
+  font-weight: 500;
+}
+
+.pricing-table tr:not(:last-child) td {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* ===============================
+   ACTIONS
+================================ */
+.program-actions {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.program-actions a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000;
+  border-bottom: 1px solid #000;
+  padding-bottom: 2px;
+  transition: opacity 0.2s ease;
+}
+
+.program-actions a:hover {
+  opacity: 0.6;
+}
+
+.secondary-link {
+  color: #666;
+  border-bottom-color: #ccc;
+}
+
+.secondary-link:hover {
+  color: #000;
+  border-bottom-color: #000;
+}
+
+/* ===============================
+   MOBILE
+================================ */
+@media (max-width: 900px) {
+  .program-hero {
     grid-template-columns: 1fr;
+    gap: 3rem;
   }
 
-  .club-hero-content h1 {
+  .program-hero-text h1 {
     font-size: 2.6rem;
+  }
+
+  .program-hero-images {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .hero-image-secondary {
+    right: 10px;
+    width: 50%;
+  }
+
+  .included-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .tournament-option-block {
+    padding: 1.5rem 1.5rem;
+  }
+
+  .pricing-option-wrapper {
+    padding: 1.5rem;
+  }
+
+  .pricing-option-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .program-page {
+    padding: 4rem 1.25rem 5rem;
+  }
+
+  .program-hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .program-hero-images {
+    height: 400px;
+  }
+
+  .hero-image-primary {
+    height: 300px;
+  }
+
+  .hero-image-secondary {
+    height: 210px;
+    width: 60%;
+    right: 0;
+  }
+
+  .included-item {
+    padding: 1.5rem;
+  }
+
+  .program-actions {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .tournament-option-block {
+    padding: 1.25rem;
+  }
+
+  .pricing-option-wrapper {
+    padding: 1.25rem;
   }
 }

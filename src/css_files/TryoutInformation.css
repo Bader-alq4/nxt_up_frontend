@@ -1,148 +1,493 @@
-/* ================= PAGE ================= */
+/* ===============================
+   GLOBAL PAGE
+================================ */
 .tryout-info-page {
-  padding: 4rem 2rem 6rem;
-  background: #050505;
-  color: #e5e7eb;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #fafafa;
+  color: #111;
+  padding: 3rem 1.5rem 6rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
+  min-height: 100vh;
 }
 
-/* ================= HEADER ================= */
-.tryout-info-header {
-  text-align: center;
+.tryout-wrapper {
   max-width: 1100px;
-  margin: 0 auto 4rem;
+  margin: 0 auto;
 }
 
-.tryout-info-header h1 {
-  font-size: 3rem;
-  font-weight: 600;
-  letter-spacing: -0.015em;
-  margin-bottom: 2rem;
-  color: #f9fafb;
+/* ===============================
+   HERO - CENTERED BOLD LAYOUT
+================================ */
+.tryout-hero {
+  text-align: center;
+  margin-bottom: 6rem;
+  padding: 3rem 0;
 }
 
-/* Intro text (THIS is where text size is controlled) */
-.tryout-intro-wide p {
-  max-width: 1000px;
-  margin: 0 auto 1.1rem;
-  font-size: 1.1rem;   /* ⬅️ change this to scale intro text */
-  font-weight: 100;     /* thin but supported by system fonts */
-  line-height: 1.85;
-  color: #9ca3af;
+.hero-content {
+  margin-bottom: 3.5rem;
 }
 
-/* ================= COLUMNS ================= */
-.tryout-columns {
+.tryout-date {
+  display: inline-block;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+}
+
+.tryout-hero h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  font-weight: 400;
+}
+
+/* ===============================
+   HERO IMAGES - SIDE BY SIDE
+================================ */
+.hero-images-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4.5rem;
-  max-width: 1250px;
+  gap: 2rem;
+  max-width: 900px;
   margin: 0 auto;
 }
 
-/* ================= INDIVIDUAL COLUMN ================= */
-.tryout-column {
-  max-width: 580px;
-  margin: 0 auto;
-  line-height: 1.6;
+.hero-images-layout img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ================= PROGRAM BADGE (BUTTON) ================= */
-.program-badge {
-  display: inline-block;
-  background: rgba(56, 189, 248, 0.12);
-  color: #38bdf8;
-  border: 1px solid rgba(56, 189, 248, 0.4);
-  padding: 0.45rem 1rem;
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
+.hero-images-layout img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* ===============================
+   INTRO SECTION
+================================ */
+.intro-section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 3rem;
+  margin-bottom: 4rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.intro-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+}
+
+.fee-box {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  padding: 1.5rem 2rem;
+  background: #f9f9f9;
+  border-left: 4px solid #111;
+  border-radius: 6px;
+}
+
+.fee-label {
+  font-size: 0.85rem;
   text-transform: uppercase;
-  margin-bottom: 1.25rem;
-  border-radius: 0; /* square */
-}
-
-.program-link {
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.15s ease;
-}
-
-.program-link:hover {
-  background: rgba(56, 189, 248, 0.22);
-  border-color: rgba(56, 189, 248, 0.75);
-  color: #7dd3fc;
-}
-
-/* ================= HEADINGS ================= */
-.tryout-column h2 {
-  font-size: 1.95rem;
+  letter-spacing: 0.1em;
+  color: #666;
   font-weight: 600;
-  margin-bottom: 1.4rem;
-  color: #f9fafb;
 }
 
-.tryout-column h3 {
+.fee-amount {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.fee-note {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* ===============================
+   SCHEDULE SECTION
+================================ */
+.schedule-section {
+  margin-bottom: 5rem;
+}
+
+.schedule-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+
+.schedule-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+}
+
+.schedule-group {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.group-label {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.schedule-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.schedule-item {
+  padding: 1.25rem;
+  background: #fafafa;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.schedule-item:hover {
+  background: #f5f5f5;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.age-group {
   font-size: 1.1rem;
   font-weight: 600;
-  margin-top: 1.75rem;
-  margin-bottom: 0.4rem;
-  color: #e5e7eb;
+  color: #111;
 }
 
-/* ================= DATE / LOCATION ================= */
-.location-date {
+.court-info {
+  font-size: 0.85rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.item-time {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.5rem;
+}
+
+.item-location {
   font-size: 0.95rem;
-  color: #9ca3af;
-  margin-bottom: 0.4rem;
+  color: #666;
 }
 
-/* ================= LISTS ================= */
-.tryout-column ul {
-  margin-left: 1.25rem;
-  margin-bottom: 1.2rem;
-}
-
-.tryout-column li {
-  font-size: 1rem;   /* ⬅️ main body size for tryout info */
-  color: #d1d5db;
-  margin-bottom: 0.35rem;
-}
-
-/* ================= FEES ================= */
-.tryout-fee {
-  margin-top: 1.5rem;
+.arrival-reminder {
+  text-align: center;
   font-size: 1rem;
-  font-weight: 500;
-  color: #f9fafb;
+  color: #555;
+  padding: 1.5rem;
+  background: #fff9e6;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-/* ================= NOTES ================= */
-.important-note {
-  margin-top: 1.25rem;
-  font-size: 0.9rem;
-  color: #e5e7eb;
+/* ===============================
+   OPEN GYM SECTION
+================================ */
+.open-gym-section {
+  margin-bottom: 5rem;
 }
 
-.muted-note {
-  margin-top: 2rem;
-  font-size: 0.9rem;
+.open-gym-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.section-subtitle {
+  font-size: 0.95rem;
+  color: #666;
   font-style: italic;
-  color: #6b7280;
+  margin-bottom: 2rem;
 }
 
-/* ================= MOBILE ================= */
-@media (max-width: 900px) {
-  .tryout-columns {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
+.open-gym-block {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 600px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
 
-  .tryout-info-header h1 {
-    font-size: 2.2rem;
-  }
+.gym-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+}
 
-  .tryout-intro-wide p {
+.gym-label {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.gym-time {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.gym-info p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* ===============================
+   ELIGIBILITY SECTION
+================================ */
+.eligibility-section {
+  margin-bottom: 5rem;
+}
+
+.eligibility-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.01em;
+}
+
+.eligibility-list {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 600px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.eligibility-row {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.eligibility-row:last-child {
+  border-bottom: none;
+}
+
+.eligibility-row .age {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #111;
+  min-width: 80px;
+}
+
+.eligibility-row .divider {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, #ddd 0%, transparent 100%);
+  margin: 0 1.5rem;
+}
+
+.eligibility-row .birth {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* ===============================
+   ADDITIONAL INFO
+================================ */
+.additional-info {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 4rem;
+}
+
+.additional-info p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #555;
+  margin: 0;
+}
+
+/* ===============================
+   CTA SECTION – CLEAN
+================================ */
+.cta-section {
+  text-align: center;
+  padding: 7rem 1.5rem 6rem;
+  margin-top: 5rem;
+  border-top: none;
+  background: transparent;
+}
+
+
+.register-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #000;
+  color: #fff;
+
+  padding: 2.6rem 7.5rem;
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  border: 3px solid #000;
+  border-radius: 0;
+  min-width: 420px;
+
+  font-family: 'Courier New', monospace;
+
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.55);
+  transition: all 0.25s ease;
+}
+
+.register-button:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-5px);
+  box-shadow: 0 26px 80px rgba(0, 0, 0, 0.7);
+}
+
+/* Optional supporting line under button */
+.cta-section .cta-note {
+  margin-top: 2.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #444;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ===============================
+   MOBILE
+================================ */
+@media (max-width: 768px) {
+  .register-button {
+    padding: 1.75rem 3.5rem;
     font-size: 1.05rem;
+    min-width: 100%;
+  }
+}
+
+/* ===============================
+   MOBILE
+================================ */
+@media (max-width: 900px) {
+  .tryout-hero h1 {
+    font-size: 3.2rem;
+  }
+
+  .hero-images-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .schedule-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .intro-section {
+    padding: 2rem;
+  }
+
+  .fee-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .tryout-info-page {
+    padding: 2rem 1rem 4rem;
+  }
+
+  .tryout-hero {
+    padding: 2rem 0;
+    margin-bottom: 4rem;
+  }
+
+  .tryout-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-images-layout img {
+    height: 220px;
+  }
+
+  .intro-section {
+    padding: 1.5rem;
+  }
+
+  .schedule-group {
+    padding: 1.5rem;
+  }
+
+  .schedule-section h2,
+  .open-gym-section h2,
+  .eligibility-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .item-time {
+    font-size: 1.3rem;
+  }
+
+  .cta-section {
+    padding: 3rem 0;
+  }
+
+  .register-button {
+    padding: 1.5rem 3rem;
+    font-size: 1rem;
+    min-width: 280px;
+    padding: 1.1rem 3rem;
+    font-size: 0.85rem;
   }
 }

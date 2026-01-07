@@ -20,10 +20,18 @@ export default function HeroSection() {
       <div className="hero-content">
         <div className="top-marker">Edmonton</div>
 
-        <div className="center-lockup">
-          <h1 className="hero-title">still running.</h1>
-          <p className="hero-subtitle">edmonton • calgary • U.S.</p>
-        </div>
+      <div className="center-lockup">
+        <h1 className="hero-title">
+          whats next <br /> is earned.
+        </h1>
+
+        <Link to="/ClubTeams/Tryouts" className="hero-register-button">
+          Registration Now Open
+        </Link>
+
+        <p className="hero-subtitle">edmonton • calgary • U.S.</p>
+      </div>
+
 
         <div className="bottom-actions">
           <Link to="/ClubTeams/Spring-2026-Boys" className="action-link">
