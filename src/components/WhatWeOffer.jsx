@@ -3,8 +3,8 @@ import '../css_files/WhatWeOffer.css';
 
 export default function WhatWeOffer() {
   const offerings = [
-    { number: '01', title: 'Competitive Club Teams', subtitle: 'U13–U18 Boys & Girls' },
-    { number: '02', title: 'Professional Media', subtitle: 'Highlights & Recruiting Content. We Will also be streaming select games live on our Twitch channel' },
+    { number: '01', title: 'Competitive Club Teams', subtitle: 'U13–U17 Boys & U15-U17 Girls' },
+    { number: '02', title: 'Professional Media', subtitle: 'Highlights, recruiting content, and select games streamed live on Twitch, with full replays and video breakdowns available on YouTube' },
     { number: '03', title: 'Shoot360 Training', subtitle: 'Smart hoops that measure arc & provide instant feedback' },
     { number: '04', title: 'Tournament Play', subtitle: 'Local, Provincial & U.S.' },
     { number: '05', title: 'Monthly Team Bonding', subtitle: 'Team outings & activities to build chemistry' },
@@ -18,7 +18,7 @@ export default function WhatWeOffer() {
     <section className="what-we-offer">
       <div className="offer-section-header">
         <h2 className="offer-section-title">What We Offer</h2>
-        <p className="offer-section-subtitle">Comprehensive basketball development programs</p>
+        <p className="offer-section-subtitle">Comprehensive basketball development program</p>
       </div>
       <div className="offer-grid">
         {offerings.map((item, index) => (

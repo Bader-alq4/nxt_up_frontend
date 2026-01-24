@@ -120,10 +120,15 @@ body {
 .hero-subtitle {
   font-size: 0.9rem;
   font-weight: 400;
-  color: #cfcfcf;
+  color: #ffffff;
   letter-spacing: 0.05em;
   margin-top: 0.5rem;
 }
+
+.hero-content .hero-subtitle {
+  color: #ffffff;
+}
+
 
 .hero-subtitle::before {
   display: none;

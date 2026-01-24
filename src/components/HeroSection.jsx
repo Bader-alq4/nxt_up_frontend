@@ -22,7 +22,7 @@ export default function HeroSection() {
 
       <div className="center-lockup">
         <h1 className="hero-title">
-          whats next <br /> is earned.
+          whats Next <br /> is earned.
         </h1>
 
         <Link to="/ClubTeams/Tryouts" className="hero-register-button">

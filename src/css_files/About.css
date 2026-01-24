@@ -78,13 +78,14 @@
   gap: 2rem;
 }
 
-.intro-lead {
+.about-page .intro-lead {
   font-size: 1.5rem;
   font-weight: 500;
   letter-spacing: -0.01em;
-  color: #e0e0e0;
+  color: #ffffff;
   line-height: 1.6;
 }
+
 
 .intro-sub {
   font-size: 1.1rem;

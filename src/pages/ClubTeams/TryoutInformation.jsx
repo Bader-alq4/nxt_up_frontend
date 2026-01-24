@@ -120,15 +120,30 @@ export default function TryoutInformation() {
         {/* ================= OPEN GYMS ================= */}
         <section className="open-gym-section">
           <h2>Open Gym Sessions</h2>
-          <p className="section-subtitle">No registration required</p>
+          <p className="section-subtitle">No registration required • Free of charge</p>
 
           <div className="open-gym-block">
             <div className="gym-header">
-              <span className="gym-label">TBD</span>
+              <div className="gym-date">
+                <span className="date-badge">February 7th</span>
+                <span className="time">6:00 - 7:30 PM</span>
+              </div>
+              <span className="location">Commonwealth Recreation Centre</span>
+            </div>
+            
+            <div className="gym-courts">
+              <div className="court-info">
+                <div className="court-number">Court 1</div>
+                <div className="court-type">Boys</div>
+              </div>
+              <div className="court-divider"></div>
+              <div className="court-info">
+                <div className="court-number">Court 2</div>
+                <div className="court-type">Girls</div>
+              </div>
             </div>
           </div>
         </section>
-
         {/* ================= AGE ELIGIBILITY ================= */}
         <section className="eligibility-section">
           <h2>Age Group Eligibility</h2>

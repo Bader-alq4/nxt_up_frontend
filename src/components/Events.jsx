@@ -4,27 +4,41 @@ import '../css_files/Events.css';
 const events = [
   {
     id: 1,
+    title: 'Boys Open Gym',
+    datetimes: [
+      'February 7, 2026 • 6:00 PM – 7:30 PM @ Commonwealth Rec Centre, Court 1'
+    ],
+  },
+  {
+    id: 2,
+    title: 'Girls Open Gym',
+    datetimes: [
+      'February 7, 2026 • 6:00 PM – 7:30 PM @ Commonwealth Rec Centre, Court 2'
+    ],
+  },
+  {
+    id: 3,
     title: 'U13–U15 Boys Tryouts',
     datetimes: [
       'February 21, 2026 • 7:30 PM – 9:00 PM @ Commonwealth Rec Centre, Court 1'
     ],
   },
   {
-    id: 2,
+    id: 4,
     title: 'U16–U17 Boys Tryouts',
     datetimes: [
       'February 21, 2026 • 7:30 PM – 9:00 PM @ Commonwealth Rec Centre, Court 2'
     ],
   },
   {
-    id: 3,
+    id: 5,
     title: 'U15 Girls Tryouts',
     datetimes: [
       'February 21, 2026 • 6:00 PM – 7:30 PM @ Commonwealth Rec Centre, Court 1'
     ],
   },
   {
-    id: 4,
+    id: 6,
     title: 'U17 Girls Tryouts',
     datetimes: [
       'February 21, 2026 • 6:00 PM – 7:30 PM @ Commonwealth Rec Centre, Court 2'

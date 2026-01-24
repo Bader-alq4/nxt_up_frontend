@@ -112,7 +112,7 @@ export default function About() {
 
           <div className="mission-image">
             <img
-              src="https://res.cloudinary.com/dahquiy48/image/upload/v1767375694/team_q5kqhc.jpg"
+              src="https://res.cloudinary.com/dahquiy48/image/upload/v1767760943/_DSC4037_vyoota.jpg"
               alt="Team development"
             />
           </div>

@@ -301,6 +301,17 @@ export default function Spring2026Boys() {
           </div>
         </section>
 
+          {/* OPTIONAL TRAINING */}
+          <section className="program-section">
+          <h2>Optional Training Add-Ons</h2>
+          <p>
+          Boys may participate in optional small group training through Treyball Training. 
+          Families interested can email <strong>info@nextuphoops.ca</strong> for details or visit 
+          <strong> @treyballtraining</strong> on Instagram.
+          </p>
+        </section>
+
+
         {/* CTA */}
         <section className="program-actions">
           <Link to="/ClubTeams/Tryouts">View Tryout Information</Link>
