@@ -133,12 +133,12 @@ export default function TryoutInformation() {
             
             <div className="gym-courts">
               <div className="court-info">
-                <div className="court-number">Court 1</div>
+                <div className="court-number">Court 2</div>
                 <div className="court-type">Boys</div>
               </div>
               <div className="court-divider"></div>
               <div className="court-info">
-                <div className="court-number">Court 2</div>
+                <div className="court-number">Court 1</div>
                 <div className="court-type">Girls</div>
               </div>
             </div>

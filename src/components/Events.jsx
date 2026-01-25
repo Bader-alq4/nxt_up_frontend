@@ -6,14 +6,14 @@ const events = [
     id: 1,
     title: 'Boys Open Gym',
     datetimes: [
-      'February 7, 2026 • 6:00 PM – 7:30 PM @ Commonwealth Rec Centre, Court 1'
+      'February 7, 2026 • 6:00 PM – 7:30 PM @ Commonwealth Rec Centre, Court 2'
     ],
   },
   {
     id: 2,
     title: 'Girls Open Gym',
     datetimes: [
-      'February 7, 2026 • 6:00 PM – 7:30 PM @ Commonwealth Rec Centre, Court 2'
+      'February 7, 2026 • 6:00 PM – 7:30 PM @ Commonwealth Rec Centre, Court 1'
     ],
   },
   {
