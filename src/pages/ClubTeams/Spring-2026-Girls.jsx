@@ -151,12 +151,17 @@ export default function Spring2026Girls() {
           </div>
 
           <div className="tournament-option-block">
-            <h3>International Option – Includes Local + Provincial + U.S.</h3>
-            <p className="option-note">All Edmonton and Calgary tournaments listed above, plus:</p>
+            <h3>International Option</h3>
+
+            <p className="option-note">
+              Includes all Local and Provincial tournaments, plus <strong>one</strong> of the following U.S. events:
+            </p>
+
             <ul className="simple-list">
-              <li>Hype Her Hoops Cali Cup – July 3–5 (California)</li>
+              <li>Hype Her Hoops Cali Cup — California (July 17–19) <strong>OR</strong> Las Vegas (July 24-27)</li>
             </ul>
           </div>
+
         </section>
 
         {/* COACHING STANDARDS */}
