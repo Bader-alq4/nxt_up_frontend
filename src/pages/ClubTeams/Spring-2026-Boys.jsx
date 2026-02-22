@@ -245,25 +245,25 @@ export default function Spring2026Boys() {
           <div className="pricing-option-wrapper">
             <div className="pricing-option-header">
               <h3>International Option</h3>
-              <span className="pricing-total">$2,700 total</span>
+              <span className="pricing-total">$2,800 total</span>
             </div>
             <table className="pricing-table">
               <tbody>
                 <tr>
                   <td>Deposit at registration</td>
-                  <td>$675</td>
+                  <td>$700</td>
                 </tr>
                 <tr>
                   <td>Monthly payment plan</td>
-                  <td>3 × $675</td>
+                  <td>3 × $700</td>
                 </tr>
                 <tr>
                   <td>Bi-weekly payment plan</td>
-                  <td>6 × $337.50</td>
+                  <td>6 × $350</td>
                 </tr>
                 <tr>
                   <td><strong>Pay in full (save $270)</strong></td>
-                  <td><strong>$2,430</strong></td>
+                  <td><strong>$2,530</strong></td>
                 </tr>
               </tbody>
             </table>

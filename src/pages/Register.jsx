@@ -162,7 +162,7 @@ function Register() {
 
     setIsSubmitting(true);
     try {
-      await api.post('/auth/register', form);
+      await api.post('/auth/register', form); // sends an HTTP post to auth/register if everything looks good. After everything is done all the way up to register user in authcontroller, ot goes to check email
       navigate('/check-email', { state: { email: form.email } });
     } catch (err) {
       const msg = err.response?.data?.message;

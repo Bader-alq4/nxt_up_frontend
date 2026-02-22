@@ -25,9 +25,9 @@ export default function HeroSection() {
           whats Next <br /> is earned.
         </h1>
 
-        <Link to="/ClubTeams/Tryouts" className="hero-register-button">
+        {/* <Link to="/ClubTeams/Tryouts" className="hero-register-button">
           Registration Now Open
-        </Link>
+        </Link> */}
 
         <p className="hero-subtitle">edmonton • calgary • U.S.</p>
       </div>
