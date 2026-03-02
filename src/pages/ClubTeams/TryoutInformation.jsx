@@ -187,7 +187,7 @@ export default function TryoutInformation() {
           </p>
         </section>
 
-        {/* ================= CTA ================= */}
+        {/* ================= CTA =================
         <section className="cta-section">
           <a
             href="https://registration.teamsnap.com/form/48542"
@@ -197,7 +197,7 @@ export default function TryoutInformation() {
           >
             Register for Tryouts
           </a>
-        </section>
+        </section> */}
 
       </div>
     </motion.div>

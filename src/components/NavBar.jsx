@@ -15,12 +15,15 @@ export default function NavBar() {
     return () => document.body.classList.remove('no-scroll');
   }, [mobileMenuOpen]);
 
+  const shopUrl = 'https://shop.nextuphoops.ca';
+
   const navLinks = [
     { label: 'About', to: '/about' },
     { label: 'Club Teams' },
     { label: 'Winter' },
     { label: 'Training' },
     { label: 'Tournaments' },
+    { label: 'Shop', externalUrl: shopUrl },
   ];
 
   const aboutSubmenu = [
@@ -65,6 +68,12 @@ export default function NavBar() {
   };
 
   const handleMobileNavClick = (link) => {
+    if (link.externalUrl) {
+      window.open(link.externalUrl, '_blank', 'noopener,noreferrer');
+      setMobileMenuOpen(false);
+      setActiveSubmenu(null);
+      return;
+    }
     const submenu = getSubmenu(link.label);
     if (submenu.length > 0) {
       setActiveSubmenu({ label: link.label, items: submenu });
@@ -166,6 +175,21 @@ export default function NavBar() {
                   </li>
                 ))}
               </ul>
+            </li>
+          );
+        }
+
+        if (link.externalUrl) {
+          return (
+            <li key={idx} className="nav-item">
+              <a
+                className="nav-link"
+                href={link.externalUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.label}
+              </a>
             </li>
           );
         }
