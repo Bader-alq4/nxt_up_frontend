@@ -1,0 +1,201 @@
+.gf-page {
+  background: #fff;
+  color: #111;
+  min-height: 100vh;
+  padding-top: 70px;
+}
+
+/* ── Hero ─────────────────────────────────────────── */
+.gf-hero {
+  padding: 6rem 3rem 5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.gf-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #bbb;
+  margin: 0 0 1.5rem 0;
+}
+
+.gf-title {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin: 0 0 2rem 0;
+  color: #0a0a0a;
+  max-width: 560px;
+}
+
+.gf-subtitle {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #777;
+  line-height: 1.7;
+  max-width: 650px;
+  margin: 0;
+}
+
+/* ── Text section ─────────────────────────────────── */
+.gf-sections {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.gf-section {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 4rem;
+  padding: 5rem 0;
+  border-bottom: 1px solid #ebebeb;
+  align-items: start;
+}
+
+.gf-section-left {
+  position: sticky;
+  top: 90px;
+}
+
+.gf-section-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #bbb;
+  margin: 0;
+}
+
+.gf-section-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.gf-section-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #0a0a0a;
+  margin: 0 0 0.25rem 0;
+}
+
+.gf-section-body {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: #555;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ── Program cards ────────────────────────────────── */
+.gf-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 3rem 6rem;
+}
+
+.gf-card {
+  border: 1px solid #ebebeb;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.gf-card-img {
+  height: 140px;
+  display: flex;
+  align-items: center;
+}
+
+.gf-card-img img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.gf-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.gf-card-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #0a0a0a;
+  margin: 0;
+}
+
+.gf-card-desc {
+  font-size: 0.97rem;
+  font-weight: 400;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+  flex: 1;
+}
+
+.gf-card-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0a0a0a;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  border-bottom: 1px solid #0a0a0a;
+  padding-bottom: 2px;
+  width: fit-content;
+  transition: opacity 0.2s ease;
+}
+
+.gf-card-link:hover {
+  opacity: 0.5;
+}
+
+/* ── Responsive ───────────────────────────────────── */
+@media (max-width: 768px) {
+  .gf-hero {
+    padding: 4rem 1.5rem 3.5rem;
+  }
+
+  .gf-title {
+    font-size: 2.8rem;
+  }
+
+  .gf-subtitle {
+    font-size: 1rem;
+  }
+
+  .gf-sections {
+    padding: 0 1.5rem;
+  }
+
+  .gf-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 3.5rem 0;
+  }
+
+  .gf-section-left {
+    position: static;
+  }
+
+  .gf-cards {
+    grid-template-columns: 1fr;
+    padding: 3rem 1.5rem 4rem;
+  }
+}

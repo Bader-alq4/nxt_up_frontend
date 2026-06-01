@@ -11,8 +11,11 @@ import Footer from './components/Footer';
 // General Pages
 import Home from './pages/Home';
 import About from './pages/About';
-import Training from './pages/Training';
+import Development from './pages/Development';
+import ClubGuidelines from './pages/ClubGuidelines';
+import GrantsFunding from './pages/GrantsFunding';
 import WinterProgramming from './pages/WinterProgramming';
+import RunClub from './pages/RunClub';
 import Tournaments from './pages/Tournaments';
 import TryoutsClosed from './pages/TryoutsClosed';
 import Sponsorship from './pages/Sponsorship';
@@ -65,9 +68,12 @@ function AppWrapper() {
 
   const shouldShowFooter =
     path.startsWith('/about') ||
+    path.startsWith('/development') ||
+    path.startsWith('/club-guidelines') ||
+    path.startsWith('/grants-funding') ||
     path.startsWith('/ClubTeams') ||
     path.startsWith('/WinterProgramming') ||
-    path.startsWith('/Training') ||
+    path.startsWith('/RunClub') ||
     path.startsWith('/Tournaments') ||
     path.startsWith('/sponsorship') ||
     path.startsWith('/testimonials') ||
@@ -82,15 +88,19 @@ function AppWrapper() {
           {/* Public Routes */}
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/development" element={<Development />} />
+          <Route path="/club-guidelines" element={<ClubGuidelines />} />
+          <Route path="/grants-funding" element={<GrantsFunding />} />
           <Route path="/sponsorship" element={<Sponsorship />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/Training" element={<Training />} />
           <Route path="/ClubTeams" element={<ClubTeams />} />
           <Route path="/ClubTeams/Spring-2026-Boys" element={<Spring2026Boys />} />
           <Route path="/ClubTeams/Spring-2026-Girls" element={<Spring2026Girls />} />
           <Route path="/ClubTeams/Tryouts" element={<TryoutInformation />} />
           <Route path="/WinterProgramming" element={<WinterProgramming />} />
+          <Route path="/RunClub" element={<RunClub />} />
+          <Route path="/Training" element={<Navigate to="/RunClub" replace />} />
           <Route path="/Tournaments" element={<Tournaments />} />
           <Route path="/TryoutsClosed" element={<TryoutsClosed />} />
 

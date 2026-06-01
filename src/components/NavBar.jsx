@@ -28,6 +28,9 @@ export default function NavBar() {
 
   const aboutSubmenu = [
     { label: 'Mission', to: '/about#mission' },
+    { label: 'Next Up Development', to: '/development' },
+    { label: 'Club Guidelines', to: '/club-guidelines' },
+    { label: 'Grants & Funding', to: '/grants-funding' },
     { label: 'Events', to: '/#upcoming-events' },
     { label: 'Contact', to: '/contact' },
   ];
@@ -43,7 +46,7 @@ export default function NavBar() {
   ];
 
   const trainingSubmenu = [
-    { label: 'Training Program', to: '/Training' },
+    { label: 'Run Club', to: '/RunClub' }
   ];
 
   const tournamentsSubmenu = [

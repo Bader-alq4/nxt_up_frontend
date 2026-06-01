@@ -1,0 +1,145 @@
+.cg-page {
+  background: #fff;
+  color: #111;
+  min-height: 100vh;
+  padding-top: 70px;
+}
+
+/* ── Hero ─────────────────────────────────────────── */
+.cg-hero {
+  padding: 6rem 3rem 5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.cg-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #bbb;
+  margin: 0 0 1.5rem 0;
+}
+
+.cg-title {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin: 0 0 2rem 0;
+  color: #0a0a0a;
+  max-width: 600px;
+}
+
+.cg-subtitle {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #777;
+  line-height: 1.7;
+  max-width: 650px;
+  margin: 0;
+}
+
+/* ── Sections ─────────────────────────────────────── */
+.cg-sections {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.cg-section {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 4rem;
+  padding: 5rem 0;
+  border-bottom: 1px solid #ebebeb;
+  align-items: start;
+}
+
+.cg-section-left {
+  position: sticky;
+  top: 90px;
+}
+
+.cg-section-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #bbb;
+  margin: 0;
+}
+
+.cg-section-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.cg-section-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #0a0a0a;
+  margin: 0 0 0.5rem 0;
+}
+
+.cg-section-body {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: #555;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ── Resource images ──────────────────────────────── */
+.cg-resources {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 3rem 6rem;
+}
+
+.cg-resource-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+/* ── Responsive ───────────────────────────────────── */
+@media (max-width: 768px) {
+  .cg-hero {
+    padding: 4rem 1.5rem 3.5rem;
+  }
+
+  .cg-title {
+    font-size: 2.8rem;
+  }
+
+  .cg-subtitle {
+    font-size: 1rem;
+  }
+
+  .cg-sections {
+    padding: 0 1.5rem;
+  }
+
+  .cg-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 3.5rem 0;
+  }
+
+  .cg-section-left {
+    position: static;
+  }
+
+  .cg-resources {
+    grid-template-columns: 1fr;
+    padding: 3rem 1.5rem 4rem;
+  }
+}

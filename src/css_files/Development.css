@@ -1,0 +1,373 @@
+.dev-page {
+  background: #fff;
+  color: #111;
+  min-height: 100vh;
+  padding-top: 70px;
+  position: relative;
+}
+
+/* ── Grain overlay ────────────────────────────────── */
+.dev-grain {
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  background-size: 180px;
+  opacity: 0.028;
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* ── Hero ─────────────────────────────────────────── */
+.dev-hero {
+  padding: 6rem 3rem 5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  border-bottom: 1px solid #ebebeb;
+  position: relative;
+  overflow: visible;
+}
+
+/* Full court hand-drawn sketch — top right of hero */
+.dev-hero-sketch {
+  position: absolute;
+  right: -40px;
+  top: -20px;
+  width: 420px;
+  height: 360px;
+  pointer-events: none;
+  opacity: 1;
+  z-index: 0;
+}
+
+.dev-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #bbb;
+  margin: 0 0 1.5rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.dev-title {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin: 0 0 2rem 0;
+  color: #0a0a0a;
+  position: relative;
+  max-width: 560px;
+  z-index: 1;
+}
+
+.dev-subtitle {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #777;
+  line-height: 1.7;
+  max-width: 620px;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Stages ───────────────────────────────────────── */
+.dev-stages {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.dev-stage {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 4rem;
+  padding: 5rem 0;
+  border-bottom: 1px solid #ebebeb;
+  align-items: start;
+  position: relative;
+}
+
+/* Per-stage sketch wrapper — top right corner of each stage */
+.stage-sketch-wrap {
+  position: absolute;
+  right: -10px;
+  top: 3rem;
+  width: 120px;
+  height: 120px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.stage-sketch-wrap svg {
+  width: 100%;
+  height: 100%;
+}
+
+.dev-stage-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: sticky;
+  top: 90px;
+  z-index: 1;
+}
+
+.dev-stage-number {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: #d0d0d0;
+  font-family: monospace;
+}
+
+/* ── Stage identity ───────────────────────────────── */
+.dev-stage-identity {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dev-stage-name {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin: 0;
+  color: #0a0a0a;
+  line-height: 1;
+}
+
+/* Subtle burnt-orange underline accent */
+.dev-stage-name span {
+  display: inline-block;
+  border-bottom: 2px solid rgba(200, 80, 0, 0.25);
+  padding-bottom: 3px;
+}
+
+.dev-stage-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #999;
+  margin: 0;
+}
+
+.dev-stage-level {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #bbb;
+  border: 1px solid #e0e0e0;
+  padding: 0.3rem 0.75rem;
+  width: fit-content;
+}
+
+/* ── Stage right ──────────────────────────────────── */
+.dev-stage-right {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.dev-stage-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.dev-stage-desc p {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: #555;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.dev-stage-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  padding-top: 2rem;
+  border-top: 1px solid #ebebeb;
+}
+
+.dev-meta-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.dev-meta-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ccc;
+  padding-top: 0.15rem;
+}
+
+.dev-meta-value {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #444;
+  line-height: 1.6;
+}
+
+.dev-programs-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.dev-programs-list li {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #444;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.dev-programs-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: #ddd;
+}
+
+/* ── Closer ───────────────────────────────────────── */
+.dev-closer {
+  padding: 6rem 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Full court sketch — centered behind closer text */
+.dev-closer-sketch {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 200px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.dev-closer-primary {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #111;
+  margin: 0;
+  line-height: 1.3;
+  position: relative;
+  z-index: 1;
+}
+
+.dev-closer-secondary {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #aaa;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Responsive ───────────────────────────────────── */
+@media (max-width: 1024px) {
+  .dev-stage {
+    grid-template-columns: 260px 1fr;
+    gap: 3rem;
+  }
+
+  .dev-hero-sketch {
+    width: 320px;
+    height: 280px;
+    right: -20px;
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 768px) {
+  .dev-hero {
+    padding: 4rem 1.5rem 3.5rem;
+    overflow: hidden;
+  }
+
+  .dev-hero-sketch {
+    width: 260px;
+    height: 220px;
+    right: -40px;
+    top: 0;
+    opacity: 0.5;
+  }
+
+  .dev-title {
+    font-size: 2.8rem;
+    max-width: 100%;
+  }
+
+  .dev-subtitle {
+    font-size: 1rem;
+  }
+
+  .dev-stages {
+    padding: 0 1.5rem;
+  }
+
+  .dev-stage {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3.5rem 0;
+  }
+
+  .stage-sketch-wrap {
+    display: none;
+  }
+
+  .dev-stage-left {
+    position: static;
+    gap: 1rem;
+  }
+
+  .dev-stage-name {
+    font-size: 2.2rem;
+  }
+
+  .dev-meta-item {
+    grid-template-columns: 110px 1fr;
+    gap: 0.75rem;
+  }
+
+  .dev-closer {
+    padding: 4rem 1.5rem;
+    overflow: hidden;
+  }
+
+  .dev-closer-sketch {
+    width: 320px;
+    height: 130px;
+    opacity: 0.6;
+  }
+
+  .dev-closer-primary {
+    font-size: 1.5rem;
+  }
+}
