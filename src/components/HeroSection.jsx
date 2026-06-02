@@ -38,10 +38,6 @@ export default function HeroSection() {
 
 
         <div className="bottom-actions">
-          <Link to="/RunClub" className="action-link action-link--featured">
-            <span>Run Club — Register now</span>
-            <span className="action-arrow">→</span>
-          </Link>
           <Link to="/ClubTeams/Spring-2026-Boys" className="action-link">
             <span>Spring 2026 Boys</span>
             <span className="action-arrow">→</span>

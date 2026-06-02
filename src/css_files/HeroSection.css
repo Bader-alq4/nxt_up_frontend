@@ -310,18 +310,6 @@ body {
   line-height: 1.4;
 }
 
-.action-link--featured {
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.04);
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-.action-link--featured .action-arrow {
-  color: #fff;
-}
-
 @media (max-width: 768px) {
   .hero-run-club-cta {
     margin-top: 1.25rem;
