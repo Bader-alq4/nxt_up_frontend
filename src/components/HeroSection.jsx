@@ -25,15 +25,23 @@ export default function HeroSection() {
           whats Next <br /> is earned.
         </h1>
 
-        {/* <Link to="/ClubTeams/Tryouts" className="hero-register-button">
-          Registration Now Open
-        </Link> */}
+        <Link to="/RunClub" className="hero-run-club-cta">
+          <span className="hero-run-club-cta-label">Registrations Open</span>
+          <span className="hero-run-club-cta-title">Run Club is now live</span>
+          <span className="hero-run-club-cta-sub">
+          Limited Spots Available — Register Now
+          </span>
+        </Link>
 
         <p className="hero-subtitle">edmonton • calgary • U.S.</p>
       </div>
 
 
         <div className="bottom-actions">
+          <Link to="/RunClub" className="action-link action-link--featured">
+            <span>Run Club — Register now</span>
+            <span className="action-arrow">→</span>
+          </Link>
           <Link to="/ClubTeams/Spring-2026-Boys" className="action-link">
             <span>Spring 2026 Boys</span>
             <span className="action-arrow">→</span>

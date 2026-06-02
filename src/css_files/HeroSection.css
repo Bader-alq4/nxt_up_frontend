@@ -259,6 +259,86 @@ body {
 }
 
 /* ===============================
+   RUN CLUB CTA
+================================ */
+.hero-run-club-cta {
+  margin: 1.75rem auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  max-width: 420px;
+  padding: 1.15rem 1.75rem;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+}
+
+.hero-run-club-cta:hover {
+  border-color: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.hero-run-club-cta-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0.85;
+}
+
+.hero-run-club-cta-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: 'Courier New', monospace;
+}
+
+.hero-run-club-cta-sub {
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.4;
+}
+
+.action-link--featured {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.action-link--featured .action-arrow {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .hero-run-club-cta {
+    margin-top: 1.25rem;
+    padding: 1rem 1.25rem;
+    max-width: 100%;
+  }
+
+  .hero-run-club-cta-title {
+    font-size: 0.95rem;
+  }
+
+  .hero-run-club-cta-sub {
+    font-size: 0.75rem;
+  }
+}
+
+/* ===============================
    HERO REGISTRATION CTA
 ================================ */
 .hero-register-button {
