@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import '../css_files/ClubGuidelines.css';
 
+const COMPLAINT_URL = 'https://app.alias-solution.com/contact/en/aba';
+
 const sections = [
   {
     heading: 'Athlete Safety',
@@ -53,9 +55,23 @@ export default function ClubGuidelines() {
         <div className="cg-resource-img">
           <img src="/rule-of-two.jpg" alt="Rule of Two — Safety in Numbers" />
         </div>
-        <div className="cg-resource-img">
-          <img src="/helpline.jpg" alt="Canadian Sport HELPline" />
-        </div>
+        <a
+          href={COMPLAINT_URL}
+          className="cg-resource-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span className="cg-resource-link-eyebrow">Report a Concern</span>
+          <h3 className="cg-resource-link-title">File a Complaint</h3>
+          <p className="cg-resource-link-body">
+            If you need to report a concern related to athlete safety or misconduct,
+            use the official complaint portal to submit a report confidentially.
+          </p>
+          <span className="cg-resource-link-action">
+            Open complaint portal
+            <span className="cg-resource-link-arrow" aria-hidden="true">→</span>
+          </span>
+        </a>
       </div>
     </motion.div>
   );

@@ -110,6 +110,74 @@
   border-radius: 4px;
 }
 
+.cg-resource-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  height: 100%;
+  min-height: 220px;
+  padding: 2.5rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  background: #fafafa;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+}
+
+.cg-resource-link:hover {
+  border-color: #ccc;
+  background: #f5f5f5;
+  transform: translateY(-2px);
+}
+
+.cg-resource-link-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #bbb;
+}
+
+.cg-resource-link-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #0a0a0a;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.cg-resource-link-body {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #666;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 36ch;
+}
+
+.cg-resource-link-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0a0a0a;
+}
+
+.cg-resource-link-arrow {
+  transition: transform 0.25s ease;
+}
+
+.cg-resource-link:hover .cg-resource-link-arrow {
+  transform: translateX(4px);
+}
+
 /* ── Responsive ───────────────────────────────────── */
 @media (max-width: 768px) {
   .cg-hero {
@@ -141,5 +209,10 @@
   .cg-resources {
     grid-template-columns: 1fr;
     padding: 3rem 1.5rem 4rem;
+  }
+
+  .cg-resource-link {
+    min-height: 0;
+    padding: 2rem 1.5rem;
   }
 }
