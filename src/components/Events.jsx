@@ -4,44 +4,37 @@ import '../css_files/Events.css';
 const events = [
   {
     id: 1,
-    title: 'Boys Open Gym',
+    title: 'Girls U15/U16 ID Camp 1',
     datetimes: [
-      'February 7, 2026 • 6:00 PM – 7:30 PM @ Commonwealth Rec Centre, Court 2'
+      'August 1, 2026 • 11:00 AM – 12:30 PM @ St Francis Xavier Sports Centre, Gym 2'
     ],
   },
   {
     id: 2,
-    title: 'Girls Open Gym',
+    title: 'Girls U17/U18 ID Camp 1',
     datetimes: [
-      'February 7, 2026 • 6:00 PM – 7:30 PM @ Commonwealth Rec Centre, Court 1'
+      'August 1, 2026 • 12:30 PM – 2:00 PM @ St Francis Xavier Sports Centre, Gym 2'
     ],
   },
   {
     id: 3,
-    title: 'U13–U15 Boys Tryouts',
+    title: 'Boys U13/U14 ID Camp 1',
     datetimes: [
-      'February 21, 2026 • 7:30 PM – 9:00 PM @ Commonwealth Rec Centre, Court 1'
+      'August 1, 2026 • 4:00 PM – 5:30 PM @ Saville Community Sports Centre, Gym 4'
     ],
   },
   {
     id: 4,
-    title: 'U16–U17 Boys Tryouts',
+    title: 'Boys U15/U16 ID Camp 1',
     datetimes: [
-      'February 21, 2026 • 7:30 PM – 9:00 PM @ Commonwealth Rec Centre, Court 2'
+      'August 1, 2026 • 5:30 PM – 7:00 PM @ Saville Community Sports Centre, Gym 4'
     ],
   },
   {
     id: 5,
-    title: 'U15 Girls Tryouts',
+    title: 'Boys U17/U18 ID Camp 1',
     datetimes: [
-      'February 21, 2026 • 6:00 PM – 7:30 PM @ Commonwealth Rec Centre, Court 1'
-    ],
-  },
-  {
-    id: 6,
-    title: 'U17 Girls Tryouts',
-    datetimes: [
-      'February 21, 2026 • 6:00 PM – 7:30 PM @ Commonwealth Rec Centre, Court 2'
+      'August 1, 2026 • 7:00 PM – 8:30 PM @ Saville Community Sports Centre, Gym 4'
     ],
   },
 ];

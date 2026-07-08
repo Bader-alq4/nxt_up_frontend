@@ -27,17 +27,17 @@ export default function FallBoys() {
             </p>
           </div>
 
-          <div className="program-hero-images">
-            <div className="hero-image-primary">
-              <img
-                src="https://res.cloudinary.com/dahquiy48/image/upload/v1767375626/boys_group_highlight_dih4fc.jpg"
-                alt="Next Up Hoops boys game action"
-              />
-            </div>
-            <div className="hero-image-secondary">
+          <div className="boys-hero-images">
+            <div className="boys-hero-primary">
               <img
                 src="https://res.cloudinary.com/dahquiy48/image/upload/v1767640380/boys-jumpshot_ir4tr4.jpg"
                 alt="Next Up Hoops boys training"
+              />
+            </div>
+            <div className="boys-hero-secondary">
+              <img
+                src="https://res.cloudinary.com/dahquiy48/image/upload/v1767375626/boys_group_highlight_dih4fc.jpg"
+                alt="Next Up Hoops boys game action"
               />
             </div>
           </div>
@@ -154,8 +154,13 @@ export default function FallBoys() {
 
         {/* CTA */}
         <section className="program-actions">
-          {/* TODO(fall-2026-registration): replace with real Boys Fall Program registration URL */}
-          <a href="#">Register for the Boys Fall Program</a>
+          <a
+            href="https://registration.teamsnap.com/form/69129"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Register for the Boys Fall Program
+          </a>
           <Link to="/ClubTeams" className="secondary-link">Back to Club Teams</Link>
         </section>
 

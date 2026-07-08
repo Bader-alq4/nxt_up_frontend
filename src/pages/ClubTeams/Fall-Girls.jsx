@@ -27,14 +27,15 @@ export default function FallGirls() {
             </p>
           </div>
 
-          <div className="program-hero-images">
-            <div className="hero-image-primary">
+          <div className="girls-hero-images">
+            <div className="girls-hero-block" />
+            <div className="girls-hero-primary">
               <img
                 src="https://res.cloudinary.com/dahquiy48/image/upload/v1767749524/new-girls-bench_ecazxk.jpg"
                 alt="Next Up Hoops girls game action"
               />
             </div>
-            <div className="hero-image-secondary">
+            <div className="girls-hero-badge">
               <img
                 src="https://res.cloudinary.com/dahquiy48/image/upload/v1767749524/solo-girl_uit4mn.jpg"
                 alt="Next Up Hoops girls training"
@@ -140,8 +141,13 @@ export default function FallGirls() {
 
         {/* CTA */}
         <section className="program-actions">
-          {/* TODO(fall-2026-registration): replace with real Girls Fall Program registration URL */}
-          <a href="#">Register for the Girls Fall Program</a>
+          <a
+            href="https://registration.teamsnap.com/form/69129"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Register for the Girls Fall Program
+          </a>
           <Link to="/ClubTeams" className="secondary-link">Back to Club Teams</Link>
         </section>
 

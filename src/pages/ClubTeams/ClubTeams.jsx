@@ -38,6 +38,24 @@ export default function ClubTeams() {
           <p style={{ fontWeight: 600, letterSpacing: '0.02em' }}>What's Next Is Earned.</p>
         </section>
 
+        {/* PHOTO STRIP */}
+        <section className="program-section">
+          <div className="hub-photo-strip">
+            <img
+              src="https://res.cloudinary.com/dahquiy48/image/upload/v1783538782/ovo_uizc32.jpg"
+              alt="Next Up Hoops girls game action"
+            />
+            <img
+              src="https://res.cloudinary.com/dahquiy48/image/upload/v1783538782/mancoach_yfkvxb.jpg"
+              alt="Next Up Hoops coach with players"
+            />
+            <img
+              src="https://res.cloudinary.com/dahquiy48/image/upload/v1783538782/drib_olzs1h.jpg"
+              alt="Next Up Hoops girls game action"
+            />
+          </div>
+        </section>
+
         {/* WHY NEXT UP */}
         <section className="program-section">
           <h2>Why Next Up?</h2>
@@ -148,8 +166,9 @@ export default function ClubTeams() {
         </section>
 
         <section className="program-actions">
-          {/* TODO(fall-2026-registration): replace with real Fall 2026 registration URL */}
-          <a href="#">Register for Fall 2026</a>
+          <Link to="/ClubTeams/Fall-Tryouts">
+            Register for Fall 2026
+          </Link>
         </section>
 
       </div>

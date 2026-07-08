@@ -19,7 +19,7 @@ export default function NavBar() {
 
   const navLinks = [
     { label: 'About', to: '/about' },
-    { label: 'Club Teams' },
+    { label: 'Club Teams', to: '/ClubTeams' },
     { label: 'Winter' },
     { label: 'Training' },
     { label: 'Tournaments' },
@@ -36,6 +36,7 @@ export default function NavBar() {
   ];
 
   const clubTeamsSubmenu = [
+    { label: 'Club Teams Overview', to: '/ClubTeams' },
     { label: 'Fall 2026 Boys', to: '/ClubTeams/Fall-Boys' },
     { label: 'Fall 2026 Girls', to: '/ClubTeams/Fall-Girls' },
     { label: 'Fall 2026 Tryouts', to: '/ClubTeams/Fall-Tryouts' },
@@ -125,7 +126,9 @@ export default function NavBar() {
         if (link.label === 'Club Teams') {
           return (
             <li key={idx} className="nav-item dropdown">
-              <span className="nav-link nav-link-disabled">{link.label}</span>
+              <Link to={link.to} className="nav-link">
+                {link.label}
+              </Link>
               <ul className="dropdown-menu">
                 {clubTeamsSubmenu.map((item, i) => (
                   <li key={i}>

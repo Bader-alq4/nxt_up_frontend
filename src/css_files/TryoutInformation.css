@@ -79,6 +79,53 @@
 }
 
 /* ===============================
+   QUICK NAV
+================================ */
+.tryout-quick-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.25rem;
+  padding-bottom: 2.5rem;
+  margin-bottom: 3.5rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.tryout-quick-nav a {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #666;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.tryout-quick-nav a:hover {
+  color: #111;
+}
+
+/* ===============================
+   SECTION EYEBROW
+================================ */
+.section-eyebrow {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 0.65rem;
+}
+
+.section-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.01em;
+}
+
+/* ===============================
    INTRO SECTION
 ================================ */
 .intro-section {
@@ -127,6 +174,12 @@
   color: #777;
 }
 
+.intro-divider {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 2.5rem 0;
+}
+
 /* ===============================
    SCHEDULE SECTION
 ================================ */
@@ -138,7 +191,6 @@
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 3rem;
-  text-align: center;
   letter-spacing: -0.01em;
 }
 
@@ -155,6 +207,35 @@
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border-top: 4px solid #ddd;
+}
+
+.schedule-group.girls {
+  border-top-color: #be185d;
+}
+
+.schedule-group.boys {
+  border-top-color: #0284c7;
+}
+
+.gender-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 50px;
+  color: #fff;
+  margin-bottom: 0.85rem;
+}
+
+.gender-badge.girls {
+  background: #be185d;
+}
+
+.gender-badge.boys {
+  background: #0284c7;
 }
 
 .group-label {
