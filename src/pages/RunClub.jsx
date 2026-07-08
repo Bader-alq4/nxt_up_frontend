@@ -18,43 +18,43 @@ const sessions = [
 
 const heroPhotos = [
   {
-    src: 'https://res.cloudinary.com/dahquiy48/image/upload/v1778106829/path_r9l1or.webp',
+    src: 'https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_900/v1778106829/path_r9l1or.webp',
     alt: 'River valley trail',
   },
   {
-    src: 'https://res.cloudinary.com/dahquiy48/image/upload/v1778106408/stairs_abtbu7.webp',
+    src: 'https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_900/v1778106408/stairs_abtbu7.webp',
     alt: 'Stairs training area',
   },
 ];
 
 const locationPhotos = [
   {
-    src: 'https://res.cloudinary.com/dahquiy48/image/upload/v1783453405/river-valley-park-system-view-louise-mckinney-riverfront-park-edmonton-river-valley-forms-ribbon-green-winds-147777655_lvj0op.webp',
+    src: 'https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_900/v1783453405/river-valley-park-system-view-louise-mckinney-riverfront-park-edmonton-river-valley-forms-ribbon-green-winds-147777655_lvj0op.webp',
     label: 'Louise McKinney Riverfront Park',
     alt: 'Louise McKinney Riverfront Park view',
   },
   {
-    src: 'https://res.cloudinary.com/dahquiy48/image/upload/v1778107416/Edmonton_River-Valley_Stairs_oolqwi.jpg',
+    src: 'https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_900/v1778107416/Edmonton_River-Valley_Stairs_oolqwi.jpg',
     label: 'River Valley',
     alt: 'Edmonton river valley',
   },
   {
-    src: 'https://res.cloudinary.com/dahquiy48/image/upload/v1778106407/Terwillegar_uhtoma.webp',
+    src: 'https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_900/v1778106407/Terwillegar_uhtoma.webp',
     label: 'Terwillegar',
     alt: 'Terwillegar Park trail',
   },
   {
-    src: 'https://res.cloudinary.com/dahquiy48/image/upload/v1778107640/kinsemen-park_eenrrm.jpg',
+    src: 'https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_900/v1778107640/kinsemen-park_eenrrm.jpg',
     label: 'Kinsmen Park',
     alt: 'Kinsmen Park trail',
   },
   {
-    src: 'https://res.cloudinary.com/dahquiy48/image/upload/v1778107867/-William-Hawrelak-Park-_vhbngt.webp',
+    src: 'https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_900/v1778107867/-William-Hawrelak-Park-_vhbngt.webp',
     label: 'Hawrelak Park',
     alt: 'Hawrelak Park trail',
   },
   {
-    src: 'https://res.cloudinary.com/dahquiy48/image/upload/v1778107978/Gallagher-park_bdzox6.webp',
+    src: 'https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_900/v1778107978/Gallagher-park_bdzox6.webp',
     label: 'Gallagher Park',
     alt: 'Gallagher Park trail',
   },

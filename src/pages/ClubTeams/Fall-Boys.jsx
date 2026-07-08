@@ -30,14 +30,17 @@ export default function FallBoys() {
           <div className="boys-hero-images">
             <div className="boys-hero-primary">
               <img
-                src="https://res.cloudinary.com/dahquiy48/image/upload/v1767640380/boys-jumpshot_ir4tr4.jpg"
+                src="https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_900/v1767640380/boys-jumpshot_ir4tr4.jpg"
                 alt="Next Up Hoops boys training"
+                loading="eager"
+                fetchpriority="high"
               />
             </div>
             <div className="boys-hero-secondary">
               <img
-                src="https://res.cloudinary.com/dahquiy48/image/upload/v1767375626/boys_group_highlight_dih4fc.jpg"
+                src="https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_900/v1767375626/boys_group_highlight_dih4fc.jpg"
                 alt="Next Up Hoops boys game action"
+                loading="eager"
               />
             </div>
           </div>

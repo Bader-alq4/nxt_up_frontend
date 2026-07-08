@@ -42,16 +42,20 @@ export default function ClubTeams() {
         <section className="program-section">
           <div className="hub-photo-strip">
             <img
-              src="https://res.cloudinary.com/dahquiy48/image/upload/v1783538782/ovo_uizc32.jpg"
+              src="https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_700/v1783538782/ovo_uizc32.jpg"
               alt="Next Up Hoops girls game action"
+              loading="eager"
+              fetchpriority="high"
             />
             <img
-              src="https://res.cloudinary.com/dahquiy48/image/upload/v1783538782/mancoach_yfkvxb.jpg"
+              src="https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_700/v1783538782/mancoach_yfkvxb.jpg"
               alt="Next Up Hoops coach with players"
+              loading="eager"
             />
             <img
-              src="https://res.cloudinary.com/dahquiy48/image/upload/v1783538782/drib_olzs1h.jpg"
+              src="https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_700/v1783538782/drib_olzs1h.jpg"
               alt="Next Up Hoops girls game action"
+              loading="eager"
             />
           </div>
         </section>

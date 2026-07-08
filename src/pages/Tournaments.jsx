@@ -29,8 +29,10 @@ export default function TournamentPlan() {
           </div>
           <div className="header-image">
             <img
-              src="https://res.cloudinary.com/dahquiy48/image/upload/v1767668511/image_eczqcf.jpg"
+              src="https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_1000/v1767668511/image_eczqcf.jpg"
               alt="Tournament action"
+              loading="eager"
+              fetchpriority="high"
             />
           </div>
         </div>
@@ -59,8 +61,9 @@ export default function TournamentPlan() {
 
           <div className="tournament-image">
             <img
-              src="https://res.cloudinary.com/dahquiy48/image/upload/v1767375664/fall_girls_detail_rsftzq.jpg"
+              src="https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_1000/v1767375664/fall_girls_detail_rsftzq.jpg"
               alt="Edmonton tournament action"
+              loading="lazy"
             />
             <div className="image-caption">home court advantage</div>
           </div>
@@ -81,8 +84,9 @@ export default function TournamentPlan() {
 
             <div className="tournament-image-inline">
               <img
-                src="https://res.cloudinary.com/dahquiy48/image/upload/v1767375679/girls_calgary_drqnww.jpg"
+                src="https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_1000/v1767375679/girls_calgary_drqnww.jpg"
                 alt="Calgary tournament"
+                loading="lazy"
               />
             </div>
           </div>
@@ -128,8 +132,9 @@ export default function TournamentPlan() {
         {/* ================= BOTTOM HERO IMAGE ================= */}
         <div className="tournament-hero-bottom">
           <img
-            src="https://res.cloudinary.com/dahquiy48/image/upload/v1767666268/girl-scream_xcxmkx.jpg"
+            src="https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_1000/v1767666268/girl-scream_xcxmkx.jpg"
             alt="Team celebration"
+            loading="lazy"
           />
           <div className="hero-overlay">
             <p className="hero-text">play where it matters.</p>

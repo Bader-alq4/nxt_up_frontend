@@ -6,22 +6,22 @@ import '../css_files/GeneralInfo.css';
 
 const infoItems = [
   {
-    image: 'https://res.cloudinary.com/dahquiy48/image/upload/v1767375694/tournaments_zjucif.jpg',
+    image: 'https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_700/v1767375694/tournaments_zjucif.jpg',
     title: 'Boys Club Teams',
     link: '/ClubTeams/Fall-Boys',
   },
   {
-    image: 'https://res.cloudinary.com/dahquiy48/image/upload/v1767375627/camps_rgyuvf.jpg',
+    image: 'https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_700/v1767375627/camps_rgyuvf.jpg',
     title: 'Girls Club Teams',
     link: '/ClubTeams/Fall-Girls',
   },
   {
-    image: 'https://res.cloudinary.com/dahquiy48/image/upload/v1767375694/spring_bkozur.jpg',
+    image: 'https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_700/v1767375694/spring_bkozur.jpg',
     title: 'tournaments',
     link: '/Tournaments',
   },
   {
-    image: 'https://res.cloudinary.com/dahquiy48/image/upload/v1767375664/fall_qc9mux.jpg',
+    image: 'https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_700/v1767375664/fall_qc9mux.jpg',
     title: 'sessions',
     link: '/Training',
   },

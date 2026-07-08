@@ -31,14 +31,17 @@ export default function FallGirls() {
             <div className="girls-hero-block" />
             <div className="girls-hero-primary">
               <img
-                src="https://res.cloudinary.com/dahquiy48/image/upload/v1767749524/new-girls-bench_ecazxk.jpg"
+                src="https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_900/v1767749524/new-girls-bench_ecazxk.jpg"
                 alt="Next Up Hoops girls game action"
+                loading="eager"
+                fetchpriority="high"
               />
             </div>
             <div className="girls-hero-badge">
               <img
-                src="https://res.cloudinary.com/dahquiy48/image/upload/v1767749524/solo-girl_uit4mn.jpg"
+                src="https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_900/v1767749524/solo-girl_uit4mn.jpg"
                 alt="Next Up Hoops girls training"
+                loading="eager"
               />
             </div>
           </div>

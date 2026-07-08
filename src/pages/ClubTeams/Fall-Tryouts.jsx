@@ -29,15 +29,18 @@ export default function FallTryouts() {
 
           <div className="hero-images-layout">
             <img
-              src="https://res.cloudinary.com/dahquiy48/image/upload/v1767375626/boys_group_highlight_dih4fc.jpg"
+              src="https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_700/v1767375626/boys_group_highlight_dih4fc.jpg"
               alt="Next Up Hoops game action"
               className="hero-img-1"
-            />
+                loading="eager"
+                fetchpriority="high"
+              />
             <img
-              src="https://res.cloudinary.com/dahquiy48/image/upload/v1767639418/girls-bench_pdshhj.jpg"
+              src="https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_700/v1767639418/girls-bench_pdshhj.jpg"
               alt="Next Up Hoops training session"
               className="hero-img-2"
-            />
+                loading="eager"
+              />
           </div>
         </header>
 

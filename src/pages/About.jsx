@@ -35,8 +35,10 @@ export default function About() {
       <div className="about-hero">
         <div className="about-hero-image">
           <img
-            src="https://res.cloudinary.com/dahquiy48/image/upload/v1767375628/coach_edoawv.jpg"
+            src="https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_900/v1767375628/coach_edoawv.jpg"
             alt="Next Up Hoops founder"
+            loading="eager"
+            fetchpriority="high"
           />
         </div>
         <div className="about-hero-overlay"></div>
@@ -65,8 +67,9 @@ export default function About() {
         <div className="mission-grid">
           <div className="mission-image">
             <img
-              src="https://res.cloudinary.com/dahquiy48/image/upload/v1767375694/team_q5kqhc.jpg"
+              src="https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_900/v1767375694/team_q5kqhc.jpg"
               alt="Next Up team"
+              loading="lazy"
             />
           </div>
 
@@ -112,8 +115,9 @@ export default function About() {
 
           <div className="mission-image">
             <img
-              src="https://res.cloudinary.com/dahquiy48/image/upload/v1767760943/_DSC4037_vyoota.jpg"
+              src="https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_900/v1767760943/_DSC4037_vyoota.jpg"
               alt="Team development"
+              loading="lazy"
             />
           </div>
         </div>
