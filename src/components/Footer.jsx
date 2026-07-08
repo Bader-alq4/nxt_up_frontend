@@ -57,13 +57,8 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/FallTeams" className="footer-link">
-                Fall Season
-              </Link>
-            </li>
-            <li>
-              <Link to="/SpringTeams" className="footer-link">
-                Spring Season
+              <Link to="/ClubTeams" className="footer-link">
+                Club Teams
               </Link>
             </li>
           </ul>

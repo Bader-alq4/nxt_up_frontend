@@ -270,6 +270,54 @@
 }
 
 /* ===============================
+   HUB PAGE - PROGRAM CARDS
+================================ */
+.hub-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.hub-card {
+  display: block;
+  background: #fafafa;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 2rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hub-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.hub-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+  color: #111;
+}
+
+.hub-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  margin: 0 0 1rem;
+}
+
+.hub-card-arrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #111;
+}
+
+/* ===============================
    ACTIONS
 ================================ */
 .program-actions {
@@ -329,7 +377,8 @@
     width: 50%;
   }
 
-  .included-grid {
+  .included-grid,
+  .hub-cards {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }

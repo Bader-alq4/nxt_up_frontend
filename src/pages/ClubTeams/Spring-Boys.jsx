@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../../css_files/ClubTeams.css';
 
-export default function Spring2026Boys() {
+export default function SpringBoys() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -314,7 +314,7 @@ export default function Spring2026Boys() {
 
         {/* CTA */}
         <section className="program-actions">
-          <Link to="/ClubTeams/Tryouts">View Tryout Information</Link>
+          <Link to="/ClubTeams/Spring-Tryouts">View Tryout Information</Link>
           <Link to="/ClubTeams" className="secondary-link">Back to Club Teams</Link>
         </section>
 

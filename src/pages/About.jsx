@@ -80,7 +80,7 @@ export default function About() {
             <p>
               Coaching systems, development pathways, communication, media, and travel
               planning have all been redesigned to create a more consistent and
-              professional experience. The Spring season is one part of a
+              professional experience. Each season is one part of a
               broader year-round approach to athlete development.
             </p>
             <p>

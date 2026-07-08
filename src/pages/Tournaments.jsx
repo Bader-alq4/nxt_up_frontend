@@ -28,8 +28,8 @@ export default function TournamentPlan() {
             </p>
           </div>
           <div className="header-image">
-            <img 
-              src="https://res.cloudinary.com/dahquiy48/image/upload/v1767668511/image_eczqcf.jpg" 
+            <img
+              src="https://res.cloudinary.com/dahquiy48/image/upload/v1767668511/image_eczqcf.jpg"
               alt="Tournament action"
             />
           </div>
@@ -58,8 +58,8 @@ export default function TournamentPlan() {
           </div>
 
           <div className="tournament-image">
-            <img 
-              src="https://res.cloudinary.com/dahquiy48/image/upload/v1767375664/fall_girls_detail_rsftzq.jpg" 
+            <img
+              src="https://res.cloudinary.com/dahquiy48/image/upload/v1767375664/fall_girls_detail_rsftzq.jpg"
               alt="Edmonton tournament action"
             />
             <div className="image-caption">home court advantage</div>
@@ -80,8 +80,8 @@ export default function TournamentPlan() {
             </div>
 
             <div className="tournament-image-inline">
-              <img 
-                src="https://res.cloudinary.com/dahquiy48/image/upload/v1767375679/girls_calgary_drqnww.jpg" 
+              <img
+                src="https://res.cloudinary.com/dahquiy48/image/upload/v1767375679/girls_calgary_drqnww.jpg"
                 alt="Calgary tournament"
               />
             </div>
@@ -127,8 +127,8 @@ export default function TournamentPlan() {
 
         {/* ================= BOTTOM HERO IMAGE ================= */}
         <div className="tournament-hero-bottom">
-          <img 
-            src="https://res.cloudinary.com/dahquiy48/image/upload/v1767666268/girl-scream_xcxmkx.jpg" 
+          <img
+            src="https://res.cloudinary.com/dahquiy48/image/upload/v1767666268/girl-scream_xcxmkx.jpg"
             alt="Team celebration"
           />
           <div className="hero-overlay">

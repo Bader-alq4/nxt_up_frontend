@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import '../../css_files/TryoutInformation.css';
 
-export default function TryoutInformation() {
+export default function SpringTryouts() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

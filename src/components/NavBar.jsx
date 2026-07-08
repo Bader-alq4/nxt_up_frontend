@@ -36,9 +36,9 @@ export default function NavBar() {
   ];
 
   const clubTeamsSubmenu = [
-    { label: 'Spring 2026 Boys', to: '/ClubTeams/Spring-2026-Boys' },
-    { label: 'Spring 2026 Girls', to: '/ClubTeams/Spring-2026-Girls' },
-    { label: 'Spring 2026 Tryouts', to: '/ClubTeams/Tryouts' },
+    { label: 'Fall 2026 Boys', to: '/ClubTeams/Fall-Boys' },
+    { label: 'Fall 2026 Girls', to: '/ClubTeams/Fall-Girls' },
+    { label: 'Fall 2026 Tryouts', to: '/ClubTeams/Fall-Tryouts' },
   ];
 
   const winterSubmenu = [

@@ -24,9 +24,12 @@ import Contact from './pages/Contact';
 
 // Club Teams Pages
 import ClubTeams from './pages/ClubTeams/ClubTeams';
-import Spring2026Boys from './pages/ClubTeams/Spring-2026-Boys';
-import Spring2026Girls from './pages/ClubTeams/Spring-2026-Girls';
-import TryoutInformation from './pages/ClubTeams/TryoutInformation';
+import SpringBoys from './pages/ClubTeams/Spring-Boys';
+import SpringGirls from './pages/ClubTeams/Spring-Girls';
+import SpringTryouts from './pages/ClubTeams/Spring-Tryouts';
+import FallBoys from './pages/ClubTeams/Fall-Boys';
+import FallGirls from './pages/ClubTeams/Fall-Girls';
+import FallTryouts from './pages/ClubTeams/Fall-Tryouts';
 
 // Auth Pages
 import Login from './pages/Login';
@@ -95,9 +98,12 @@ function AppWrapper() {
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/ClubTeams" element={<ClubTeams />} />
-          <Route path="/ClubTeams/Spring-2026-Boys" element={<Spring2026Boys />} />
-          <Route path="/ClubTeams/Spring-2026-Girls" element={<Spring2026Girls />} />
-          <Route path="/ClubTeams/Tryouts" element={<TryoutInformation />} />
+          <Route path="/ClubTeams/Fall-Boys" element={<FallBoys />} />
+          <Route path="/ClubTeams/Fall-Girls" element={<FallGirls />} />
+          <Route path="/ClubTeams/Fall-Tryouts" element={<FallTryouts />} />
+          <Route path="/ClubTeams/Spring-Boys" element={<SpringBoys />} />
+          <Route path="/ClubTeams/Spring-Girls" element={<SpringGirls />} />
+          <Route path="/ClubTeams/Spring-Tryouts" element={<SpringTryouts />} />
           <Route path="/WinterProgramming" element={<WinterProgramming />} />
           <Route path="/RunClub" element={<RunClub />} />
           <Route path="/Training" element={<Navigate to="/RunClub" replace />} />
@@ -141,7 +147,7 @@ function AppWrapper() {
           />
           <Route
             path="/tryout-information"
-            element={<TryoutInformation />}
+            element={<FallTryouts />}
           />
           <Route
             path="/admin"

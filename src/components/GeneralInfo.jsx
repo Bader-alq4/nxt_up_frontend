@@ -8,12 +8,12 @@ const infoItems = [
   {
     image: 'https://res.cloudinary.com/dahquiy48/image/upload/v1767375694/tournaments_zjucif.jpg',
     title: 'Boys Club Teams',
-    link: '/ClubTeams/Spring-2026-Boys',
+    link: '/ClubTeams/Fall-Boys',
   },
   {
     image: 'https://res.cloudinary.com/dahquiy48/image/upload/v1767375627/camps_rgyuvf.jpg',
     title: 'Girls Club Teams',
-    link: '/ClubTeams/Spring-2026-Girls',
+    link: '/ClubTeams/Fall-Girls',
   },
   {
     image: 'https://res.cloudinary.com/dahquiy48/image/upload/v1767375694/spring_bkozur.jpg',

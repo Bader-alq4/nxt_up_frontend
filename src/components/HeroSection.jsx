@@ -38,15 +38,15 @@ export default function HeroSection() {
 
 
         <div className="bottom-actions">
-          <Link to="/ClubTeams/Spring-2026-Boys" className="action-link">
-            <span>Spring 2026 Boys</span>
+          <Link to="/ClubTeams/Fall-Boys" className="action-link">
+            <span>Fall 2026 Boys</span>
             <span className="action-arrow">→</span>
           </Link>
-          <Link to="/ClubTeams/Spring-2026-Girls" className="action-link">
-            <span>Spring 2026 Girls</span>
+          <Link to="/ClubTeams/Fall-Girls" className="action-link">
+            <span>Fall 2026 Girls</span>
             <span className="action-arrow">→</span>
           </Link>
-          <Link to="/ClubTeams/Tryouts" className="action-link">
+          <Link to="/ClubTeams/Fall-Tryouts" className="action-link">
             <span>Tryout Information</span>
             <span className="action-arrow">→</span>
           </Link>

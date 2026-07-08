@@ -10,67 +10,149 @@ export default function ClubTeams() {
 
   return (
     <motion.div
-      className="club-teams-page"
+      className="program-page"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      {/* HERO */}
-      <section className="club-hero">
-        <div className="club-hero-content">
-          <h1>Club Teams</h1>
-          <p>
-            We offer Club teams for girls and boys ages 13U–18U during the Spring and
-            Summer seasons. Teams are formed through tryouts and compete in local,
-            regional, and select out-of-province tournaments.
+      <div className="program-container">
+
+        {/* HERO */}
+        <section className="program-section">
+          <span className="program-eyebrow">Fall 2026</span>
+          <h1 style={{ fontSize: '3rem', fontWeight: 600, lineHeight: 1.15, margin: '0 0 1.5rem' }}>
+            Continue What's Next.
+          </h1>
+          <p className="program-lead">
+            The Spring/Summer club season may be over, but your development doesn't have to
+            be. The Next Up Hoops Fall Program is designed to bridge the gap between the
+            Spring/Summer club season and the school basketball season, providing athletes
+            with the opportunity to continue training, competing, and improving in a
+            structured, competitive environment.
           </p>
-        </div>
-      </section>
+          <p className="program-lead">
+            Whether you're preparing for your school season, looking to continue developing
+            your game, or simply want to stay active throughout the Fall, our program is built
+            to help athletes continue progressing while enjoying the game they love.
+          </p>
+          <p style={{ fontWeight: 600, letterSpacing: '0.02em' }}>What's Next Is Earned.</p>
+        </section>
 
-      {/* SPRING 2026 */}
-      <section className="club-season">
-        <div className="club-season-header">
-          <h2>Spring 2026</h2>
-          <span className="season-status">Registration Open</span>
-        </div>
+        {/* WHY NEXT UP */}
+        <section className="program-section">
+          <h2>Why Next Up?</h2>
+          <p>
+            At Next Up Hoops, we believe development doesn't stop when one season ends. Our
+            Fall Program combines structured weekly training, meaningful competition,
+            experienced coaching, professional media, and a positive team environment to
+            create an experience that goes beyond a typical basketball program.
+          </p>
+          <p>
+            Every detail is designed to help athletes continue improving while preparing for a
+            successful school basketball season.
+          </p>
+        </section>
 
-        <div className="club-cards">
-          <Link to="/ClubTeams/Spring-2026-Boys" className="club-card boys">
-            <div className="club-card-overlay" />
-            <div className="club-card-content">
-              <h3>Boys Teams</h3>
-              <p>
-                Club teams across multiple age groups with a structured practice and
-                tournament schedule.
-              </p>
-              <span>View Boys Teams →</span>
+        {/* THE NEXT UP DIFFERENCE */}
+        <section className="program-section">
+          <h2>The Next Up Difference</h2>
+          <div className="included-grid">
+            <div className="included-item">
+              <h3>Structured Weekly Development</h3>
+              <p>Continue building your game through consistent team practices focused on individual skill development, basketball IQ, and team concepts.</p>
             </div>
-          </Link>
-
-          <Link to="/ClubTeams/Spring-2026-Girls" className="club-card girls">
-            <div className="club-card-overlay" />
-            <div className="club-card-content">
-              <h3>Girls Teams</h3>
-              <p>
-                Competitive club opportunities with consistent training and
-                age-appropriate tournament play.
-              </p>
-              <span>View Girls Teams →</span>
+            <div className="included-item">
+              <h3>Meaningful Competition</h3>
+              <p>Apply what you learn each week through organized scrimmages and tournament competition in a structured game environment.</p>
             </div>
-          </Link>
-
-          <Link to="/ClubTeams/Tryouts" className="club-card tryouts">
-            <div className="club-card-overlay" />
-            <div className="club-card-content">
-              <h3>Tryout Information</h3>
-              <p>
-                Full details on tryout dates, locations, and registration for Spring 2026.
-              </p>
-              <span>View Tryouts →</span>
+            <div className="included-item">
+              <h3>Experienced Coaching</h3>
+              <p>Train with coaches committed to helping athletes develop confidence, improve their skills, and reach their full potential.</p>
             </div>
-          </Link>
-        </div>
-      </section>
+            <div className="included-item">
+              <h3>Professional Athlete Experience</h3>
+              <p>From premium team apparel and organized programming to clear communication and a development-first culture, every aspect of the program is designed with athletes and families in mind.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* NEXT UP STUDIOS */}
+        <section className="program-section">
+          <h2>Next Up Studios</h2>
+          <p>
+            Media has always been an important part of the Next Up Hoops experience.
+            Beginning this Fall, all media operations will be led by Next Up Studios, our
+            dedicated in-house media team.
+          </p>
+          <p>Throughout the season, athletes can expect:</p>
+          <ul className="simple-list">
+            <li>Official Team Media Day</li>
+            <li>Team & Individual Photography</li>
+            <li>Practice & Game-Day Coverage</li>
+            <li>Player Features</li>
+            <li>Social Media Content</li>
+            <li>Behind-the-Scenes Coverage</li>
+          </ul>
+          <p>
+            Our goal is to showcase every athlete's journey while creating lasting memories
+            throughout the season.
+          </p>
+        </section>
+
+        {/* FALL PROGRAMS */}
+        <section className="program-section">
+          <h2>Fall Programs</h2>
+          <div className="hub-cards">
+            <Link to="/ClubTeams/Fall-Boys" className="hub-card">
+              <h3>Boys Fall Program</h3>
+              <p>U13 • U14 • U15 • U16 • U17 • U18</p>
+              <p>
+                Continue developing through weekly practices, competitive scrimmages,
+                tournament play, and experienced coaching while preparing for the upcoming
+                school basketball season.
+              </p>
+              <span className="hub-card-arrow">View Boys Program →</span>
+            </Link>
+
+            <Link to="/ClubTeams/Fall-Girls" className="hub-card">
+              <h3>Girls Fall Program</h3>
+              <p>U15 • U16 • U17 • U18</p>
+              <p>
+                Continue developing in a competitive, positive, and supportive environment
+                while preparing for the upcoming school basketball season.
+              </p>
+              <span className="hub-card-arrow">View Girls Program →</span>
+            </Link>
+          </div>
+        </section>
+
+        {/* FALL TRYOUTS */}
+        <section className="program-section">
+          <h2>Fall Tryouts</h2>
+          <p>
+            Every athlete interested in participating in the Fall Program is required to
+            attend the Fall 2026 Tryouts. Our multi-step evaluation process provides every
+            athlete with multiple opportunities to earn their place within the Next Up Hoops
+            program.
+          </p>
+          <Link to="/ClubTeams/Fall-Tryouts">Learn More About Fall Tryouts →</Link>
+        </section>
+
+        {/* CTA */}
+        <section className="program-section">
+          <h2>Ready for Fall?</h2>
+          <p>
+            Join one of Edmonton's fastest-growing basketball programs and continue building
+            your game this Fall.
+          </p>
+        </section>
+
+        <section className="program-actions">
+          {/* TODO(fall-2026-registration): replace with real Fall 2026 registration URL */}
+          <a href="#">Register for Fall 2026</a>
+        </section>
+
+      </div>
     </motion.div>
   );
 }

@@ -8,7 +8,7 @@ const SIGNUP_URL = 'https://registration.teamsnap.com/form/63099';
 const sessions = [
   { date: 'Aug 4',  location: 'Kinsmen Park / Walterdale Area' },
   { date: 'Aug 6',  location: 'Terwillegar Park' },
-  { date: 'Aug 11', location: 'Mill Creek Ravine' },
+  { date: 'Aug 11', location: 'Louise McKinney Riverfront Park' },
   { date: 'Aug 13', location: 'Capilano Park' },
   { date: 'Aug 18', location: 'Gallagher Park (Hill Session)' },
   { date: 'Aug 20', location: 'Gold Bar Park' },
@@ -29,9 +29,9 @@ const heroPhotos = [
 
 const locationPhotos = [
   {
-    src: 'https://res.cloudinary.com/dahquiy48/image/upload/v1778107575/mill-creek_rnesxy.webp',
-    label: 'Mill Creek',
-    alt: 'Whitemud Creek ravine view',
+    src: 'https://res.cloudinary.com/dahquiy48/image/upload/v1783453405/river-valley-park-system-view-louise-mckinney-riverfront-park-edmonton-river-valley-forms-ribbon-green-winds-147777655_lvj0op.webp',
+    label: 'Louise McKinney Riverfront Park',
+    alt: 'Louise McKinney Riverfront Park view',
   },
   {
     src: 'https://res.cloudinary.com/dahquiy48/image/upload/v1778107416/Edmonton_River-Valley_Stairs_oolqwi.jpg',
@@ -279,7 +279,7 @@ export default function RunClub() {
             your spot.
           </p>
 
-          <a href={SIGNUP_URL} className="rc-register-btn" target="_blank" rel="noopener noreferrer">
+          <a href={SIGNUP_URL} className="xrc-register-btn" target="_blank" rel="noopener noreferrer">
             Register Now
           </a>
 
