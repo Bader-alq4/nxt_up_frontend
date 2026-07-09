@@ -1,411 +1,1014 @@
-.tournament-plan-page {
-  min-height: 100vh;
+/* ==========================================================
+   NEXT UP FALL INVITATIONAL
+   Standalone editorial design. Sharp corners, hairline rules,
+   mono accents, full-bleed photography. Intentionally distinct
+   from the program-page system used elsewhere on the site.
+========================================================== */
+
+.inv-page {
   background: #ffffff;
   color: #111;
-  font-family: 'Helvetica Neue', -apple-system, sans-serif;
-  padding: 6rem 2rem 4rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
 }
 
-.tournament-wrapper {
-  max-width: 1200px;
+.inv-mono {
+  font-family: 'Courier New', monospace;
+}
+
+/* ================= HERO ================= */
+.inv-hero {
+  padding: 5rem 1.5rem 0;
+}
+
+.inv-hero-inner {
+  max-width: 1100px;
   margin: 0 auto;
 }
 
-/* ================= HEADER SPLIT LAYOUT ================= */
-.page-header-split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
-  margin-bottom: 3rem;
-  padding-bottom: 3rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.header-text h1 {
-  font-family: 'Helvetica Neue', -apple-system, sans-serif;
-  font-size: clamp(2.9rem, 5vw, 3.5rem);
+.inv-eyebrow {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 1.5rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #666;
+  margin: 0 0 1.25rem;
+}
+
+.inv-title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin: 0 0 2.5rem;
+}
+
+.inv-title span {
+  display: block;
   color: #111;
-  line-height: 1.1;
 }
 
-.header-description {
-  font-size: 1rem;
-  color: #444;
-  line-height: 1.7;
-  letter-spacing: 0.01em;
+@supports ((-webkit-text-stroke: 2px #111) and (paint-order: stroke fill)) {
+  .inv-title span {
+    color: #ffffff;
+    -webkit-text-stroke: 2px #111;
+    paint-order: stroke fill;
+  }
 }
 
-.header-image {
+.inv-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #111;
+  margin-bottom: 3rem;
+}
+
+.inv-hero-meta > div {
+  flex: 1 1 200px;
+  padding: 1.1rem 1.5rem 1.1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.inv-hero-meta > div + div {
+  padding-left: 1.5rem;
+  border-left: 1px solid #e5e5e5;
+}
+
+.inv-meta-label {
+  font-family: 'Courier New', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #999;
+}
+
+.inv-hero-meta > div > span:last-child {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* Emblem panel (replaces hero photo) */
+.inv-hero-emblem {
   position: relative;
-  border-radius: 14px;
+  width: 100%;
+  background: #0d0d0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1.5rem;
   overflow: hidden;
-  height: 500px;
-  background: #f5f5f5;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.14);
 }
 
-.header-image::before {
+.inv-hero-emblem::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(0, 168, 232, 0.12) 0%, transparent 55%);
-  z-index: 1;
+  width: 760px;
+  height: 760px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
   pointer-events: none;
 }
 
-.header-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: left top;
-  filter: saturate(1.08) contrast(1.05);
-  transition: transform 0.5s ease;
-}
-
-.header-image:hover img {
-  transform: scale(1.03);
-}
-/* ================= TOP NOTE ================= */
-.top-note {
-  font-size: 0.95rem;
-  color: #444;
-  line-height: 1.6;
-  margin-bottom: 3rem;
-  padding: 1.5rem;
-  background: #fafafa;
-  border-left: 2px solid #111;
-}
-
-/* ================= SECTIONS ================= */
-.tournament-section {
-  margin-bottom: 4rem;
-}
-
-.section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1.5rem;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.tournament-section h2 {
-  font-family: 'Courier New', monospace;
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  color: #111;
-  text-transform: uppercase;
-  margin: 0;
-}
-
-.package-badge {
-  font-size: 0.75rem;
-  padding: 0.4rem 0.75rem;
-  border-radius: 3px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.package-badge.included {
-  background: rgba(0, 168, 232, 0.15);
-  color: #00a8e8;
-  border: 1px solid rgba(0, 168, 232, 0.3);
-}
-
-.package-badge.optional {
-  background: rgba(128, 128, 128, 0.15);
-  color: #999;
-  border: 1px solid rgba(128, 128, 128, 0.3);
-}
-
-/* ================= TOURNAMENT LIST ================= */
-.tournament-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-
-.tournament-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.25rem 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-}
-
-.tournament-item:last-child {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.tournament-item:hover {
-  padding-left: 1rem;
-  background: rgba(0, 0, 0, 0.02);
-}
-
-.tournament-name {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #111;
-  letter-spacing: 0.01em;
-}
-
-.tournament-date {
-  font-size: 0.9rem;
-  color: #777;
-  letter-spacing: 0.02em;
-  text-align: right;
-}
-
-.team-label {
-  display: inline-block;
-  font-size: 0.75rem;
-  padding: 0.25rem 0.5rem;
-  background: rgba(0, 0, 0, 0.06);
-  color: #333;
-  border-radius: 3px;
-  margin-left: 0.5rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.muted {
-  color: #888;
-  font-size: 0.85rem;
-  font-style: italic;
-}
-
-/* ================= IMAGES ================= */
-
-/* Edmonton - Full width with caption */
-.tournament-image {
-  margin-top: 2rem;
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.tournament-image img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  filter: brightness(0.8) contrast(1.1);
-  display: block;
-}
-
-.image-caption {
+.inv-hero-emblem::after {
+  content: '';
   position: absolute;
-  bottom: 1.5rem;
-  left: 1.5rem;
-  font-family: 'Courier New', monospace;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #fff;
-  text-transform: lowercase;
-  letter-spacing: -0.01em;
+  width: 560px;
+  height: 560px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 50%;
+  pointer-events: none;
 }
 
-/* Calgary - Split layout */
-.split-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
-}
-
-.tournament-image-inline {
-  border-radius: 8px;
-  overflow: hidden;
-  height: 280px;
-}
-
-.tournament-image-inline img {
+.inv-seal {
+  position: relative;
+  z-index: 1;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.85) contrast(1.1);
+  max-width: 420px;
+  height: auto;
 }
 
-/* US - Side by side cards */
-.tournament-images-grid {
+.inv-seal-arc {
+  font-family: 'Courier New', monospace;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 3.5px;
+}
+
+.inv-seal-logo {
+  filter: brightness(1.05) contrast(1.05);
+}
+
+.inv-hero-tag {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #111;
+  color: #fff;
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.9rem 1.75rem;
+}
+
+/* ================= TICKER ================= */
+.inv-ticker {
+  background: #111;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0.85rem 0;
+}
+
+.inv-ticker-track {
+  display: inline-flex;
+  gap: 3rem;
+  padding-right: 3rem;
+  animation: inv-scroll 32s linear infinite;
+}
+
+.inv-ticker span {
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+@keyframes inv-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .inv-ticker-track {
+    animation: none;
+  }
+}
+
+/* ================= NUMBERED SECTIONS ================= */
+.inv-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5.5rem 1.5rem 0;
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 1.5rem;
-  margin-top: 2rem;
+  grid-template-columns: 260px 1fr;
+  gap: 3.5rem;
   align-items: start;
 }
 
-.tournament-image-card {
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-  height: 300px;
+.inv-section-head {
+  position: sticky;
+  top: 2rem;
 }
 
-.tournament-image-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.8) contrast(1.1);
-  transition: transform 0.4s ease;
-}
-
-.tournament-image-card:hover img {
-  transform: scale(1.05);
-}
-
-/* Las Vegas image - show full photo, fit to image size */
-.vegas-image {
-  width: fit-content;
-  max-width: 100%;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.vegas-image img {
-  object-fit: contain;
-  object-position: center;
-  background: transparent;
-  width: auto;
-  height: 100%;
-  max-width: 100%;
+.inv-num {
   display: block;
-}
-
-.vegas-image:hover img {
-  transform: scale(1.02);
-}
-
-.image-label {
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
   font-family: 'Courier New', monospace;
   font-size: 1rem;
   font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #bbb;
+  margin-bottom: 0.6rem;
+}
+
+.inv-section-head h2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.inv-section-body p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  margin: 0 0 1.4rem;
+  max-width: 640px;
+}
+
+.inv-section-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Callout inside a section */
+.inv-callout {
+  border-left: 3px solid #111;
+  padding: 1.25rem 1.75rem;
+  background: #fafafa;
+  margin-top: 2rem;
+}
+
+.inv-callout p {
+  font-size: 0.98rem;
+  margin: 0 0 0.75rem;
+}
+
+.inv-callout a {
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #111;
+  text-decoration: none;
+  border-bottom: 2px solid #111;
+  padding-bottom: 2px;
+}
+
+.inv-callout a:hover {
+  opacity: 0.6;
+}
+
+/* Split photo beside section body */
+.inv-split-photo {
+  margin-top: 2.5rem;
+  width: 100%;
+}
+
+.inv-split-photo img {
+  width: 100%;
+  max-height: 460px;
+  object-fit: cover;
+  display: block;
+  filter: contrast(1.03);
+}
+
+.inv-photo-credit {
+  font-family: 'Courier New', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #999;
+  padding-top: 0.6rem;
+  border-top: 1px solid #e5e5e5;
+  margin-top: 0.6rem;
+}
+
+/* ================= STATS BAND ================= */
+.inv-stats {
+  max-width: 1100px;
+  margin: 5.5rem auto 0;
+  padding: 0 1.5rem;
+}
+
+.inv-stats-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #111;
+}
+
+.inv-stat {
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.inv-stat + .inv-stat {
+  border-left: 1px solid #e5e5e5;
+}
+
+.inv-stat strong {
+  display: block;
+  font-size: 3.4rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.inv-stat span {
+  font-family: 'Courier New', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #777;
+}
+
+/* ================= LEDGER ROWS (The Experience) ================= */
+.inv-ledger {
+  border-top: 1px solid #111;
+}
+
+.inv-row {
+  display: grid;
+  grid-template-columns: 60px 260px 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #e5e5e5;
+  align-items: baseline;
+  transition: padding-left 0.2s ease;
+}
+
+.inv-row:hover {
+  padding-left: 0.75rem;
+}
+
+.inv-row-num {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #bbb;
+}
+
+.inv-row h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.inv-row p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+/* ================= DARK SHOWCASE BAND ================= */
+.inv-dark {
+  background: #0d0d0f;
   color: #fff;
-  text-transform: lowercase;
+  margin-top: 6rem;
+  padding: 5.5rem 1.5rem;
 }
 
-/* Bottom Hero Image */
-.tournament-hero-bottom {
+.inv-dark-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.inv-dark .inv-num {
+  color: #555;
+}
+
+.inv-dark h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin: 0 0 1rem;
+}
+
+.inv-dark-lead {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: #bbb;
+  margin: 0 0 2.25rem;
+  max-width: 480px;
+}
+
+.inv-chips {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.inv-chip {
+  font-family: 'Courier New', monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0.9rem 1.1rem;
+  color: #fff;
+}
+
+.inv-dark-note {
+  font-size: 0.9rem;
+  color: #888;
+  margin: 2rem 0 0;
+}
+
+.inv-dark-photo {
   position: relative;
-  margin-top: 4rem;
-  border-radius: 8px;
-  overflow: hidden;
-  height: 500px;
 }
 
-.tournament-hero-bottom img {
+.inv-dark-photo-frame {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #080809;
+}
+
+.inv-dark-photo-frame img {
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  filter: contrast(1.1) brightness(0.9) saturate(0.92);
+  transform: scale(1.03);
+  transform-origin: top center;
+}
+
+.inv-dark-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(13, 13, 15, 0.08) 0%, transparent 28%),
+    linear-gradient(0deg, rgba(13, 13, 15, 0.72) 0%, transparent 42%);
+  pointer-events: none;
+}
+
+.inv-dark-photo .inv-photo-credit {
+  color: #666;
+  border-top-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ================= AWARDS ================= */
+.inv-awards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid #111;
+  margin-top: 0.5rem;
+}
+
+.inv-award-block {
+  padding: 2rem;
+}
+
+.inv-award-block + .inv-award-block {
+  border-left: 1px solid #e5e5e5;
+}
+
+.inv-award-block h3 {
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #999;
+  margin: 0 0 1.1rem;
+}
+
+.inv-award-block ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.inv-award-block li {
+  font-size: 0.98rem;
+  line-height: 1.55;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.inv-award-block li:last-child {
+  border-bottom: none;
+}
+
+.inv-award-block li strong {
+  font-weight: 700;
+}
+
+/* ================= INFO / DIVISIONS ================= */
+.inv-info-rows {
+  border-top: 1px solid #111;
+  margin-bottom: 3rem;
+}
+
+.inv-info-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1.5rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.inv-info-row dt {
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #999;
+}
+
+.inv-info-row dd {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.inv-div-group {
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #999;
+  margin: 2.25rem 0 0.5rem;
+}
+
+.inv-div-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.inv-div-table td {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 1rem;
+}
+
+.inv-div-table td:first-child {
+  font-weight: 700;
+  width: 140px;
+}
+
+.inv-div-table td:last-child {
+  color: #666;
+}
+
+/* ================= REGISTRATION ================= */
+.inv-reg-intro {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  max-width: 640px;
+  margin: 0 0 2rem;
+}
+
+.inv-fees {
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+  max-width: 640px;
+}
+
+.inv-fees li {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.inv-fee-label {
+  font-size: 1rem;
+  font-weight: 600;
+  min-width: 110px;
+}
+
+.inv-fee-dates {
+  flex: 1;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.inv-fee-amount {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444;
+  font-variant-numeric: tabular-nums;
+}
+
+.inv-reg-note {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.7;
+  max-width: 620px;
+  margin-bottom: 2.25rem;
+}
+
+.inv-cta-btn {
+  display: inline-block;
+  background: transparent;
+  color: #111;
+  font-family: 'Courier New', monospace;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.05rem 2.5rem;
+  border: 1px solid #111;
+  transition: all 0.2s ease;
+}
+
+.inv-cta-btn:hover {
+  background: #111;
+  color: #fff;
+}
+
+.inv-cta-email {
+  display: inline-block;
+  margin-left: 1.75rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #666;
+  text-decoration: none;
+}
+
+.inv-cta-email:hover {
+  color: #111;
+}
+
+/* ================= CLOSING BAND ================= */
+.inv-closing {
+  position: relative;
+  margin-top: 6.5rem;
+  height: 480px;
+  overflow: hidden;
+}
+
+.inv-closing img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 35%;
-  filter: brightness(0.5) contrast(1.2);
+  display: block;
+  filter: brightness(0.45) contrast(1.1);
 }
 
-.hero-overlay {
+.inv-closing-overlay {
   position: absolute;
   inset: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.4) 100%);
+  text-align: center;
+  padding: 0 1.5rem;
 }
 
-.hero-text {
-  font-family: 'Courier New', monospace;
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 700;
+.inv-closing-overlay h2 {
   color: #fff;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 800;
   letter-spacing: -0.02em;
-  text-align: center;
-  text-transform: lowercase;
+  margin: 0 0 1rem;
+}
+
+.inv-closing-overlay p {
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
 }
 
 /* ================= MOBILE ================= */
-@media (max-width: 768px) {
-  .tournament-plan-page {
-    padding: 4rem 1.5rem 3rem;
+@media (max-width: 900px) {
+  .inv-section {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    padding-top: 4rem;
   }
 
-  .page-header-split {
+  .inv-section-head {
+    position: static;
+  }
+
+  .inv-stats-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .inv-stat:nth-child(3) {
+    border-left: none;
+  }
+
+  .inv-stat:nth-child(n+3) {
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .inv-row {
+    grid-template-columns: 40px 1fr;
+  }
+
+  .inv-row p {
+    grid-column: 2;
+  }
+
+  .inv-dark-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .inv-dark-photo-frame img {
+    height: 400px;
+  }
+
+  .inv-awards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .inv-award-block + .inv-award-block {
+    border-left: none;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .inv-fees li {
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+  }
+
+  .inv-fee-dates {
+    flex: 1 1 100%;
+    order: 3;
+  }
+
+  .inv-info-row {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .inv-hero {
+    padding-top: 3.5rem;
+  }
+
+  .inv-hero-emblem {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .inv-seal {
+    max-width: 300px;
+  }
+
+  .inv-hero-meta > div {
+    flex: 1 1 100%;
+    padding: 0.9rem 0;
+  }
+
+  .inv-hero-meta > div + div {
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .inv-chips {
+    grid-template-columns: 1fr;
+  }
+
+  .inv-stat strong {
+    font-size: 2.6rem;
+  }
+
+  .inv-cta-email {
+    display: block;
+    margin: 1.25rem 0 0;
+  }
+
+  .inv-closing {
+    height: 380px;
+  }
+}
+
+/* ================= TOURNAMENTS OVERVIEW ================= */
+.tourney-overview-page {
+  min-height: 100vh;
+}
+
+.tourney-hero {
+  padding: 6rem 1.5rem 4rem;
+  background: #111;
+  color: #fff;
+}
+
+.tourney-hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.tourney-hero .inv-eyebrow {
+  color: #bdbdbd;
+}
+
+.tourney-title {
+  max-width: 900px;
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  font-weight: 800;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.tourney-hero-copy {
+  max-width: 720px;
+  margin: 2rem 0 0;
+  color: #e7e7e7;
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+.tourney-standards,
+.tourney-events {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5.5rem 1.5rem 0;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.tourney-section-head {
+  top: 2rem;
+}
+
+.tourney-standards-grid,
+.tourney-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.tourney-standard,
+.tourney-card {
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  padding: 1.5rem;
+}
+
+.tourney-standard h3,
+.tourney-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+.tourney-standard p,
+.tourney-card p {
+  margin: 0;
+  color: #444;
+  line-height: 1.7;
+}
+
+.tourney-card {
+  display: flex;
+  min-height: 320px;
+  flex-direction: column;
+}
+
+.tourney-card-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.tourney-card-link {
+  align-self: flex-start;
+  margin-top: auto;
+  border: 1px solid #111;
+  background: #111;
+  color: #fff;
+  padding: 0.85rem 1.1rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.tourney-card-link:hover {
+  background: #fff;
+  color: #111;
+}
+
+.tourney-contact {
+  max-width: 1100px;
+  margin: 5.5rem auto 0;
+  padding: 3rem 1.5rem 5.5rem;
+  border-top: 1px solid #111;
+}
+
+.tourney-contact p {
+  max-width: 680px;
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.tourney-contact a {
+  color: #111;
+  font-weight: 800;
+}
+
+.spring-coming-page {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.spring-coming {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 6rem 1.5rem;
+}
+
+.spring-coming h1 {
+  margin: 0 0 1.5rem;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.spring-coming p:not(.inv-eyebrow) {
+  max-width: 680px;
+  margin: 0 0 2rem;
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+  .tourney-standards,
+  .tourney-events {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
-  .header-text h1 {
-    font-size: 2.5rem;
-  }
-
-  .header-image {
-    height: 300px;
-  }
-
-  .section-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
-
-  .tournament-section h2 {
-    font-size: 1.1rem;
-  }
-
-  .tournament-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-    padding: 1rem 0;
-  }
-
-  .tournament-name {
-    font-size: 0.95rem;
-  }
-
-  .tournament-date {
-    font-size: 0.85rem;
-    text-align: left;
-  }
-
-  .team-label {
-    margin-left: 0;
-    margin-top: 0.25rem;
-  }
-
-  /* Mobile image adjustments */
-  .split-content {
+  .tourney-standards-grid,
+  .tourney-card-grid {
     grid-template-columns: 1fr;
   }
+}
 
-  .tournament-image img {
-    height: 300px;
+@media (max-width: 600px) {
+  .tourney-hero {
+    padding-top: 4.5rem;
   }
 
-  .tournament-image-inline {
-    height: 250px;
+  .tourney-card {
+    min-height: 0;
   }
 
-  .tournament-images-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .tournament-hero-bottom {
-    height: 350px;
-  }
-
-  .hero-text {
-    font-size: 2rem;
-    padding: 0 1rem;
+  .tourney-card-meta {
+    flex-direction: column;
+    gap: 0.4rem;
   }
 }

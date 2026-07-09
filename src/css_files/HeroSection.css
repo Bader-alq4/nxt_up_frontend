@@ -259,70 +259,70 @@ body {
 }
 
 /* ===============================
-   RUN CLUB CTA
+   FALL TRYOUTS CTA
 ================================ */
-.hero-run-club-cta {
+.hero-tryouts-cta {
   margin: 1.75rem auto 0;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.35rem;
-  max-width: 420px;
-  padding: 1.15rem 1.75rem;
+  gap: 0.4rem;
+  padding: 1.15rem 2.5rem;
   text-align: center;
   text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  background: rgba(255, 255, 255, 0.07);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  background: transparent;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 
-.hero-run-club-cta:hover {
-  border-color: rgba(255, 255, 255, 0.65);
-  background: rgba(255, 255, 255, 0.12);
+.hero-tryouts-cta:hover {
+  background: #fff;
   transform: translateY(-2px);
 }
 
-.hero-run-club-cta-label {
+.hero-tryouts-cta-label {
   font-size: 0.65rem;
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #fff;
-  opacity: 0.85;
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.25s ease;
 }
 
-.hero-run-club-cta-title {
-  font-size: 1.05rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #fff;
-  font-family: 'Courier New', monospace;
-}
-
-.hero-run-club-cta-sub {
-  font-size: 0.8rem;
-  font-weight: 400;
+.hero-tryouts-cta-title {
+  font-size: 1.6rem;
+  font-weight: 800;
   letter-spacing: 0.04em;
-  color: rgba(255, 255, 255, 0.75);
-  line-height: 1.4;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1;
+  transition: color 0.25s ease;
+}
+
+.hero-tryouts-cta-arrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'Courier New', monospace;
+  transition: color 0.25s ease;
+}
+
+.hero-tryouts-cta:hover .hero-tryouts-cta-label,
+.hero-tryouts-cta:hover .hero-tryouts-cta-title,
+.hero-tryouts-cta:hover .hero-tryouts-cta-arrow {
+  color: #111;
 }
 
 @media (max-width: 768px) {
-  .hero-run-club-cta {
+  .hero-tryouts-cta {
     margin-top: 1.25rem;
-    padding: 1rem 1.25rem;
-    max-width: 100%;
+    padding: 1rem 2rem;
   }
 
-  .hero-run-club-cta-title {
-    font-size: 0.95rem;
-  }
-
-  .hero-run-club-cta-sub {
-    font-size: 0.75rem;
+  .hero-tryouts-cta-title {
+    font-size: 1.35rem;
   }
 }
 

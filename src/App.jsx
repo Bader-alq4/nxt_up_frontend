@@ -16,7 +16,7 @@ import ClubGuidelines from './pages/ClubGuidelines';
 import GrantsFunding from './pages/GrantsFunding';
 import WinterProgramming from './pages/WinterProgramming';
 import RunClub from './pages/RunClub';
-import Tournaments from './pages/Tournaments';
+import Tournaments, { FallInvitational, SpringInvitational } from './pages/Tournaments';
 import TryoutsClosed from './pages/TryoutsClosed';
 import Sponsorship from './pages/Sponsorship';
 import Testimonials from './pages/Testimonials';
@@ -108,6 +108,8 @@ function AppWrapper() {
           <Route path="/RunClub" element={<RunClub />} />
           <Route path="/Training" element={<Navigate to="/RunClub" replace />} />
           <Route path="/Tournaments" element={<Tournaments />} />
+          <Route path="/Tournaments/Spring-Invitational" element={<SpringInvitational />} />
+          <Route path="/Tournaments/Fall-Invitational" element={<FallInvitational />} />
           <Route path="/TryoutsClosed" element={<TryoutsClosed />} />
 
 

@@ -51,7 +51,9 @@ export default function NavBar() {
   ];
 
   const tournamentsSubmenu = [
-    { label: 'Participating Tournaments', to: '/Tournaments' },
+    { label: 'Tournaments Overview', to: '/Tournaments' },
+    { label: 'Next Up Spring Invitational', to: '/Tournaments/Spring-Invitational' },
+    { label: 'Next Up Fall Invitational', to: '/Tournaments/Fall-Invitational' },
   ];
 
   const getSubmenu = (label) => {

@@ -399,6 +399,19 @@
 }
 
 /* ===============================
+   SECTION PHOTO (single full-width)
+================================ */
+.section-photo {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  display: block;
+  margin-top: 2rem;
+}
+
+/* ===============================
    HUB PAGE - PROGRAM CARDS
 ================================ */
 .hub-cards {
@@ -565,6 +578,10 @@
 
   .hub-photo-strip img {
     height: 260px;
+  }
+
+  .section-photo {
+    max-height: 260px;
   }
 
   .program-hero-text h1 {

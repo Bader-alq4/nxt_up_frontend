@@ -25,12 +25,10 @@ export default function HeroSection() {
           whats Next <br /> is earned.
         </h1>
 
-        <Link to="/RunClub" className="hero-run-club-cta">
-          <span className="hero-run-club-cta-label">Registrations Open</span>
-          <span className="hero-run-club-cta-title">Run Club is now live</span>
-          <span className="hero-run-club-cta-sub">
-          Limited Spots Available — Register Now
-          </span>
+        <Link to="/ClubTeams/Fall-Tryouts" className="hero-tryouts-cta">
+          <span className="hero-tryouts-cta-label">Fall 2026 · Now Open</span>
+          <span className="hero-tryouts-cta-title">Tryouts</span>
+          <span className="hero-tryouts-cta-arrow">Find your spot →</span>
         </Link>
 
         <p className="hero-subtitle">edmonton • calgary • U.S.</p>

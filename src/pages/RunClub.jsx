@@ -81,10 +81,8 @@ export default function RunClub() {
                     <span className="program-eyebrow">Next Up Run Club · August 2026</span>
                     <h1>
                       Show up ready.<br />
-                      <span>Not catching up.</span>
                     </h1>
                     <p className="program-lead">
-                      Most athletes wait until tryouts to get in shape. That's why they fall behind.
                       Next Up Run Club is a structured outdoor conditioning program designed to help
                       athletes build speed, endurance, and game-ready fitness before their season starts.
                     </p>
