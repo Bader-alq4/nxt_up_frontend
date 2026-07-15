@@ -29,7 +29,7 @@ export default function FallTryouts() {
 
           <div className="hero-images-layout">
             <img
-              src="/bigfoot.png"
+              src="/bigfoot-hero.jpg"
               alt="Next Up Hoops athletes at Bigfoot Hoops tournament"
               className="hero-img-1"
                 loading="eager"
