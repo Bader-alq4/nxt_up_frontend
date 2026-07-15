@@ -1,333 +1,193 @@
 .about-page {
-  background: #000;
-  color: #fff;
   min-height: 100vh;
-  padding-top: 70px;
+  background: #f7f9fb;
+  color: #111820;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
 }
 
 .about-hero {
-  position: relative;
-  height: 75vh;
-  display: flex;
-  align-items: flex-end;
-  overflow: hidden;
-}
-
-.about-hero-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.about-hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: grayscale(30%) contrast(1.15) brightness(0.5);
-}
-
-.about-hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%);
-  z-index: 2;
-}
-
-.about-hero-content {
-  position: relative;
-  z-index: 3;
-  padding: 3rem;
-  max-width: 1200px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.75fr);
+  gap: 3rem;
+  align-items: center;
+  max-width: 1180px;
   margin: 0 auto;
-  width: 100%;
+  padding: 7rem 2rem 5rem;
 }
 
-.about-hero-content h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  margin: 0 0 1.5rem 0;
-  line-height: 1;
-  color: #fff;
+.about-hero-copy {
+  max-width: 720px;
 }
 
-.about-hero-content p {
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: #c0c0c0;
-  line-height: 1.6;
-  max-width: 700px;
+.about-eyebrow {
+  display: inline-block;
+  margin-bottom: 1.15rem;
+  color: #0f78a8;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.about-hero h1 {
+  max-width: 760px;
+  margin: 0 0 2rem;
+  color: #101820;
+  font-family: 'Atkinson Hyperlegible', 'Courier New', monospace;
+  font-size: clamp(3rem, 7vw, 5.4rem);
+  font-weight: 900;
+  line-height: 0.96;
+  letter-spacing: 0;
 }
 
 .about-intro {
-  padding: 6rem 3rem;
-  max-width: 1000px;
-  margin: 0 auto;
-  border-bottom: 1px solid #1a1a1a;
-}
-
-.intro-content {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.about-page .intro-lead {
-  font-size: 1.5rem;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  color: #ffffff;
-  line-height: 1.6;
-}
-
-
-.intro-sub {
-  font-size: 1.1rem;
-  font-weight: 400;
-  color: #808080;
-  font-style: italic;
-  line-height: 1.6;
-}
-
-.about-mission {
-  padding: 6rem 0;
-  border-bottom: 1px solid #1a1a1a;
-}
-
-.mission-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  max-width: 1400px;
-  margin: 0 auto;
-  gap: 0;
+  gap: 1.2rem;
+  max-width: 680px;
 }
 
-.mission-image {
-  position: relative;
-  min-height: 500px;
+.about-intro p,
+.about-section-body p {
+  margin: 0;
+  color: #465966;
+  font-size: 1.04rem;
+  line-height: 1.8;
+}
+
+.about-intro p:first-child {
+  color: #101820;
+  font-size: 1.24rem;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.about-hero-image {
   overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #dde8ef;
+  background: #101820;
+  box-shadow: 0 24px 60px rgba(16, 24, 32, 0.13);
 }
 
-.mission-image img {
+.about-hero-image img {
+  display: block;
   width: 100%;
-  height: 100%;
+  height: min(58vw, 520px);
   object-fit: cover;
-  filter: grayscale(35%) contrast(1.2) brightness(0.65);
+  object-position: center 38%;
 }
 
-.mission-text {
-  padding: 4rem 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1.5rem;
-  background: #0a0a0a;
-}
-
-.mission-text h2 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  margin: 0 0 1rem 0;
-  color: #fff;
-}
-
-.mission-text p {
-  font-size: 1.1rem;
-  font-weight: 400;
-  color: #b0b0b0;
-  line-height: 1.7;
-}
-
-.about-values {
-  padding: 6rem 3rem;
-  max-width: 1400px;
+.about-story {
+  max-width: 980px;
   margin: 0 auto;
-  border-bottom: 1px solid #1a1a1a;
+  padding: 1rem 2rem 7rem;
 }
 
-.values-header {
-  max-width: 800px;
-  margin: 0 auto 4rem;
-  text-align: center;
-}
-
-.values-header h2 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  margin: 0 0 1rem 0;
-  color: #fff;
-}
-
-.values-header p {
-  font-size: 1.1rem;
-  font-weight: 400;
-  color: #808080;
-  line-height: 1.6;
-}
-
-.values-grid {
+.about-story-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: minmax(220px, 0.4fr) minmax(0, 1fr);
   gap: 3rem;
-  margin-top: 3rem;
+  padding: 3.25rem 0;
+  border-top: 1px solid #dce6ed;
 }
 
-.value-item {
-  padding: 2rem;
-  background: #0a0a0a;
-  border: 1px solid #1a1a1a;
-  transition: border-color 0.3s ease;
+.about-story-section:last-child {
+  border-bottom: 1px solid #dce6ed;
 }
 
-.value-item:hover {
-  border-color: #2a2a2a;
-}
-
-.value-item h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  margin: 0 0 1rem 0;
-  color: #fff;
-}
-
-.value-item p {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #909090;
-  line-height: 1.6;
+.about-story-section h2 {
+  position: sticky;
+  top: 6rem;
+  align-self: start;
   margin: 0;
+  color: #101820;
+  font-family: 'Atkinson Hyperlegible', 'Courier New', monospace;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: 0;
 }
 
-.about-closer {
-  padding: 6rem 3rem;
-  max-width: 1000px;
-  margin: 0 auto;
+.about-section-body {
+  display: grid;
+  gap: 1.05rem;
 }
 
-.closer-content {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.about-section-body p:first-child {
+  color: #101820;
+  font-weight: 700;
 }
 
-.closer-primary {
-  font-size: 1.8rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  color: #e0e0e0;
-  line-height: 1.4;
-  margin: 0;
+.about-callout-list {
+  display: grid;
+  gap: 0;
+  margin: 0.7rem 0;
+  border-top: 1px solid #dce6ed;
+  border-bottom: 1px solid #dce6ed;
 }
 
-.closer-secondary {
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: #707070;
-  font-style: italic;
-  line-height: 1.6;
-  margin: 0;
+.about-callout-list p {
+  padding: 1rem 0;
+  color: #101820;
+  font-size: 1.12rem;
+  font-weight: 800;
+  border-bottom: 1px solid #dce6ed;
 }
 
-@media (max-width: 1024px) {
-  .mission-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .mission-image {
-    min-height: 400px;
-  }
-
-  .values-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-  }
+.about-callout-list p:last-child {
+  border-bottom: none;
 }
 
-@media (max-width: 768px) {
+.about-final-line {
+  margin-top: 0.8rem !important;
+  color: #0f78a8 !important;
+  font-family: 'Atkinson Hyperlegible', 'Courier New', monospace;
+  font-size: clamp(1.7rem, 4vw, 2.6rem) !important;
+  font-weight: 900;
+  line-height: 1.05 !important;
+}
+
+@media (max-width: 900px) {
   .about-hero {
-    height: 65vh;
-  }
-
-  .about-hero-content {
-    padding: 2rem 1.5rem;
-  }
-
-  .about-hero-content h1 {
-    font-size: 2.5rem;
-  }
-
-  .about-hero-content p {
-    font-size: 1rem;
-  }
-
-  .about-intro {
-    padding: 4rem 1.5rem;
-  }
-
-  .intro-lead {
-    font-size: 1.25rem;
-  }
-
-  .intro-sub {
-    font-size: 1rem;
-  }
-
-  .mission-text {
-    padding: 3rem 1.5rem;
-  }
-
-  .mission-text h2 {
-    font-size: 2rem;
-  }
-
-  .mission-text p {
-    font-size: 1rem;
-  }
-
-  .about-values {
-    padding: 4rem 1.5rem;
-  }
-
-  .values-header h2 {
-    font-size: 2rem;
-  }
-
-  .values-header p {
-    font-size: 1rem;
-  }
-
-  .values-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    padding: 5.5rem 1.5rem 3.5rem;
   }
 
-  .value-item {
-    padding: 1.5rem;
+  .about-hero-image img {
+    height: 420px;
   }
 
-  .value-item h3 {
-    font-size: 1.2rem;
+  .about-story {
+    padding: 0 1.5rem 5rem;
   }
 
-  .about-closer {
-    padding: 4rem 1.5rem;
+  .about-story-section {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+    padding: 2.75rem 0;
   }
 
-  .closer-primary {
-    font-size: 1.5rem;
+  .about-story-section h2 {
+    position: static;
+  }
+}
+
+@media (max-width: 560px) {
+  .about-hero {
+    padding-top: 4.5rem;
   }
 
-  .closer-secondary {
-    font-size: 1.1rem;
+  .about-hero h1 {
+    font-size: 2.65rem;
+  }
+
+  .about-hero-image img {
+    height: 320px;
+  }
+
+  .about-intro p,
+  .about-section-body p {
+    font-size: 1rem;
+    line-height: 1.72;
   }
 }

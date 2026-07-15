@@ -1,6 +1,6 @@
 .events-wrapper {
-  background-color: #000;
-  color: white;
+  background: linear-gradient(180deg, #f7fbfd 0%, #ffffff 100%);
+  color: #101820;
   padding: 5rem 1.5rem;
   text-align: center;
   width: 100%;
@@ -14,7 +14,7 @@
   font-family: 'Atkinson Hyperlegible', 'Courier New', monospace;
   font-weight: 600;
   margin-bottom: 3rem;
-  color: white;
+  color: #101820;
   letter-spacing: 0.5px;
 }
 
@@ -36,10 +36,10 @@
 }
 
 .event-card {
-  background-color: #111;
-  border: 1px solid #222;
+  background-color: #ffffff;
+  border: 1px solid #e2edf3;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.04);
+  box-shadow: 0 16px 35px rgba(16, 24, 32, 0.07);
   text-align: left;
   padding: 1.75rem 2rem;
   transition: all 0.3s ease;
@@ -53,19 +53,20 @@
 .event-card:hover {
   transform: translateY(-5px);
   border-color: #36a4d6;
+  box-shadow: 0 20px 45px rgba(16, 24, 32, 0.1);
 }
 
 .event-title {
   font-size: 1.3rem;
   font-family: 'Atkinson Hyperlegible', 'Courier New', monospace;
   font-weight: 600;
-  color: #36a4d6;
+  color: #0f78a8;
   margin-bottom: 0.4rem;
 }
 
 .event-datetime {
   font-size: 1rem;
-  color: #ccc;
+  color: #3d4c57;
   margin-bottom: 0.2rem;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -74,7 +75,7 @@
 
 .event-location {
   font-size: 1rem;
-  color: #888;
+  color: #6b7a85;
 }
 
 /* Responsive tweaks */

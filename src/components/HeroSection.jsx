@@ -18,22 +18,22 @@ export default function HeroSection() {
       <div className="vignette"></div>
 
       <div className="hero-content">
-        <div className="top-marker">Edmonton</div>
+        <span className="top-marker">Edmonton</span>
 
-      <div className="center-lockup">
-        <h1 className="hero-title">
-          whats Next <br /> is earned.
-        </h1>
+        <div className="hero-middle">
+          <div className="hero-headline-block">
+            <h1 className="hero-title">
+              whats Next <br /> is earned.
+            </h1>
+            <p className="hero-subtitle">Elite Basketball Club Based in Edmonton, Alberta 🇨🇦</p>
+          </div>
 
-        <Link to="/ClubTeams/Fall-Tryouts" className="hero-tryouts-cta">
-          <span className="hero-tryouts-cta-label">Fall 2026 · Now Open</span>
-          <span className="hero-tryouts-cta-title">Tryouts</span>
-          <span className="hero-tryouts-cta-arrow">Find your spot →</span>
-        </Link>
-
-        <p className="hero-subtitle">edmonton • calgary • U.S.</p>
-      </div>
-
+          <Link to="/ClubTeams/Fall-Tryouts" className="hero-tryouts-cta">
+            <span className="hero-tryouts-cta-label">Fall 2026 · Now Open</span>
+            <span className="hero-tryouts-cta-title">Tryouts</span>
+            <span className="hero-tryouts-cta-arrow">Find your spot →</span>
+          </Link>
+        </div>
 
         <div className="bottom-actions">
           <Link to="/ClubTeams/Fall-Boys" className="action-link">
@@ -50,6 +50,14 @@ export default function HeroSection() {
           </Link>
         </div>
       </div>
+
+      <Link to="/verified" className="hero-verified" aria-label="Canada Basketball Verified club">
+        <img
+          src="/CanadaBasketball-Verified-Bilingual-Red.png"
+          alt="Canada Basketball Verified"
+          loading="eager"
+        />
+      </Link>
     </div>
   );
 }

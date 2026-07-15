@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 // General Pages
 import Home from './pages/Home';
 import About from './pages/About';
+import Verified from './pages/Verified';
 import Development from './pages/Development';
 import ClubGuidelines from './pages/ClubGuidelines';
 import GrantsFunding from './pages/GrantsFunding';
@@ -91,6 +92,7 @@ function AppWrapper() {
           {/* Public Routes */}
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/verified" element={<Verified />} />
           <Route path="/development" element={<Development />} />
           <Route path="/club-guidelines" element={<ClubGuidelines />} />
           <Route path="/grants-funding" element={<GrantsFunding />} />

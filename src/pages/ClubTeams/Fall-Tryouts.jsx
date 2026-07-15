@@ -29,8 +29,8 @@ export default function FallTryouts() {
 
           <div className="hero-images-layout">
             <img
-              src="https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_700/v1767375626/boys_group_highlight_dih4fc.jpg"
-              alt="Next Up Hoops game action"
+              src="/bigfoot-hoops-vegas-banner-clean.png"
+              alt="Next Up Hoops athletes at Bigfoot Hoops tournament"
               className="hero-img-1"
                 loading="eager"
                 fetchpriority="high"
@@ -135,9 +135,9 @@ export default function FallTryouts() {
               <div className="timeline-step-label">Step 4</div>
               <h3>Team Offers</h3>
               <p>
-                Offers are released via email on Sunday, August 9 at 6:00 PM. Athletes have
-                until Wednesday, August 12 at 11:59 PM to accept. Any remaining waitlist and
-                alternate offers begin going out Thursday, August 13.
+                Offers are released via email on Sunday, August 16 at 6:00 PM. Athletes have
+                until Wednesday, August 19 at 11:59 PM to accept. Any remaining waitlist and
+                alternate offers begin going out Thursday, August 20.
               </p>
             </div>
           </div>
@@ -149,28 +149,9 @@ export default function FallTryouts() {
           <h2>Tryout Schedule</h2>
 
           <div style={{ marginBottom: '3.5rem' }}>
-            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.35rem' }}>ID Camp 1</h3>
+            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.35rem' }}>ID Camp 1 · Boys</h3>
             <p style={{ color: '#666', fontSize: '0.95rem', marginBottom: '1.5rem' }}>Saturday, August 1</p>
             <div className="schedule-container">
-              <div className="schedule-group girls">
-                <span className="gender-badge girls">Girls</span>
-                <div className="group-label">St Francis Xavier Sports Centre Gym 2</div>
-                <div className="schedule-items">
-                  <div className="schedule-item">
-                    <div className="item-header">
-                      <span className="age-group">U15 / U16</span>
-                    </div>
-                    <div className="item-time">11:00 AM – 12:30 PM</div>
-                  </div>
-                  <div className="schedule-item">
-                    <div className="item-header">
-                      <span className="age-group">U17 / U18</span>
-                    </div>
-                    <div className="item-time">12:30 PM – 2:00 PM</div>
-                  </div>
-                </div>
-              </div>
-
               <div className="schedule-group boys">
                 <span className="gender-badge boys">Boys</span>
                 <div className="group-label">Saville Community Sports Centre Gym 4</div>
@@ -199,7 +180,7 @@ export default function FallTryouts() {
           </div>
 
           <div style={{ marginBottom: '3.5rem' }}>
-            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.35rem' }}>ID Camp 2 · Girls</h3>
+            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.35rem' }}>ID Camp 1 · Girls</h3>
             <p style={{ color: '#666', fontSize: '0.95rem', marginBottom: '1.5rem' }}>Wednesday, August 5</p>
             <div className="schedule-container">
               <div className="schedule-group girls">
@@ -268,23 +249,29 @@ export default function FallTryouts() {
             </div>
           </div>
 
-          <div>
-            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.35rem' }}>Final Tryout · Invitation Only</h3>
+          <div style={{ marginBottom: '3.5rem' }}>
+            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.35rem' }}>ID Camp 2 · Girls</h3>
             <p style={{ color: '#666', fontSize: '0.95rem', marginBottom: '1.5rem' }}>Saturday, August 8</p>
             <div className="schedule-container">
               <div className="schedule-group girls">
                 <span className="gender-badge girls">Girls</span>
-                <div className="group-label">The Meadows Rec Centre – West Gym</div>
+                <div className="group-label">Central Lions Gymnasium</div>
                 <div className="schedule-items">
                   <div className="schedule-item">
                     <div className="item-header">
-                      <span className="age-group">All Girls</span>
+                      <span className="age-group">U15 – U18</span>
                     </div>
-                    <div className="item-time">12:00 PM – 2:00 PM</div>
+                    <div className="item-time">11:00 AM – 1:00 PM</div>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
 
+          <div style={{ marginBottom: '3.5rem' }}>
+            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.35rem' }}>Final Tryout · Boys · Invitation Only</h3>
+            <p style={{ color: '#666', fontSize: '0.95rem', marginBottom: '1.5rem' }}>Saturday, August 8</p>
+            <div className="schedule-container">
               <div className="schedule-group boys">
                 <span className="gender-badge boys">Boys</span>
                 <div className="group-label">Dr Anne Anderson Community Centre Gym 2</div>
@@ -311,6 +298,25 @@ export default function FallTryouts() {
               </div>
             </div>
           </div>
+
+          <div>
+            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.35rem' }}>Final Tryout · Girls · Invitation Only</h3>
+            <p style={{ color: '#666', fontSize: '0.95rem', marginBottom: '1.5rem' }}>Saturday, August 15</p>
+            <div className="schedule-container">
+              <div className="schedule-group girls">
+                <span className="gender-badge girls">Girls</span>
+                <div className="group-label">The Meadows Rec Centre – West Gym</div>
+                <div className="schedule-items">
+                  <div className="schedule-item">
+                    <div className="item-header">
+                      <span className="age-group">All Girls</span>
+                    </div>
+                    <div className="item-time">12:00 PM – 2:00 PM</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* ================= KEY DATES ================= */}
@@ -327,31 +333,42 @@ export default function FallTryouts() {
             <tbody>
               <tr>
                 <td>ID Camp 1</td>
-                <td>Saturday, August 1, 2026</td>
+                <td>
+                  <div className="key-date-line"><span>Boys</span><span>Saturday, August 1, 2026</span></div>
+                  <div className="key-date-line"><span>Girls</span><span>Wednesday, August 5, 2026</span></div>
+                </td>
               </tr>
               <tr>
-                <td>ID Camp 2 (Girls)</td>
-                <td>Wednesday, August 5, 2026</td>
+                <td>ID Camp 2</td>
+                <td>
+                  <div className="key-date-line"><span>Boys</span><span>Friday, August 7, 2026</span></div>
+                  <div className="key-date-line"><span>Girls</span><span>Saturday, August 8, 2026</span></div>
+                </td>
               </tr>
               <tr>
-                <td>ID Camp 2 (Boys)</td>
-                <td>Friday, August 7, 2026</td>
-              </tr>
-              <tr>
-                <td>Final Tryout (Invitation Only)</td>
-                <td>Saturday, August 8, 2026</td>
+                <td>Final Tryout</td>
+                <td>
+                  <div className="key-date-line"><span>Boys</span><span>Saturday, August 8, 2026</span></div>
+                  <div className="key-date-line"><span>Girls</span><span>Saturday, August 15, 2026</span></div>
+                </td>
               </tr>
               <tr>
                 <td>Offers Released</td>
-                <td>Sunday, August 9, 2026 · 6:00 PM</td>
+                <td>
+                  <div className="key-date-line"><span>Boys</span><span>Sunday, August 9, 2026 · 6:00 PM</span></div>
+                  <div className="key-date-line"><span>Girls</span><span>Sunday, August 16, 2026 · 6:00 PM</span></div>
+                </td>
               </tr>
               <tr>
                 <td>Acceptance Deadline</td>
-                <td>Wednesday, August 12, 2026 · 11:59 PM</td>
+                <td>Wednesday, August 19, 2026 · 11:59 PM</td>
               </tr>
               <tr>
                 <td>Waitlist & Alternate Offers</td>
-                <td>Begins Thursday, August 13, 2026</td>
+                <td>
+                  <div className="key-date-line"><span>Boys</span><span>Begins Thursday, August 13, 2026</span></div>
+                  <div className="key-date-line"><span>Girls</span><span>Begins Thursday, August 20, 2026</span></div>
+                </td>
               </tr>
             </tbody>
           </table>

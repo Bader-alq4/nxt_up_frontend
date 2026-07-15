@@ -1,34 +1,95 @@
 .partner-page {
-  background-color: #000;
-  color: #fff;
+  background: linear-gradient(180deg, #f7fbfd 0%, #ffffff 45%, #f3f7fa 100%);
+  color: #101820;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4rem 1rem;
+  padding: 5rem 1rem;
 }
 
 .partner-container {
-  max-width: 800px;
+  max-width: 980px;
   width: 100%;
-  background: #111;
-  border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-  padding: 3rem 2rem;
+  background: #ffffff;
+  border: 1px solid #e2edf3;
+  border-radius: 12px;
+  box-shadow: 0 18px 45px rgba(16, 24, 32, 0.08);
+  padding: 3.5rem;
   text-align: left;
 }
 
+.partner-eyebrow {
+  margin: 0 0 0.85rem;
+  color: #0f78a8;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .partner-heading {
-  font-size: 2.5rem;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.05;
   font-weight: 700;
-  margin-bottom: 1rem;
-  color: #36a4d6;
+  margin-bottom: 1.15rem;
+  color: #101820;
 }
 
 .partner-intro {
   font-size: 1.125rem;
-  margin-bottom: 2rem;
+  max-width: 760px;
+  margin-bottom: 2.5rem;
   line-height: 1.6;
-  color: #ddd;
+  color: #4a5a66;
+}
+
+.partner-feature-grid,
+.partner-section-grid,
+.contact-grid,
+.social-links {
+  display: grid;
+  gap: 1rem;
+}
+
+.partner-feature-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 2.5rem;
+}
+
+.partner-section-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.partner-feature-card,
+.contact-card,
+.social-link {
+  border: 1px solid #e2edf3;
+  background: #f9fcfe;
+  border-radius: 10px;
+}
+
+.partner-feature-card {
+  padding: 1.5rem;
+}
+
+.partner-card-label {
+  color: #0f78a8;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.partner-feature-card h2 {
+  margin: 0.55rem 0 0.7rem;
+  color: #101820;
+  font-size: 1.35rem;
+}
+
+.partner-feature-card p {
+  margin: 0;
+  color: #4a5a66;
+  line-height: 1.6;
 }
 
 .partner-subheading {
@@ -36,7 +97,7 @@
   font-weight: 600;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  color: #fff;
+  color: #101820;
 }
 
 .partner-list {
@@ -50,7 +111,7 @@
   margin-bottom: 0.75rem;
   padding-left: 1.5rem;
   font-size: 1.0625rem;
-  color: #ccc;
+  color: #4a5a66;
   line-height: 1.5;
 }
 
@@ -61,7 +122,7 @@
   top: 0;
   font-size: 1.5rem;
   line-height: 1;
-  color: #36a4d6;
+  color: #0f78a8;
 }
 
 .partner-contact {
@@ -71,13 +132,83 @@
 }
 
 .partner-link {
-  color: #36a4d6;
+  color: #0f78a8;
   text-decoration: none;
   font-weight: 600;
 }
 
 .partner-link:hover {
   text-decoration: none;
+}
+
+.contact-container {
+  max-width: 920px;
+}
+
+.contact-intro {
+  margin-bottom: 2rem;
+}
+
+.contact-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.15rem;
+  color: #101820;
+  text-decoration: none;
+}
+
+.contact-card strong,
+.contact-card small {
+  display: block;
+}
+
+.contact-card small {
+  margin-top: 0.2rem;
+  color: #5e6d78;
+}
+
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  border-radius: 50%;
+  background: #e8f5fb;
+  color: #0f78a8;
+}
+
+.social-section {
+  margin-top: 2.5rem;
+}
+
+.social-links {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1rem;
+  color: #101820;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.contact-card:hover,
+.social-link:hover {
+  border-color: #0f78a8;
+  color: #0f78a8;
+  transform: translateY(-2px);
 }
 
 @media (max-width: 640px) {
@@ -91,5 +222,12 @@
 
   .partner-subheading {
     font-size: 1.25rem;
+  }
+
+  .partner-feature-grid,
+  .partner-section-grid,
+  .contact-grid,
+  .social-links {
+    grid-template-columns: 1fr;
   }
 }

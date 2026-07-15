@@ -22,7 +22,7 @@ const infoItems = [
   },
   {
     image: 'https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_700/v1767375664/fall_qc9mux.jpg',
-    title: 'sessions',
+    title: 'Programming',
     link: '/Training',
   },
 ];

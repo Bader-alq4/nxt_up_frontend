@@ -3,6 +3,66 @@ import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import '../css_files/About.css';
 
+const storySections = [
+  {
+    title: 'Where It All Began',
+    paragraphs: [
+      'Next Up Hoops began in November 2023 with a simple vision and just eight athletes at our very first open gym.',
+      "We didn't have a long history or an established reputation. What we had was a commitment to putting people first. We believed that if we built the right culture, stayed true to our values, and consistently invested in our athletes, everything else would follow.",
+      "Since then, we've been humbled by the growth of our community, but what we're most proud of isn't the number of teams we've built or tournaments we've played. It's the confidence we've seen athletes develop, the friendships they've formed, and the lifelong lessons they've carried with them beyond basketball.",
+    ],
+  },
+  {
+    title: 'Why We Exist',
+    paragraphs: [
+      "We didn't create Next Up to be just another basketball club.",
+      'We created it to build a community where mentorship, relationships, and personal growth matter just as much as athletic development.',
+      'We believe every athlete deserves coaches who genuinely care, teammates who support one another, and an environment where they feel seen, encouraged, and challenged to become the best version of themselves.',
+      'Our goal has always been to create something that lasts far beyond a single season. A place where athletes always know they have people in their corner and where former players one day return as coaches, mentors, volunteers, and leaders for the next generation.',
+      "That's how lasting communities are built.",
+    ],
+  },
+  {
+    title: 'What Makes Next Up Different',
+    paragraphs: [
+      'From day one, we never wanted Next Up to feel like it belonged to one person.',
+      'We wanted it to feel like it belonged to everyone who believes in what we are building.',
+      'Every athlete, parent, coach, volunteer, and alumni plays a role in shaping our culture. Every person contributes to the environment that makes this community special.',
+      'No one should ever feel like just another registration or another name on a roster.',
+    ],
+    callouts: [
+      'Every athlete matters.',
+      'Every family matters.',
+      'Every coach matters.',
+      'Every person who believes in our mission matters.',
+    ],
+    closing:
+      "The strongest communities are built by people who care for one another, continue showing up, and leave the program better than they found it. That's the standard we hold ourselves to every single day.",
+  },
+  {
+    title: "What's Next Is Earned",
+    paragraphs: [
+      'To us, "What\'s Next Is Earned" is more than a slogan.',
+      'It is the standard we live by.',
+      "Success isn't built under the bright lights of tournament weekends. It's earned during the early mornings, the late nights, the extra reps, the difficult conversations, and the moments when nobody is watching.",
+      "It's choosing discipline over excuses, consistency over shortcuts, and growth over comfort.",
+      "Our responsibility is to walk alongside every athlete throughout that journey. To challenge them, support them, celebrate their successes, and help them discover what they're capable of, both on and off the court.",
+    ],
+  },
+  {
+    title: 'Our Promise',
+    paragraphs: [
+      'Everything we do begins with people.',
+      "If an athlete leaves Next Up more confident than when they arrived, we've done our job.",
+      "If they leave with lifelong friendships, stronger character, and memories they'll carry for years, we've done our job.",
+      "If they look back years from now and remember Next Up as a place where they felt valued, believed in, and part of something bigger than themselves, then we've accomplished exactly what we set out to build.",
+      'Because basketball is what brings us together.',
+      'The people are what make Next Up special.',
+    ],
+    finalLine: "What's Next Is Earned.",
+  },
+];
+
 export default function About() {
   const location = useLocation();
 
@@ -10,7 +70,7 @@ export default function About() {
     if (!location.hash) {
       window.scrollTo(0, 0);
     }
-  }, []);
+  }, [location.hash]);
 
   useEffect(() => {
     if (location.hash) {
@@ -18,181 +78,68 @@ export default function About() {
       if (target) {
         setTimeout(() => {
           target.scrollIntoView({ behavior: 'smooth' });
-        }, 500);
+        }, 300);
       }
     }
   }, [location]);
 
   return (
-    <motion.div
+    <motion.main
       className="about-page"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.35 }}
     >
-      {/* HERO */}
-      <div className="about-hero">
+      <section className="about-hero" id="mission">
+        <div className="about-hero-copy">
+          <span className="about-eyebrow">Our Story</span>
+          <h1>Built for More Than Basketball</h1>
+          <div className="about-intro">
+            <p>Next Up Hoops was never created because Edmonton needed another basketball club.</p>
+            <p>
+              It was built because we believed young athletes deserved something more. More than
+              practices and tournaments. More than a team for one season. We wanted to create a
+              place where athletes feel valued, challenged, supported, and surrounded by people who
+              genuinely care about who they become, both on and off the court.
+            </p>
+            <p>That belief continues to guide everything we do.</p>
+          </div>
+        </div>
+
         <div className="about-hero-image">
           <img
-            src="https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_900/v1767375628/coach_edoawv.jpg"
-            alt="Next Up Hoops founder"
+            src="https://res.cloudinary.com/dahquiy48/image/upload/w_600,q_auto,f_auto/board_blo3u0.jpg"
+            alt="Next Up Hoops team huddle"
             loading="eager"
             fetchpriority="high"
           />
         </div>
-        <div className="about-hero-overlay"></div>
-        <div className="about-hero-content">
-          <h1>About Next Up Hoops</h1>
-          <p>
-            Founded in Edmonton, Alberta by Yassir Madih. Built for athletes who were
-            overlooked, underfunded, or underestimated — but committed to putting in
-            the work.
-          </p>
-        </div>
-      </div>
-
-      {/* INTRO */}
-      <section className="about-intro">
-        <div className="intro-content">
-          <p className="intro-lead">
-            Next Up Hoops is a development-focused basketball program built for athletes
-            committed to long-term improvement and competitive growth.
-          </p>
-        </div>
       </section>
 
-      {/* PROGRAM OVERVIEW */}
-      <section className="about-mission">
-        <div className="mission-grid">
-          <div className="mission-image">
-            <img
-              src="https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_900/v1767375694/team_q5kqhc.jpg"
-              alt="Next Up team"
-              loading="lazy"
-            />
-          </div>
+      <section className="about-story">
+        {storySections.map((section) => (
+          <article className="about-story-section" key={section.title}>
+            <h2>{section.title}</h2>
+            <div className="about-section-body">
+              {section.paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
 
-          <div className="mission-text">
-            <h2>Program Overview</h2>
-            <p>
-              This season represents a full reset for Next Up Hoops. The program has been
-              rebuilt from the ground up with a clear objective: to operate as a long-term
-              development partner, not a short-term or seasonal team.
-            </p>
-            <p>
-              Coaching systems, development pathways, communication, media, and travel
-              planning have all been redesigned to create a more consistent and
-              professional experience. Each season is one part of a
-              broader year-round approach to athlete development.
-            </p>
-            <p>
-              Rosters are intentionally capped at 12–13 players per team to protect
-              coaching quality, individual development, and team chemistry. Tryouts are
-              competitive, and not all athletes will be selected.
-            </p>
-          </div>
-        </div>
+              {section.callouts && (
+                <div className="about-callout-list">
+                  {section.callouts.map((item) => (
+                    <p key={item}>{item}</p>
+                  ))}
+                </div>
+              )}
+
+              {section.closing && <p>{section.closing}</p>}
+              {section.finalLine && <p className="about-final-line">{section.finalLine}</p>}
+            </div>
+          </article>
+        ))}
       </section>
-
-      {/* PHILOSOPHY */}
-      <section className="about-mission">
-        <div className="mission-grid">
-          <div className="mission-text">
-            <h2>Program Philosophy</h2>
-            <p>
-              Next Up is built on structure, clarity, and consistency. Athlete development
-              does not happen in short bursts — it happens over time through clear
-              expectations, reliable coaching, and meaningful training environments.
-            </p>
-            <p>
-              Our role extends beyond practices and tournaments. We support athletes
-              through skill development, confidence building, accountability, exposure,
-              and guidance as they progress through different stages of their basketball
-              journey.
-            </p>
-          </div>
-
-          <div className="mission-image">
-            <img
-              src="https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_900/v1767760943/_DSC4037_vyoota.jpg"
-              alt="Team development"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* VALUES */}
-      <section className="about-values" id="why-choose-us">
-        <div className="values-header">
-          <h2>What Makes Us Different</h2>
-          <p>
-            We focus on how athletes develop over time — not just how teams perform in
-            individual games.
-          </p>
-        </div>
-
-        <div className="values-grid">
-          <div className="value-item">
-            <h3>Structured Development</h3>
-            <p>
-              Practices, training, and competition are planned with long-term progression
-              in mind.
-            </p>
-          </div>
-
-          <div className="value-item">
-            <h3>Intentional Roster Sizes</h3>
-            <p>
-              Smaller rosters allow for meaningful coaching, clear roles, and real
-              development.
-            </p>
-          </div>
-
-          <div className="value-item">
-            <h3>Consistent Coaching Standards</h3>
-            <p>
-              Athletes are held to clear expectations for effort, accountability, and
-              professionalism.
-            </p>
-          </div>
-
-          <div className="value-item">
-            <h3>Complete Program Experience</h3>
-            <p>
-              Practices, additional training, team culture, media, and travel are treated
-              as connected parts of one system.
-            </p>
-          </div>
-
-          <div className="value-item">
-            <h3>Clear Communication & Planning</h3>
-            <p>
-              Expectations, schedules, and commitments are communicated clearly so families
-              understand how the season is structured.
-            </p>
-          </div>
-
-          <div className="value-item">
-            <h3>Long-Term Perspective</h3>
-            <p>
-              Decisions are made with the athlete’s development over multiple seasons in
-              mind — not short-term outcomes.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* CLOSER */}
-      <section className="about-closer">
-        <div className="closer-content">
-          <p className="closer-primary">Prep. High school. Post-secondary.</p>
-          <p className="closer-secondary">
-            If that’s where you’re headed, this is where the work begins.
-          </p>
-        </div>
-      </section>
-    </motion.div>
+    </motion.main>
   );
 }

@@ -27,11 +27,11 @@ export default function NavBar() {
   ];
 
   const aboutSubmenu = [
-    { label: 'Mission', to: '/about#mission' },
     { label: 'Next Up Development', to: '/development' },
     { label: 'Club Guidelines', to: '/club-guidelines' },
     { label: 'Grants & Funding', to: '/grants-funding' },
-    { label: 'Events', to: '/#upcoming-events' },
+    { label: 'Canada Basketball Verified', to: '/verified' },
+    { label: 'Sponsorship', to: '/sponsorship' },
     { label: 'Contact', to: '/contact' },
   ];
 
@@ -226,7 +226,7 @@ export default function NavBar() {
       <div className="nav-container">
         <div className="logo">
           <Link to="/">
-            <img src="/final_logo.jpg" alt="Logo" />
+            <img src="/full-logo-blue-white.png" alt="Next Up Hoops" />
           </Link>
         </div>
 
@@ -247,7 +247,7 @@ export default function NavBar() {
             <div className="mobile-menu-header">
               <div className="logo">
                 <Link to="/" onClick={closeMobileMenu}>
-                  <img src="/final_logo.jpg" alt="Logo" />
+                  <img src="/full-logo-blue-white.png" alt="Next Up Hoops" />
                 </Link>
               </div>
               <button
@@ -295,7 +295,7 @@ export default function NavBar() {
                 <div className="mobile-menu-header">
                   <div className="logo">
                     <Link to="/" onClick={closeMobileMenu}>
-                      <img src="/final_logo.jpg" alt="Logo" />
+                      <img src="/full-logo-blue-white.png" alt="Next Up Hoops" />
                     </Link>
                   </div>
                   <button

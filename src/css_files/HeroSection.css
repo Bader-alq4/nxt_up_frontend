@@ -90,6 +90,30 @@ body {
   padding: 2rem;
 }
 
+.hero-verified {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 11;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.hero-verified img {
+  width: 210px;
+  height: auto;
+  display: block;
+  filter: none;
+}
+
+.hero-verified:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+
 .top-marker {
   font-size: 0.75rem;
   font-weight: 500;
@@ -99,11 +123,25 @@ body {
   text-transform: uppercase;
 }
 
+.hero-middle {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 0;
+}
+
+.hero-headline-block {
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
 .center-lockup {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 0.5rem;
-  margin-top: -8vh;
   animation: fadeInUp 1s ease-out 0.3s both;
 }
 
@@ -204,12 +242,21 @@ body {
     font-size: 3rem;
   }
 
-  .center-lockup {
-    margin-top: -4vh;
-  }
-
   .top-marker {
     font-size: 0.7rem;
+  }
+
+  .hero-verified img {
+    width: 120px;
+  }
+
+  .hero-verified {
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .hero-verified:hover {
+    transform: translateY(-2px);
   }
 
   .hero-subtitle {
@@ -253,6 +300,11 @@ body {
     padding: 3rem 4rem;
   }
 
+  .hero-verified {
+    top: 3rem;
+    right: 4rem;
+  }
+
   .bottom-actions {
     max-width: 500px;
   }
@@ -262,7 +314,10 @@ body {
    FALL TRYOUTS CTA
 ================================ */
 .hero-tryouts-cta {
-  margin: 1.75rem auto 0;
+  position: absolute;
+  left: calc(50vw - 4rem);
+  top: 50%;
+  margin: 0;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -272,12 +327,13 @@ body {
   text-decoration: none;
   border: 1px solid rgba(255, 255, 255, 0.9);
   background: transparent;
+  transform: translate(-50%, -50%);
   transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 
 .hero-tryouts-cta:hover {
   background: #fff;
-  transform: translateY(-2px);
+  transform: translate(-50%, calc(-50% - 2px));
 }
 
 .hero-tryouts-cta-label {
@@ -317,12 +373,21 @@ body {
 
 @media (max-width: 768px) {
   .hero-tryouts-cta {
-    margin-top: 1.25rem;
-    padding: 1rem 2rem;
+    position: static;
+    transform: none;
+    margin: 2rem auto 0;
+    animation: fadeInUp 1s ease-out 0.45s both;
   }
 
-  .hero-tryouts-cta-title {
-    font-size: 1.35rem;
+  .hero-tryouts-cta:hover {
+    transform: translateY(-2px);
+  }
+
+  .hero-middle {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0;
   }
 }
 
