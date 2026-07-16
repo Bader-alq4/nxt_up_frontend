@@ -13,7 +13,7 @@ const storySections = [
     ],
   },
   {
-    title: 'Why We Exist',
+    title: 'Our Why',
     paragraphs: [
       "We didn't create Next Up to be just another basketball club.",
       'We created it to build a community where mentorship, relationships, and personal growth matter just as much as athletic development.',

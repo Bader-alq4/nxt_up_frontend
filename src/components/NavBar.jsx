@@ -27,6 +27,7 @@ export default function NavBar() {
   ];
 
   const aboutSubmenu = [
+    { label: 'Our Story', to: '/about' },
     { label: 'Next Up Development', to: '/development' },
     { label: 'Club Guidelines', to: '/club-guidelines' },
     { label: 'Grants & Funding', to: '/grants-funding' },
