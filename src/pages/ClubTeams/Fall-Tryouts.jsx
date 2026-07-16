@@ -135,9 +135,8 @@ export default function FallTryouts() {
               <div className="timeline-step-label">Step 4</div>
               <h3>Team Offers</h3>
               <p>
-                Offers are released via email on Sunday, August 16 at 6:00 PM. Athletes have
-                until Wednesday, August 19 at 11:59 PM to accept. Any remaining waitlist and
-                alternate offers begin going out Thursday, August 20.
+                Offers are released. Athletes have
+                72 hours to accept their offer before we extend additional offers to the waitlist.
               </p>
             </div>
           </div>
@@ -255,7 +254,7 @@ export default function FallTryouts() {
             <div className="schedule-container">
               <div className="schedule-group girls">
                 <span className="gender-badge girls">Girls</span>
-                <div className="group-label">Central Lions Gymnasium</div>
+                <div className="group-label">The Meadows Rec Centre – West Gym</div>
                 <div className="schedule-items">
                   <div className="schedule-item">
                     <div className="item-header">
@@ -305,7 +304,7 @@ export default function FallTryouts() {
             <div className="schedule-container">
               <div className="schedule-group girls">
                 <span className="gender-badge girls">Girls</span>
-                <div className="group-label">The Meadows Rec Centre – West Gym</div>
+                <div className="group-label">Central Lions Gymnasium</div>
                 <div className="schedule-items">
                   <div className="schedule-item">
                     <div className="item-header">
@@ -358,10 +357,6 @@ export default function FallTryouts() {
                   <div className="key-date-line"><span>Boys</span><span>Sunday, August 9, 2026 · 6:00 PM</span></div>
                   <div className="key-date-line"><span>Girls</span><span>Sunday, August 16, 2026 · 6:00 PM</span></div>
                 </td>
-              </tr>
-              <tr>
-                <td>Acceptance Deadline</td>
-                <td>Wednesday, August 19, 2026 · 11:59 PM</td>
               </tr>
               <tr>
                 <td>Waitlist & Alternate Offers</td>
@@ -431,9 +426,9 @@ export default function FallTryouts() {
             <details className="faq-item">
               <summary>How will I know if I've been selected?</summary>
               <p>
-                Offers are released via email on Sunday, August 9 at 6:00 PM. Athletes have
-                until Wednesday, August 12 at 11:59 PM to accept. Any remaining waitlist and
-                alternate offers begin going out Thursday, August 13.
+                Offers are released via email on Sunday, August 9 at 6:00 PM for Boys and Sunday, August 16 at 6:00 PM for Girls. Athletes have
+                72 hours to accept their offer before we extend additional offers to the waitlist. Any remaining waitlist and
+                alternate offers begin going out Thursday, August 13 for Boys and Thursday, August 20 for Girls.
               </p>
             </details>
 
