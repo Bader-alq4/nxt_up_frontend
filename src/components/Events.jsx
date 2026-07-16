@@ -32,7 +32,7 @@ const events = [
     id: 4,
     title: 'Girls U15–U18 ID Camp 2',
     datetimes: [
-      'August 8, 2026 • 11:00 AM – 1:00 PM @ The Meadows Rec Centre, West Gym'
+      'August 8, 2026 • 12:00 PM – 2:00 PM @ The Meadows Rec Centre, West Gym'
     ],
   },
   {
@@ -48,7 +48,7 @@ const events = [
     id: 6,
     title: 'Girls Final Tryout · Invitation Only',
     datetimes: [
-      'August 15, 2026 • 12:00 PM – 2:00 PM @ Central Lions Gymnasium'
+      'August 15, 2026 • 11:00 AM – 1:00 PM @ Central Lions Gymnasium'
     ],
   },
 ];

@@ -260,7 +260,7 @@ export default function FallTryouts() {
                     <div className="item-header">
                       <span className="age-group">U15 – U18</span>
                     </div>
-                    <div className="item-time">11:00 AM – 1:00 PM</div>
+                    <div className="item-time">12:00 PM – 2:00 PM</div>
                   </div>
                 </div>
               </div>
@@ -310,7 +310,7 @@ export default function FallTryouts() {
                     <div className="item-header">
                       <span className="age-group">All Girls</span>
                     </div>
-                    <div className="item-time">12:00 PM – 2:00 PM</div>
+                    <div className="item-time">11:00 AM – 1:00 PM</div>
                   </div>
                 </div>
               </div>
