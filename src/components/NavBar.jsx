@@ -233,15 +233,19 @@ export default function NavBar() {
 
         <ul className="nav-links">{renderDesktopLinks()}</ul>
 
-        <button
-          className={`hamburger ${mobileMenuOpen ? 'open' : ''}`}
-          aria-label="Toggle menu"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
+        {/* Hidden while the menu is open: the overlay renders its own close
+            button, and this one sits above the overlay, so both X's showed. */}
+        {!mobileMenuOpen && (
+          <button
+            className="hamburger"
+            aria-label="Open menu"
+            onClick={() => setMobileMenuOpen(true)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        )}
 
         {mobileMenuOpen && (
           <div className="mobile-fullscreen-menu">

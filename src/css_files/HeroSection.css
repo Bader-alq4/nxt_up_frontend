@@ -244,10 +244,14 @@ body {
 
   .top-marker {
     font-size: 0.7rem;
+    /* Reserves the band the absolutely-positioned badge sits in, so the
+       vertically-centred headline can never ride up underneath it on
+       shorter phones. Must clear .hero-verified top offset + image width. */
+    min-height: 104px;
   }
 
   .hero-verified img {
-    width: 120px;
+    width: 88px;
   }
 
   .hero-verified {
@@ -386,6 +390,11 @@ body {
   .hero-middle {
     flex-direction: column;
     justify-content: center;
+    /* On short phones the headline + CTA are taller than this box. Plain
+       `center` splits that overflow both ways and pushes the headline up
+       into the verified badge. `safe` falls back to top-alignment when the
+       content overflows, so it can never spill upward. */
+    justify-content: safe center;
     align-items: flex-start;
     gap: 0;
   }
