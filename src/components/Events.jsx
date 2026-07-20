@@ -30,8 +30,8 @@ const events = [
     id: 4,
     title: 'Boys ID Camp 2',
     datetimes: [
-      'August 12, 2026 • U13/U14/U15: 6:00 PM – 7:30 PM @ Saville Community Sports Centre, Gym 4',
-      'August 12, 2026 • U16/U17/U18: 7:30 PM – 9:00 PM @ Saville Community Sports Centre, Gym 4'
+      'August 12, 2026 • U13/U14/U15: 6:00 PM – 7:30 PM @ Saville Community Sports Centre, Gym 3',
+      'August 12, 2026 • U16/U17/U18: 7:30 PM – 9:00 PM @ Saville Community Sports Centre, Gym 3'
     ],
   },
   {
@@ -45,8 +45,8 @@ const events = [
     id: 6,
     title: 'Boys Final Tryout · Invitation Only',
     datetimes: [
-      'August 15, 2026 • U13/U14/U15: 3:00 PM – 5:00 PM @ Saville Community Sports Centre, Gym 4',
-      'August 15, 2026 • U16/U17/U18: 5:00 PM – 7:00 PM @ Saville Community Sports Centre, Gym 4'
+      'August 15, 2026 • U13/U14/U15: 3:00 PM – 5:00 PM @ Saville Community Sports Centre, Gym 3',
+      'August 15, 2026 • U16/U17/U18: 5:00 PM – 7:00 PM @ Saville Community Sports Centre, Gym 3'
     ],
   },
 ];

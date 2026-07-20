@@ -244,7 +244,7 @@ export default function FallTryouts() {
             <div className="schedule-container">
               <div className="schedule-group boys">
                 <span className="gender-badge boys">Boys</span>
-                <div className="group-label">Saville Community Sports Centre Gym 4</div>
+                <div className="group-label">Saville Community Sports Centre Gym 3</div>
                 <div className="schedule-items">
                   <div className="schedule-item">
                     <div className="item-header">
@@ -288,7 +288,7 @@ export default function FallTryouts() {
             <div className="schedule-container">
               <div className="schedule-group boys">
                 <span className="gender-badge boys">Boys</span>
-                <div className="group-label">Saville Community Sports Centre Gym 4</div>
+                <div className="group-label">Saville Community Sports Centre Gym 3</div>
                 <div className="schedule-items">
                   <div className="schedule-item">
                     <div className="item-header">
