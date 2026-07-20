@@ -86,6 +86,14 @@ export default function RunClub() {
                       Next Up Run Club is a structured outdoor conditioning program designed to help
                       athletes build speed, endurance, and game-ready fitness before their season starts.
                     </p>
+                    <a
+                      href={SIGNUP_URL}
+                      className="rc-register-btn"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Register for Run Club
+                    </a>
                   </div>
 
                   <div className="program-hero-images">

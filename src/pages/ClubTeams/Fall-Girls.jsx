@@ -40,8 +40,8 @@ export default function FallGirls() {
             </div>
             <div className="girls-hero-badge">
               <img
-                src="https://res.cloudinary.com/dahquiy48/image/upload/f_auto,q_auto,w_900/v1767749524/solo-girl_uit4mn.jpg"
-                alt="Next Up Hoops girls training"
+                src="/ovo-girl.JPG"
+                alt="Next Up Hoops girls basketball player"
                 loading="eager"
               />
             </div>

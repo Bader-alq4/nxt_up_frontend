@@ -12,43 +12,41 @@ const events = [
   },
   {
     id: 2,
-    title: 'Boys ID Camp 1',
-    datetimes: [
-      'August 1, 2026 • U13/U14: 4:00 PM – 5:30 PM @ Saville Community Sports Centre, Gym 4',
-      'August 1, 2026 • U15/U16: 5:30 PM – 7:00 PM @ Saville Community Sports Centre, Gym 4',
-      'August 1, 2026 • U17/U18: 7:00 PM – 8:30 PM @ Saville Community Sports Centre, Gym 4'
-    ],
-  },
-  {
-    id: 3,
-    title: 'Boys ID Camp 2',
-    datetimes: [
-      'August 7, 2026 • U13/U14: 6:00 PM – 7:30 PM @ St Francis Xavier Sports Centre, Gym 2',
-      'August 7, 2026 • U15/U16: 6:00 PM – 7:30 PM @ St Francis Xavier Sports Centre, Gym 3',
-      'August 7, 2026 • U17/U18: 7:30 PM – 9:00 PM @ St Francis Xavier Sports Centre, Gym 3'
-    ],
-  },
-  {
-    id: 4,
     title: 'Girls U15–U18 ID Camp 2',
     datetimes: [
       'August 8, 2026 • 12:00 PM – 2:00 PM @ The Meadows Rec Centre, West Gym'
     ],
   },
   {
-    id: 5,
-    title: 'Boys Final Tryout · Invitation Only',
+    id: 3,
+    title: 'Boys ID Camp 1',
     datetimes: [
-      'August 8, 2026 • U13/U14: 4:00 PM – 5:30 PM @ Dr Anne Anderson Community Centre, Gym 2',
-      'August 8, 2026 • U15/U16: 5:30 PM – 7:00 PM @ Dr Anne Anderson Community Centre, Gym 2',
-      'August 8, 2026 • U17/U18: 7:00 PM – 8:30 PM @ Dr Anne Anderson Community Centre, Gym 2'
+      'August 8, 2026 • U13/U14: 4:00 PM – 5:30 PM @ Dr Anne Anderson High School',
+      'August 8, 2026 • U15/U16: 5:30 PM – 7:00 PM @ Dr Anne Anderson High School',
+      'August 8, 2026 • U17/U18: 7:00 PM – 8:30 PM @ Dr Anne Anderson High School'
+    ],
+  },
+  {
+    id: 4,
+    title: 'Boys ID Camp 2',
+    datetimes: [
+      'August 12, 2026 • U13/U14/U15: 6:00 PM – 7:30 PM @ Saville Community Sports Centre, Gym 4',
+      'August 12, 2026 • U16/U17/U18: 7:30 PM – 9:00 PM @ Saville Community Sports Centre, Gym 4'
+    ],
+  },
+  {
+    id: 5,
+    title: 'Girls Final Tryout · Invitation Only',
+    datetimes: [
+      'August 15, 2026 • 11:00 AM – 1:00 PM @ Central Lions Gymnasium'
     ],
   },
   {
     id: 6,
-    title: 'Girls Final Tryout · Invitation Only',
+    title: 'Boys Final Tryout · Invitation Only',
     datetimes: [
-      'August 15, 2026 • 11:00 AM – 1:00 PM @ Central Lions Gymnasium'
+      'August 15, 2026 • U13/U14/U15: 3:00 PM – 5:00 PM @ Saville Community Sports Centre, Gym 4',
+      'August 15, 2026 • U16/U17/U18: 5:00 PM – 7:00 PM @ Saville Community Sports Centre, Gym 4'
     ],
   },
 ];
