@@ -1,0 +1,111 @@
+/* ==========================================================
+   STICKY REGISTER BAR
+   Slides up once past the hero, hides again near the footer so
+   it never doubles up with the page's own register button.
+========================================================== */
+
+.sticky-register {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 900;
+  background: #111;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  transform: translateY(110%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.32s cubic-bezier(0.2, 0.7, 0.3, 1), opacity 0.32s ease,
+    visibility 0.32s;
+}
+
+.sticky-register.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.sticky-register-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.sticky-register-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.sticky-register-label {
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sticky-register-note {
+  font-size: 0.78rem;
+  color: #9a9aa1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sticky-register-btn {
+  flex-shrink: 0;
+  background: #ffffff;
+  color: #111;
+  font-family: 'Courier New', monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  border: 1px solid #ffffff;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sticky-register-btn:hover {
+  background: transparent;
+  color: #ffffff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sticky-register {
+    transition: opacity 0.2s ease, visibility 0.2s;
+    transform: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .sticky-register-inner {
+    padding: 0.7rem 1rem;
+    gap: 1rem;
+  }
+
+  .sticky-register-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+  }
+
+  .sticky-register-note {
+    font-size: 0.72rem;
+  }
+
+  .sticky-register-btn {
+    padding: 0.7rem 1.35rem;
+    font-size: 0.72rem;
+  }
+}

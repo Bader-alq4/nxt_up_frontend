@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import StickyRegister from '../../components/StickyRegister';
 import '../../css_files/ClubTeams.css';
 
 export default function FallBoys() {
@@ -158,6 +159,7 @@ export default function FallBoys() {
         {/* CTA */}
         <section className="program-actions">
           <a
+            data-register-cta
             href="https://registration.teamsnap.com/form/69129"
             target="_blank"
             rel="noopener noreferrer"
@@ -168,6 +170,8 @@ export default function FallBoys() {
         </section>
 
       </div>
+
+      <StickyRegister label="Boys Fall Program" note="Tryout registration open" />
     </div>
   );
 }

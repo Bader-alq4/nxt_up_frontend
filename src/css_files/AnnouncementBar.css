@@ -1,0 +1,88 @@
+/* ==========================================================
+   ANNOUNCEMENT BAR
+   Slim, site-wide, sits above the navbar. Intentionally quiet:
+   no animation, no colour shouting. Dismissible.
+========================================================== */
+
+.announcement-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0.7rem 3rem;
+}
+
+.announcement-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  font-family: 'Courier New', monospace;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #111;
+}
+
+.announcement-label {
+  color: #111;
+}
+
+.announcement-divider {
+  color: #b9b9bd;
+}
+
+.announcement-text {
+  color: #6b6b72;
+}
+
+.announcement-cta {
+  color: #111;
+  border-bottom: 1.5px solid #111;
+  padding-bottom: 1px;
+  transition: opacity 0.2s ease;
+}
+
+.announcement-content:hover .announcement-cta {
+  opacity: 0.55;
+}
+
+.announcement-close {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #9a9aa1;
+  font-size: 1.15rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem 0.4rem;
+  transition: color 0.2s ease;
+}
+
+.announcement-close:hover {
+  color: #111;
+}
+
+@media (max-width: 640px) {
+  .announcement-bar {
+    padding: 0.65rem 2.5rem;
+  }
+
+  .announcement-content {
+    font-size: 0.66rem;
+    letter-spacing: 0.1em;
+    gap: 0.45rem;
+  }
+
+  /* Keep it to one clean line on small screens */
+  .announcement-text,
+  .announcement-divider {
+    display: none;
+  }
+}

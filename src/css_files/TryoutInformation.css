@@ -61,6 +61,30 @@
   line-height: 1.65;
 }
 
+.hero-register-btn {
+  display: inline-block;
+  margin-top: 1.75rem;
+  background: #111;
+  color: #fff;
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  /* offsets the trailing space letter-spacing adds after the last character */
+  text-indent: 0.16em;
+  padding: 1.05rem 2.5rem;
+  border: 1px solid #111;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.hero-register-btn:hover {
+  background: transparent;
+  color: #111;
+}
+
 /* ===============================
    HERO IMAGES - BALANCED FEATURE
 ================================ */
