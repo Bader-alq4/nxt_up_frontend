@@ -12,18 +12,18 @@ const events = [
   },
   {
     id: 2,
-    title: 'Girls U15–U18 ID Camp 2',
+    title: 'Girls ID Camp 2',
     datetimes: [
-      'August 8, 2026 • 12:00 PM – 2:00 PM @ The Meadows Rec Centre, West Gym'
+      'August 8, 2026 • U15–U18: 12:00 PM – 2:00 PM @ The Meadows Rec Centre, West Gym'
     ],
   },
   {
     id: 3,
     title: 'Boys ID Camp 1',
     datetimes: [
-      'August 8, 2026 • U13/U14: 4:00 PM – 5:30 PM @ Dr Anne Anderson High School',
-      'August 8, 2026 • U15/U16: 5:30 PM – 7:00 PM @ Dr Anne Anderson High School',
-      'August 8, 2026 • U17/U18: 7:00 PM – 8:30 PM @ Dr Anne Anderson High School'
+      'August 8, 2026 • U13/U14: 4:00 PM – 5:30 PM @ Dr Anne Anderson Community Centre',
+      'August 8, 2026 • U15/U16: 5:30 PM – 7:00 PM @ Dr Anne Anderson Community Centre',
+      'August 8, 2026 • U17/U18: 7:00 PM – 8:30 PM @ Dr Anne Anderson Community Centre'
     ],
   },
   {

@@ -213,7 +213,7 @@ export default function FallTryouts() {
             <div className="schedule-container">
               <div className="schedule-group boys">
                 <span className="gender-badge boys">Boys</span>
-                <div className="group-label">Dr Anne Anderson High School</div>
+                <div className="group-label">Dr Anne Anderson Community Centre</div>
                 <div className="schedule-items">
                   <div className="schedule-item">
                     <div className="item-header">
