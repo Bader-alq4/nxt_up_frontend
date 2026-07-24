@@ -41,7 +41,15 @@
   line-height: 0.95;
   letter-spacing: -0.03em;
   text-transform: uppercase;
-  margin: 0 0 2.5rem;
+  margin: 0 0 1.5rem;
+}
+
+.inv-hero-lead {
+  max-width: 620px;
+  margin: 0 0 2.75rem;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  line-height: 1.55;
+  color: #444;
 }
 
 .inv-title span {
@@ -648,9 +656,33 @@
   color: #fff;
 }
 
+/* Large, solid registration button */
+.inv-cta-btn-lg {
+  background: #111;
+  color: #fff;
+  font-size: 0.95rem;
+  padding: 1.35rem 3.5rem;
+  border-width: 2px;
+}
+
+.inv-cta-btn-lg:hover {
+  background: transparent;
+  color: #111;
+}
+
+.inv-cta-wrap {
+  margin-top: 0.5rem;
+}
+
+.inv-cta-reassure {
+  margin: 1rem 0 0;
+  font-size: 0.92rem;
+  color: #666;
+}
+
 .inv-cta-email {
   display: inline-block;
-  margin-left: 1.75rem;
+  margin-top: 1.5rem;
   font-family: 'Courier New', monospace;
   font-size: 0.82rem;
   font-weight: 700;
@@ -661,6 +693,90 @@
 
 .inv-cta-email:hover {
   color: #111;
+}
+
+/* ================= CREDIBILITY STATEMENT ================= */
+.inv-statement {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5.5rem 2rem 2rem;
+}
+
+.inv-statement-eyebrow {
+  font-family: 'Courier New', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #888;
+  margin: 0 0 1.5rem;
+}
+
+.inv-statement-text {
+  max-width: 900px;
+  margin: 0;
+  font-size: clamp(1.6rem, 3.6vw, 2.7rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: #111;
+}
+
+/* ================= FAQ ================= */
+.inv-faq-list {
+  border-top: 1px solid #111;
+}
+
+.inv-faq-item {
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.inv-faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.4rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.inv-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.inv-faq-item summary::after {
+  content: '+';
+  flex-shrink: 0;
+  font-family: 'Courier New', monospace;
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: #999;
+  transition: color 0.2s ease;
+}
+
+.inv-faq-item[open] summary::after {
+  content: '–';
+  color: #111;
+}
+
+.inv-faq-item summary:hover {
+  color: #444;
+}
+
+.inv-faq-answer {
+  padding: 0 0 1.6rem;
+  max-width: 720px;
+}
+
+.inv-faq-answer p {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: #444;
 }
 
 /* ================= CLOSING BAND ================= */

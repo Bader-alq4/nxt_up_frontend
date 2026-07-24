@@ -41,6 +41,7 @@ const tournamentCards = [
 
 const tickerItems = [
   '4 Game Guarantee',
+  'Limited to 50 Teams',
   'Certified Officials',
   'Championship Rings',
   'Saturday Night Showcase',
@@ -114,7 +115,7 @@ export default function TournamentsOverview() {
           Interested in bringing your program to a Next Up tournament? Reach out and we
           will point you in the right direction.
         </p>
-        <a href="mailto:info@nextuphoops.ca">info@nextuphoops.ca</a>
+        <a href="mailto:invitational@nextuphoops.ca">invitational@nextuphoops.ca</a>
       </section>
     </motion.div>
   );
@@ -168,6 +169,11 @@ export function FallInvitational() {
             Next Up<br />
             <span>Fall Invitational</span>
           </h1>
+
+          <p className="inv-hero-lead">
+            A premier invitation-only tournament bringing together Western Canada's top
+            basketball programs for an unforgettable championship weekend.
+          </p>
 
           <div className="inv-hero-meta">
             <div>
@@ -244,6 +250,16 @@ export function FallInvitational() {
         </div>
       </div>
 
+      {/* ================= CREDIBILITY STATEMENT ================= */}
+      <section className="inv-statement">
+        <p className="inv-statement-eyebrow">Built by basketball people</p>
+        <p className="inv-statement-text">
+          We have spent years at tournaments across Canada and the United States, as
+          players, coaches, and parents. We took the best of what we experienced, fixed
+          what didn't, and built the tournament we always wanted to attend.
+        </p>
+      </section>
+
       {/* ================= 01 THE FIRST CHAPTER ================= */}
       <section className="inv-section">
         <div className="inv-section-head">
@@ -257,17 +273,11 @@ export function FallInvitational() {
             in year one will always be part of where this tournament began.
           </p>
           <p>
-            Our staff has spent years at tournaments across Canada and the United States
-            through the eyes of players, coaches, and parents. We paid attention to what
-            made those weekends special. We also noticed what could be better. Then we
-            built the tournament we always wished we were walking into.
-          </p>
-          <p>
-            We are not chasing the biggest event in Alberta. We are building the
-            tournament athletes look forward to and coaches trust. We want families to
-            remember the weekend long after the final game. That standard shaped the
-            way games are staffed, how championships are celebrated, and how the weekend
-            feels after the last game on Saturday.
+            That experience shaped every decision. We are not chasing the biggest event
+            in Alberta. We are building the tournament athletes look forward to and
+            coaches trust, the one families remember long after the final game. That
+            standard shaped how our games are staffed, how championships are celebrated,
+            and how the whole weekend feels from the moment a team walks in.
           </p>
           <p>
             Every game should feel organized. Every athlete should feel recognized. Every
@@ -283,7 +293,7 @@ export function FallInvitational() {
               are looking for programs that compete the right way and care about the
               experience athletes and families have all weekend.
             </p>
-            <a href="mailto:info@nextuphoops.ca?subject=Next%20Up%20Fall%20Invitational%20-%20Request%20an%20Invitation">
+            <a href="mailto:invitational@nextuphoops.ca?subject=Next%20Up%20Fall%20Invitational%20-%20Request%20an%20Invitation">
               Request an Invitation
             </a>
           </div>
@@ -304,8 +314,8 @@ export function FallInvitational() {
       <div className="inv-stats">
         <div className="inv-stats-inner">
           <div className="inv-stat">
-            <strong>3</strong>
-            <span>Days</span>
+            <strong>50</strong>
+            <span>Team Field</span>
           </div>
           <div className="inv-stat">
             <strong>4</strong>
@@ -316,8 +326,8 @@ export function FallInvitational() {
             <span>Divisions</span>
           </div>
           <div className="inv-stat">
-            <strong>2</strong>
-            <span>Venues</span>
+            <strong>3</strong>
+            <span>Days</span>
           </div>
         </div>
       </div>
@@ -519,18 +529,131 @@ export function FallInvitational() {
             </li>
           </ul>
           <p className="inv-reg-note">
-            Divisions are capped, and brackets close once they fill. Reach out and we will
-            walk your program through the details.
+            The field is limited to 50 teams, and divisions close once they fill. Reach
+            out and we will walk your program through the details.
           </p>
-          <a
-            className="inv-cta-btn"
-            href="mailto:info@nextuphoops.ca?subject=Next%20Up%20Fall%20Invitational%20-%20Request%20an%20Invitation"
-          >
-            Request an Invitation
-          </a>
-          <a className="inv-cta-email" href="mailto:info@nextuphoops.ca">
-            info@nextuphoops.ca
-          </a>
+          <div className="inv-cta-wrap">
+            <a
+              className="inv-cta-btn inv-cta-btn-lg"
+              href="mailto:invitational@nextuphoops.ca?subject=Next%20Up%20Fall%20Invitational%20-%20Request%20an%20Invitation"
+            >
+              Request an Invitation
+            </a>
+            <p className="inv-cta-reassure">Most invitations are reviewed within 24 hours.</p>
+            <a className="inv-cta-email" href="mailto:invitational@nextuphoops.ca">
+              invitational@nextuphoops.ca
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= 07 FAQ ================= */}
+      <section className="inv-section">
+        <div className="inv-section-head">
+          <span className="inv-num">07</span>
+          <h2>Coaches' FAQ</h2>
+        </div>
+        <div className="inv-section-body">
+          <div className="inv-faq-list">
+            <details className="inv-faq-item">
+              <summary>Who is the Invitational open to?</summary>
+              <div className="inv-faq-answer">
+                <p>
+                  We invite club teams, prep programs, basketball academies, and
+                  high-performance programs. Divisions are Boys U13 (born 2014 or later),
+                  U15 (2012 or later), and U18 (2009 or later), plus Girls U15 (2012 or
+                  later) and U18 (2009 or later). If your program competes the right way
+                  and cares about how athletes and families experience the weekend,
+                  request an invitation and we will be in touch.
+                </p>
+              </div>
+            </details>
+
+            <details className="inv-faq-item">
+              <summary>How many games are guaranteed?</summary>
+              <div className="inv-faq-answer">
+                <p>
+                  Four games minimum for every team, win or lose. Every team plays all
+                  weekend and moves into championship bracket play. Nobody travels to
+                  Edmonton for two games.
+                </p>
+              </div>
+            </details>
+
+            <details className="inv-faq-item">
+              <summary>What does the entry fee include?</summary>
+              <div className="inv-faq-answer">
+                <p>
+                  Entry is per roster and covers four guaranteed games, an official
+                  inaugural tournament tee for every registered athlete, certified
+                  officials and dedicated scorekeepers on every court, Player of the Game
+                  recognition each game, and full access to the Saturday Night Showcase.
+                  Early bird is $700 + GST through August 15, then $750 + GST from August
+                  16 to September 15.
+                </p>
+              </div>
+            </details>
+
+            <details className="inv-faq-item">
+              <summary>What kind of exposure will our athletes get?</summary>
+              <div className="inv-faq-answer">
+                <p>
+                  The Saturday Night Showcase brings in local scouts along with college
+                  and university coaches, and every program can nominate athletes for the
+                  All-Star games. Championship Sunday puts your top teams back in front of
+                  them. Next Up Studios covers the full weekend with professional
+                  photography, highlight videos, and player interviews, so athletes leave
+                  with real content, not just results.
+                </p>
+              </div>
+            </details>
+
+            <details className="inv-faq-item">
+              <summary>How are the games officiated and run?</summary>
+              <div className="inv-faq-answer">
+                <p>
+                  Certified officials work every court and dedicated scorekeepers run
+                  every game, not just the finals. Professional game operations are the
+                  standard for the whole weekend, so coaches can focus on coaching.
+                </p>
+              </div>
+            </details>
+
+            <details className="inv-faq-item">
+              <summary>What do champions receive?</summary>
+              <div className="inv-faq-answer">
+                <p>
+                  Division champions take home the trophy, and every player and coach on
+                  the championship roster earns an inaugural championship ring. Second and
+                  third place teams receive medals. Individual honors include Championship
+                  Game MVP, All-Tournament Team, the Boys and Girls All-Star MVPs, and the
+                  Slam Dunk and Three Point champions.
+                </p>
+              </div>
+            </details>
+
+            <details className="inv-faq-item">
+              <summary>How do we secure a spot?</summary>
+              <div className="inv-faq-answer">
+                <p>
+                  The field is limited to 50 teams and divisions close once they fill, so
+                  earlier is better. Request an invitation at invitational@nextuphoops.ca and we
+                  will walk your program through the details. Early bird pricing runs
+                  through August 15.
+                </p>
+              </div>
+            </details>
+
+            <details className="inv-faq-item">
+              <summary>Where is it held?</summary>
+              <div className="inv-faq-answer">
+                <p>
+                  Two Edmonton venues, The Centre Sports Complex and the EYBA Centre, over
+                  three days from October 2 to 4, 2026.
+                </p>
+              </div>
+            </details>
+          </div>
         </div>
       </section>
 
