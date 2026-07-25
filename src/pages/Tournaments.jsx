@@ -384,23 +384,19 @@ export function FallInvitational() {
             <p className="inv-dark-lead">
               When Saturday's games end, the building stays loud. The night belongs to
               the players, and every program can nominate athletes for All-Star
-              consideration. We will also invite local scouts along with college and
-              university coaches. The goal is to give athletes a chance to connect on
-              Saturday night, then be seen again during championship games on Sunday.
+              consideration. The showcase brings teams together for an evening of
+              All-Star competition, contests, and fan moments before Championship Sunday.
             </p>
             <div className="inv-chips">
               <div className="inv-chip">Boys All-Star Game</div>
               <div className="inv-chip">Girls All-Star Game</div>
               <div className="inv-chip">Slam Dunk Contest</div>
               <div className="inv-chip">Three Point Contest</div>
-              <div className="inv-chip">Scout &amp; Coach Networking</div>
               <div className="inv-chip">Championship Sunday Exposure</div>
               <div className="inv-chip">Prize Giveaways</div>
-              <div className="inv-chip">Halftime Performers</div>
             </div>
             <p className="inv-dark-note">
-              Plus t-shirt tosses, fan giveaways, and special guest performances
-              throughout the night.
+              Plus t-shirt tosses and fan giveaways throughout the night.
             </p>
           </div>
 
@@ -574,8 +570,19 @@ export function FallInvitational() {
               <div className="inv-faq-answer">
                 <p>
                   Four games minimum for every team, win or lose. Every team plays all
-                  weekend and moves into championship bracket play. Nobody travels to
+                  weekend through bracket play or placement games. Nobody travels to
                   Edmonton for two games.
+                </p>
+              </div>
+            </details>
+
+            <details className="inv-faq-item">
+              <summary>What is the tournament format?</summary>
+              <div className="inv-faq-answer">
+                <p>
+                  Teams begin with pool play. Pool results determine whether each team
+                  advances into bracket play or placement games for the remainder of the
+                  tournament.
                 </p>
               </div>
             </details>
@@ -598,10 +605,8 @@ export function FallInvitational() {
               <summary>What kind of exposure will our athletes get?</summary>
               <div className="inv-faq-answer">
                 <p>
-                  The Saturday Night Showcase brings in local scouts along with college
-                  and university coaches, and every program can nominate athletes for the
-                  All-Star games. Championship Sunday puts your top teams back in front of
-                  them. Next Up Studios covers the full weekend with professional
+                  Every program can nominate athletes for the Saturday Night Showcase
+                  All-Star games. Next Up Studios covers the full weekend with professional
                   photography, highlight videos, and player interviews, so athletes leave
                   with real content, not just results.
                 </p>
