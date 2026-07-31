@@ -6,8 +6,7 @@ const events = [
     id: 1,
     title: 'Girls ID Camp 1',
     datetimes: [
-      'August 5, 2026 • U15/U16: 6:30 PM – 8:00 PM @ Commonwealth Rec Centre, Gym 1',
-      'August 5, 2026 • U17/U18: 6:30 PM – 8:00 PM @ Commonwealth Rec Centre, Gym 2'
+      'August 5, 2026 • U15–U18: 6:30 PM – 8:00 PM @ Legacy Athletics, Court 1'
     ],
   },
   {

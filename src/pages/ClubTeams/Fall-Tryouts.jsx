@@ -162,24 +162,11 @@ export default function FallTryouts() {
             <div className="schedule-container">
               <div className="schedule-group girls">
                 <span className="gender-badge girls">Girls</span>
-                <div className="group-label">Commonwealth Rec Centre Gym 1</div>
+                <div className="group-label">Legacy Athletics Court 1</div>
                 <div className="schedule-items">
                   <div className="schedule-item">
                     <div className="item-header">
-                      <span className="age-group">U15 / U16</span>
-                    </div>
-                    <div className="item-time">6:30 PM – 8:00 PM</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="schedule-group girls">
-                <span className="gender-badge girls">Girls</span>
-                <div className="group-label">Commonwealth Rec Centre Gym 2</div>
-                <div className="schedule-items">
-                  <div className="schedule-item">
-                    <div className="item-header">
-                      <span className="age-group">U17 / U18</span>
+                      <span className="age-group">U15 – U18</span>
                     </div>
                     <div className="item-time">6:30 PM – 8:00 PM</div>
                   </div>

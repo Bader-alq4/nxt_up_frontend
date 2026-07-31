@@ -22,7 +22,7 @@ export default function SpringTryouts() {
             <span className="tryout-date">February 21, 2026</span>
             <h1>Spring Club Tryouts</h1>
             <p className="hero-subtitle">
-              Commonwealth Recreation Centre · Edmonton
+              Legacy Athletics · Edmonton
             </p>
           </div>
 
@@ -77,7 +77,7 @@ export default function SpringTryouts() {
                     <span className="court-info">Court 1</span>
                   </div>
                   <div className="item-time">7:30 PM</div>
-                  <div className="item-location">Commonwealth Rec Centre</div>
+                  <div className="item-location">Legacy Athletics</div>
                 </div>
 
                 <div className="schedule-item">
@@ -86,7 +86,7 @@ export default function SpringTryouts() {
                     <span className="court-info">Court 2</span>
                   </div>
                   <div className="item-time">7:30 PM</div>
-                  <div className="item-location">Commonwealth Rec Centre</div>
+                  <div className="item-location">Legacy Athletics</div>
                 </div>
               </div>
             </div>
@@ -100,7 +100,7 @@ export default function SpringTryouts() {
                     <span className="court-info">Court 1</span>
                   </div>
                   <div className="item-time">6:00 PM</div>
-                  <div className="item-location">Commonwealth Rec Centre</div>
+                  <div className="item-location">Legacy Athletics</div>
                 </div>
 
                 <div className="schedule-item">
@@ -109,7 +109,7 @@ export default function SpringTryouts() {
                     <span className="court-info">Court 2</span>
                   </div>
                   <div className="item-time">6:00 PM</div>
-                  <div className="item-location">Commonwealth Rec Centre</div>
+                  <div className="item-location">Legacy Athletics</div>
                 </div>
               </div>
             </div>
@@ -131,7 +131,7 @@ export default function SpringTryouts() {
                 <span className="date-badge">February 7th</span>
                 <span className="time">6:00 - 7:30 PM</span>
               </div>
-              <span className="location">Commonwealth Recreation Centre</span>
+              <span className="location">Legacy Athletics</span>
             </div>
             
             <div className="gym-courts">
