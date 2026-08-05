@@ -20,9 +20,8 @@ const events = [
     id: 3,
     title: 'Boys ID Camp 1',
     datetimes: [
-      'August 8, 2026 • U13/U14: 4:00 PM – 5:30 PM @ Dr Anne Anderson Community Centre',
-      'August 8, 2026 • U15/U16: 5:30 PM – 7:00 PM @ Dr Anne Anderson Community Centre',
-      'August 8, 2026 • U17/U18: 7:00 PM – 8:30 PM @ Dr Anne Anderson Community Centre'
+      'August 8, 2026 • U13/U14/U15: 4:00 PM – 6:00 PM @ Dr Anne Anderson Community Centre',
+      'August 8, 2026 • U16/U17/U18: 6:15 PM – 8:15 PM @ Dr Anne Anderson Community Centre'
     ],
   },
   {

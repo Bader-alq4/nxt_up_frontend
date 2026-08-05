@@ -204,21 +204,15 @@ export default function FallTryouts() {
                 <div className="schedule-items">
                   <div className="schedule-item">
                     <div className="item-header">
-                      <span className="age-group">U13 / U14</span>
+                      <span className="age-group">U13 / U14 / U15</span>
                     </div>
-                    <div className="item-time">4:00 PM – 5:30 PM</div>
+                    <div className="item-time">4:00 PM – 6:00 PM</div>
                   </div>
                   <div className="schedule-item">
                     <div className="item-header">
-                      <span className="age-group">U15 / U16</span>
+                      <span className="age-group">U16 / U17 / U18</span>
                     </div>
-                    <div className="item-time">5:30 PM – 7:00 PM</div>
-                  </div>
-                  <div className="schedule-item">
-                    <div className="item-header">
-                      <span className="age-group">U17 / U18</span>
-                    </div>
-                    <div className="item-time">7:00 PM – 8:30 PM</div>
+                    <div className="item-time">6:15 PM – 8:15 PM</div>
                   </div>
                 </div>
               </div>
