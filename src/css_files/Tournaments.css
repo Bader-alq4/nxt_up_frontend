@@ -585,6 +585,202 @@
   color: #666;
 }
 
+/* ================= TEAM ACCOMMODATIONS ================= */
+.inv-hotel-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 230px;
+  gap: 3rem;
+  align-items: stretch;
+  padding: 2.75rem;
+  background: #0d0d0f;
+  color: #fff;
+  border-top: 5px solid #111;
+}
+
+.inv-hotel-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.inv-hotel-kicker {
+  display: block;
+  margin-bottom: 1rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #96969c;
+}
+
+.inv-hotel-copy h3 {
+  max-width: 520px;
+  margin: 0 0 1.1rem;
+  font-size: clamp(1.75rem, 3vw, 2.45rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+.inv-section-body .inv-hotel-copy > p {
+  max-width: 570px;
+  margin-bottom: 1.75rem;
+  color: #c9c9cd;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.inv-hotel-details {
+  width: 100%;
+  max-width: 570px;
+  margin: 0 0 2rem;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.inv-hotel-details li {
+  position: relative;
+  padding: 0.8rem 0 0.8rem 1.35rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.92rem;
+  color: #e4e4e6;
+}
+
+.inv-hotel-details li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  transform: translateY(-50%);
+}
+
+.inv-hotel-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.inv-hotel-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  min-width: 190px;
+  padding: 1rem 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  font-family: 'Courier New', monospace;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.inv-hotel-btn span {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.inv-hotel-btn-primary {
+  background: #fff;
+  color: #111;
+  border-color: #fff;
+}
+
+.inv-hotel-btn-primary:hover {
+  background: #dcdcdf;
+  border-color: #dcdcdf;
+}
+
+.inv-hotel-btn-secondary {
+  background: transparent;
+  color: #fff;
+}
+
+.inv-hotel-btn-secondary:hover {
+  background: #fff;
+  color: #111;
+  border-color: #fff;
+}
+
+.inv-section-body .inv-hotel-copy > .inv-hotel-note {
+  max-width: 560px;
+  margin: 1.5rem 0 0;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: #898990;
+}
+
+.inv-hotel-document {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 315px;
+  padding: 1.5rem;
+  background: #fff;
+  color: #111;
+  border: 1px solid #fff;
+  box-shadow: 12px 12px 0 rgba(255, 255, 255, 0.11);
+}
+
+.inv-hotel-document::after {
+  content: '';
+  position: absolute;
+  left: 1.5rem;
+  right: 1.5rem;
+  bottom: 4.15rem;
+  height: 1px;
+  background: #d9d9dc;
+}
+
+.inv-hotel-file-type {
+  align-self: flex-start;
+  padding: 0.35rem 0.45rem;
+  background: #111;
+  color: #fff;
+  font-family: 'Courier New', monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.inv-hotel-document div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.inv-hotel-document div span {
+  font-family: 'Courier New', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.inv-hotel-document strong {
+  max-width: 150px;
+  font-size: 1.7rem;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.inv-hotel-file-title {
+  font-family: 'Courier New', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
 /* ================= REGISTRATION ================= */
 .inv-reg-intro {
   font-size: 1.05rem;
@@ -779,6 +975,17 @@
   color: #444;
 }
 
+.inv-faq-link {
+  color: #111;
+  font-weight: 700;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.inv-faq-link:hover {
+  color: #555;
+}
+
 /* ================= CLOSING BAND ================= */
 .inv-closing {
   position: relative;
@@ -888,6 +1095,15 @@
     grid-template-columns: 1fr;
     gap: 0.4rem;
   }
+
+  .inv-hotel-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .inv-hotel-document {
+    width: min(100%, 270px);
+    justify-self: start;
+  }
 }
 
 @media (max-width: 600px) {
@@ -925,6 +1141,21 @@
   .inv-cta-email {
     display: block;
     margin: 1.25rem 0 0;
+  }
+
+  .inv-hotel-panel {
+    gap: 2.25rem;
+    padding: 1.75rem;
+  }
+
+  .inv-hotel-actions,
+  .inv-hotel-btn {
+    width: 100%;
+  }
+
+  .inv-hotel-document {
+    width: 100%;
+    min-height: 270px;
   }
 
   .inv-closing {

@@ -501,10 +501,70 @@ export function FallInvitational() {
         </div>
       </section>
 
-      {/* ================= 06 REGISTRATION ================= */}
+      {/* ================= 06 TEAM ACCOMMODATIONS ================= */}
       <section className="inv-section">
         <div className="inv-section-head">
           <span className="inv-num">06</span>
+          <h2>Team Accommodations</h2>
+        </div>
+        <div className="inv-section-body">
+          <div className="inv-hotel-panel">
+            <div className="inv-hotel-copy">
+              <span className="inv-hotel-kicker">Travel Planning</span>
+              <h3>Preferred rates for travelling teams.</h3>
+              <p>
+                Preferred group rates are available at select Edmonton hotels for teams,
+                athletes, and families attending the Fall Invitational. Use the hotel
+                guide to review participating properties, rates, booking instructions,
+                and reservation deadlines.
+              </p>
+
+              <ul className="inv-hotel-details">
+                <li>Participating hotel options</li>
+                <li>Group-rate information</li>
+                <li>Booking instructions and deadlines</li>
+              </ul>
+
+              <div className="inv-hotel-actions">
+                <a
+                  className="inv-hotel-btn inv-hotel-btn-primary"
+                  href="/fall-invitational-hotel-guide.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Hotel Guide <span aria-hidden="true">↗</span>
+                </a>
+                <a
+                  className="inv-hotel-btn inv-hotel-btn-secondary"
+                  href="/fall-invitational-hotel-guide.pdf"
+                  download
+                >
+                  Download PDF <span aria-hidden="true">↓</span>
+                </a>
+              </div>
+
+              <p className="inv-hotel-note">
+                Rates and room availability are managed by each participating hotel.
+                Follow the booking instructions in the guide to access the group rate.
+              </p>
+            </div>
+
+            <div className="inv-hotel-document" aria-hidden="true">
+              <span className="inv-hotel-file-type">PDF</span>
+              <div>
+                <span>Next Up</span>
+                <strong>Fall Invitational</strong>
+              </div>
+              <span className="inv-hotel-file-title">Hotel Guide · 2026</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= 07 REGISTRATION ================= */}
+      <section className="inv-section">
+        <div className="inv-section-head">
+          <span className="inv-num">07</span>
           <h2>Registration</h2>
         </div>
         <div className="inv-section-body">
@@ -543,10 +603,10 @@ export function FallInvitational() {
         </div>
       </section>
 
-      {/* ================= 07 FAQ ================= */}
+      {/* ================= 08 FAQ ================= */}
       <section className="inv-section">
         <div className="inv-section-head">
-          <span className="inv-num">07</span>
+          <span className="inv-num">08</span>
           <h2>Coaches' FAQ</h2>
         </div>
         <div className="inv-section-body">
@@ -561,6 +621,61 @@ export function FallInvitational() {
                   later) and U18 (2009 or later). If your program competes the right way
                   and cares about how athletes and families experience the weekend,
                   request an invitation and we will be in touch.
+                </p>
+              </div>
+            </details>
+
+            <details className="inv-faq-item">
+              <summary>Where is it held?</summary>
+              <div className="inv-faq-answer">
+                <p>
+                  Two Edmonton venues, The Centre Sports Complex and the EYBA Centre, over
+                  three days from October 2 to 4, 2026.
+                </p>
+              </div>
+            </details>
+
+            <details className="inv-faq-item">
+              <summary>Are preferred hotel rates available for travelling teams?</summary>
+              <div className="inv-faq-answer">
+                <p>
+                  Yes. Preferred group rates are available at select Edmonton hotels.
+                  Review the participating properties, booking instructions, and
+                  reservation deadlines in the{' '}
+                  <a
+                    className="inv-faq-link"
+                    href="/fall-invitational-hotel-guide.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Fall Invitational Hotel Guide
+                  </a>.
+                </p>
+              </div>
+            </details>
+
+            <details className="inv-faq-item">
+              <summary>How do we secure a spot?</summary>
+              <div className="inv-faq-answer">
+                <p>
+                  The field is limited to 50 teams and divisions close once they fill, so
+                  earlier is better. Request an invitation at invitational@nextuphoops.ca and we
+                  will walk your program through the details. Early bird pricing runs
+                  through August 15.
+                </p>
+              </div>
+            </details>
+
+            <details className="inv-faq-item">
+              <summary>What does the entry fee include?</summary>
+              <div className="inv-faq-answer">
+                <p>
+                  Entry is per roster and covers four guaranteed games, an official
+                  inaugural tournament tee for every registered athlete, certified
+                  officials and dedicated scorekeepers on every court, Player of the Game
+                  recognition each game, and full access to the Saturday Night Showcase.
+                  Early bird is $700 + GST through August 15, then $750 + GST from August
+                  16 to September 15.
                 </p>
               </div>
             </details>
@@ -588,15 +703,12 @@ export function FallInvitational() {
             </details>
 
             <details className="inv-faq-item">
-              <summary>What does the entry fee include?</summary>
+              <summary>How are the games officiated and run?</summary>
               <div className="inv-faq-answer">
                 <p>
-                  Entry is per roster and covers four guaranteed games, an official
-                  inaugural tournament tee for every registered athlete, certified
-                  officials and dedicated scorekeepers on every court, Player of the Game
-                  recognition each game, and full access to the Saturday Night Showcase.
-                  Early bird is $700 + GST through August 15, then $750 + GST from August
-                  16 to September 15.
+                  Certified officials work every court and dedicated scorekeepers run
+                  every game, not just the finals. Professional game operations are the
+                  standard for the whole weekend, so coaches can focus on coaching.
                 </p>
               </div>
             </details>
@@ -614,17 +726,6 @@ export function FallInvitational() {
             </details>
 
             <details className="inv-faq-item">
-              <summary>How are the games officiated and run?</summary>
-              <div className="inv-faq-answer">
-                <p>
-                  Certified officials work every court and dedicated scorekeepers run
-                  every game, not just the finals. Professional game operations are the
-                  standard for the whole weekend, so coaches can focus on coaching.
-                </p>
-              </div>
-            </details>
-
-            <details className="inv-faq-item">
               <summary>What do champions receive?</summary>
               <div className="inv-faq-answer">
                 <p>
@@ -633,28 +734,6 @@ export function FallInvitational() {
                   third place teams receive medals. Individual honors include Championship
                   Game MVP, All-Tournament Team, the Boys and Girls All-Star MVPs, and the
                   Slam Dunk and Three Point champions.
-                </p>
-              </div>
-            </details>
-
-            <details className="inv-faq-item">
-              <summary>How do we secure a spot?</summary>
-              <div className="inv-faq-answer">
-                <p>
-                  The field is limited to 50 teams and divisions close once they fill, so
-                  earlier is better. Request an invitation at invitational@nextuphoops.ca and we
-                  will walk your program through the details. Early bird pricing runs
-                  through August 15.
-                </p>
-              </div>
-            </details>
-
-            <details className="inv-faq-item">
-              <summary>Where is it held?</summary>
-              <div className="inv-faq-answer">
-                <p>
-                  Two Edmonton venues, The Centre Sports Complex and the EYBA Centre, over
-                  three days from October 2 to 4, 2026.
                 </p>
               </div>
             </details>
