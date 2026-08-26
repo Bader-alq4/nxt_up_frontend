@@ -27,27 +27,6 @@ export default function HeroSection() {
             </h1>
             <p className="hero-subtitle">Elite Basketball Club Based in Edmonton, Alberta 🇨🇦</p>
           </div>
-
-          <Link to="/ClubTeams/Fall-Tryouts" className="hero-tryouts-cta">
-            <span className="hero-tryouts-cta-label">Fall 2026 · Now Open</span>
-            <span className="hero-tryouts-cta-title">Tryouts</span>
-            <span className="hero-tryouts-cta-arrow">Find your spot →</span>
-          </Link>
-        </div>
-
-        <div className="bottom-actions">
-          <Link to="/ClubTeams/Fall-Boys" className="action-link">
-            <span>Fall 2026 Boys</span>
-            <span className="action-arrow">→</span>
-          </Link>
-          <Link to="/ClubTeams/Fall-Girls" className="action-link">
-            <span>Fall 2026 Girls</span>
-            <span className="action-arrow">→</span>
-          </Link>
-          <Link to="/ClubTeams/Fall-Tryouts" className="action-link">
-            <span>Tryout Information</span>
-            <span className="action-arrow">→</span>
-          </Link>
         </div>
       </div>
 

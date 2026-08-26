@@ -15,15 +15,12 @@ export default function NavBar() {
     return () => document.body.classList.remove('no-scroll');
   }, [mobileMenuOpen]);
 
-  const shopUrl = 'https://shop.nextuphoops.ca';
-
   const navLinks = [
     { label: 'About', to: '/about' },
     { label: 'Club Teams', to: '/ClubTeams' },
     { label: 'Winter' },
     { label: 'Training' },
     { label: 'Tournaments' },
-    { label: 'Shop', externalUrl: shopUrl },
   ];
 
   const aboutSubmenu = [

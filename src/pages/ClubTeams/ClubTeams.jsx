@@ -157,22 +157,6 @@ export default function ClubTeams() {
             athlete with multiple opportunities to earn their place within the Next Up Hoops
             program.
           </p>
-          <Link to="/ClubTeams/Fall-Tryouts">Learn More About Fall Tryouts →</Link>
-        </section>
-
-        {/* CTA */}
-        <section className="program-section">
-          <h2>Ready for Fall?</h2>
-          <p>
-            Join one of Edmonton's fastest-growing basketball programs and continue building
-            your game this Fall.
-          </p>
-        </section>
-
-        <section className="program-actions">
-          <Link to="/ClubTeams/Fall-Tryouts">
-            Register for Fall 2026
-          </Link>
         </section>
 
       </div>

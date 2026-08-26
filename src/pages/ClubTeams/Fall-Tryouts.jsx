@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import StickyRegister from '../../components/StickyRegister';
 import '../../css_files/TryoutInformation.css';
 
 export default function FallTryouts() {
@@ -26,14 +25,6 @@ export default function FallTryouts() {
               A multi-step evaluation process giving every athlete a fair chance to earn their
               place within the Next Up Hoops Fall Program.
             </p>
-            <a
-              className="hero-register-btn"
-              href="https://registration.teamsnap.com/form/69129"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Register for Tryouts
-            </a>
           </div>
 
           <div className="hero-images-layout">
@@ -441,23 +432,7 @@ export default function FallTryouts() {
           </p>
         </section>
 
-        {/* ================= CTA ================= */}
-        <section className="cta-section">
-          <a
-            data-register-cta
-            href="https://registration.teamsnap.com/form/69129"
-            className="register-button"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Register for the Fall 2026 Evaluation Process
-          </a>
-          <p className="cta-note">Evaluation Fee: $20</p>
-        </section>
-
       </div>
-
-      <StickyRegister label="Fall 2026 Tryouts" note="Evaluation Fee $20" />
     </motion.div>
   );
 }

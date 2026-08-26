@@ -6,7 +6,6 @@ import NotFound from "./pages/NotFound";
 
 // Core Layout
 import NavBar from './components/NavBar';
-import AnnouncementBar from './components/AnnouncementBar';
 import Footer from './components/Footer';
 
 // General Pages
@@ -86,7 +85,6 @@ function AppWrapper() {
 
   return (
     <>
-      <AnnouncementBar />
       <NavBar />
 
       <AnimatePresence mode="wait">
