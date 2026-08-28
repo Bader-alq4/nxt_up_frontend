@@ -133,7 +133,7 @@ export default function FallBoys() {
           <p>
             Each team participates in one organized scrimmage each week against another Next
             Up Hoops team or, when available, a local club. Scrimmages are primarily hosted at
-            The Centre Sports Complex.
+            The Center Sports Complex.
           </p>
 
           <h3>Tournament Competition</h3>

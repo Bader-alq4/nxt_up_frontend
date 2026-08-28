@@ -468,7 +468,7 @@ export function FallInvitational() {
             </div>
             <div className="inv-info-row">
               <dt>Venues</dt>
-              <dd>The Centre Sports Complex &amp; EYBA Centre, Edmonton</dd>
+              <dd>The Center Sports Complex &amp; EYBA Centre, Edmonton</dd>
             </div>
             <div className="inv-info-row">
               <dt>Open To</dt>
@@ -629,7 +629,7 @@ export function FallInvitational() {
               <summary>Where is it held?</summary>
               <div className="inv-faq-answer">
                 <p>
-                  Two Edmonton venues, The Centre Sports Complex and the EYBA Centre, over
+                  Two Edmonton venues, The Center Sports Complex and the EYBA Centre, over
                   three days from October 2 to 4, 2026.
                 </p>
               </div>
