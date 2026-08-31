@@ -255,8 +255,8 @@ export function FallInvitational() {
         <p className="inv-statement-eyebrow">Built by basketball people</p>
         <p className="inv-statement-text">
           We have spent years at tournaments across Canada and the United States, as
-          players, coaches, and parents. We took the best of what we experienced, fixed
-          what didn't, and built the tournament we always wanted to attend.
+          players, coaches, and parents. We took the best of what we liked, fixed
+          what we didn't, and built the tournament we always wanted to attend.
         </p>
       </section>
 
