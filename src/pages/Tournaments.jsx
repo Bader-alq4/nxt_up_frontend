@@ -43,7 +43,7 @@ const tickerItems = [
   '4 Game Guarantee',
   'Limited to 50 Teams',
   'Certified Officials',
-  'Championship Rings',
+  'Finals MVP Rings',
   'Saturday Night Showcase',
   'Player of the Game Awards',
   'Covered by Next Up Studios',
@@ -204,7 +204,7 @@ export function FallInvitational() {
               <path id="invArcBottom" d="M 82 210 A 128 128 0 0 0 338 210" />
             </defs>
 
-            {/* rings */}
+            {/* seal circles */}
             <circle cx="210" cy="210" r="202" fill="none" stroke="#f2f2f2" strokeWidth="2" />
             <circle cx="210" cy="210" r="186" fill="none" stroke="#4a4a4e" strokeWidth="1" />
             <circle cx="210" cy="210" r="118" fill="none" stroke="#4a4a4e" strokeWidth="1" />
@@ -422,23 +422,20 @@ export function FallInvitational() {
         </div>
         <div className="inv-section-body">
           <p>
-            Division champions take home the trophy. Every player and coach on the
-            championship roster earns an inaugural championship ring. Second and third
-            place teams receive medals.
+            Each division champion receives a team trophy and first-place medals. A
+            Finals MVP is selected in every division and receives an MVP ring.
           </p>
           <div className="inv-awards-grid">
             <div className="inv-award-block">
               <h3>Team Awards</h3>
               <ul>
-                <li><strong>Champions:</strong> trophy + inaugural rings for every player and coach</li>
-                <li><strong>Second place:</strong> team medals</li>
-                <li><strong>Third place:</strong> team medals</li>
+                <li><strong>Division champions:</strong> team trophy + first-place medals</li>
               </ul>
             </div>
             <div className="inv-award-block">
               <h3>Individual Honors</h3>
               <ul>
-                <li>Championship Game MVP</li>
+                <li>Finals MVP ring in each division</li>
                 <li>All-Tournament Team</li>
                 <li>Boys &amp; Girls All-Star MVP</li>
                 <li>Slam Dunk Champion</li>
@@ -729,11 +726,10 @@ export function FallInvitational() {
               <summary>What do champions receive?</summary>
               <div className="inv-faq-answer">
                 <p>
-                  Division champions take home the trophy, and every player and coach on
-                  the championship roster earns an inaugural championship ring. Second and
-                  third place teams receive medals. Individual honors include Championship
-                  Game MVP, All-Tournament Team, the Boys and Girls All-Star MVPs, and the
-                  Slam Dunk and Three Point champions.
+                  Each division champion receives a team trophy and first-place medals. A
+                  Finals MVP is selected in every division and receives an MVP ring. Other
+                  individual honors include the All-Tournament Team, Boys and Girls All-Star
+                  MVPs, and the Slam Dunk and Three Point champions.
                 </p>
               </div>
             </details>
