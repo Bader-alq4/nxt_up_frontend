@@ -227,7 +227,7 @@
 }
 
 .winter-division-fact strong {
-  font-size: 1.3rem;
+  font-size: 0.95rem;
   letter-spacing: -0.02em;
 }
 
@@ -480,6 +480,22 @@
   border-bottom: 0;
 }
 
+.winter-groups-four {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.winter-groups-four > div {
+  justify-content: center;
+}
+
+.winter-groups-four > div + div {
+  border-left: 1px solid var(--winter-rule);
+}
+
+.winter-groups-four strong {
+  border-bottom: 0;
+}
+
 .winter-fine-print {
   margin-top: 1.1rem !important;
   font-size: 0.82rem !important;
@@ -695,6 +711,15 @@
   margin: 0;
   font-size: 0.86rem;
   line-height: 1.5;
+  color: #77777d;
+}
+
+.winter-pricing-panel .winter-payment-note {
+  margin: 0;
+  padding: 1rem 0 1.15rem;
+  border-top: 1px solid #dfdfe2;
+  font-size: 0.82rem;
+  font-weight: 700;
   color: #77777d;
 }
 
@@ -1183,6 +1208,19 @@
     grid-template-columns: 1fr;
   }
 
+  .winter-groups-four {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .winter-groups-four > div:nth-child(3) {
+    border-top: 1px solid var(--winter-rule);
+    border-left: 0;
+  }
+
+  .winter-groups-four > div:nth-child(4) {
+    border-top: 1px solid var(--winter-rule);
+  }
+
   .winter-development-grid article,
   .winter-development-grid article + article {
     padding: 2.25rem 0;
@@ -1227,7 +1265,550 @@
     padding: 1.5rem 0;
   }
 
+  .winter-groups-four {
+    grid-template-columns: 1fr;
+  }
+
+  .winter-groups-four > div + div,
+  .winter-groups-four > div:nth-child(3),
+  .winter-groups-four > div:nth-child(4) {
+    border-top: 1px solid var(--winter-rule);
+    border-left: 0;
+  }
+
   .winter-registration-contact {
     width: 100%;
+  }
+}
+
+/* ==================================================
+   COMPACT PROFESSIONAL LAYOUT
+================================================== */
+.winter-hero-inner {
+  padding: 5rem 1.5rem 3.5rem;
+}
+
+.winter-hero-copy {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: clamp(3rem, 6vw, 5.5rem);
+  align-items: end;
+  max-width: none;
+}
+
+.winter-hero-title-block,
+.winter-hero-details {
+  min-width: 0;
+}
+
+.winter-hero h1 {
+  max-width: 660px;
+  margin-bottom: 0;
+  font-size: clamp(3.4rem, 5.7vw, 5.2rem);
+  line-height: 0.96;
+}
+
+.winter-hero-details {
+  padding: 0 0 0.2rem 2rem;
+  border-left: 1px solid var(--winter-rule);
+}
+
+.winter-hero-subtitle {
+  margin-top: 0;
+  font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+}
+
+.winter-hero-description {
+  margin-bottom: 1.5rem;
+}
+
+.winter-hero-groups {
+  margin-bottom: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--winter-rule);
+}
+
+.winter-hero-groups > span {
+  display: block;
+  margin-bottom: 0.85rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--winter-blue-dark);
+}
+
+.winter-hero-groups > div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem 1.5rem;
+}
+
+.winter-hero-groups strong {
+  font-size: 0.98rem;
+  line-height: 1.35;
+}
+
+.winter-quick-facts {
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 0;
+}
+
+.winter-quick-facts div {
+  padding: 1.45rem 1.5rem;
+}
+
+.winter-quick-facts div + div {
+  border-left: 1px solid var(--winter-rule);
+}
+
+.winter-audience-bar {
+  display: grid;
+  grid-template-columns: 1.1fr repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.2rem 1.5rem;
+  border-top: 1px solid var(--winter-rule);
+  border-bottom: 1px solid var(--winter-rule);
+}
+
+.winter-audience-bar span {
+  font-family: 'Courier New', monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--winter-blue-dark);
+}
+
+.winter-audience-bar strong {
+  font-size: 0.88rem;
+  line-height: 1.35;
+}
+
+.winter-section {
+  grid-template-columns: 210px minmax(0, 1fr);
+  gap: 3rem;
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+}
+
+.winter-section-heading h2 {
+  font-size: clamp(1.65rem, 2.4vw, 2.1rem);
+}
+
+.winter-dark-inner {
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+}
+
+.winter-section-heading-light {
+  margin-bottom: 2.5rem;
+}
+
+.winter-development-grid article {
+  padding-top: 2rem;
+}
+
+.winter-development-grid article + article {
+  padding-left: 2rem;
+}
+
+.winter-groups {
+  margin-top: 1.65rem;
+}
+
+.winter-groups > div {
+  padding-top: 1.35rem;
+  padding-bottom: 0.35rem;
+}
+
+.winter-groups strong {
+  font-size: 0.95rem;
+}
+
+.winter-plan-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 2.75rem;
+  border-top: 0;
+}
+
+.winter-plan-row {
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 0.4rem 1rem;
+  align-content: start;
+  padding: 1.15rem 0;
+  border-top: 1px solid var(--winter-rule);
+}
+
+.winter-plan-row h3 {
+  line-height: 1.35;
+}
+
+.winter-plan-row p {
+  grid-column: 2;
+  margin-top: 0.15rem;
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+.winter-checkins {
+  margin-top: 1.65rem;
+}
+
+.winter-checkins article {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.winter-checkins article > span {
+  margin-bottom: 1rem;
+}
+
+.winter-dates-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 2.75rem;
+  border-top: 0;
+}
+
+.winter-date-row {
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 1rem;
+  padding: 0.9rem 0;
+  border-top: 1px solid var(--winter-rule);
+}
+
+.winter-date-break {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.winter-pathway {
+  gap: 3rem;
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+}
+
+.winter-registration {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(420px, 1.2fr);
+  gap: clamp(3rem, 7vw, 6rem);
+  padding-top: 4.25rem;
+  padding-bottom: 4.5rem;
+  border-top: 1px solid var(--winter-ink);
+}
+
+.winter-registration-heading {
+  align-self: start;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.winter-registration-heading h2 {
+  font-size: clamp(2.25rem, 4vw, 3.35rem);
+}
+
+.winter-registration-details {
+  min-width: 0;
+}
+
+.winter-pricing-panel {
+  margin-top: 0;
+}
+
+.winter-registration-action {
+  align-items: flex-start;
+}
+
+.winter-registration-action p {
+  flex-basis: 100%;
+}
+
+.winter-registration-contact {
+  margin-top: 0.4rem;
+}
+
+@media (max-width: 900px) {
+  .winter-hero-copy,
+  .winter-registration {
+    grid-template-columns: 1fr;
+  }
+
+  .winter-hero-copy {
+    gap: 2.5rem;
+  }
+
+  .winter-hero-details {
+    max-width: 700px;
+    padding: 1.75rem 0 0;
+    border-top: 1px solid var(--winter-rule);
+    border-left: 0;
+  }
+
+  .winter-hero-groups {
+    max-width: 580px;
+  }
+
+  .winter-audience-bar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .winter-audience-bar span {
+    grid-column: 1 / -1;
+  }
+
+  .winter-plan-grid,
+  .winter-dates-grid {
+    column-gap: 2rem;
+  }
+
+  .winter-registration {
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .winter-hero-inner {
+    padding: 3.75rem 1.25rem 3rem;
+  }
+
+  .winter-hero h1 {
+    font-size: clamp(2.75rem, 13vw, 4rem);
+  }
+
+  .winter-quick-facts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .winter-quick-facts div,
+  .winter-quick-facts div:nth-child(3) {
+    padding: 1.2rem 0.8rem;
+    border-top: 0;
+  }
+
+  .winter-quick-facts strong {
+    font-size: 1.2rem;
+  }
+
+  .winter-quick-facts span {
+    font-size: 0.57rem;
+    letter-spacing: 0.08em;
+  }
+
+  .winter-audience-bar {
+    padding: 1.15rem 1.25rem;
+  }
+
+  .winter-section,
+  .winter-dark-inner,
+  .winter-pathway,
+  .winter-registration {
+    padding-top: 3.25rem;
+    padding-bottom: 3.25rem;
+  }
+
+  .winter-plan-grid,
+  .winter-dates-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .winter-plan-row p {
+    grid-column: 2;
+  }
+
+  .winter-registration {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==================================================
+   CONTENT PRIORITY + DISCLOSURE
+================================================== */
+.winter-essentials-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 1.75rem;
+  border-top: 1px solid var(--winter-ink);
+}
+
+.winter-essentials-list article {
+  padding: 1.4rem 1.75rem 1.4rem 0;
+  border-bottom: 1px solid var(--winter-rule);
+}
+
+.winter-essentials-list article:nth-child(even) {
+  padding-right: 0;
+  padding-left: 1.75rem;
+  border-left: 1px solid var(--winter-rule);
+}
+
+.winter-essentials-list h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.winter-essentials-list p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #626268;
+}
+
+.winter-groups-panel {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.7fr) minmax(0, 1.3fr);
+  gap: 2rem;
+  align-items: start;
+  margin-top: 2rem;
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--winter-ink);
+  border-bottom: 1px solid var(--winter-rule);
+}
+
+.winter-groups-panel span {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--winter-blue-dark);
+}
+
+.winter-groups-panel h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+
+.winter-groups-panel-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--winter-rule);
+}
+
+.winter-groups-panel-list strong {
+  padding: 0.85rem 1rem 0.85rem 0;
+  border-bottom: 1px solid var(--winter-rule);
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.winter-groups-panel-list strong:nth-child(even) {
+  padding-right: 0;
+  padding-left: 1rem;
+  border-left: 1px solid var(--winter-rule);
+}
+
+.winter-training-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 1.75rem;
+  border-top: 1px solid var(--winter-ink);
+}
+
+.winter-training-summary span {
+  padding: 1rem 1rem 1rem 0;
+  border-bottom: 1px solid var(--winter-rule);
+  font-size: 0.88rem;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.winter-training-summary span:not(:nth-child(3n + 1)) {
+  padding-left: 1rem;
+  border-left: 1px solid var(--winter-rule);
+}
+
+.winter-plan-details {
+  margin-top: 2rem;
+  border-top: 1px solid var(--winter-ink);
+  border-bottom: 1px solid var(--winter-ink);
+}
+
+.winter-plan-details summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.2rem 0;
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.winter-plan-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.winter-plan-details summary strong {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.winter-plan-details[open] summary strong {
+  transform: rotate(45deg);
+}
+
+.winter-plan-details .winter-plan-grid {
+  padding-bottom: 1rem;
+}
+
+.winter-pathway-compact {
+  align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.winter-pathway-compact h2 {
+  margin-bottom: 0;
+}
+
+.winter-pathway-compact p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+  .winter-essentials-list,
+  .winter-training-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .winter-groups-panel {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .winter-groups-panel-list {
+    grid-template-columns: 1fr;
+  }
+
+  .winter-groups-panel-list strong,
+  .winter-groups-panel-list strong:nth-child(even) {
+    padding: 0.85rem 0;
+    border-left: 0;
+  }
+
+  .winter-essentials-list article,
+  .winter-essentials-list article:nth-child(even) {
+    padding: 1.2rem 0;
+    border-left: 0;
+  }
+
+  .winter-training-summary span,
+  .winter-training-summary span:not(:nth-child(3n + 1)) {
+    padding: 0.9rem 0;
+    border-left: 0;
   }
 }

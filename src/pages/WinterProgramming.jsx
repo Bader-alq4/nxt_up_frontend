@@ -2,19 +2,6 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import '../css_files/WinterProgramming.css';
 
-const trainingFocus = [
-  'Shooting and shot preparation',
-  'Finishing through contact',
-  'Ball handling and change of pace',
-  'Attacking closeouts',
-  'Passing and playmaking',
-  'Ball-screen reads',
-  'Off-ball movement and footwork',
-  'Decision-making at game speed',
-  'On-ball and help defence',
-  'Rebounding and communication',
-];
-
 const developmentPlan = [
   {
     week: '01',
@@ -83,24 +70,6 @@ const programDates = [
   { date: 'February 28', label: 'Session 10' },
 ];
 
-const checkIns = [
-  {
-    number: '01',
-    title: 'Beginning',
-    text: 'Establish strengths, identify areas of focus, and give each athlete clear priorities for the winter.',
-  },
-  {
-    number: '02',
-    title: 'Midpoint',
-    text: 'Discuss progress, provide direct feedback, and set the focus for the second half of the program.',
-  },
-  {
-    number: '03',
-    title: 'Final',
-    text: 'Review development and give the athlete direction on what to continue working on after the program.',
-  },
-];
-
 export default function WinterProgramming() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -117,21 +86,25 @@ export default function WinterProgramming() {
       <header className="winter-hero">
         <div className="winter-hero-inner">
           <div className="winter-hero-copy">
-            <p className="winter-eyebrow">Next Up Hoops · Winter 2026/27</p>
-            <h1>Winter High Performance Training</h1>
-            <p className="winter-hero-subtitle">
-              High performance training and a competitive 3X3 series in one focused
-              Sunday session each week.
-            </p>
-            <p className="winter-hero-description">
-              Keep developing throughout the winter without adding another full team
-              schedule. Athletes receive consistent coaching and live competition while
-              maintaining their school basketball, community basketball, academics, and
-              family commitments.
-            </p>
-            <a className="winter-primary-link" href="#winter-registration">
-              View Pricing &amp; Registration
-            </a>
+            <div className="winter-hero-title-block">
+              <p className="winter-eyebrow">Next Up Hoops · Winter 2026/27</p>
+              <h1>Winter High Performance Academy</h1>
+            </div>
+            <div className="winter-hero-details">
+              <p className="winter-hero-subtitle">
+                High performance training and a competitive 3X3 series in one focused
+                Sunday session each week.
+              </p>
+              <p className="winter-hero-description">
+                Keep developing throughout the winter without adding another full team
+                schedule. Athletes receive consistent coaching and live competition while
+                maintaining their school basketball, community basketball, academics, and
+                family commitments.
+              </p>
+              <a className="winter-primary-link" href="#winter-registration">
+                View Pricing &amp; Registration
+              </a>
+            </div>
           </div>
 
           <div className="winter-hero-mark" aria-hidden="true">
@@ -145,186 +118,124 @@ export default function WinterProgramming() {
           <div><strong>10</strong><span>Sunday Sessions</span></div>
           <div><strong>20</strong><span>Total Hours</span></div>
           <div><strong>2 HR</strong><span>Each Sunday</span></div>
-          <div className="winter-division-fact">
-            <strong>Boys U13–U18</strong>
-            <strong>Girls U15–U18</strong>
-          </div>
         </div>
       </header>
 
       <main>
-        <section className="winter-section winter-overview">
+        <section className="winter-section winter-essentials">
           <div className="winter-section-heading">
             <span>01</span>
-            <h2>Built for the Winter Season</h2>
-          </div>
-          <div className="winter-section-content winter-overview-grid">
-            <div>
-              <p className="winter-lead">
-                Winter schedules are already busy. This program gives athletes a reliable
-                place to train and compete without asking them to take on another team.
-              </p>
-              <p>
-                Sessions run for two hours on Sunday late afternoons. The calendar also
-                includes a holiday break and a Family Day weekend break, making the
-                program easier to manage alongside an athlete's existing commitments.
-              </p>
-            </div>
-            <ul className="winter-no-list">
-              <li>No weekday practices</li>
-              <li>No additional travel</li>
-              <li>No extra tournament weekends</li>
-              <li>No second team schedule</li>
-            </ul>
-          </div>
-        </section>
-
-        <section className="winter-dark-section">
-          <div className="winter-dark-inner">
-            <div className="winter-section-heading winter-section-heading-light">
-              <span>02</span>
-              <h2>Train. Read. Compete.</h2>
-            </div>
-            <div className="winter-development-grid">
-              <article>
-                <span className="winter-card-label">High Performance Training</span>
-                <h3>Skills that carry into games</h3>
-                <p>
-                  Team practices naturally focus on systems and upcoming opponents during
-                  the season. These sessions protect time for individual development and
-                  give athletes the repetitions needed to keep improving.
-                </p>
-                <div className="winter-focus-grid">
-                  {trainingFocus.map((item) => <span key={item}>{item}</span>)}
-                </div>
-              </article>
-
-              <article className="winter-3x3-card">
-                <span className="winter-card-label">Next Up Winter 3X3 Series</span>
-                <h3>Competition is part of the training</h3>
-                <p>
-                  Athletes move from skill work into live 1-on-1 and 2-on-2 situations
-                  before competing in 3X3. Balanced teams play throughout the winter,
-                  building toward playoffs and a Winter Championship.
-                </p>
-                <ul>
-                  <li>Weekly 3X3 competition</li>
-                  <li>Team standings and playoff seeding</li>
-                  <li>Playoffs and Winter Championship</li>
-                  <li>Player recognition and prizes</li>
-                  <li>Media coverage throughout the program</li>
-                </ul>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section className="winter-section">
-          <div className="winter-section-heading">
-            <span>03</span>
-            <h2>Small Groups. High-Quality Reps.</h2>
+            <h2>What Athletes Get</h2>
           </div>
           <div className="winter-section-content">
             <p className="winter-lead">
-              Registration is limited so athletes receive meaningful repetitions and
-              direct coaching. Groups will be organized by age and gender, then adjusted
-              by ability and registration numbers when needed.
+              One focused Sunday session combines individual development, coached game
+              situations, and live 3X3 competition.
             </p>
-            <div className="winter-groups">
+            <div className="winter-essentials-list">
+              <article>
+                <h3>High-performance training</h3>
+                <p>Game-speed work that develops scoring, playmaking, footwork, and defence.</p>
+              </article>
+              <article>
+                <h3>Weekly competition</h3>
+                <p>Skill work moves into 1-on-1 and 2-on-2 situations before weekly 3X3 play.</p>
+              </article>
+              <article>
+                <h3>Direct coaching feedback</h3>
+                <p>Athletes receive check-ins at the beginning, midpoint, and end of the academy.</p>
+              </article>
+              <article>
+                <h3>A manageable winter schedule</h3>
+                <p>There are no weekday practices, extra travel, or additional tournament weekends.</p>
+              </article>
+            </div>
+            <div className="winter-groups-panel">
               <div>
-                <span className="winter-group-label">Boys</span>
-                <strong>U13/U14</strong>
-                <strong>U15/U16</strong>
-                <strong>U17/U18</strong>
+                <span>Training Groups</span>
+                <h3>Who It’s For</h3>
               </div>
-              <div>
-                <span className="winter-group-label">Girls</span>
-                <strong>U15/U16</strong>
-                <strong>U17/U18</strong>
+              <div className="winter-groups-panel-list">
+                <strong>High School Boys</strong>
+                <strong>High School Girls</strong>
+                <strong>Junior High Boys</strong>
+                <strong>Junior High Girls</strong>
               </div>
             </div>
             <p className="winter-fine-print">
-              Final groupings may be adjusted to create the strongest training and
-              competition environment for registered athletes.
+              Registration is limited so every group can maintain meaningful repetitions
+              and direct access to coaches.
             </p>
-          </div>
-        </section>
-
-        <section className="winter-section winter-plan-section">
-          <div className="winter-section-heading">
-            <span>04</span>
-            <h2>10-Week Development Plan</h2>
-          </div>
-          <div className="winter-section-content winter-plan-list">
-            {developmentPlan.map((item) => (
-              <article className="winter-plan-row" key={item.week}>
-                <span className="winter-week">Week {item.week}</span>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="winter-section winter-checkins-section">
-          <div className="winter-section-heading">
-            <span>05</span>
-            <h2>Player Development Check-Ins</h2>
-          </div>
-          <div className="winter-section-content">
-            <p className="winter-lead">
-              Athletes should understand what they are working toward. Coaches meet with
-              players at three points in the program to provide clear feedback and
-              accountability.
-            </p>
-            <div className="winter-checkins">
-              {checkIns.map((item) => (
-                <article key={item.number}>
-                  <span>{item.number}</span>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                </article>
-              ))}
-            </div>
           </div>
         </section>
 
         <section className="winter-section">
           <div className="winter-section-heading">
-            <span>06</span>
+            <span>02</span>
             <h2>Program Dates</h2>
           </div>
           <div className="winter-section-content">
-            <div className="winter-dates">
+            <div className="winter-dates winter-dates-grid">
               {programDates.map((item) => (
                 <div className={`winter-date-row${item.break ? ' winter-date-break' : ''}`} key={`${item.date}-${item.label}`}>
                   <span>{item.label}</span>
                   <strong>{item.date}</strong>
-                  {!item.break && <em>Sunday · Late afternoon</em>}
                 </div>
               ))}
             </div>
             <p className="winter-fine-print">
-              Exact session times and location will be announced before the program begins.
+              All training dates are Sundays in the late afternoon. Exact session times
+              and location will be announced before the program begins.
             </p>
           </div>
         </section>
 
-        <section className="winter-pathway">
+        <section className="winter-section winter-training-section">
+          <div className="winter-section-heading">
+            <span>03</span>
+            <h2>Training &amp; Development</h2>
+          </div>
+          <div className="winter-section-content">
+            <p className="winter-lead">
+              Training progresses from individual skills into decision-making and live
+              play, finishing with 3X3 playoffs and a Winter Championship.
+            </p>
+            <div className="winter-training-summary">
+              <span>Shooting &amp; finishing</span>
+              <span>Ball handling &amp; attacking</span>
+              <span>Passing &amp; playmaking</span>
+              <span>Off-ball movement</span>
+              <span>Defence &amp; rebounding</span>
+              <span>3X3 competition</span>
+            </div>
+            <details className="winter-plan-details">
+              <summary>
+                <span>View the full 10-week development plan</span>
+                <strong aria-hidden="true">+</strong>
+              </summary>
+              <div className="winter-plan-list winter-plan-grid">
+                {developmentPlan.map((item) => (
+                  <article className="winter-plan-row" key={item.week}>
+                    <span className="winter-week">Week {item.week}</span>
+                    <h3>{item.title}</h3>
+                    <p>{item.text}</p>
+                  </article>
+                ))}
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <section className="winter-pathway winter-pathway-compact">
           <div>
             <span className="winter-card-label">Looking Ahead</span>
-            <h2>Ahead of Spring/Summer 2027</h2>
+            <h2>Spring/Summer 2027</h2>
           </div>
           <div>
             <p>
-              Winter training gives athletes the chance to experience Next Up before our
-              Spring/Summer 2027 tryouts. It also gives our coaches time to learn how each
-              athlete competes and responds to coaching over several weeks.
-            </p>
-            <p>
-              Next Up will offer Circuit and Provincial team pathways for Spring/Summer
-              2027. Participation in the winter program does not guarantee a roster spot.
-              All athletes must still complete the official tryout process.
+              The academy gives athletes and coaches time to work together before
+              Spring/Summer 2027 tryouts. Winter participation does not guarantee a roster
+              spot; every athlete must still complete the official tryout process.
             </p>
           </div>
         </section>
@@ -332,42 +243,47 @@ export default function WinterProgramming() {
         <section className="winter-registration" id="winter-registration">
           <div className="winter-registration-heading">
             <p className="winter-eyebrow">Registration</p>
-            <h2>Winter High Performance Training</h2>
-            <p>Boys U13–U18 · Girls U15–U18</p>
+            <h2>Pricing &amp; Registration</h2>
             <p>November 29, 2026 to February 28, 2027</p>
           </div>
 
-          <div className="winter-pricing-panel">
-            <div className="winter-price-row">
-              <div>
-                <span>Early Registration</span>
-                <p>Available through November 8, 2026</p>
+          <div className="winter-registration-details">
+            <div className="winter-pricing-panel">
+              <div className="winter-price-row">
+                <div>
+                  <span>Early Registration</span>
+                  <p>Available through November 8, 2026</p>
+                </div>
+                <strong>$349</strong>
               </div>
-              <strong>$349</strong>
-            </div>
-            <div className="winter-price-row">
-              <div>
-                <span>Regular Registration</span>
-                <p>Begins November 9 and remains open until groups are full</p>
+              <div className="winter-price-row">
+                <div>
+                  <span>Regular Registration</span>
+                  <p>Begins November 9 and remains open until groups are full</p>
+                </div>
+                <strong>$399</strong>
               </div>
-              <strong>$399</strong>
+              <p className="winter-payment-note">Payment plans are available at checkout.</p>
             </div>
-          </div>
 
-          <div className="winter-registration-action">
-            <p>
-              Space is intentionally limited within each group. Once a group reaches
-              capacity, registration for that group will close.
-            </p>
-            <div className="winter-registration-contact">
-              <a href="mailto:info@nextuphoops.ca?subject=Winter%20High%20Performance%20Training%20Registration">
-                Ask About Registration
-              </a>
-              <a className="winter-email-link" href="mailto:info@nextuphoops.ca">
-                info@nextuphoops.ca
-              </a>
+            <div className="winter-registration-action">
+              <p>
+                Space is intentionally limited within each group. Once a group reaches
+                capacity, registration for that group will close.
+              </p>
+              <div className="winter-registration-contact">
+                <a
+                  href="https://registration.teamsnap.com/form/80841"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Register Now
+                </a>
+                <a className="winter-email-link" href="mailto:info@nextuphoops.ca">
+                  info@nextuphoops.ca
+                </a>
+              </div>
             </div>
-            <span>Online registration link coming soon</span>
           </div>
         </section>
       </main>
