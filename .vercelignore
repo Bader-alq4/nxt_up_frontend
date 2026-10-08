@@ -1,0 +1,19 @@
+# Dependencies and local backups
+node_modules
+node_modules*
+
+# Local build output
+dist
+dist-ssr
+
+# Local tooling and repository metadata
+.git
+.vercel
+.DS_Store
+*.log
+
+# Local environment files
+.env
+.env.*
+*.env
+*.env.*

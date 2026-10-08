@@ -1780,6 +1780,18 @@
 }
 
 @media (max-width: 700px) {
+  .winter-section {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.75rem;
+    width: 100%;
+  }
+
+  .winter-section-heading,
+  .winter-section-content {
+    width: 100%;
+    min-width: 0;
+  }
+
   .winter-essentials-list,
   .winter-training-summary {
     grid-template-columns: 1fr;
