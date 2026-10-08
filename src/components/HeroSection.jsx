@@ -23,7 +23,7 @@ export default function HeroSection() {
         <div className="hero-middle">
           <div className="hero-headline-block">
             <h1 className="hero-title">
-              what's Next <br /> is earned.
+              whats Next <br /> is earned.
             </h1>
             <p className="hero-subtitle">Elite Basketball Club Based in Edmonton, Alberta 🇨🇦</p>
           </div>
