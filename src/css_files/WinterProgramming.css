@@ -1476,6 +1476,59 @@
   border-top: 0;
 }
 
+.winter-schedule-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.75rem 0 2.25rem;
+}
+
+.winter-schedule-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-height: 220px;
+  padding: 1.5rem;
+  border: 1px solid var(--winter-rule);
+  border-top: 4px solid var(--winter-blue);
+  background: #f8fbfd;
+}
+
+.winter-schedule-card > div:first-child > span,
+.winter-schedule-details span {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--winter-blue-dark);
+}
+
+.winter-schedule-card h3 {
+  margin: 0;
+  font-size: 1.55rem;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.winter-schedule-details {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.winter-schedule-details p {
+  margin: 0;
+}
+
+.winter-schedule-details strong {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
 .winter-date-row {
   grid-template-columns: 92px minmax(0, 1fr);
   gap: 1rem;
@@ -1615,6 +1668,14 @@
   .winter-plan-grid,
   .winter-dates-grid {
     grid-template-columns: 1fr;
+  }
+
+  .winter-schedule-groups {
+    grid-template-columns: 1fr;
+  }
+
+  .winter-schedule-card {
+    min-height: 0;
   }
 
   .winter-plan-row p {

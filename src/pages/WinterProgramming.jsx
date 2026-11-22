@@ -70,6 +70,21 @@ const programDates = [
   { date: 'February 28', label: 'Session 10' },
 ];
 
+const scheduleGroups = [
+  {
+    sessions: 'Sessions 1–5',
+    description: 'First five sessions',
+    location: 'Legacy Athletics',
+    time: '3:00–5:00 PM',
+  },
+  {
+    sessions: 'Sessions 6–10',
+    description: 'Final five sessions',
+    location: 'The Centers North Sports Complex',
+    time: '3:00–5:00 PM',
+  },
+];
+
 export default function WinterProgramming() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -175,6 +190,30 @@ export default function WinterProgramming() {
             <h2>Program Dates</h2>
           </div>
           <div className="winter-section-content">
+            <p className="winter-lead">
+              Every session runs from 3:00–5:00 PM. The program moves to a new
+              location after Session 5.
+            </p>
+            <div className="winter-schedule-groups">
+              {scheduleGroups.map((group) => (
+                <article className="winter-schedule-card" key={group.sessions}>
+                  <div>
+                    <span>{group.description}</span>
+                    <h3>{group.sessions}</h3>
+                  </div>
+                  <div className="winter-schedule-details">
+                    <p>
+                      <span>Location</span>
+                      <strong>{group.location}</strong>
+                    </p>
+                    <p>
+                      <span>Time</span>
+                      <strong>{group.time}</strong>
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
             <div className="winter-dates winter-dates-grid">
               {programDates.map((item) => (
                 <div className={`winter-date-row${item.break ? ' winter-date-break' : ''}`} key={`${item.date}-${item.label}`}>
@@ -184,8 +223,7 @@ export default function WinterProgramming() {
               ))}
             </div>
             <p className="winter-fine-print">
-              All training dates are Sundays in the late afternoon. Exact session times
-              and location will be announced before the program begins.
+              All program dates are Sundays. Holiday breaks are shown in the schedule above.
             </p>
           </div>
         </section>
